@@ -1,0 +1,11 @@
+framework module EntrupySDK {
+  umbrella header "EntrupySDK.h"
+
+  export *
+  module * { export * }
+}
+
+module EntrupySDK.Swift {
+  header "EntrupySDK-Swift.h"
+  requires objc
+}
