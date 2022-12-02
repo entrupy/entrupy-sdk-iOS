@@ -8,6 +8,8 @@
 #import <Foundation/Foundation.h>
 #import "EntrupyAppProtocols.h"
 
+@protocol EntrupyTheme;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface EntrupyApp: NSObject<EntrupyAppProtocol>
@@ -16,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak) id<EntrupyConfigDelegate> configDelegate;
 @property (nonatomic, weak) id<EntrupyCaptureDelegate> captureDelegate;
 @property (nonatomic, weak) id<EntrupySearchDelegate> searchDelegate;
+@property (nonatomic, strong) id<EntrupyTheme> theme;
 
 + (instancetype)sharedInstance;
 
@@ -32,8 +35,8 @@ NS_ASSUME_NONNULL_BEGIN
      //Implement EntrupyConfigDelegate
      EntrupyApp.sharedInstance().configDelegate = self
      
-     // Set configType to ConfigTypeShort if you want a shorter capture workflow during development
-     EntrupyApp.sharedInstance().fetchConfigurationType(EntrupyConfigType.ConfigTypeFull)
+     // Set configType to ConfigTypeDebug if you want a shorter capture workflow during development
+     EntrupyApp.sharedInstance().fetchConfigurationType(EntrupyConfigType.ConfigTypeProduction)
  }
  
  ```
@@ -43,8 +46,8 @@ NS_ASSUME_NONNULL_BEGIN
  ```
  
  
- - Parameter configType: ConfigTypeShort: Short config is used to launch a shorter capture workflow. This is only to be used for dev testing. All submissions with the short config will be marked Invalid.
- ConfigTypeFull: The regular full length config.
+ - Parameter configType: ConfigTypeDebug: The debug config is used to launch a shorter capture workflow. This is only to be used for dev testing. All submissions with the debug config will be marked Invalid.
+ ConfigTypeProduction: The regular full length config.
  
  */
 -(void) fetchConfigurationType: (EntrupyConfigType) configType;
@@ -108,7 +111,7 @@ NS_ASSUME_NONNULL_BEGIN
  Repeat the searchSubmissions call, setting the pageCursor with the "next_cursor" array received in the delegate response of the previous call until all pages have been retrieved. If the “next_cursor” array returned is nil or empty it indicates that the last page has been reached.
  
  [SDK web documentation]:
- https://developer.entrupy.com/v1_2.html/v1_2_entrupy_sdk.html
+ https://developer.entrupy.com/v1_2_entrupy_sdk.html
  
  ```
  Implement the "EntrupySearchDelegate" protocol to handle responses
@@ -173,7 +176,7 @@ NS_ASSUME_NONNULL_BEGIN
  It is recommended that tokens are created or re-created if expired before calling other SDK methods to avoid additional latency.
  
  [SDK web documentation]:
- https://developer.entrupy.com/v1_2.html/v1_2_entrupy_sdk.html
+ https://developer.entrupy.com/v1_2_entrupy_sdk.html
  
  * Implement the following steps on your app and  backend as indicated.
  

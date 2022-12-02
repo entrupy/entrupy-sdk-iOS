@@ -19,7 +19,7 @@
 Save the received authorization token expiry timestamp in the UserDefaults and reauthorize when the token is about to expire.
 
  [SDK web documentation]:
- https://developer.entrupy.com/v1_2.html/v1_2_entrupy_sdk.html
+ https://developer.entrupy.com/v1_2_entrupy_sdk.html
 
 Refer to the [SDK web documentation] for more details.
  - Parameter expirationTime: The authorization token expiration time
@@ -89,7 +89,7 @@ Refer to the [SDK web documentation] for more details.
 @end
 
 @protocol EntrupyAppProtocol <NSObject>
-@property (nonatomic, weak) id<EntrupyLoginDelegate> _Nullable sessionDelegate;
+@property (nonatomic, weak) id<EntrupyLoginDelegate> _Nullable loginDelegate;
 @property (nonatomic, weak) id<EntrupyConfigDelegate> _Nullable configDelegate;
 @property (nonatomic, weak) id<EntrupyCaptureDelegate> _Nullable captureDelegate;
 @property (nonatomic, weak) id<EntrupySearchDelegate> _Nullable searchDelegate;

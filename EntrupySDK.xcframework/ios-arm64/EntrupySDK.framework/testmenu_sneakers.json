@@ -1,0 +1,750 @@
+{
+  "config": {
+    "metadata": {
+      "function_id": "macro_authentication"
+    },
+    "enabled": true,
+    "settings": {
+      "cell_size": "small",
+      "title": "Brands"
+    },
+    "type": "menu",
+    "children": [
+      {
+        "display": {
+          "full_display_name": "Nike",
+          "short_display_name": "Nike"
+        },
+        "children": [
+          {
+            "metadata": {
+              "capture_overlay_style_id": "air_jordan_1",
+              "model_id": "other",
+              "capture_overlay_us_size_id": "9",
+              "capture_overlay_sneaker_size_type_id": "men",
+              "mode_id": null,
+              "brand_id": "nike",
+              "function_id": "macro_authentication"
+            },
+            "parent_display": {
+              "menu_text": "Air Jordan 1 High\nInstant",
+              "menu_text_color": "default",
+              "background_url": null
+            },
+            "display": {
+              "full_display_name": "Air Jordan 1 High\nInstant",
+              "short_display_name": "Air Jordan 1 High\nInstant"
+            },
+            "enabled": true,
+            "settings": {
+              "constraints": [],
+              "artifacts": [
+                  {
+                    "count": 1,
+                    "device": null,
+                    "display_name": "Box Label Barcode",
+                    "group_display_name": "Box(Optional)",
+                    "instruction": {
+                      "image_path": "box-label-barcode.png",
+                      "image_source": "static",
+                      "text": "Point the camera at the barcode to scan.",
+                      "verbose_text": "Scan the barcode on the box label."
+                    },
+                    "mime_type": "text/plain",
+                    "overlays": null,
+                    "region_id": "box_label_barcode",
+                    "region_id_app": null,
+                    "required": false,
+                    "special": "barcode",
+                    "ui_settings": {
+                      "skip_region_button": {
+                        "title": "Skip, no box"
+                      }
+                    }
+                  },
+                  {
+                    "count": 1,
+                    "device": null,
+                    "display_name": "Box Label Barcode Type",
+                    "group_display_name": "Box(Optional)",
+                    "instruction": null,
+                    "mime_type": "text/plain",
+                    "overlays": null,
+                    "region_id": "box_label_barcode_symbology",
+                    "region_id_app": null,
+                    "required": false,
+                    "special": "autofill-barcode-symbology visible-no"
+                  },
+                  {
+                    "count": 1,
+                    "device": null,
+                    "display_name": "Additional Box Label Barcode",
+                    "group_display_name": "Box(Optional)",
+                    "instruction": {
+                      "image_path": null,
+                      "image_source": null,
+                      "text": "Point the camera at the barcode to scan.",
+                      "verbose_text": "Scan any additional barcode on the box label."
+                    },
+                    "mime_type": "text/plain",
+                    "overlays": null,
+                    "region_id": "additional_box_label_barcode",
+                    "region_id_app": null,
+                    "required": false,
+                    "special": "barcode"
+                  },
+                  {
+                    "count": 1,
+                    "device": null,
+                    "display_name": "Additional Box Label Barcode Type",
+                    "group_display_name": "Box(Optional)",
+                    "instruction": null,
+                    "mime_type": "text/plain",
+                    "overlays": null,
+                    "region_id": "additional_box_label_barcode_symbology",
+                    "region_id_app": null,
+                    "required": false,
+                    "special": "autofill-barcode-symbology visible-no"
+                  },
+                  {
+                    "capture_tests": null,
+                    "count": 1,
+                    "device": {
+                      "class": "*",
+                      "type": "camera"
+                    },
+                    "display_name": "Box Label Photo",
+                    "group_display_name": "Box(Optional)",
+                    "instruction": {
+                      "image_path": "box-label.png",
+                      "image_source": "static",
+                      "text": "Capture a close-up of the full box label.",
+                      "verbose_text": "Capture a close-up of the full box label."
+                    },
+                    "jpeg_settings": {
+                      "orientation": null,
+                      "preset": "photo",
+                      "quality": 85
+                    },
+                    "mime_type": "image/jpeg",
+                    "overlays": null,
+                    "region_id": "box_label",
+                    "required": false,
+                    "special": null,
+                    "ui_settings": {
+                      "skip_region_button": {
+                        "title": "Skip, no box"
+                      }
+                    }
+                  },
+                  {
+                    "capture_tests": null,
+                    "count": 1,
+                    "device": {
+                      "class": "*",
+                      "type": "camera"
+                    },
+                    "display_name": "Test Photo",
+                    "group_display_name": "Test(Optional)",
+                    "instruction": {
+                      "image_path": "box-label.png",
+                      "image_source": "static",
+                      "text": "Capture a close-up of the full box label.",
+                      "verbose_text": "Capture a close-up of the full box label."
+                    },
+                    "jpeg_settings": {
+                      "orientation": null,
+                      "preset": "photo",
+                      "quality": 85
+                    },
+                    "mime_type": "image/jpeg",
+                    "overlays": null,
+                    "region_id": "box_label",
+                    "required": false,
+                    "special": null,
+                    "ui_settings": {
+                      "skip_region_button": {
+                        "title": "Skip, no box"
+                      }
+                    }
+                  },
+                  {
+                    "capture_tests": null,
+                    "count": 1,
+                    "device": {
+                      "class": "*",
+                      "type": "camera"
+                    },
+                    "display_name": "Test Photo 1",
+                    "group_display_name": "Test 1(Optional)",
+                    "instruction": {
+                      "image_path": "box-label.png",
+                      "image_source": "static",
+                      "text": "Capture a close-up of the full box label.",
+                      "verbose_text": "Capture a close-up of the full box label."
+                    },
+                    "jpeg_settings": {
+                      "orientation": null,
+                      "preset": "photo",
+                      "quality": 85
+                    },
+                    "mime_type": "image/jpeg",
+                    "overlays": null,
+                    "region_id": "box_label",
+                    "required": false,
+                    "special": null,
+                    "ui_settings": {
+                      "skip_region_button": {
+                        "title": "Skip, no box"
+                      }
+                    }
+                  },
+                  {
+                    "capture_tests": null,
+                    "count": 1,
+                    "device": {
+                      "class": "*",
+                      "properties": {
+                        "zoom": 3
+                      },
+                      "type": "camera"
+                    },
+                    "display_name": "Left Sneaker: Size Tag Photo",
+                    "group_display_name": "Left Sneaker",
+                    "instruction": {
+                      "image_path": "nike-sizetag.png",
+                      "image_source": "static",
+                      "text": "Capture the whole tag as close as possible with the entire tag visible and unfolded.",
+                      "verbose_text": "Capture the size tag attached to the inner lining or the tongue of the sneaker."
+                    },
+                    "jpeg_settings": {
+                      "orientation": null,
+                      "preset": "photo",
+                      "quality": 85
+                    },
+                    "mime_type": "image/jpeg",
+                    "overlays": null,
+                    "region_id": "size_tag",
+                    "required": true,
+                    "special": "ocr-nike-airjordan1-sizetag flash-toggle"
+                  },
+                  {
+                    "count": 1,
+                    "device": null,
+                    "display_name": "FACTORY CODE",
+                    "group_display_name": "Left Sneaker",
+                    "instruction": null,
+                    "mime_type": "text/plain",
+                    "overlays": null,
+                    "region_id": "factory_code",
+                    "region_id_app": "factory_code",
+                    "required": true,
+                    "special": "autofill-ocr-nike-airjordan1-sizetag visible-no"
+                  },
+                  {
+                    "count": 1,
+                    "device": null,
+                    "display_name": "US SIZE",
+                    "group_display_name": "Left Sneaker",
+                    "instruction": null,
+                    "mime_type": "text/plain",
+                    "overlays": null,
+                    "region_id": "us_size",
+                    "region_id_app": "us_size",
+                    "required": true,
+                    "special": "autofill-ocr-nike-airjordan1-sizetag visible-no"
+                  },
+                  {
+                    "count": 1,
+                    "device": null,
+                    "display_name": "UK SIZE",
+                    "group_display_name": "Left Sneaker",
+                    "instruction": null,
+                    "mime_type": "text/plain",
+                    "overlays": null,
+                    "region_id": "uk_size",
+                    "region_id_app": "uk_size",
+                    "required": false,
+                    "special": "autofill-ocr-nike-airjordan1-sizetag visible-no"
+                  },
+                  {
+                    "count": 1,
+                    "device": null,
+                    "display_name": "EUR SIZE",
+                    "group_display_name": "Left Sneaker",
+                    "instruction": null,
+                    "mime_type": "text/plain",
+                    "overlays": null,
+                    "region_id": "eur_size",
+                    "region_id_app": "eur_size",
+                    "required": false,
+                    "special": "autofill-ocr-nike-airjordan1-sizetag visible-no"
+                  },
+                  {
+                    "count": 1,
+                    "device": null,
+                    "display_name": "cm SIZE",
+                    "group_display_name": "Left Sneaker",
+                    "instruction": null,
+                    "mime_type": "text/plain",
+                    "overlays": null,
+                    "region_id": "cm_size",
+                    "region_id_app": "cm_size",
+                    "required": false,
+                    "special": "autofill-ocr-nike-airjordan1-sizetag visible-no"
+                  },
+                  {
+                    "count": 1,
+                    "device": null,
+                    "display_name": "PRODUCTION START DATE",
+                    "group_display_name": "Left Sneaker",
+                    "instruction": null,
+                    "mime_type": "text/plain",
+                    "overlays": null,
+                    "region_id": "production_start_date",
+                    "region_id_app": "production_start_date",
+                    "required": true,
+                    "special": "autofill-ocr-nike-airjordan1-sizetag visible-no"
+                  },
+                  {
+                    "count": 1,
+                    "device": null,
+                    "display_name": "STYLE CODE",
+                    "group_display_name": "Left Sneaker",
+                    "instruction": null,
+                    "mime_type": "text/plain",
+                    "overlays": null,
+                    "region_id": "style",
+                    "region_id_app": "style",
+                    "required": true,
+                    "special": "autofill-ocr-nike-airjordan1-sizetag visible-no"
+                  },
+                  {
+                    "count": 1,
+                    "device": null,
+                    "display_name": "PRODUCTION END DATE",
+                    "group_display_name": "Left Sneaker",
+                    "instruction": null,
+                    "mime_type": "text/plain",
+                    "overlays": null,
+                    "region_id": "production_end_date",
+                    "region_id_app": "production_end_date",
+                    "required": true,
+                    "special": "autofill-ocr-nike-airjordan1-sizetag visible-no"
+                  },
+                  {
+                    "count": 1,
+                    "device": null,
+                    "display_name": "COUNTRY OF MANUFACTURE",
+                    "group_display_name": "Left Sneaker",
+                    "instruction": null,
+                    "mime_type": "text/plain",
+                    "overlays": null,
+                    "region_id": "country_of_manufacture",
+                    "region_id_app": "country_of_manufacture",
+                    "required": true,
+                    "special": "autofill-ocr-nike-airjordan1-sizetag visible-no"
+                  },
+                  {
+                    "count": 1,
+                    "device": null,
+                    "display_name": "BATCH NUMBER",
+                    "group_display_name": "Left Sneaker",
+                    "instruction": null,
+                    "mime_type": "text/plain",
+                    "overlays": null,
+                    "region_id": "batch_number",
+                    "region_id_app": "batch_number",
+                    "required": true,
+                    "special": "autofill-ocr-nike-airjordan1-sizetag visible-no"
+                  },
+                  {
+                    "count": 1,
+                    "device": null,
+                    "display_name": "UPC",
+                    "group_display_name": "Left Sneaker",
+                    "instruction": null,
+                    "mime_type": "text/plain",
+                    "overlays": null,
+                    "region_id": "upc",
+                    "region_id_app": "upc",
+                    "required": false,
+                    "special": "autofill-ocr-nike-airjordan1-sizetag visible-no"
+                  },
+                  {
+                    "count": 1,
+                    "device": {
+                      "class": "*",
+                      "type": "camera"
+                    },
+                    "display_name": "Left Sneaker: Bottom Rear",
+                    "group_display_name": "Left Sneaker",
+                    "instruction": {
+                      "image_path": "LB2",
+                      "image_source": "static",
+                      "text": "Align the frame by holding the camera level with the sneaker region.",
+                      "verbose_text": "Capture the bottom(outsole) rear part of the left sneaker."
+                    },
+                    "jpeg_settings": {
+                      "orientation": "right",
+                      "preset": "photo",
+                      "quality": 85
+                    },
+                    "mime_type": "image/jpeg",
+                    "overlays": null,
+                    "region_id": "left_bottom_rear",
+                    "required": true,
+                    "special": "flash-toggle"
+                  },
+                  {
+                    "count": 1,
+                    "device": {
+                      "class": "*",
+                      "properties": {
+                        "depth": false,
+                        "mode": null
+                      },
+                      "type": "camera"
+                    },
+                    "display_name": "Left Sneaker: Rear",
+                    "group_display_name": "Left Sneaker",
+                    "instruction": {
+                      "image_path": "LR",
+                      "image_source": "static",
+                      "text": "Align the frame by holding the camera level with the sneaker region.",
+                      "verbose_text": "Capture the rear(heel-side) of the left sneaker."
+                    },
+                    "jpeg_settings": {
+                      "orientation": "right",
+                      "preset": "photo",
+                      "quality": 85
+                    },
+                    "mime_type": "image/jpeg",
+                    "overlays": null,
+                    "region_id": "left_rear",
+                    "required": true,
+                    "special": "flash-toggle"
+                  },
+                  {
+                    "count": 1,
+                    "device": {
+                      "class": "*",
+                      "properties": {
+                        "depth": false,
+                        "mode": null
+                      },
+                      "type": "camera"
+                    },
+                    "display_name": "Left Sneaker: Left Rear",
+                    "group_display_name": "Left Sneaker",
+                    "instruction": {
+                      "image_path": "LL2",
+                      "image_source": "static",
+                      "text": "Align the frame by holding the camera level with the sneaker region.",
+                      "verbose_text": "Capture the rear part on the left side of the left sneaker. This is the ankle area where the logo is usually present."
+                    },
+                    "jpeg_settings": {
+                      "orientation": "right",
+                      "preset": "photo",
+                      "quality": 85
+                    },
+                    "mime_type": "image/jpeg",
+                    "overlays": null,
+                    "region_id": "left_left_rear",
+                    "required": true,
+                    "special": "flash-toggle"
+                  },
+                  {
+                    "count": 1,
+                    "device": {
+                      "class": "*",
+                      "properties": {
+                        "depth": false,
+                        "mode": null
+                      },
+                      "type": "camera"
+                    },
+                    "display_name": "Left Sneaker: Right Rear",
+                    "group_display_name": "Left Sneaker",
+                    "instruction": {
+                      "image_path": "LR2",
+                      "image_source": "static",
+                      "text": "Align the frame by holding the camera level with the sneaker region.",
+                      "verbose_text": "Capture the rear part on the right side of the left sneaker."
+                    },
+                    "jpeg_settings": {
+                      "orientation": "right",
+                      "preset": "photo",
+                      "quality": 85
+                    },
+                    "mime_type": "image/jpeg",
+                    "overlays": null,
+                    "region_id": "left_right_rear",
+                    "required": true,
+                    "special": "flash-toggle"
+                  },
+                  {
+                    "count": 1,
+                    "device": {
+                      "class": "*",
+                      "properties": {
+                        "depth": false,
+                        "mode": null
+                      },
+                      "type": "camera"
+                    },
+                    "display_name": "Right Sneaker: Bottom Rear",
+                    "group_display_name": "Right Sneaker",
+                    "instruction": {
+                      "image_path": "RB2",
+                      "image_source": "static",
+                      "text": "Align the frame by holding the camera level with the sneaker region.",
+                      "verbose_text": "Capture the bottom(outsole) rear part of the right sneaker."
+                    },
+                    "jpeg_settings": {
+                      "orientation": "right",
+                      "preset": "photo",
+                      "quality": 85
+                    },
+                    "mime_type": "image/jpeg",
+                    "overlays": null,
+                    "region_id": "right_bottom_rear",
+                    "required": true,
+                    "special": "flash-toggle"
+                  },
+                  {
+                    "count": 1,
+                    "device": {
+                      "class": "*",
+                      "properties": {
+                        "depth": false,
+                        "mode": null
+                      },
+                      "type": "camera"
+                    },
+                    "display_name": "Right Sneaker: Rear",
+                    "group_display_name": "Right Sneaker",
+                    "instruction": {
+                      "image_path": "RR",
+                      "image_source": "static",
+                      "text": "Align the frame by holding the camera level with the sneaker region.",
+                      "verbose_text": "Capture the rear(heel-side) of the left sneaker."
+                    },
+                    "jpeg_settings": {
+                      "orientation": "right",
+                      "preset": "photo",
+                      "quality": 85
+                    },
+                    "mime_type": "image/jpeg",
+                    "overlays": null,
+                    "region_id": "right_rear",
+                    "required": true,
+                    "special": "flash-toggle"
+                  },
+                  {
+                    "count": 1,
+                    "device": {
+                      "class": "*",
+                      "properties": {
+                        "depth": false,
+                        "mode": null
+                      },
+                      "type": "camera"
+                    },
+                    "display_name": "Right Sneaker: Left Rear",
+                    "group_display_name": "Right Sneaker",
+                    "instruction": {
+                      "image_path": "RL2",
+                      "image_source": "static",
+                      "text": "Align the frame by holding the camera level with the sneaker region.",
+                      "verbose_text": "Capture the rear part on the left side of the right sneaker."
+                    },
+                    "jpeg_settings": {
+                      "orientation": "right",
+                      "preset": "photo",
+                      "quality": 85
+                    },
+                    "mime_type": "image/jpeg",
+                    "overlays": null,
+                    "region_id": "right_left_rear",
+                    "required": true,
+                    "special": "flash-toggle"
+                  },
+                  {
+                    "count": 1,
+                    "device": {
+                      "class": "*",
+                      "properties": {
+                        "depth": false,
+                        "mode": null
+                      },
+                      "type": "camera"
+                    },
+                    "display_name": "Right Sneaker: Right Rear",
+                    "group_display_name": "Right Sneaker",
+                    "instruction": {
+                      "image_path": "RR2",
+                      "image_source": "static",
+                      "text": "Align the frame by holding the camera level with the sneaker region.",
+                      "verbose_text": "Capture the rear part on the right side of the right sneaker. This is the ankle area where the logo is usually present."
+                    },
+                    "jpeg_settings": {
+                      "orientation": "right",
+                      "preset": "photo",
+                      "quality": 85
+                    },
+                    "mime_type": "image/jpeg",
+                    "overlays": null,
+                    "region_id": "right_right_rear",
+                    "required": true,
+                    "special": "flash-toggle"
+                  },
+                  {
+                    "count": 1,
+                    "device": null,
+                    "display_name": "Internal ID",
+                    "external": {
+                      "region_id": {
+                        "map": "customer_item_id"
+                      }
+                    },
+                    "mime_type": "text/plain",
+                    "overlays": null,
+                    "region_id": "sku",
+                    "required": false,
+                    "special": "visible-no"
+                  },
+                  {
+                    "count": 1,
+                    "device": null,
+                    "display_name": "External Style",
+                    "external": {
+                      "region_id": {
+                        "map": "style_code"
+                      }
+                    },
+                    "instruction": null,
+                    "mime_type": "text/plain",
+                    "overlays": null,
+                    "region_id": "external_style",
+                    "required": false,
+                    "special": "visible-no"
+                  },
+                  {
+                    "count": 1,
+                    "device": null,
+                    "display_name": "External US SIZE",
+                    "external": {
+                      "region_id": {
+                        "map": "us_size"
+                      }
+                    },
+                    "instruction": null,
+                    "mime_type": "text/plain",
+                    "overlays": null,
+                    "region_id": "external_us_size",
+                    "required": false,
+                    "special": "visible-no"
+                  }
+                ]
+            },
+            "type": "authentication"
+          }
+          ],
+        "enabled": true,
+        "parent_display": {
+          "menu_text": "Nike",
+          "menu_text_color": "default",
+          "background_url": null
+        },
+        "type": "menu",
+        "metadata": {
+          "function_id": "macro_authentication",
+          "brand_id": "nike"
+        },
+        "settings": {
+          "cell_size": "small",
+          "title": "Nike: Series"
+        }
+      }
+    ],
+    "authorized_scanner_types": [
+      "attachment"
+    ]
+  },
+  "iat": 1652291717,
+  "main_display": {
+    "display_messages": [],
+    "account_status": {
+      "active": true,
+      "account_standing_message": null
+    }
+  },
+  "config_schema": "2.13.0",
+  "global_settings": {
+    "region_instruction_reset_counter": 1,
+    "barcode_reader": "google-mlkit",
+    "region_instructions": "optional-default-on",
+    "search_filters": [
+      {
+        "name": "properties.brand.id",
+        "options": [
+          {
+            "internal_id": "nike",
+            "display_name": "Nike"
+          }
+        ],
+        "title": "Brand"
+      },
+      {
+        "name": "status.result.id",
+        "options": [
+          {
+            "internal_id": "authentic",
+            "display_name": "Authentic"
+          },
+          {
+            "internal_id": "unknown",
+            "display_name": "Unidentified"
+          },
+          {
+            "internal_id": "not_supported",
+            "display_name": "Not Supported"
+          },
+          {
+            "internal_id": "needs_review",
+            "display_name": "Under Review"
+          },
+          {
+            "internal_id": "invalid",
+            "display_name": "Invalid"
+          }
+        ],
+        "title": "Result Type"
+      },
+      {
+        "name": "status.flag",
+        "options": [
+          {
+            "internal_id": "none",
+            "display_name": "None"
+          },
+          {
+            "internal_id": "flagged",
+            "display_name": "Flagged"
+          },
+          {
+            "internal_id": "resolved",
+            "display_name": "Resolved"
+          }
+        ],
+        "title": "Flag Status"
+      }
+    ],
+    "search_mode_filters_enabled": true,
+    "search_mode_sku_entry_enabled": false
+  },
+  "uuid_match": null,
+  "uuid": "b3289bf5-a25a-5e30-ad0b-bc580be3f575",
+  "exp": 1698332285
+}

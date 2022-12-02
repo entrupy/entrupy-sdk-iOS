@@ -250,6 +250,19 @@ using UInt = size_t;
 #endif
 
 #if defined(__OBJC__)
+@class UIColor;
+
+SWIFT_PROTOCOL("_TtP10EntrupySDK12EntrupyTheme_")
+@protocol EntrupyTheme
+@property (nonatomic, readonly, strong) UIColor * _Nullable backgroundColor;
+@property (nonatomic, readonly, strong) UIColor * _Nullable foregroundColor;
+@property (nonatomic, readonly, strong) UIColor * _Nullable borderColor;
+@end
+
+
+
+
+
 #endif
 #if defined(__cplusplus)
 #endif

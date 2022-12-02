@@ -4,85 +4,9 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>.Roboto-Black.ttf.icloud</key>
-		<data>
-		0CCSDH2W2bAhGW8G1+XxKw+ulfM=
-		</data>
-		<key>.Roboto-BlackItalic.ttf.icloud</key>
-		<data>
-		Vz5LIT6vg2WDV4Q1PGZtMK1oWE4=
-		</data>
-		<key>.Roboto-Bold.ttf.icloud</key>
-		<data>
-		XMHsLz0RbPRbIuY0AADhtnFl0G0=
-		</data>
-		<key>.Roboto-BoldItalic.ttf.icloud</key>
-		<data>
-		1fhN3oPzjBLfmlbSv+zAe1Y8l20=
-		</data>
-		<key>.Roboto-Italic.ttf.icloud</key>
-		<data>
-		mXvjqDYgX+P2HRaK0cy0R1Anqtg=
-		</data>
-		<key>.Roboto-Light.ttf.icloud</key>
-		<data>
-		7Hq0SQwA9eKfTK/UVxyJL4sP0Lk=
-		</data>
-		<key>.Roboto-LightItalic.ttf.icloud</key>
-		<data>
-		jZpeJN+G6JWp3ysTgELL8RiWNJs=
-		</data>
-		<key>.Roboto-Medium.ttf.icloud</key>
-		<data>
-		QOldm/Ho4PLrgExM8/A8TpI49w0=
-		</data>
-		<key>.Roboto-MediumItalic.ttf.icloud</key>
-		<data>
-		h4zUhcqPwYz2hevaElUx4vcGQuE=
-		</data>
-		<key>.Roboto-Regular.ttf.icloud</key>
-		<data>
-		e09UCxvRGzBE3JRD01ipHHATPM8=
-		</data>
-		<key>.Roboto-Thin.ttf.icloud</key>
-		<data>
-		5Llp361jGpHuljToOgEaycnZr7U=
-		</data>
-		<key>.Roboto-ThinItalic.ttf.icloud</key>
-		<data>
-		GrOfqeSxJzMZ4EyOmWUJNxvjGT4=
-		</data>
-		<key>.RobotoCondensed-Bold.ttf.icloud</key>
-		<data>
-		n34s/Fxf9fjVI+5dPU/DoPBqjKo=
-		</data>
-		<key>.RobotoCondensed-BoldItalic.ttf.icloud</key>
-		<data>
-		DBBYjJVC4UJgXYr429mRPtWNNsA=
-		</data>
-		<key>.RobotoCondensed-Italic.ttf.icloud</key>
-		<data>
-		dY691zRspGp8fDZbyRX1vAohGPI=
-		</data>
-		<key>.RobotoCondensed-Light.ttf.icloud</key>
-		<data>
-		jsGDmVpjTathcsiTEg1ZcmMu9/U=
-		</data>
-		<key>.RobotoCondensed-LightItalic.ttf.icloud</key>
-		<data>
-		T/jH/XMEBNXD7AG/YltvQK7laRI=
-		</data>
-		<key>.RobotoCondensed-Regular.ttf.icloud</key>
-		<data>
-		D1lFo/zQEhHEqrtMDvSKB8z56Ks=
-		</data>
-		<key>Apache License.txt</key>
-		<data>
-		EMwui5K51m0SyPgFEF0CJHMIh1k=
-		</data>
 		<key>Assets.car</key>
 		<data>
-		HXMFhLxfedwyGE+sSrjcTBye+V8=
+		TKav/VPZOR7o7dmqfNnDFLFOrpA=
 		</data>
 		<key>Base.lproj/EntrupyTOCropViewControllerLocalizable.strings</key>
 		<data>
@@ -92,17 +16,57 @@
 		<data>
 		poDYGy1JWXBgPH3/wCEBNbVTOks=
 		</data>
+		<key>EntrupyCameraActionsView.nib</key>
+		<data>
+		rCyuJEg6GHVVT07k31HafomznHI=
+		</data>
+		<key>EntrupyCameraInformationView.nib</key>
+		<data>
+		MxpE75TmlLimuQyEotWsRUhjRC0=
+		</data>
+		<key>EntrupyCaptureCameraView.nib</key>
+		<data>
+		1uciyfQcaev3rG1oasp8ywZSVNY=
+		</data>
+		<key>EntrupyCaptureDetail.nib</key>
+		<data>
+		1mpGnmaGSARC/pAKb08zwkVBlNA=
+		</data>
+		<key>EntrupyCaptureNoteView.nib</key>
+		<data>
+		3NohAEsVjq1LP1AT9RZCVHTpSUY=
+		</data>
+		<key>EntrupyCaptureSuccessActionView.nib</key>
+		<data>
+		iu68XFnwK0IzH1UWTTlJPs5zrC4=
+		</data>
+		<key>EntrupyCaptureVC.nib</key>
+		<data>
+		DT4HEo0oPRbxS6qgvT5PxCsmdH8=
+		</data>
 		<key>EntrupyCaptureViewController.nib</key>
 		<data>
-		Eltri0RHvhsACd4n1zEqNVdpdnU=
+		Nrg93iRdykYBuWD46DLJo4BRoG0=
 		</data>
 		<key>EntrupyCollectionHeaderView.nib</key>
 		<data>
 		kKIlfPzi7+6uFJDpbzPo0oJhdR8=
 		</data>
+		<key>EntrupyCollectionReusableView.nib</key>
+		<data>
+		pkv2Onn2BF58jPMafQFrb58F0/g=
+		</data>
+		<key>EntrupyEditBarcodeViewController.nib</key>
+		<data>
+		z7fmoljxiFb4IvOy7W8en4tzDOo=
+		</data>
 		<key>EntrupyGalleryCollectionViewCell.nib</key>
 		<data>
 		KQDONiAbBfQnBKOKfmUj70yCv+o=
+		</data>
+		<key>EntrupyImageGuideViewController.nib</key>
+		<data>
+		thUiPpYvSpqVqmloZQs6A5FiadA=
 		</data>
 		<key>EntrupyNYTPhotoViewer.bundle/NYTPhotoViewerCloseButtonX.png</key>
 		<data>
@@ -128,9 +92,25 @@
 		<data>
 		hUnRk6hkU9Z8NPWkTTEHmNzFGD8=
 		</data>
+		<key>EntrupyProductItemTextView.nib</key>
+		<data>
+		/N6N7x0zguI5lUKVmgD24GHSjS4=
+		</data>
+		<key>EntrupyProductItemViewDescription.nib</key>
+		<data>
+		rYSvxXastHGy1ScPJtUksVzUOm4=
+		</data>
 		<key>EntrupySDK-Info.plist</key>
 		<data>
-		YdaIqxIRA7yHbNwxRk0slG1J0ok=
+		JLfkWGU5Pb1vT00CZMFIGImzqUU=
+		</data>
+		<key>EntrupySneakerCollectionViewCell.nib</key>
+		<data>
+		6v3ZwLt6FIV7nh7bxCxM741DO2k=
+		</data>
+		<key>EntrupySneakerTextCollectionViewCell.nib</key>
+		<data>
+		Z+FOH/kWNofT2stQ5/H2vieR/7I=
 		</data>
 		<key>Frameworks/Default-568h@2x.png</key>
 		<data>
@@ -2184,29 +2164,33 @@
 		<data>
 		joZp/dhg2KvrJr5/stRqRAF67s8=
 		</data>
+		<key>Headers/EntrupyApp+Internal.h</key>
+		<data>
+		CdLeqz9WU7fGs8isL0FGCnO4Wu0=
+		</data>
 		<key>Headers/EntrupyApp.h</key>
 		<data>
-		Ebo/o42wUaf0QvH2T63H53jI5SI=
+		UXLpINPRIVYpkr83ArPWwJiQcl4=
+		</data>
+		<key>Headers/EntrupyAppInternalProtocols.h</key>
+		<data>
+		eiYZan6xff+Q8K/pa3E36sa7h38=
 		</data>
 		<key>Headers/EntrupyAppProtocols.h</key>
 		<data>
-		fCexYaN13tfiSeU5h2akInfdoXk=
+		8NracNmn7KN7b3ywWoV8Mlr1q0A=
 		</data>
 		<key>Headers/EntrupyConfigType.h</key>
 		<data>
-		lHMXQj6y1174w+BnY2vjbSD0yZU=
+		2Wx203MBzxkjZwmNLBPs0o+0AHQ=
 		</data>
 		<key>Headers/EntrupyErrorCode.h</key>
 		<data>
 		4XhENvlUIH3xgYihUq2P517VKdk=
 		</data>
-		<key>Headers/EntrupyPrivateSDK.h</key>
-		<data>
-		gsffmfPx3U37KupJkZ6ZVUpbzA4=
-		</data>
 		<key>Headers/EntrupySDK-Swift.h</key>
 		<data>
-		J+PMwg+1tyJCbxWYGxN3UFDTnX8=
+		LUyMbxwBIJq2vSsrfwRjGks51Jc=
 		</data>
 		<key>Headers/EntrupySDK.h</key>
 		<data>
@@ -2214,7 +2198,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		T855F6d4p+8HA/BMC7huyCC064U=
+		rATmrN3ZFXDnjTQwOvpG2frbCIs=
 		</data>
 		<key>Jordan_final_2.mlmodelc/analytics/coremldata.bin</key>
 		<data>
@@ -2252,6 +2236,78 @@
 		<data>
 		Rh5SbIf7GG69PN91RdOLUHXYYG4=
 		</data>
+		<key>Kanit-Black.ttf</key>
+		<data>
+		fXxUXeLwKYnR8qdoSSkbdfbmt+Y=
+		</data>
+		<key>Kanit-BlackItalic.ttf</key>
+		<data>
+		V1Vq+IMckvYfkQmLzOJ/YAAsYZI=
+		</data>
+		<key>Kanit-Bold.ttf</key>
+		<data>
+		TTdqVEfv4uzh4+Of8Pwrvzrw5fg=
+		</data>
+		<key>Kanit-BoldItalic.ttf</key>
+		<data>
+		pRXZbosK5mbBgP+FPwcoJkfM54s=
+		</data>
+		<key>Kanit-ExtraBold.ttf</key>
+		<data>
+		6IDV8QpwYDTKcfF8ZTSj524TGa0=
+		</data>
+		<key>Kanit-ExtraBoldItalic.ttf</key>
+		<data>
+		FQXwRTW/uey6skUqGS0y9DGgV/0=
+		</data>
+		<key>Kanit-ExtraLight.ttf</key>
+		<data>
+		yUjaxmxnOjE6m0MpTjW3OhSgz2k=
+		</data>
+		<key>Kanit-ExtraLightItalic.ttf</key>
+		<data>
+		gecnQ9ENW/u45sEN9jRzxZ9GGFE=
+		</data>
+		<key>Kanit-Italic.ttf</key>
+		<data>
+		1LRfpwtx19O8Mew8CTQWcsZg2yg=
+		</data>
+		<key>Kanit-Light.ttf</key>
+		<data>
+		X3NoRHRyHd/JgWj1uKY011UuidQ=
+		</data>
+		<key>Kanit-LightItalic.ttf</key>
+		<data>
+		v6gA1gDbDXL9ooX86qLgtSNPL68=
+		</data>
+		<key>Kanit-Medium.ttf</key>
+		<data>
+		YaxuYY6mTKf0riREGU4LrUxyyPk=
+		</data>
+		<key>Kanit-MediumItalic.ttf</key>
+		<data>
+		1O/k7wEyoApWndz7e8KSBi/Nlro=
+		</data>
+		<key>Kanit-Regular.ttf</key>
+		<data>
+		TXtw6XF64K3swzL6ya90VwY4hqQ=
+		</data>
+		<key>Kanit-SemiBold.ttf</key>
+		<data>
+		lxX7CGlmBjc1+Eqjfz4tzWVM6Zk=
+		</data>
+		<key>Kanit-SemiBoldItalic.ttf</key>
+		<data>
+		q0fGkVDBVS3AEjC3rNlCPiw+bEc=
+		</data>
+		<key>Kanit-Thin.ttf</key>
+		<data>
+		wBocTYoMrWuLSYiwPJyPPfoZJCw=
+		</data>
+		<key>Kanit-ThinItalic.ttf</key>
+		<data>
+		aEo1bIifSKccpiINLk2G/YhPkXo=
+		</data>
 		<key>LB1.png</key>
 		<data>
 		5Z8JgJuj3y470c2QIY3YvhuGd+0=
@@ -2286,11 +2342,11 @@
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		s0h2J/M1rEl+IfxfYLi+gj4V/3Y=
+		aphaPjVHAZgUtQTaQT+ti3l/Lwk=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		Nxc6rtQXd33BUfyXvw86ctTWkOg=
+		Zba300xG+KMbydQ+NRiEqXLlkRU=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -2298,11 +2354,11 @@
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Nxc6rtQXd33BUfyXvw86ctTWkOg=
+		Zba300xG+KMbydQ+NRiEqXLlkRU=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		rMaid83klfBoDtZKOMi6FJDcIaA=
+		X/k3Gwzwyj2z45mQK4yEdaCDDtE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -2346,7 +2402,7 @@
 		</data>
 		<key>Yeezy_new_ep8.mlmodelc/coremldata.bin</key>
 		<data>
-		rfXM+PYanvmIrlioG8pYS2ZaEjg=
+		O+kK46Bp5l6rplobeXdZ8LjGc1w=
 		</data>
 		<key>Yeezy_new_ep8.mlmodelc/metadata.json</key>
 		<data>
@@ -3562,6 +3618,14 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>testmenu_sneakers.json</key>
+		<data>
+		tSufmlN3lExgnc1vZHLNXVHq/+M=
+		</data>
+		<key>testmenu_sneakers_data.json</key>
+		<data>
+		hH8VWYdtM/eZkIT5dY6zwQAXGT8=
+		</data>
 		<key>texture.png</key>
 		<data>
 		hpMEKTFefeFGZOBtBpuo687hf4U=
@@ -4665,144 +4729,11 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>.Roboto-Black.ttf.icloud</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			NbaYnGdOExYQsiNCseh1zH5V1A41GjtcJjQul3Q3kBY=
-			</data>
-		</dict>
-		<key>.Roboto-BlackItalic.ttf.icloud</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			bUPo4YeN9H7L1ZZjZ5ai13VdyNTgD73eKZpnq9Yw7Es=
-			</data>
-		</dict>
-		<key>.Roboto-Bold.ttf.icloud</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			IWlunlu0LMXMomt5+/HNP3tTdpkzKMMs1AiA2q458ac=
-			</data>
-		</dict>
-		<key>.Roboto-BoldItalic.ttf.icloud</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			9O70GIC8kUd3i4v44dCHKXHq4lwKxBcI//ET8xEq5K0=
-			</data>
-		</dict>
-		<key>.Roboto-Italic.ttf.icloud</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			/9FvI6CZk9AZ665JCPvqUut0aYudphrPtfC9ZUtdWl0=
-			</data>
-		</dict>
-		<key>.Roboto-Light.ttf.icloud</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			McOrHRmxDXskjmg8JME/MdDra81LvvoPO2noVaaoSSg=
-			</data>
-		</dict>
-		<key>.Roboto-LightItalic.ttf.icloud</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			OaBnpTNvE4hlFdNagH46OLUB+f+w0Hqjeqmr0kDCLec=
-			</data>
-		</dict>
-		<key>.Roboto-Medium.ttf.icloud</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			YOO2Om5O3oLF4rIMOiWUVAYAzj3kWwyJkbwzJL/wChA=
-			</data>
-		</dict>
-		<key>.Roboto-MediumItalic.ttf.icloud</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			jbzXMgWryW65EaK6L/ebgtfCA2/5Roarqhl0FeIERSE=
-			</data>
-		</dict>
-		<key>.Roboto-Regular.ttf.icloud</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			hrQzTSz1JFq92FbGR4GGvC+AM66tmxPzZoH576D8HrQ=
-			</data>
-		</dict>
-		<key>.Roboto-Thin.ttf.icloud</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			DlfIk0IOGfvWjAwvy+c6EsySRY18Ggs3HDHxZIkQ4/E=
-			</data>
-		</dict>
-		<key>.Roboto-ThinItalic.ttf.icloud</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			nAW+7ITpY4PHL1ZyVuYjD17rB5FvLAQSHBVpKkN1Tuo=
-			</data>
-		</dict>
-		<key>.RobotoCondensed-Bold.ttf.icloud</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			t04WSFkAoLXgkYwAE+ywSXlG3CYJ0vn5rQ1N47CITzg=
-			</data>
-		</dict>
-		<key>.RobotoCondensed-BoldItalic.ttf.icloud</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			tK7RT9FDWpLdurEkQUciS1J7mZyUGNImKDw1b3YDoEk=
-			</data>
-		</dict>
-		<key>.RobotoCondensed-Italic.ttf.icloud</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			qj5rmyf5jWA2wq0gFKxkKF/QXxFFcqUbSziMDvCTjok=
-			</data>
-		</dict>
-		<key>.RobotoCondensed-Light.ttf.icloud</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			4DIqLp2aQk0rJ6B7eK0zzGxmD1p6VfH1dAmwl9VcooU=
-			</data>
-		</dict>
-		<key>.RobotoCondensed-LightItalic.ttf.icloud</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			jos0oiZ7iTiNQwN3MHfhHYPhn9ci8Dy0ERr1olacsCo=
-			</data>
-		</dict>
-		<key>.RobotoCondensed-Regular.ttf.icloud</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			yxHVrZIx2dPrjzTSQSBCvXzmqEk4JkmfKHLQg4komrs=
-			</data>
-		</dict>
-		<key>Apache License.txt</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			PoSA4meYVN/90MTxYtmUH9W5IxvogYWfy0GVRM17bJk=
-			</data>
-		</dict>
 		<key>Assets.car</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UjF1vBVVS+igvFBFtieX4YQrAHhMiM28iZ1xGcEiqt8=
+			C1HYVFI/NPW7y9JaF/CeiS16+aMvNaV/z/bPzI7EwIg=
 			</data>
 		</dict>
 		<key>Base.lproj/EntrupyTOCropViewControllerLocalizable.strings</key>
@@ -4819,11 +4750,60 @@
 			UdHegDh1HZlDpSEYtzMl4sjA9q8uvK4K9OL0sRTFD6M=
 			</data>
 		</dict>
+		<key>EntrupyCameraActionsView.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			WxszG2zOTCfwZn+X1sN/vx8F/jXIO3GEYr0toV4Ipo8=
+			</data>
+		</dict>
+		<key>EntrupyCameraInformationView.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			JGqTNLDMWEYwdypVphL4sw9IPVyU6LlbmxVCEzzAY8w=
+			</data>
+		</dict>
+		<key>EntrupyCaptureCameraView.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			DqBWoZvjkN9TMbt4dOYkR11z8n6YBcTjNpXnj/ypdwg=
+			</data>
+		</dict>
+		<key>EntrupyCaptureDetail.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			/bcuA67PVceX4mqX3iDIJr9BNKVQQFNqPDJAsdr5tZE=
+			</data>
+		</dict>
+		<key>EntrupyCaptureNoteView.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			EWveiWtA2jSJ9rm0t4uWLWIF0BKJ7pWwQze7wBqmzkI=
+			</data>
+		</dict>
+		<key>EntrupyCaptureSuccessActionView.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			nWjHe6lueKwbxJzau43/5v0GgJiG0/Tq1/BsMv52BPo=
+			</data>
+		</dict>
+		<key>EntrupyCaptureVC.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			w8zX/+spE4UIGXrPelh5lnd6I5XFUkEtwxqBoIjoKu0=
+			</data>
+		</dict>
 		<key>EntrupyCaptureViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+wJ02C6QmtXxM6ZF4mtXWNNkqRVa/0KoIdokZMWs6BE=
+			t2PPGmX2kYppdk5ZqLaMiR4t1uGDFY1m4UFAaxGucCI=
 			</data>
 		</dict>
 		<key>EntrupyCollectionHeaderView.nib</key>
@@ -4833,11 +4813,32 @@
 			ZR/VAbLs2OA1d7HoAgypj+bi0LHqBXCL7v1a1MYP1Mc=
 			</data>
 		</dict>
+		<key>EntrupyCollectionReusableView.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			US1wFFfQvkcurkEE+jsFOvhC2JXZk/HIjMITBD4ZCKg=
+			</data>
+		</dict>
+		<key>EntrupyEditBarcodeViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			1xQi0PCKJjl7TcMQeEsYy/JSuAs7PL++/2LwOCQXrDQ=
+			</data>
+		</dict>
 		<key>EntrupyGalleryCollectionViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
 			NODKvziBUmHOffWDgCWxY82XFTcpwCuYvJGL5ZuG/7g=
+			</data>
+		</dict>
+		<key>EntrupyImageGuideViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			fdYdlFoID5E5dpc+CsxzsY0qNMgNsUboHUCPf/FgDZY=
 			</data>
 		</dict>
 		<key>EntrupyNYTPhotoViewer.bundle/NYTPhotoViewerCloseButtonX.png</key>
@@ -4882,11 +4883,39 @@
 			O5zbSQWt6aZ/jNl2Cy3agcYTniTV2Jj+X4vSe0vRQQE=
 			</data>
 		</dict>
+		<key>EntrupyProductItemTextView.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			hnDQHG2ynxfIAJtV0Ei0DQGza53qTWgLzH3wSLle2Ao=
+			</data>
+		</dict>
+		<key>EntrupyProductItemViewDescription.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			saZiQTH56e8s7HqCMNB1sPqP3NvxIirTxSVXYHqLicc=
+			</data>
+		</dict>
 		<key>EntrupySDK-Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			s8a6jQVKc23773PXeU1R2qFKz4muZurnthGtpMb5S8U=
+			0gbBywzrb66yRWKDQDX+ppS9Gzx02VBVReThW+XR+V8=
+			</data>
+		</dict>
+		<key>EntrupySneakerCollectionViewCell.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			NwHuxoLXFdOpVkBahCTRM5ZyMH+u32+/oUY2bY4F34I=
+			</data>
+		</dict>
+		<key>EntrupySneakerTextCollectionViewCell.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			w6ViOrC0YWkYzRHac+THx60ybxzPhPm+49VVAaV2hJw=
 			</data>
 		</dict>
 		<key>Frameworks/Default-568h@2x.png</key>
@@ -8480,25 +8509,39 @@
 			T2oeFyCkRq1JBWN/YYKXUOP25363nGeSB6wtxiXylCA=
 			</data>
 		</dict>
+		<key>Headers/EntrupyApp+Internal.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			wVlSFX6ttUlDgQPaOK4LPP8M74+wlhQfpli8mcnfvF4=
+			</data>
+		</dict>
 		<key>Headers/EntrupyApp.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gx77PcbMmgs1U0Ut6yC/cLXKCRMrdRo0p8TiIO4qM3A=
+			v4khX0aW5TCzw2vSCsfJ25Lu2oFUy/6dNjFAwryzgus=
+			</data>
+		</dict>
+		<key>Headers/EntrupyAppInternalProtocols.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			BCwpuNlvqTg9/sj7gFrSWzjwKgKwpm6zLBpWtjaHp2s=
 			</data>
 		</dict>
 		<key>Headers/EntrupyAppProtocols.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7+OtDuwgTgh+ddsj0OwVI4lY9fG9mkkXzbRcbkUtWf8=
+			KcD/9eXTaE+Grix7bTar0xbXIM315Gxv4ZtEo8GT6H0=
 			</data>
 		</dict>
 		<key>Headers/EntrupyConfigType.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RcYCAHO9173T6cCqf143Waj2Xl6Yd5MaFiV0zxG7N30=
+			SIbb8Vh4v9L09FMPWMiha7/s6PPIybckoWG+q+kztsA=
 			</data>
 		</dict>
 		<key>Headers/EntrupyErrorCode.h</key>
@@ -8508,18 +8551,11 @@
 			xvrIKDTgaNRkrX2o2k0cRBHXiegSaOOsQ5NtPwclU08=
 			</data>
 		</dict>
-		<key>Headers/EntrupyPrivateSDK.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			wVEaLIsffC6/0Yi1NmXQ1QGeb9eKpaFQCRd9r/QWDVg=
-			</data>
-		</dict>
 		<key>Headers/EntrupySDK-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LsgEHDlUu/UMGhpRfcmac54AA+5ORxE/Wwc8d9FgMI8=
+			V5u/JQ6ClNPp/XNveDpl2peRKK6sYib5/pa+0OcKI+0=
 			</data>
 		</dict>
 		<key>Headers/EntrupySDK.h</key>
@@ -8592,6 +8628,132 @@
 			MwjnpS6ivPCMWWR86OxosTU8kZlu85BBlKnJdVTGY8E=
 			</data>
 		</dict>
+		<key>Kanit-Black.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			f20rYa6qfm4dHwqZ/uZmxohlDwAlR4ah9Iv7oxrWOqk=
+			</data>
+		</dict>
+		<key>Kanit-BlackItalic.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			CXcOZgQVW+h3ERhDjJ8Wwok63cscO7BConizWGeEy6U=
+			</data>
+		</dict>
+		<key>Kanit-Bold.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			G06jHXXPT5D8tYmZoRBDW8LS2TbYl5f0PHvWr3Al1Vc=
+			</data>
+		</dict>
+		<key>Kanit-BoldItalic.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			oWb8E/bp4Pn0iYYO8YgYw5ZuAP2FunMGMaMYphb0jpU=
+			</data>
+		</dict>
+		<key>Kanit-ExtraBold.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6fcVVSLXK6otytqXuaoSahbJeYtO6EOjSgeGgCHbiT0=
+			</data>
+		</dict>
+		<key>Kanit-ExtraBoldItalic.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			NoVQ+hGP9YP6blcubphLg6hOQ0tEp/boILeJovug35s=
+			</data>
+		</dict>
+		<key>Kanit-ExtraLight.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			l+ISauyCAIfJIU61F+k30GSZ6bsEWWS+5EcmTsHMzFk=
+			</data>
+		</dict>
+		<key>Kanit-ExtraLightItalic.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			VNgnwPvMuQ5Xo6GKa3qoavkmoaLLCGHzIbz/65xr8D8=
+			</data>
+		</dict>
+		<key>Kanit-Italic.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Ra+ZKeilFeeeg1K1N7dD0yL6wDpM1Wh32ATyydg4mCU=
+			</data>
+		</dict>
+		<key>Kanit-Light.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6M4seBbVoLtYetAknwrsC2vSyJR6EJ8pFjJhnb8yZGw=
+			</data>
+		</dict>
+		<key>Kanit-LightItalic.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			CVQMLP1g1JDkIOYKY90i9xV9Fzg3rngOMeZxGnwh8VI=
+			</data>
+		</dict>
+		<key>Kanit-Medium.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			OFS/bpDjyzyPjOBLyGz3rFjYOz/7xLE0XqfREglbef8=
+			</data>
+		</dict>
+		<key>Kanit-MediumItalic.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			m0N16do9X7JGVyUbWgWPtC+cXxyCyl6GImdPflH765Q=
+			</data>
+		</dict>
+		<key>Kanit-Regular.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			VFQQ4swXt0hb/4m0NoqQDhSw8fyy455dHVLUIknT5FA=
+			</data>
+		</dict>
+		<key>Kanit-SemiBold.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			9KBnIj4+WDm3ASz35GilBcnaNF7g8v1WLfvC956FDWw=
+			</data>
+		</dict>
+		<key>Kanit-SemiBoldItalic.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			fUxzgIoKIRiKHIUgq3WjepShRzD78J26M+ku3tuz+ks=
+			</data>
+		</dict>
+		<key>Kanit-Thin.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			bE6ArEh1vNbypOPfiA/bKFxWI4W0N1HEm3gHQvqoWeM=
+			</data>
+		</dict>
+		<key>Kanit-ThinItalic.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2LrG+cpwzG9ucMcBnvIRHWUHVgVcTAXDpy0ee6vcUk4=
+			</data>
+		</dict>
 		<key>LB1.png</key>
 		<dict>
 			<key>hash2</key>
@@ -8652,14 +8814,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cFsvJrZbpKpnLDTJVWuvssoQYgqBkFUgwmLc4UNBick=
+			GLtZkJsHYbg1kfO5BbCfcnF6GCM0p1lhCUvk4Qkl0c8=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QdEr0ru84E6K0DXMLTQ/2JmNsCmpfzHAseKz+VqVDuA=
+			41UBH/ODXED+UcaK9MihqWutdRfA7Wdm7RErhLldLtc=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -8673,14 +8835,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			QdEr0ru84E6K0DXMLTQ/2JmNsCmpfzHAseKz+VqVDuA=
+			41UBH/ODXED+UcaK9MihqWutdRfA7Wdm7RErhLldLtc=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4CXET+CFz6Vvo4FKTUc/ej5bJ81GrfjejyMQxwhaEnI=
+			Cf6eF1tHnaWyY78R2nJ49ZuCrMaRtzpP6Gi+7ZuaNEg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -8757,7 +8919,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+utynyRIdDOmWzZaAV0U97qz1f0pxjC/dk5rY+RDv+Q=
+			Ms90tuGva8fvO6hbRG66l6jD901H27ViJc/Q5QlwCcg=
 			</data>
 		</dict>
 		<key>Yeezy_new_ep8.mlmodelc/metadata.json</key>
@@ -10708,6 +10870,20 @@
 			</data>
 			<key>optional</key>
 			<true/>
+		</dict>
+		<key>testmenu_sneakers.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			O5Xzo7RNaImkdgBuSTnSzVsbtfW7UcFGPICDeE9uxTU=
+			</data>
+		</dict>
+		<key>testmenu_sneakers_data.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			X54NiXwltlyBZQqSD+yM+hPyMs2e/A3xMpNshh1+3do=
+			</data>
 		</dict>
 		<key>texture.png</key>
 		<dict>
