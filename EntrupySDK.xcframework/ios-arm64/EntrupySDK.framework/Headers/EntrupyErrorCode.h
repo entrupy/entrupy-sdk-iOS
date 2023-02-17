@@ -1,10 +1,12 @@
 //
 //  EntrupyErrorCode.h
-//  EntrupySDK
+//  EntrupyHelpers
 //
-//  Created by Muhammad Waqas on 01/07/2022.
+//  Created by Dharini Raghavan on 10/29/22.
 //
 
+#ifndef EntrupyErrorCode_h
+#define EntrupyErrorCode_h
 
 //MARK: - ErrorCode
 
@@ -21,3 +23,6 @@ typedef NS_ENUM(NSUInteger, EntrupyErrorCode) {
     ErrorCodeUserDeniedPermissions, //The user denied necessary permissions
     ErrorCodeUnknownError //An unknown error occurred
 };
+
+
+#endif /* EntrupyErrorCode_h */

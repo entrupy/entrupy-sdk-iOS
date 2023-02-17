@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		TKav/VPZOR7o7dmqfNnDFLFOrpA=
+		H1oVNyawMK5RpQ4U8ayJDJm6xAM=
 		</data>
 		<key>Base.lproj/EntrupyTOCropViewControllerLocalizable.strings</key>
 		<data>
@@ -16,13 +16,17 @@
 		<data>
 		poDYGy1JWXBgPH3/wCEBNbVTOks=
 		</data>
+		<key>EntrupyBannerView.nib</key>
+		<data>
+		//hTn6wFfhE4tovc1rYQXbv9qs8=
+		</data>
 		<key>EntrupyCameraActionsView.nib</key>
 		<data>
 		rCyuJEg6GHVVT07k31HafomznHI=
 		</data>
 		<key>EntrupyCameraInformationView.nib</key>
 		<data>
-		MxpE75TmlLimuQyEotWsRUhjRC0=
+		AKy0irW//QB2JZkU4QZDUnegpWg=
 		</data>
 		<key>EntrupyCaptureCameraView.nib</key>
 		<data>
@@ -30,7 +34,7 @@
 		</data>
 		<key>EntrupyCaptureDetail.nib</key>
 		<data>
-		1mpGnmaGSARC/pAKb08zwkVBlNA=
+		YxjEnE6qJloo4ytYrzB5qU/Vobs=
 		</data>
 		<key>EntrupyCaptureNoteView.nib</key>
 		<data>
@@ -40,13 +44,9 @@
 		<data>
 		iu68XFnwK0IzH1UWTTlJPs5zrC4=
 		</data>
-		<key>EntrupyCaptureVC.nib</key>
-		<data>
-		DT4HEo0oPRbxS6qgvT5PxCsmdH8=
-		</data>
 		<key>EntrupyCaptureViewController.nib</key>
 		<data>
-		Nrg93iRdykYBuWD46DLJo4BRoG0=
+		Pt+E54Mtn+4TKfDeBP+nB3kvdbs=
 		</data>
 		<key>EntrupyCollectionHeaderView.nib</key>
 		<data>
@@ -58,15 +58,55 @@
 		</data>
 		<key>EntrupyEditBarcodeViewController.nib</key>
 		<data>
-		z7fmoljxiFb4IvOy7W8en4tzDOo=
+		pwaY5LytR9ngLUKWYGIm5g+tQmU=
 		</data>
 		<key>EntrupyGalleryCollectionViewCell.nib</key>
 		<data>
 		KQDONiAbBfQnBKOKfmUj70yCv+o=
 		</data>
+		<key>EntrupyGuideline.storyboardc/5jS-zx-z7E-view-9C8-1U-OPo.nib</key>
+		<data>
+		4CRBfKfyGk7vBSE2AVoN4gxj3KI=
+		</data>
+		<key>EntrupyGuideline.storyboardc/EntrupyImageGuidelineController.nib</key>
+		<data>
+		P1vXWU6yJ1JAkhwuK8CFoiuC12U=
+		</data>
+		<key>EntrupyGuideline.storyboardc/EntrupyWorkFlowViewController.nib</key>
+		<data>
+		8p+girLmi/1mPk+UP+envFYYwA8=
+		</data>
+		<key>EntrupyGuideline.storyboardc/Info.plist</key>
+		<data>
+		/HFEHbMcxgyfvG2SxIrCY1yTSBM=
+		</data>
+		<key>EntrupyGuideline.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib</key>
+		<data>
+		tRwkOjXU0pb64cr6pnvqOhm+rXE=
+		</data>
+		<key>EntrupyGuidelineSectionView.nib</key>
+		<data>
+		mWK8qjSGtlXXUDpOwmk2XWg0L8I=
+		</data>
+		<key>EntrupyHorizontalItemCell.nib</key>
+		<data>
+		nUlks1CoQ0BRb0K8er42Bwfmgwk=
+		</data>
+		<key>EntrupyHorizontalSectionCell.nib</key>
+		<data>
+		+l/putOQqJnL9ipJGW5ZTmuGVpM=
+		</data>
+		<key>EntrupyHorizontalSectionItemsView.nib</key>
+		<data>
+		dlGcg2KNY9QNTqBb2P7ZE7VID9Q=
+		</data>
 		<key>EntrupyImageGuideViewController.nib</key>
 		<data>
-		thUiPpYvSpqVqmloZQs6A5FiadA=
+		406wjuDrxZLpt3guc6swubTf5z4=
+		</data>
+		<key>EntrupyInstructionController.nib</key>
+		<data>
+		abhEGGYtgg2qx1wbq70RqK/qP0k=
 		</data>
 		<key>EntrupyNYTPhotoViewer.bundle/NYTPhotoViewerCloseButtonX.png</key>
 		<data>
@@ -98,7 +138,7 @@
 		</data>
 		<key>EntrupyProductItemViewDescription.nib</key>
 		<data>
-		rYSvxXastHGy1ScPJtUksVzUOm4=
+		qa7mamC57aMjw8KbcnP/j/9k/D0=
 		</data>
 		<key>EntrupySDK-Info.plist</key>
 		<data>
@@ -2164,21 +2204,13 @@
 		<data>
 		joZp/dhg2KvrJr5/stRqRAF67s8=
 		</data>
-		<key>Headers/EntrupyApp+Internal.h</key>
-		<data>
-		CdLeqz9WU7fGs8isL0FGCnO4Wu0=
-		</data>
 		<key>Headers/EntrupyApp.h</key>
 		<data>
-		UXLpINPRIVYpkr83ArPWwJiQcl4=
-		</data>
-		<key>Headers/EntrupyAppInternalProtocols.h</key>
-		<data>
-		eiYZan6xff+Q8K/pa3E36sa7h38=
+		Cu/oMQbj0p3++zn3ol7e5WtjN4w=
 		</data>
 		<key>Headers/EntrupyAppProtocols.h</key>
 		<data>
-		8NracNmn7KN7b3ywWoV8Mlr1q0A=
+		qidZtaRoYJO28jcDSQ21bQBWEio=
 		</data>
 		<key>Headers/EntrupyConfigType.h</key>
 		<data>
@@ -2186,55 +2218,19 @@
 		</data>
 		<key>Headers/EntrupyErrorCode.h</key>
 		<data>
-		4XhENvlUIH3xgYihUq2P517VKdk=
+		FZmbn7GalywcjgEIwRGneIcbKwQ=
 		</data>
 		<key>Headers/EntrupySDK-Swift.h</key>
 		<data>
-		LUyMbxwBIJq2vSsrfwRjGks51Jc=
+		6WdA+23AlysCIG2GhLwZfljCgV0=
 		</data>
 		<key>Headers/EntrupySDK.h</key>
 		<data>
-		yUMHBO8OObVXc6UK2N4y8hkbJ3I=
+		IZLZKOGMO/7nwcBQieedJ0xX6cQ=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		rATmrN3ZFXDnjTQwOvpG2frbCIs=
-		</data>
-		<key>Jordan_final_2.mlmodelc/analytics/coremldata.bin</key>
-		<data>
-		qaGjCNoD8JPIFck5Y0fKQm+cvNc=
-		</data>
-		<key>Jordan_final_2.mlmodelc/coremldata.bin</key>
-		<data>
-		rfXM+PYanvmIrlioG8pYS2ZaEjg=
-		</data>
-		<key>Jordan_final_2.mlmodelc/metadata.json</key>
-		<data>
-		dFyU+YZf86fTQW1gXUv7VX0kg6I=
-		</data>
-		<key>Jordan_final_2.mlmodelc/model.espresso.net</key>
-		<data>
-		AZuHrkKnVLFlGhgoQ7bYwwpiDrw=
-		</data>
-		<key>Jordan_final_2.mlmodelc/model.espresso.shape</key>
-		<data>
-		CBApaf4u5aWIqb9O71YdutXXpbE=
-		</data>
-		<key>Jordan_final_2.mlmodelc/model.espresso.weights</key>
-		<data>
-		lfo6CzTHGstmEBRb2nq78nCee/k=
-		</data>
-		<key>Jordan_final_2.mlmodelc/model/coremldata.bin</key>
-		<data>
-		xgXPW/ItgoSQEQKvq6s0lpqxxlg=
-		</data>
-		<key>Jordan_final_2.mlmodelc/neural_network_optionals/coremldata.bin</key>
-		<data>
-		uA3l0Th1hUHF8FJlrRRKufqG0ds=
-		</data>
-		<key>Jordan_final_2.mlmodelkey</key>
-		<data>
-		Rh5SbIf7GG69PN91RdOLUHXYYG4=
+		OJasLlZCblaP9B4cC7b4D4lXPnM=
 		</data>
 		<key>Kanit-Black.ttf</key>
 		<data>
@@ -2342,23 +2338,23 @@
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		aphaPjVHAZgUtQTaQT+ti3l/Lwk=
+		UvJvvnIs6YSX5BBNMqYp9ps+Ve8=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		Zba300xG+KMbydQ+NRiEqXLlkRU=
+		NK+c3DIO9UnL5xDk3NP+RmrT0rY=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		LBmLPGTtTRXSSX0H/YWdP8IgdAI=
+		X0Q1eetaBOCRh1+zKbl9NroH9uQ=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Zba300xG+KMbydQ+NRiEqXLlkRU=
+		NK+c3DIO9UnL5xDk3NP+RmrT0rY=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		X/k3Gwzwyj2z45mQK4yEdaCDDtE=
+		w9DVhvKdTlR7/0OZp9gcg9zuJk0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -2395,42 +2391,6 @@
 		<key>RR2.png</key>
 		<data>
 		a/AMqyxZM6NgstLkUFBS2kRCzCw=
-		</data>
-		<key>Yeezy_new_ep8.mlmodelc/analytics/coremldata.bin</key>
-		<data>
-		Azar5xAAaQTnldbbIu3gcV9wCTQ=
-		</data>
-		<key>Yeezy_new_ep8.mlmodelc/coremldata.bin</key>
-		<data>
-		O+kK46Bp5l6rplobeXdZ8LjGc1w=
-		</data>
-		<key>Yeezy_new_ep8.mlmodelc/metadata.json</key>
-		<data>
-		C4tGFFjrKsZNR9rTFv+kIIeif8U=
-		</data>
-		<key>Yeezy_new_ep8.mlmodelc/model.espresso.net</key>
-		<data>
-		AZuHrkKnVLFlGhgoQ7bYwwpiDrw=
-		</data>
-		<key>Yeezy_new_ep8.mlmodelc/model.espresso.shape</key>
-		<data>
-		CBApaf4u5aWIqb9O71YdutXXpbE=
-		</data>
-		<key>Yeezy_new_ep8.mlmodelc/model.espresso.weights</key>
-		<data>
-		JEladcAFwdiCy4O6tmTPTgDQjPE=
-		</data>
-		<key>Yeezy_new_ep8.mlmodelc/model/coremldata.bin</key>
-		<data>
-		xgXPW/ItgoSQEQKvq6s0lpqxxlg=
-		</data>
-		<key>Yeezy_new_ep8.mlmodelc/neural_network_optionals/coremldata.bin</key>
-		<data>
-		uA3l0Th1hUHF8FJlrRRKufqG0ds=
-		</data>
-		<key>Yeezy_new_ep8.mlmodelkey</key>
-		<data>
-		PSFIoLLyLpcM08d+kb2diKGQhdc=
 		</data>
 		<key>adidas-sizetag-barcode.png</key>
 		<data>
@@ -3394,7 +3354,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			QubrZIEXP5OaaGmu+rzRy2xTM9A=
+			J+Wllmf8q6F1Aj/QOdwvcs3/lLQ=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3435,38 +3395,6 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>final_model_7.mlmodelc/analytics/coremldata.bin</key>
-		<data>
-		j0TBhq22+9k0wG7PZ0AZ4idrQcM=
-		</data>
-		<key>final_model_7.mlmodelc/coremldata.bin</key>
-		<data>
-		Wq+RBMiJryR9FEbuOoi+ThEQVPs=
-		</data>
-		<key>final_model_7.mlmodelc/metadata.json</key>
-		<data>
-		fUwAo+ZMEvYsctpN5FLlJZ+K9TY=
-		</data>
-		<key>final_model_7.mlmodelc/model.espresso.net</key>
-		<data>
-		/J/i/nFVgv1KCI/IicLw+v58FTU=
-		</data>
-		<key>final_model_7.mlmodelc/model.espresso.shape</key>
-		<data>
-		ZEF8FKQwXI8vxOmTUiA1ex1qrEg=
-		</data>
-		<key>final_model_7.mlmodelc/model.espresso.weights</key>
-		<data>
-		2Wwpr8Vsn5mibNtUKnrk4Ef1iPg=
-		</data>
-		<key>final_model_7.mlmodelc/model/coremldata.bin</key>
-		<data>
-		Io+TJ3ezTo3sJm0h972cRJBCikg=
-		</data>
-		<key>final_model_7.mlmodelc/neural_network_optionals/coremldata.bin</key>
-		<data>
-		uA3l0Th1hUHF8FJlrRRKufqG0ds=
-		</data>
 		<key>fr.lproj/EntrupyTOCropViewControllerLocalizable.strings</key>
 		<dict>
 			<key>hash</key>
@@ -3516,7 +3444,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Q5r0UjFCnKM35nAjlPuLldUkYbc=
+			2jDWZTyJNyiYYwsj8riP4XZwmPg=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3533,6 +3461,74 @@
 		<key>lightbox-parallel.png</key>
 		<data>
 		ctruV8GgHQHhjwH68WR73x/qJII=
+		</data>
+		<key>mlmodel_adidas_yeezy_350_v2_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_yeezy350v2_1.0.0_model.mlmodelc/analytics/coremldata.bin</key>
+		<data>
+		7s6N9AA13Bhe7H/QzyUwEYMbstI=
+		</data>
+		<key>mlmodel_adidas_yeezy_350_v2_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_yeezy350v2_1.0.0_model.mlmodelc/coremldata.bin</key>
+		<data>
+		rfXM+PYanvmIrlioG8pYS2ZaEjg=
+		</data>
+		<key>mlmodel_adidas_yeezy_350_v2_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_yeezy350v2_1.0.0_model.mlmodelc/metadata.json</key>
+		<data>
+		m6vTzqnqyhA0Yd3xyk+zYlFO/lQ=
+		</data>
+		<key>mlmodel_adidas_yeezy_350_v2_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_yeezy350v2_1.0.0_model.mlmodelc/model.espresso.net</key>
+		<data>
+		AZuHrkKnVLFlGhgoQ7bYwwpiDrw=
+		</data>
+		<key>mlmodel_adidas_yeezy_350_v2_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_yeezy350v2_1.0.0_model.mlmodelc/model.espresso.shape</key>
+		<data>
+		CBApaf4u5aWIqb9O71YdutXXpbE=
+		</data>
+		<key>mlmodel_adidas_yeezy_350_v2_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_yeezy350v2_1.0.0_model.mlmodelc/model.espresso.weights</key>
+		<data>
+		JEladcAFwdiCy4O6tmTPTgDQjPE=
+		</data>
+		<key>mlmodel_adidas_yeezy_350_v2_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_yeezy350v2_1.0.0_model.mlmodelc/model/coremldata.bin</key>
+		<data>
+		xgXPW/ItgoSQEQKvq6s0lpqxxlg=
+		</data>
+		<key>mlmodel_adidas_yeezy_350_v2_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_yeezy350v2_1.0.0_model.mlmodelc/neural_network_optionals/coremldata.bin</key>
+		<data>
+		uA3l0Th1hUHF8FJlrRRKufqG0ds=
+		</data>
+		<key>mlmodel_nike_air_jordan_1_high_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_jordan1_1.0.0_model.mlmodelc/analytics/coremldata.bin</key>
+		<data>
+		AQVybjZ4eRhAL+njvZtMSME7Nkw=
+		</data>
+		<key>mlmodel_nike_air_jordan_1_high_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_jordan1_1.0.0_model.mlmodelc/coremldata.bin</key>
+		<data>
+		rfXM+PYanvmIrlioG8pYS2ZaEjg=
+		</data>
+		<key>mlmodel_nike_air_jordan_1_high_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_jordan1_1.0.0_model.mlmodelc/metadata.json</key>
+		<data>
+		n7RXPiuTqO8xz51y3ZCcBPbKhlU=
+		</data>
+		<key>mlmodel_nike_air_jordan_1_high_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_jordan1_1.0.0_model.mlmodelc/model.espresso.net</key>
+		<data>
+		AZuHrkKnVLFlGhgoQ7bYwwpiDrw=
+		</data>
+		<key>mlmodel_nike_air_jordan_1_high_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_jordan1_1.0.0_model.mlmodelc/model.espresso.shape</key>
+		<data>
+		CBApaf4u5aWIqb9O71YdutXXpbE=
+		</data>
+		<key>mlmodel_nike_air_jordan_1_high_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_jordan1_1.0.0_model.mlmodelc/model.espresso.weights</key>
+		<data>
+		lfo6CzTHGstmEBRb2nq78nCee/k=
+		</data>
+		<key>mlmodel_nike_air_jordan_1_high_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_jordan1_1.0.0_model.mlmodelc/model/coremldata.bin</key>
+		<data>
+		xgXPW/ItgoSQEQKvq6s0lpqxxlg=
+		</data>
+		<key>mlmodel_nike_air_jordan_1_high_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_jordan1_1.0.0_model.mlmodelc/neural_network_optionals/coremldata.bin</key>
+		<data>
+		uA3l0Th1hUHF8FJlrRRKufqG0ds=
+		</data>
+		<key>mlmodelconfig.json</key>
+		<data>
+		l7blYg1kX++h8MnjzcYFUA/O6QA=
 		</data>
 		<key>ms.lproj/EntrupyTOCropViewControllerLocalizable.strings</key>
 		<dict>
@@ -3618,14 +3614,6 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>testmenu_sneakers.json</key>
-		<data>
-		tSufmlN3lExgnc1vZHLNXVHq/+M=
-		</data>
-		<key>testmenu_sneakers_data.json</key>
-		<data>
-		hH8VWYdtM/eZkIT5dY6zwQAXGT8=
-		</data>
 		<key>texture.png</key>
 		<data>
 		hpMEKTFefeFGZOBtBpuo687hf4U=
@@ -4733,7 +4721,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			C1HYVFI/NPW7y9JaF/CeiS16+aMvNaV/z/bPzI7EwIg=
+			RYjdjFhU82ek5byF3ygThvWmxDsK/Csw23kLx3/T1YM=
 			</data>
 		</dict>
 		<key>Base.lproj/EntrupyTOCropViewControllerLocalizable.strings</key>
@@ -4750,6 +4738,13 @@
 			UdHegDh1HZlDpSEYtzMl4sjA9q8uvK4K9OL0sRTFD6M=
 			</data>
 		</dict>
+		<key>EntrupyBannerView.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			05zzDG9xOMSJgBTr5F3Gx5GtRM5LP1107sxV/dMoQr4=
+			</data>
+		</dict>
 		<key>EntrupyCameraActionsView.nib</key>
 		<dict>
 			<key>hash2</key>
@@ -4761,7 +4756,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JGqTNLDMWEYwdypVphL4sw9IPVyU6LlbmxVCEzzAY8w=
+			QcRIJmAMwrgfUv/O5HoAzP9UIDGDFhZT8hMnq5A4iKY=
 			</data>
 		</dict>
 		<key>EntrupyCaptureCameraView.nib</key>
@@ -4775,7 +4770,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/bcuA67PVceX4mqX3iDIJr9BNKVQQFNqPDJAsdr5tZE=
+			Miaw86lY8fmreonAv7ncSVBHMTtgvxJERqytMTKRG1c=
 			</data>
 		</dict>
 		<key>EntrupyCaptureNoteView.nib</key>
@@ -4792,18 +4787,11 @@
 			nWjHe6lueKwbxJzau43/5v0GgJiG0/Tq1/BsMv52BPo=
 			</data>
 		</dict>
-		<key>EntrupyCaptureVC.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			w8zX/+spE4UIGXrPelh5lnd6I5XFUkEtwxqBoIjoKu0=
-			</data>
-		</dict>
 		<key>EntrupyCaptureViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			t2PPGmX2kYppdk5ZqLaMiR4t1uGDFY1m4UFAaxGucCI=
+			wym6i+morasXT5nXxGDx/sQf+Fq01CSW5E4XBiqWqT8=
 			</data>
 		</dict>
 		<key>EntrupyCollectionHeaderView.nib</key>
@@ -4824,7 +4812,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1xQi0PCKJjl7TcMQeEsYy/JSuAs7PL++/2LwOCQXrDQ=
+			jiuR3Pmx0ZxKWJYl6bJmAJOQQRQZjkIJ/cNAwTDBQOU=
 			</data>
 		</dict>
 		<key>EntrupyGalleryCollectionViewCell.nib</key>
@@ -4834,11 +4822,81 @@
 			NODKvziBUmHOffWDgCWxY82XFTcpwCuYvJGL5ZuG/7g=
 			</data>
 		</dict>
+		<key>EntrupyGuideline.storyboardc/5jS-zx-z7E-view-9C8-1U-OPo.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			86CAzrT1cqDPVarMM7cKks+V2WdPOZGFvowvDqyuXJE=
+			</data>
+		</dict>
+		<key>EntrupyGuideline.storyboardc/EntrupyImageGuidelineController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			WH4AhByw649UXBnJm7bcK+sBqHjQQT6pNwqKEzWsGww=
+			</data>
+		</dict>
+		<key>EntrupyGuideline.storyboardc/EntrupyWorkFlowViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			OCG2OEYb9XW+fo2BB7jF4GiMf72Zpw3F4o1z+iKEoKc=
+			</data>
+		</dict>
+		<key>EntrupyGuideline.storyboardc/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			iUdwhm6b01/4ewg44tiOYW6ecfIYqU46BbgZkNXg6QE=
+			</data>
+		</dict>
+		<key>EntrupyGuideline.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			bTlyoQhPf4QkarhXwRrghj1cLcDuxXRdcppRE6Lc4Zs=
+			</data>
+		</dict>
+		<key>EntrupyGuidelineSectionView.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			G0PTXeq++58l9dr/CAmVKdiqVJ3jVOv9ULv9VKqH5yE=
+			</data>
+		</dict>
+		<key>EntrupyHorizontalItemCell.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			jvwKWHaCG4RXmuWGyWOT2bib3thVGEuD+kSTuDZtQcI=
+			</data>
+		</dict>
+		<key>EntrupyHorizontalSectionCell.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			KE710QBsptqHrgNiZGOsiVUxxLhS8u6excumWjioaZE=
+			</data>
+		</dict>
+		<key>EntrupyHorizontalSectionItemsView.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			jHAP6ATuWyn7nY+M6V76rzSC3QmoFI3GJcPFwdGDQtM=
+			</data>
+		</dict>
 		<key>EntrupyImageGuideViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fdYdlFoID5E5dpc+CsxzsY0qNMgNsUboHUCPf/FgDZY=
+			3McMNdx2o4YwSzjHbnX4T0hOjVTVCSezujY2J9epVBA=
+			</data>
+		</dict>
+		<key>EntrupyInstructionController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			fAaZhAXaEoqxhPbcz+HP3XL1MaF2+Kag4MGeYaUB6eg=
 			</data>
 		</dict>
 		<key>EntrupyNYTPhotoViewer.bundle/NYTPhotoViewerCloseButtonX.png</key>
@@ -4894,7 +4952,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			saZiQTH56e8s7HqCMNB1sPqP3NvxIirTxSVXYHqLicc=
+			BHptwWKpi76Y79GUkqM8eNfwGWwug7X99GPkMLeV1/Y=
 			</data>
 		</dict>
 		<key>EntrupySDK-Info.plist</key>
@@ -8509,32 +8567,18 @@
 			T2oeFyCkRq1JBWN/YYKXUOP25363nGeSB6wtxiXylCA=
 			</data>
 		</dict>
-		<key>Headers/EntrupyApp+Internal.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			wVlSFX6ttUlDgQPaOK4LPP8M74+wlhQfpli8mcnfvF4=
-			</data>
-		</dict>
 		<key>Headers/EntrupyApp.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			v4khX0aW5TCzw2vSCsfJ25Lu2oFUy/6dNjFAwryzgus=
-			</data>
-		</dict>
-		<key>Headers/EntrupyAppInternalProtocols.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			BCwpuNlvqTg9/sj7gFrSWzjwKgKwpm6zLBpWtjaHp2s=
+			mN7tmnTdqadquc+HHLz746LHmvSOJia4L+3tV8i4aoI=
 			</data>
 		</dict>
 		<key>Headers/EntrupyAppProtocols.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KcD/9eXTaE+Grix7bTar0xbXIM315Gxv4ZtEo8GT6H0=
+			32Ihr/EZ5ham+UVkRUubmIT9A4NIy7JmxvFbEZAzXMU=
 			</data>
 		</dict>
 		<key>Headers/EntrupyConfigType.h</key>
@@ -8548,84 +8592,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xvrIKDTgaNRkrX2o2k0cRBHXiegSaOOsQ5NtPwclU08=
+			/1a/y2bOjtNcLS4Zk+q6frneh7o+3qwDW+a0prNdhnE=
 			</data>
 		</dict>
 		<key>Headers/EntrupySDK-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			V5u/JQ6ClNPp/XNveDpl2peRKK6sYib5/pa+0OcKI+0=
+			WwKvYzhXZ/cO2WQBwhA+L7ReQi+j0alXhy5/ts9+pl8=
 			</data>
 		</dict>
 		<key>Headers/EntrupySDK.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nlYREYQ7oqb+gpFw4DYelw4AOEVSEabKCBA5pBcpIpY=
-			</data>
-		</dict>
-		<key>Jordan_final_2.mlmodelc/analytics/coremldata.bin</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			NgjBFXmb2pxqC09nfU4QjVIycCeMrRTC8c+0Mzk4f58=
-			</data>
-		</dict>
-		<key>Jordan_final_2.mlmodelc/coremldata.bin</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			+utynyRIdDOmWzZaAV0U97qz1f0pxjC/dk5rY+RDv+Q=
-			</data>
-		</dict>
-		<key>Jordan_final_2.mlmodelc/metadata.json</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			04VGKdYhrJp55HaV9khIyl6erMhaUeCSzoN9K98x/10=
-			</data>
-		</dict>
-		<key>Jordan_final_2.mlmodelc/model.espresso.net</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			6VBLQs599BPwI/iMDEj8CL0gbQIWhcudv377NyjbjdU=
-			</data>
-		</dict>
-		<key>Jordan_final_2.mlmodelc/model.espresso.shape</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Nv7SvMN5NYcYONAv3HWy1C7SHvAEKlm8o1ZEjkdPpEM=
-			</data>
-		</dict>
-		<key>Jordan_final_2.mlmodelc/model.espresso.weights</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			TVyWzC255y0C0DGRk5rk0l6DilhlfgzJGZmy8NbpGwo=
-			</data>
-		</dict>
-		<key>Jordan_final_2.mlmodelc/model/coremldata.bin</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			yyNGTViHYY/b2Bmdn6pOA79QjtlJtmeNzBV5kDYIy2s=
-			</data>
-		</dict>
-		<key>Jordan_final_2.mlmodelc/neural_network_optionals/coremldata.bin</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			LDTOHfI7g4xavyp/ZDfMo9MGftUJ/yXxHfaxG1grUes=
-			</data>
-		</dict>
-		<key>Jordan_final_2.mlmodelkey</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			MwjnpS6ivPCMWWR86OxosTU8kZlu85BBlKnJdVTGY8E=
+			5sXdNvucIlYk+mItURki6IrevACREGnJ2WjMVSkiIbs=
 			</data>
 		</dict>
 		<key>Kanit-Black.ttf</key>
@@ -8814,35 +8795,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GLtZkJsHYbg1kfO5BbCfcnF6GCM0p1lhCUvk4Qkl0c8=
+			vriH5ucQC5JMpc69iJgBdvb5rvU4H1G84S+S3Buvwo0=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			41UBH/ODXED+UcaK9MihqWutdRfA7Wdm7RErhLldLtc=
+			A41AE6Uhdo6eSw7L1uuJB5yOq58uzoWO/b+QMgPEPOk=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rw+pF+vDsNtOHpPzv8Uy7G/O/Ahue/JrnYSvleGK7ig=
+			J8ucbEKS5mU3dZoPoB7uMToBe60UYCirevIi3NSv+Yw=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			41UBH/ODXED+UcaK9MihqWutdRfA7Wdm7RErhLldLtc=
+			A41AE6Uhdo6eSw7L1uuJB5yOq58uzoWO/b+QMgPEPOk=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Cf6eF1tHnaWyY78R2nJ49ZuCrMaRtzpP6Gi+7ZuaNEg=
+			I0UvasvFTjVzsgnIEvmSLs7ILCOPBusxTNTWbV6BtdY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -8906,69 +8887,6 @@
 			<key>hash2</key>
 			<data>
 			IcM91M1YpsBM67sipfe7X4GhGFic8QrEkirYMLr0N/E=
-			</data>
-		</dict>
-		<key>Yeezy_new_ep8.mlmodelc/analytics/coremldata.bin</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			WZ7b8Hcrqr6onDwuz9jC8E1QTbB6C3AE42vquF9IXdM=
-			</data>
-		</dict>
-		<key>Yeezy_new_ep8.mlmodelc/coremldata.bin</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Ms90tuGva8fvO6hbRG66l6jD901H27ViJc/Q5QlwCcg=
-			</data>
-		</dict>
-		<key>Yeezy_new_ep8.mlmodelc/metadata.json</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			X8rRcS9xWiqOwKwfyqyMOtfmz5Xd6GleUKgBpN2yq8w=
-			</data>
-		</dict>
-		<key>Yeezy_new_ep8.mlmodelc/model.espresso.net</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			6VBLQs599BPwI/iMDEj8CL0gbQIWhcudv377NyjbjdU=
-			</data>
-		</dict>
-		<key>Yeezy_new_ep8.mlmodelc/model.espresso.shape</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Nv7SvMN5NYcYONAv3HWy1C7SHvAEKlm8o1ZEjkdPpEM=
-			</data>
-		</dict>
-		<key>Yeezy_new_ep8.mlmodelc/model.espresso.weights</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			1A4pHeSeUPV8l3vd1BPM/kDbvBRs/MLf+gHkwqn3nto=
-			</data>
-		</dict>
-		<key>Yeezy_new_ep8.mlmodelc/model/coremldata.bin</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			yyNGTViHYY/b2Bmdn6pOA79QjtlJtmeNzBV5kDYIy2s=
-			</data>
-		</dict>
-		<key>Yeezy_new_ep8.mlmodelc/neural_network_optionals/coremldata.bin</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			LDTOHfI7g4xavyp/ZDfMo9MGftUJ/yXxHfaxG1grUes=
-			</data>
-		</dict>
-		<key>Yeezy_new_ep8.mlmodelkey</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			qHH7BwO3z5uESjSEW++HLfYJUuehLRknj7vzvwEpMEw=
 			</data>
 		</dict>
 		<key>adidas-sizetag-barcode.png</key>
@@ -10611,7 +10529,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Hs1zl40ea3VqNR22gC9Oz4ErMkmbJCyLVoyqd/UKHR0=
+			nLqWXAkHdSyeaNiZCfzNvqzAjmjmO21h9URthtBHvK8=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -10651,62 +10569,6 @@
 			</data>
 			<key>optional</key>
 			<true/>
-		</dict>
-		<key>final_model_7.mlmodelc/analytics/coremldata.bin</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			PC2lK1mrcsN1PcQyjqsaKRqu1+9VLQ/bJXHCSTkV04U=
-			</data>
-		</dict>
-		<key>final_model_7.mlmodelc/coremldata.bin</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			aRTmBO/myugBuUasGH4z1VCWwlhSAdEZrhm+kDHKsCs=
-			</data>
-		</dict>
-		<key>final_model_7.mlmodelc/metadata.json</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			DSpl54t1xoU99NU83EEMi3Z60AUuAnbRrFR1kKStUZc=
-			</data>
-		</dict>
-		<key>final_model_7.mlmodelc/model.espresso.net</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Gq2vIJRR3wDRdRroxFkh+wvPHzgUjjRrkRcCmTgNFrA=
-			</data>
-		</dict>
-		<key>final_model_7.mlmodelc/model.espresso.shape</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			cyREAwRfcCLj7IXGjE7QVHTIx6BYsiWztEYkVn7bkGY=
-			</data>
-		</dict>
-		<key>final_model_7.mlmodelc/model.espresso.weights</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			O6xIaPTCvUMKMkuPkx8esERhGjPSvfhqNdB7xrbc8pk=
-			</data>
-		</dict>
-		<key>final_model_7.mlmodelc/model/coremldata.bin</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			U96s1e8SJ+FvxoP54mPSoSE1zjenp52jkezEk+kbtYE=
-			</data>
-		</dict>
-		<key>final_model_7.mlmodelc/neural_network_optionals/coremldata.bin</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			LDTOHfI7g4xavyp/ZDfMo9MGftUJ/yXxHfaxG1grUes=
-			</data>
 		</dict>
 		<key>fr.lproj/EntrupyTOCropViewControllerLocalizable.strings</key>
 		<dict>
@@ -10757,7 +10619,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			z2PU97P4sGhKsTVvojVHQH6grrgRswQvr3kRHUSC/BQ=
+			JcFac2dnG2ooK61vmHyoCiPOV+gbXui9VDGLWC/y2Yo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -10776,6 +10638,125 @@
 			<key>hash2</key>
 			<data>
 			tduRuPE/roBQaVxa9xj4URwiYpydkZt5YQg33B4yD1s=
+			</data>
+		</dict>
+		<key>mlmodel_adidas_yeezy_350_v2_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_yeezy350v2_1.0.0_model.mlmodelc/analytics/coremldata.bin</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			JrzYKEObBgqPU4PwPHIrSyfogOaPbjp5qVSV95OUqvU=
+			</data>
+		</dict>
+		<key>mlmodel_adidas_yeezy_350_v2_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_yeezy350v2_1.0.0_model.mlmodelc/coremldata.bin</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			+utynyRIdDOmWzZaAV0U97qz1f0pxjC/dk5rY+RDv+Q=
+			</data>
+		</dict>
+		<key>mlmodel_adidas_yeezy_350_v2_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_yeezy350v2_1.0.0_model.mlmodelc/metadata.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			fXcmoaWmie1Gjn6KJFnufkJ7B1G4S9vss0vrSO/024I=
+			</data>
+		</dict>
+		<key>mlmodel_adidas_yeezy_350_v2_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_yeezy350v2_1.0.0_model.mlmodelc/model.espresso.net</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6VBLQs599BPwI/iMDEj8CL0gbQIWhcudv377NyjbjdU=
+			</data>
+		</dict>
+		<key>mlmodel_adidas_yeezy_350_v2_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_yeezy350v2_1.0.0_model.mlmodelc/model.espresso.shape</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Nv7SvMN5NYcYONAv3HWy1C7SHvAEKlm8o1ZEjkdPpEM=
+			</data>
+		</dict>
+		<key>mlmodel_adidas_yeezy_350_v2_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_yeezy350v2_1.0.0_model.mlmodelc/model.espresso.weights</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			1A4pHeSeUPV8l3vd1BPM/kDbvBRs/MLf+gHkwqn3nto=
+			</data>
+		</dict>
+		<key>mlmodel_adidas_yeezy_350_v2_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_yeezy350v2_1.0.0_model.mlmodelc/model/coremldata.bin</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			yyNGTViHYY/b2Bmdn6pOA79QjtlJtmeNzBV5kDYIy2s=
+			</data>
+		</dict>
+		<key>mlmodel_adidas_yeezy_350_v2_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_yeezy350v2_1.0.0_model.mlmodelc/neural_network_optionals/coremldata.bin</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			LDTOHfI7g4xavyp/ZDfMo9MGftUJ/yXxHfaxG1grUes=
+			</data>
+		</dict>
+		<key>mlmodel_nike_air_jordan_1_high_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_jordan1_1.0.0_model.mlmodelc/analytics/coremldata.bin</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			9R3GfbJBgcvOjiRHzrdaDDDGJ6UayftrkkqlxxmFf2g=
+			</data>
+		</dict>
+		<key>mlmodel_nike_air_jordan_1_high_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_jordan1_1.0.0_model.mlmodelc/coremldata.bin</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			+utynyRIdDOmWzZaAV0U97qz1f0pxjC/dk5rY+RDv+Q=
+			</data>
+		</dict>
+		<key>mlmodel_nike_air_jordan_1_high_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_jordan1_1.0.0_model.mlmodelc/metadata.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			RrnLUgdLHzWe/0Ex1ngZtZluDz9dA8Fzr6A2N/lO2nk=
+			</data>
+		</dict>
+		<key>mlmodel_nike_air_jordan_1_high_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_jordan1_1.0.0_model.mlmodelc/model.espresso.net</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6VBLQs599BPwI/iMDEj8CL0gbQIWhcudv377NyjbjdU=
+			</data>
+		</dict>
+		<key>mlmodel_nike_air_jordan_1_high_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_jordan1_1.0.0_model.mlmodelc/model.espresso.shape</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Nv7SvMN5NYcYONAv3HWy1C7SHvAEKlm8o1ZEjkdPpEM=
+			</data>
+		</dict>
+		<key>mlmodel_nike_air_jordan_1_high_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_jordan1_1.0.0_model.mlmodelc/model.espresso.weights</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			TVyWzC255y0C0DGRk5rk0l6DilhlfgzJGZmy8NbpGwo=
+			</data>
+		</dict>
+		<key>mlmodel_nike_air_jordan_1_high_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_jordan1_1.0.0_model.mlmodelc/model/coremldata.bin</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			yyNGTViHYY/b2Bmdn6pOA79QjtlJtmeNzBV5kDYIy2s=
+			</data>
+		</dict>
+		<key>mlmodel_nike_air_jordan_1_high_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_jordan1_1.0.0_model.mlmodelc/neural_network_optionals/coremldata.bin</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			LDTOHfI7g4xavyp/ZDfMo9MGftUJ/yXxHfaxG1grUes=
+			</data>
+		</dict>
+		<key>mlmodelconfig.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			l62Mp8YRRPWFnkkJnQcNv7lzd6DJwHLIjJaJ9a+r6E8=
 			</data>
 		</dict>
 		<key>ms.lproj/EntrupyTOCropViewControllerLocalizable.strings</key>
@@ -10870,20 +10851,6 @@
 			</data>
 			<key>optional</key>
 			<true/>
-		</dict>
-		<key>testmenu_sneakers.json</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			O5Xzo7RNaImkdgBuSTnSzVsbtfW7UcFGPICDeE9uxTU=
-			</data>
-		</dict>
-		<key>testmenu_sneakers_data.json</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			X54NiXwltlyBZQqSD+yM+hPyMs2e/A3xMpNshh1+3do=
-			</data>
 		</dict>
 		<key>texture.png</key>
 		<dict>

@@ -13,6 +13,6 @@ FOUNDATION_EXPORT double EntrupySDKVersionNumber;
 //! Project version string for EntrupySDK.
 FOUNDATION_EXPORT const unsigned char EntrupySDKVersionString[];
 
+
 #import <EntrupySDK/EntrupyApp.h>
 #import <EntrupySDK/EntrupyAppProtocols.h>
-#import <EntrupySDK/EntrupyErrorCode.h>

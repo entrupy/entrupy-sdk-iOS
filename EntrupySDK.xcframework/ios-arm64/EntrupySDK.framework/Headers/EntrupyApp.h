@@ -19,11 +19,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak) id<EntrupyCaptureDelegate> captureDelegate;
 @property (nonatomic, weak) id<EntrupySearchDelegate> searchDelegate;
 @property (nonatomic, strong) id<EntrupyTheme> theme;
+@property (nonatomic, copy, nullable) void(^backgroundTransferCompletionHandler)(void);
 
 + (instancetype)sharedInstance;
 
 /**
- Fetches the configuration required for running the capture and search actions
+ Fetches the configuration required for running the capture and search actions.
  
  This function is optional to implement and can be called once from the viewDidAppear function of the View Controllers invoking the SDK’s startCapture/searchSubmissions method. It fetches configuration required for performing these actions. If this is not explicitly called this’ll be implicitly handled by the sdk before launching the capture workflow or beginning the search causing a few seconds overhead.
  
@@ -232,6 +233,23 @@ NS_ASSUME_NONNULL_BEGIN
  */
 -(BOOL) isAuthorizationValid;
 
+/**
+ Handles EntrupySDK related upload or download events that occured while the app was in the suspended state.
+
+ Call "interceptApplication" in the AppDelegate's handleEventsForBackgroundURLSession method.
+ 
+ 
+ ```swift
+ // AppDelegate
+
+ func application(_ application: UIApplication, handleEventsForBackgroundURLSession identifier: String, completionHandler: @escaping () -> Void) {
+     EntrupyApp.sharedInstance().interceptApplication(application, handleEventsForBackgroundURLSession: identifier completionHandler:completionHandler)
+ }
+ 
+ ```
+ 
+*/
+-(void)interceptApplication:(UIApplication *)application handleEventsForBackgroundURLSession:(NSString *)identifier completionHandler:(void(^ _Nullable)(void))completionHandler;
 @end
 
 NS_ASSUME_NONNULL_END

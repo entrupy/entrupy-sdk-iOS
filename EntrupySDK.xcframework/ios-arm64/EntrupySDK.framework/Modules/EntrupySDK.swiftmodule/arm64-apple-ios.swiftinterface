@@ -1,8 +1,9 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
 // swift-module-flags: -target arm64-apple-ios14.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name EntrupySDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
+import CoreML
 import CryptoKit
 @_exported import EntrupySDK
 import Foundation
@@ -15,3 +16,33 @@ import _StringProcessing
   @objc var foregroundColor: UIKit.UIColor? { get }
   @objc var borderColor: UIKit.UIColor? { get }
 }
+extension Swift.Array {
+  public subscript(safe index: Swift.Int) -> Element? {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) public class SCPageControlView : UIKit.UIView {
+  public enum SCPageStyle : Swift.Int {
+    case SCNormal
+    case SCJAMoveCircle
+    case SCJAFillCircle
+    case SCJAFlatBar
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @_Concurrency.MainActor(unsafe) public var scp_style: EntrupySDK.SCPageControlView.SCPageStyle
+  @_Concurrency.MainActor(unsafe) public var isCircle: Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) public func set_view(_ page: Swift.Int, current: Swift.Int, current_color: UIKit.UIColor, disable_color: UIKit.UIColor?)
+  @_Concurrency.MainActor(unsafe) public func set_rotateDevice()
+  @_Concurrency.MainActor(unsafe) open func scroll_did(_ scrollView: UIKit.UIScrollView)
+  @objc deinit
+}
+extension EntrupySDK.SCPageControlView.SCPageStyle : Swift.Equatable {}
+extension EntrupySDK.SCPageControlView.SCPageStyle : Swift.Hashable {}
+extension EntrupySDK.SCPageControlView.SCPageStyle : Swift.RawRepresentable {}

@@ -4,13 +4,10 @@
 //
 //  Created by Muhammad Waqas on 30/06/2022.
 //
-
 #import <UIKit/UIKit.h>
 #import "EntrupyErrorCode.h"
 #import "EntrupyConfigType.h"
-
 @class EntrupyHistoryResultModel;
-@class EntrupyCaptureResultModel;
 
 @protocol EntrupyLoginDelegate <NSObject>
 /**
