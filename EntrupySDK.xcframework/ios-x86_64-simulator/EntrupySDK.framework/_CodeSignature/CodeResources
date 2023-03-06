@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		H1oVNyawMK5RpQ4U8ayJDJm6xAM=
+		v2+taVyEaDUzxDuCACs6D1ydnVE=
 		</data>
 		<key>Base.lproj/EntrupyTOCropViewControllerLocalizable.strings</key>
 		<data>
@@ -2230,7 +2230,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		OJasLlZCblaP9B4cC7b4D4lXPnM=
+		QkM3Nhi5MrVGV+gNPyI3RazBN5w=
 		</data>
 		<key>Kanit-Black.ttf</key>
 		<data>
@@ -2354,7 +2354,7 @@
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		w9DVhvKdTlR7/0OZp9gcg9zuJk0=
+		sLGskMc92rPBuv6cH9OthhpStac=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -3500,7 +3500,7 @@
 		</data>
 		<key>mlmodel_nike_air_jordan_1_high_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_jordan1_1.0.0_model.mlmodelc/coremldata.bin</key>
 		<data>
-		rfXM+PYanvmIrlioG8pYS2ZaEjg=
+		O+kK46Bp5l6rplobeXdZ8LjGc1w=
 		</data>
 		<key>mlmodel_nike_air_jordan_1_high_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_jordan1_1.0.0_model.mlmodelc/metadata.json</key>
 		<data>
@@ -4721,7 +4721,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RYjdjFhU82ek5byF3ygThvWmxDsK/Csw23kLx3/T1YM=
+			czugxvgrGHhNF2O/pPszpgZQVzh2FZAS26LjO3af5jc=
 			</data>
 		</dict>
 		<key>Base.lproj/EntrupyTOCropViewControllerLocalizable.strings</key>
@@ -8823,7 +8823,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			I0UvasvFTjVzsgnIEvmSLs7ILCOPBusxTNTWbV6BtdY=
+			Pqf3Vrc77rbmbZ9tCe6jGGpk3Ep8fAnDRNQ3Iri2ASE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -10707,7 +10707,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+utynyRIdDOmWzZaAV0U97qz1f0pxjC/dk5rY+RDv+Q=
+			Ms90tuGva8fvO6hbRG66l6jD901H27ViJc/Q5QlwCcg=
 			</data>
 		</dict>
 		<key>mlmodel_nike_air_jordan_1_high_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_jordan1_1.0.0_model.mlmodelc/metadata.json</key>
