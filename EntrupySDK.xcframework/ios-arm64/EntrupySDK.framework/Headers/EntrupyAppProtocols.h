@@ -83,6 +83,7 @@ Refer to the [SDK web documentation] for more details.
 ///   - description: An error description
 ///   - localizedDescription: A localized error description
 -(void) didSearchSubmissionsFailWithError:(EntrupyErrorCode)errorCode description:(NSString *_Nonnull)description localizedDescription: (NSString *_Nonnull)localizedDescription;
+
 @end
 
 @protocol EntrupyAppProtocol <NSObject>

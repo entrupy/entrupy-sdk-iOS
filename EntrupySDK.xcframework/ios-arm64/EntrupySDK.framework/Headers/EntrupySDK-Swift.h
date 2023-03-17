@@ -230,8 +230,6 @@ using UInt = size_t;
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
-@import CoreFoundation;
-@import UIKit;
 #endif
 
 #endif
@@ -259,16 +257,6 @@ SWIFT_PROTOCOL("_TtP10EntrupySDK12EntrupyTheme_")
 @property (nonatomic, readonly, strong) UIColor * _Nullable backgroundColor;
 @property (nonatomic, readonly, strong) UIColor * _Nullable foregroundColor;
 @property (nonatomic, readonly, strong) UIColor * _Nullable borderColor;
-@end
-
-@class NSCoder;
-
-IB_DESIGNABLE
-SWIFT_CLASS("_TtC10EntrupySDK17SCPageControlView")
-@interface SCPageControlView : UIView
-- (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (void)layoutSubviews;
 @end
 
 

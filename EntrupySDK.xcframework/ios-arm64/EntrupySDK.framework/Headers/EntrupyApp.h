@@ -23,6 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)sharedInstance;
 
+
+
 /**
  Fetches the configuration required for running the capture and search actions.
  
@@ -52,7 +54,6 @@ NS_ASSUME_NONNULL_BEGIN
  
  */
 -(void) fetchConfigurationType: (EntrupyConfigType) configType;
-
 
 /**
  Starts the capture workflow for performing an authentication
@@ -103,7 +104,6 @@ NS_ASSUME_NONNULL_BEGIN
  
  */
 -(void) startCaptureForItem:(NSDictionary *)item viewController:(UIViewController *)viewController;
-
 
 /**
  Fetches past submissions.
@@ -165,6 +165,8 @@ NS_ASSUME_NONNULL_BEGIN
  - Returns: void
  
  */
+
+
 -(void) cleanup;
 
 // MARK: - Authorization

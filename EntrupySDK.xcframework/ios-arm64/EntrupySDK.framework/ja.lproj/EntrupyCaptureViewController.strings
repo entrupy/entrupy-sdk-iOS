@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "08D-Bx-8vt"; */
+"08D-Bx-8vt.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "3ew-oR-28t"; */
+"3ew-oR-28t.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Hga-eO-dwc"; */
+"Hga-eO-dwc.text" = "Label";
+
+/* Class = "UILabel"; text = "Enter Barcode No."; ObjectID = "NLB-nc-cpy"; */
+"NLB-nc-cpy.text" = "Enter Barcode No.";
+
+/* Class = "UILabel"; text = "Hold steady. Preparing for capture."; ObjectID = "Sjr-m3-ZUf"; */
+"Sjr-m3-ZUf.text" = "Hold steady. Preparing for capture.";
+
+/* Class = "UILabel"; text = "Barcode number manually entered"; ObjectID = "knc-gy-kez"; */
+"knc-gy-kez.text" = "Barcode number manually entered";
+
+/* Class = "UIButton"; normalTitle = "Skip"; ObjectID = "vLe-ff-epV"; */
+"vLe-ff-epV.normalTitle" = "Skip";

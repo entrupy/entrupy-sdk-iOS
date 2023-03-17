@@ -1,0 +1,23 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name EntrupySDK
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AVFoundation
+import CoreML
+import CryptoKit
+@_exported import EntrupySDK
+import Foundation
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+@objc public protocol EntrupyTheme {
+  @objc var backgroundColor: UIKit.UIColor? { get }
+  @objc var foregroundColor: UIKit.UIColor? { get }
+  @objc var borderColor: UIKit.UIColor? { get }
+}
+extension Swift.Array {
+  public subscript(safe index: Swift.Int) -> Element? {
+    get
+  }
+}

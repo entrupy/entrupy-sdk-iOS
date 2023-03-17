@@ -21,28 +21,3 @@ extension Swift.Array {
     get
   }
 }
-@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) public class SCPageControlView : UIKit.UIView {
-  public enum SCPageStyle : Swift.Int {
-    case SCNormal
-    case SCJAMoveCircle
-    case SCJAFillCircle
-    case SCJAFlatBar
-    public init?(rawValue: Swift.Int)
-    public typealias RawValue = Swift.Int
-    public var rawValue: Swift.Int {
-      get
-    }
-  }
-  @_Concurrency.MainActor(unsafe) public var scp_style: EntrupySDK.SCPageControlView.SCPageStyle
-  @_Concurrency.MainActor(unsafe) public var isCircle: Swift.Bool
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
-  @_Concurrency.MainActor(unsafe) public func set_view(_ page: Swift.Int, current: Swift.Int, current_color: UIKit.UIColor, disable_color: UIKit.UIColor?)
-  @_Concurrency.MainActor(unsafe) public func set_rotateDevice()
-  @_Concurrency.MainActor(unsafe) open func scroll_did(_ scrollView: UIKit.UIScrollView)
-  @objc deinit
-}
-extension EntrupySDK.SCPageControlView.SCPageStyle : Swift.Equatable {}
-extension EntrupySDK.SCPageControlView.SCPageStyle : Swift.Hashable {}
-extension EntrupySDK.SCPageControlView.SCPageStyle : Swift.RawRepresentable {}
