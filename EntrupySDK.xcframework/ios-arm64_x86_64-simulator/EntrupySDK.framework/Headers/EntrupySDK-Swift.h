@@ -297,6 +297,51 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 #if defined(__OBJC__)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+typedef SWIFT_ENUM_NAMED(NSInteger, ObjcEntrupyEventName, "EntrupyEventName", open) {
+  ObjcEntrupyEventNameCaptureStarted = 1,
+  ObjcEntrupyEventNameCaptureSucceeded = 2,
+  ObjcEntrupyEventNameCaptureFailed = 3,
+  ObjcEntrupyEventNameCaptureCancelled = 4,
+  ObjcEntrupyEventNameCaptureTimeout = 5,
+  ObjcEntrupyEventNameRetakeStarted = 6,
+  ObjcEntrupyEventNameRetakeSucceeded = 7,
+  ObjcEntrupyEventNameRetakeCancelled = 8,
+  ObjcEntrupyEventNameRetakeFailed = 9,
+  ObjcEntrupyEventNameRetakeTimeout = 10,
+  ObjcEntrupyEventNameAuthenticationBeginRequestSucceeded = 11,
+  ObjcEntrupyEventNameAuthenticationCompleteRequestSucceeded = 12,
+  ObjcEntrupyEventNameAuthenticationFetchRequestSucceeded = 13,
+  ObjcEntrupyEventNameRetakeBatchRequestSucceeded = 14,
+  ObjcEntrupyEventNameErrorOccurred = 15,
+  ObjcEntrupyEventNameFullImageGuideButtonTap = 16,
+  ObjcEntrupyEventNamePopupInstructionDoNotShowAgainCheckboxTap = 17,
+  ObjcEntrupyEventNameRegionImageGuideButtonTap = 18,
+  ObjcEntrupyEventNameFreshChatButtonTap = 19,
+  ObjcEntrupyEventNameLogging = 20,
+};
+
 @class UIColor;
 
 SWIFT_PROTOCOL("_TtP10EntrupySDK12EntrupyTheme_")
@@ -305,6 +350,18 @@ SWIFT_PROTOCOL("_TtP10EntrupySDK12EntrupyTheme_")
 @property (nonatomic, readonly, strong) UIColor * _Nullable foregroundColor;
 @property (nonatomic, readonly, strong) UIColor * _Nullable borderColor;
 @end
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -620,6 +677,51 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 #if defined(__OBJC__)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+typedef SWIFT_ENUM_NAMED(NSInteger, ObjcEntrupyEventName, "EntrupyEventName", open) {
+  ObjcEntrupyEventNameCaptureStarted = 1,
+  ObjcEntrupyEventNameCaptureSucceeded = 2,
+  ObjcEntrupyEventNameCaptureFailed = 3,
+  ObjcEntrupyEventNameCaptureCancelled = 4,
+  ObjcEntrupyEventNameCaptureTimeout = 5,
+  ObjcEntrupyEventNameRetakeStarted = 6,
+  ObjcEntrupyEventNameRetakeSucceeded = 7,
+  ObjcEntrupyEventNameRetakeCancelled = 8,
+  ObjcEntrupyEventNameRetakeFailed = 9,
+  ObjcEntrupyEventNameRetakeTimeout = 10,
+  ObjcEntrupyEventNameAuthenticationBeginRequestSucceeded = 11,
+  ObjcEntrupyEventNameAuthenticationCompleteRequestSucceeded = 12,
+  ObjcEntrupyEventNameAuthenticationFetchRequestSucceeded = 13,
+  ObjcEntrupyEventNameRetakeBatchRequestSucceeded = 14,
+  ObjcEntrupyEventNameErrorOccurred = 15,
+  ObjcEntrupyEventNameFullImageGuideButtonTap = 16,
+  ObjcEntrupyEventNamePopupInstructionDoNotShowAgainCheckboxTap = 17,
+  ObjcEntrupyEventNameRegionImageGuideButtonTap = 18,
+  ObjcEntrupyEventNameFreshChatButtonTap = 19,
+  ObjcEntrupyEventNameLogging = 20,
+};
+
 @class UIColor;
 
 SWIFT_PROTOCOL("_TtP10EntrupySDK12EntrupyTheme_")
@@ -628,6 +730,18 @@ SWIFT_PROTOCOL("_TtP10EntrupySDK12EntrupyTheme_")
 @property (nonatomic, readonly, strong) UIColor * _Nullable foregroundColor;
 @property (nonatomic, readonly, strong) UIColor * _Nullable borderColor;
 @end
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

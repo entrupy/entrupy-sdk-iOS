@@ -2,7 +2,7 @@
 //  EntrupySDK.h
 //  EntrupySDK
 //
-//  Created by Felipe Garcia on 12/04/2022.
+//  Created by Entrupy.
 //
 
 #import <Foundation/Foundation.h>

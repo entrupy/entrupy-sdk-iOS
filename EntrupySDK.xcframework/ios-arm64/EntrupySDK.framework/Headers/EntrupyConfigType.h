@@ -2,7 +2,7 @@
 //  EntrupyConfigType.h
 //  EntrupySDK
 //
-//  Created by Dharini Raghavan on 9/8/22.
+//  Created by Entrupy.
 //
 
 #ifndef EntrupyConfigType_h

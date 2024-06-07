@@ -2,24 +2,221 @@
 // swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
 // swift-module-flags: -target arm64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name EntrupySDK
 import AVFoundation
+import Compression
+import CoreFoundation
+import CoreGraphics
 import CoreML
+import CoreText
 import CryptoKit
 import DeveloperToolsSupport
 @_exported import EntrupySDK
 import Foundation
+import QuartzCore
 import Swift
 import SwiftUI
 import UIKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+import zlib
+extension QuartzCore.CALayer {
+  @nonobjc public func logLayerTree(withIndent: Swift.Int = 0)
+}
+infix operator +| : DefaultPrecedence
+infix operator +- : DefaultPrecedence
+public struct EntrupySearchResult : Swift.Codable {
+  public let item_count: Swift.Int
+  public let items: [EntrupySDK.EntrupyCaptureResult]
+  public let next_cursor: [Swift.String]?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@objc(ObjcEntrupyEventName) public enum EntrupyEventName : Swift.Int {
+  case captureStarted = 1
+  case captureSucceeded
+  case captureFailed
+  case captureCancelled
+  case captureTimeout
+  case retakeStarted
+  case retakeSucceeded
+  case retakeCancelled
+  case retakeFailed
+  case retakeTimeout
+  case authenticationBeginRequestSucceeded
+  case authenticationCompleteRequestSucceeded
+  case authenticationFetchRequestSucceeded
+  case retakeBatchRequestSucceeded
+  case errorOccurred
+  case fullImageGuideButtonTap
+  case popupInstructionDoNotShowAgainCheckboxTap
+  case regionImageGuideButtonTap
+  case freshChatButtonTap
+  case logging
+  public func toString() -> Swift.String
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 @objc public protocol EntrupyTheme {
   @objc var backgroundColor: UIKit.UIColor? { get }
   @objc var foregroundColor: UIKit.UIColor? { get }
   @objc var borderColor: UIKit.UIColor? { get }
+}
+extension Foundation.Bundle : @unchecked Swift.Sendable {
 }
 extension Swift.Array {
   public subscript(safe index: Swift.Int) -> Element? {
     get
   }
 }
+@_hasMissingDesignatedInitializers public class EntrupyAsset : Swift.Codable {
+  required public init(from decoder: any Swift.Decoder) throws
+  final public let id: Swift.String
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct EntrupyCaptureResult : Swift.Codable {
+  public let authentication_id: Swift.String
+  public let properties: EntrupySDK.EntrupyCaptureResultProperties
+  public var status: EntrupySDK.EntrupyCaptureResultStatus
+  public let more_details: EntrupySDK.EntrupyCaptureResultMoreDetails?
+  public let text_fields: [EntrupySDK.EntrupyCaptureResultTextField]?
+  public let images: EntrupySDK.EntrupyCaptureResultImages?
+  public let event_times: EntrupySDK.EntrupyCaptureResultEventTimes?
+  public let timestamp: EntrupySDK.EntrupyCaptureResultTimestamp
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupyCaptureResultImages : Swift.Codable {
+  public let item_photo: Swift.String?
+  public let uploaded_images: [EntrupySDK.EntrupyCaptureResultUploadedImages]?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupyCaptureResultUploadedImages : Swift.Codable {
+  public let image_id: Swift.String
+  public let urls: EntrupySDK.EntrupyCaptureResultUploadedImagesUrls?
+  public let display_name: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupyCaptureResultUploadedImagesUrls : Swift.Codable {
+  public let original: Swift.String?
+  public let scale_micro: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupyCaptureResultEventTimes : Swift.Codable {
+  public let submitted_at: EntrupySDK.EntrupyCaptureResultTimestamp?
+  public let result_returned_at: EntrupySDK.EntrupyCaptureResultTimestamp?
+  public let initial_result_set_at: EntrupySDK.EntrupyCaptureResultTimestamp?
+  public let capture_started_at: EntrupySDK.EntrupyCaptureResultTimestamp?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupyCaptureResultMoreDetails : Swift.Codable {
+  public let certificate: EntrupySDK.EntrupyCaptureResultMoreDetailsCertificate
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupyCaptureResultMoreDetailsCertificate : Swift.Codable {
+  public var preview: Swift.String?
+  public var site: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupyCaptureResultProperties : Swift.Codable {
+  public let brand: EntrupySDK.EntrupyCaptureResultPropertiesBrand
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupyCaptureResultPropertiesBrand : Swift.Codable {
+  public let display: [Swift.String : Swift.String]
+  public let id: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupyCaptureResultStatus : Swift.Codable {
+  public var flag: EntrupySDK.EntrupyCaptureResultStatusFlag
+  public let result: EntrupySDK.EntrupyCaptureResultStatusResult
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum EntrupyFlagId : Swift.Equatable, Swift.CustomStringConvertible, Swift.Encodable {
+  case none
+  case flagged
+  case resolved
+  case other(Swift.String)
+  public init(rawValue: Swift.String)
+  public var description: Swift.String {
+    get
+  }
+  public static func == (a: EntrupySDK.EntrupyFlagId, b: EntrupySDK.EntrupyFlagId) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct EntrupyCaptureResultStatusFlag : Swift.Codable {
+  public var id: EntrupySDK.EntrupyFlagId
+  public let is_flaggable: Swift.Bool
+  public mutating func toggle()
+  public var isFlagged: Swift.Bool {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public enum EntrupyCaptureResultStatusId : Swift.Equatable, Swift.CustomStringConvertible, Swift.Encodable {
+  case authentic
+  case unknown
+  case not_supported
+  case needs_review
+  case invalid
+  case other(Swift.String)
+  public init(rawValue: Swift.String)
+  public var description: Swift.String {
+    get
+  }
+  public static func == (a: EntrupySDK.EntrupyCaptureResultStatusId, b: EntrupySDK.EntrupyCaptureResultStatusId) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct EntrupyCaptureResultStatusResult : Swift.Codable {
+  public let display: EntrupySDK.EntrupyCaptureResultStatusResultDisplay
+  public let id: EntrupySDK.EntrupyCaptureResultStatusId
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct EntrupyCaptureResultStatusResultDisplay : Swift.Codable {
+  public let header: Swift.String
+  public let message: Swift.String?
+  public let reasons: [EntrupySDK.EntrupyCaptureResultStatusResultDisplayReasons]?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupyCaptureResultStatusResultDisplayReasons : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupyCaptureResultTextField : Swift.Codable {
+  public var content: Swift.String?
+  public let display_name: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupyCaptureResultTimestamp : Swift.Codable {
+  public let display: Swift.String
+  public let epoch: Swift.Double
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class EntrupyImageAsset : EntrupySDK.EntrupyAsset {
+  final public let name: Swift.String
+  final public let directory: Swift.String
+  final public let width: Swift.Double
+  final public let height: Swift.Double
+  override final public func encode(to encoder: any Swift.Encoder) throws
+  @objc deinit
+}
+extension EntrupySDK.EntrupyEventName : Swift.Equatable {}
+extension EntrupySDK.EntrupyEventName : Swift.Hashable {}
+extension EntrupySDK.EntrupyEventName : Swift.RawRepresentable {}

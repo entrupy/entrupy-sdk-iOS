@@ -2,12 +2,11 @@
 //  EntrupyAppProtocols.h
 //  EntrupySDK
 //
-//  Created by Muhammad Waqas on 30/06/2022.
+//  Created by Entrupy.
 //
 #import <UIKit/UIKit.h>
 #import "EntrupyErrorCode.h"
 #import "EntrupyConfigType.h"
-@class EntrupyHistoryResultModel;
 
 @protocol EntrupyLoginDelegate <NSObject>
 /**
@@ -49,7 +48,7 @@ Refer to the [SDK web documentation] for more details.
 /// Invoked when the user successfully submits the item to Entrupy for verification
 ///
 /// - Parameters:
-///   - result: The authentication result as a dictionary
+///   - result: The authentication result as a dictionary. This dictionary is decodable with `EntrupyCaptureResult` struct using Swift's `JSONDecoder`.
 ///   - item: The input dictionary supplied to the startCapture method
 -(void) didCaptureCompleteSuccessfully:(NSDictionary *_Nonnull)result forItem:(NSDictionary *_Nonnull) item;
 
@@ -74,7 +73,7 @@ Refer to the [SDK web documentation] for more details.
 /// Invoked if the search is successful
 ///
 /// The "next_cursor" array received in the response can be passed to the searchSubmissions call to receive the next page. If the “next_cursor” array returned is nil or empty it indicates that the last page has been reached.
-/// - Parameter result: The search response dictionary containing the requested number of items or fewer if there aren't enough items and a cursor to the next page.
+/// - Parameter result: The search response dictionary containing the requested number of items or fewer if there aren't enough items and a cursor to the next page. This dictionary is decodable with `EntrupySearchResult` struct using Swift's `JSONDecoder`.
 -(void) didSearchSubmissionsCompleteSuccessfully:(NSDictionary *_Nonnull)result;
 
 /// Invoked if the search fails
@@ -83,6 +82,37 @@ Refer to the [SDK web documentation] for more details.
 ///   - description: An error description
 ///   - localizedDescription: A localized error description
 -(void) didSearchSubmissionsFailWithError:(EntrupyErrorCode)errorCode description:(NSString *_Nonnull)description localizedDescription: (NSString *_Nonnull)localizedDescription;
+
+@end
+
+@protocol EntrupyFlagDelegate <NSObject>
+/**
+ Invoked upon the successful setting or clearing of a flag associated with a result.
+
+ - Parameters:
+   - entrupyID: The Entrupy ID associated with the result.
+   - flag: A boolean value indicating the requested flag operation.
+
+ */
+- (void)didFlagResultSuccessfullyForEntrupyID:(NSString *_Nonnull)entrupyID
+                             forRequestedFlag:(BOOL)flag;
+
+/**
+ Invoked upon failure to set or clear a flag associated with a result.
+
+ - Parameters:
+   - errorCode: The error code.
+   - description: An error description.
+   - localizedDescription: A localized error description.
+   - entrupyID: The Entrupy ID associated with the result.
+   - flag: A boolean value indicating the requested flag operation.
+
+ */
+- (void)didFlagResultFailWithError:(EntrupyErrorCode)errorCode
+                       description:(NSString *_Nonnull)description
+              localizedDescription:(NSString *_Nonnull)localizedDescription
+                      forEntrupyID:(NSString *_Nonnull)entrupyID
+                  forRequestedFlag:(BOOL)flag;
 
 @end
 

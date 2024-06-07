@@ -2,7 +2,7 @@
 //  EntrupyErrorCode.h
 //  EntrupyHelpers
 //
-//  Created by Dharini Raghavan on 10/29/22.
+//  Created by Entrupy.
 //
 
 #ifndef EntrupyErrorCode_h
@@ -21,7 +21,7 @@ typedef NS_ENUM(NSUInteger, EntrupyErrorCode) {
     ErrorCodeTooManyRequests,    //Rate Limit reached
     ErrorCodeImageUploadError,   //Error uploading images
     ErrorCodeUserDeniedPermissions, //The user denied necessary permissions
-    ErrorCodeUnknownError //An unknown error occurred
+    ErrorCodeUnknownError, //An unknown error occurred
 };
 
 

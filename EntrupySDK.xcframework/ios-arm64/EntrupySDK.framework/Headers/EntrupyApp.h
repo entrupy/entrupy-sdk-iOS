@@ -2,7 +2,7 @@
 //  EntrupyApp.h
 //  EntrupySDK
 //
-//  Created by Muhammad Waqas on 30/06/2022.
+//  Created by Entrupy.
 //
 
 #import <Foundation/Foundation.h>
@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak) id<EntrupySearchDelegate> searchDelegate;
 @property (nonatomic, strong) id<EntrupyTheme> theme;
 @property (nonatomic, copy, nullable) void(^backgroundTransferCompletionHandler)(void);
+@property (nonatomic, weak) id<EntrupyFlagDelegate> flagDelegate;
 
 + (instancetype)sharedInstance;
 
@@ -252,6 +253,87 @@ NS_ASSUME_NONNULL_BEGIN
  
 */
 -(void)interceptApplication:(UIApplication *)application handleEventsForBackgroundURLSession:(NSString *)identifier completionHandler:(void(^ _Nullable)(void))completionHandler;
+
+
+/**
+ Retrieves the flag status and eligibility for a result assigned by Entrupy.
+
+ - Parameters:
+    -  entrupyID: The Entrupy ID associated with the result.
+    - completionHandler: The closure called upon completion of the request.
+        - `result`: A dictionary containing details about the flag status and eligibility. This dictionary is decodable with `EntrupyCaptureResultStatusFlag` struct using Swift's `JSONDecoder`.
+        - `error`: An error object indicating any failures that occurred during the request.
+
+ 
+ Within the completion handler, handle the response to provide users with options to flag or clear the flag depending on the flag status and eligibility.
+ 
+ Example usage:
+ ```swift
+ EntrupyApp.sharedInstance().getFlagDetailsForResult(withEntrupyID: <Entrupy ID>) { [weak self] result, error in
+             guard let self = self else { return }
+             if let result = result {
+  
+                 do {
+                     let decoder = JSONDecoder()
+                     let jsonData = try JSONSerialization.data(withJSONObject: result)
+                     let parsedResult = try decoder.decode(EntrupyCaptureResultStatusFlag.self, from: jsonData)
+
+                     if (parsedResult.id == .none || parsedResult.id == .resolved) && parsedResult.is_flaggable {
+                         //Show ‘Flag’ button
+                     }
+                     else if parsedResult.id == .flagged {
+                         //Show ‘Clear Flag’ button
+                     }
+                     else {
+                         //Hide buttons
+                     }
+                   } catch {
+                     print(error)
+                   }
+                 }
+              else {
+                 if let error = error {
+                     let errorCode = (error as NSError).code
+                     switch(errorCode){
+                     //Handle the error codes
+                     }
+                 }
+             }
+         }
+
+ ```
+ [SDK web documentation]:
+ https://developer.entrupy.com/v1_2_entrupy_sdk.html
+ 
+ For more infomation refer to the [SDK web documentation].
+ */
+
+- (void)getFlagDetailsForResultWithEntrupyID:(NSString *)entrupyID completionHandler:(void (^ _Nonnull)(NSDictionary * _Nullable details, NSError * _Nullable error))completionHandler;
+
+/**
+ Sets or clears a flag on a result assigned by Entrupy based on what is requested.
+ 
+ - Parameters:
+   - flag: A boolean value indicating whether a flag should be set (true) or cleared (false).
+   - entrupyID: The Entrupy ID associated with the result.
+ 
+ - Returns: void
+ 
+ ```
+ Implement the "EntrupyFlagDelegate" to handle responses from this function
+ ```
+ 
+ ```swift
+     //Implement EntrupyFlagDelegate
+     EntrupyApp.sharedInstance().flagDelegate = self
+     
+     //Invoke the setFlag method to update the flag status
+     EntrupyApp.sharedInstance().setFlag("true/false", forResultWithEntrupyID: <Entrupy ID>)
+ ```
+ */
+
+- (void)setFlag:(BOOL)flag forResultWithEntrupyID:(NSString *_Nonnull)entrupyID;
+
 @end
 
 NS_ASSUME_NONNULL_END
