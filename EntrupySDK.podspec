@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
   spec.license            = { :type => "Commercial", :file => "LICENSE" }
   spec.author             = { "Entrupy Company" => "support@entrupy.com" }
   spec.platform           = :ios, "15.8"
-  spec.source             = { :git => "https://github.com/entrupy/entrupy-sneakerauthentication-sdk-iOS.git", :tag => "spec.version"}
+  spec.source             = { :git => "https://github.com/entrupy/entrupy-sdk-iOS.git", :tag => "spec.version"}
   spec.vendored_frameworks = "EntrupySDK.xcframework"
   spec.preserve_paths      = "EntrupySDK.xcframework"
 end
