@@ -8,6 +8,8 @@
 #import "EntrupyErrorCode.h"
 #import "EntrupyConfigType.h"
 
+@class EntrupyDetailViewConfiguration;
+
 @protocol EntrupyLoginDelegate <NSObject>
 /**
  Invoked if the login was successful
@@ -113,6 +115,54 @@ Refer to the [SDK web documentation] for more details.
               localizedDescription:(NSString *_Nonnull)localizedDescription
                       forEntrupyID:(NSString *_Nonnull)entrupyID
                   forRequestedFlag:(BOOL)flag;
+
+
+
+@end
+
+/**
+ Delegate protocol for handling Detail View Controller presentation events.
+
+ @note Implement this delegate to handle Detail View lifecycle events.
+*/
+@protocol EntrupyDetailViewDelegate <NSObject>
+
+/**
+ Called when the SDK successfully presents the Detail View Controller.
+ 
+ This indicates the view has been displayed and the user can interact with
+ the view controller showing authentication status, timeline, results,
+ and available actions for the specified item.
+ 
+ @param entrupyID The unique Entrupy ID of the item being displayed in the Detail View
+*/
+- (void)didDisplayDetailViewForItemWithEntrupyID:(NSString *_Nonnull)entrupyID;
+
+/**
+ Called when the Detail View Controller is dismissed by the user.
+ 
+ This occurs when the user closes the Detail View through available navigation
+ controls. The view controller has been removed from the presentation stack.
+ 
+ @param entrupyID The unique Entrupy ID of the item that was being viewed
+*/
+- (void)didDismissDetailViewForItemWithEntrupyID:(NSString *_Nonnull)entrupyID;
+
+/**
+ Called when the SDK fails to present the Detail View Controller.
+ 
+ This can occur due to various reasons such as unauthorized access, network errors,
+ invalid Entrupy ID, or internal SDK errors. The Detail View will not be shown.
+ 
+ @param errorCode The specific error code describing the type of failure
+ @param description A technical description of the error for debugging
+ @param localizedDescription A user-friendly, localized error message suitable for display
+ @param entrupyID The Entrupy ID that was requested but failed to display
+*/
+- (void)didDisplayDetailViewFailWithError:(EntrupyErrorCode)errorCode
+                                         description:(NSString *_Nonnull)description
+                                localizedDescription:(NSString *_Nonnull)localizedDescription
+                                       forEntrupyID:(NSString *_Nonnull)entrupyID;
 
 @end
 
