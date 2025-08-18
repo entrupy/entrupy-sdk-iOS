@@ -22,6 +22,8 @@ typedef NS_ENUM(NSUInteger, EntrupyErrorCode) {
     ErrorCodeImageUploadError,   //Error uploading images
     ErrorCodeUserDeniedPermissions, //The user denied necessary permissions
     ErrorCodeUnknownError, //An unknown error occurred
+    ErrorCodeSearchItemNotFound, //An search item not found
+    ErrorCodeSearchItemFound, //An search item found
 };
 
 

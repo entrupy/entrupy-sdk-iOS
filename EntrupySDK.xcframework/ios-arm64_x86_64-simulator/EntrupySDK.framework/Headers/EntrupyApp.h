@@ -9,6 +9,7 @@
 #import "EntrupyAppProtocols.h"
 
 @protocol EntrupyTheme;
+@class EntrupyDetailViewConfiguration;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -21,6 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) id<EntrupyTheme> theme;
 @property (nonatomic, copy, nullable) void(^backgroundTransferCompletionHandler)(void);
 @property (nonatomic, weak) id<EntrupyFlagDelegate> flagDelegate;
+@property (nonatomic, weak) id<EntrupyDetailViewDelegate> detailViewDelegate;
+
 
 + (instancetype)sharedInstance;
 
@@ -66,43 +69,63 @@ NS_ASSUME_NONNULL_BEGIN
  - Parameter viewController: A reference to the view controller launching the Entrupy capture workflow.
  
  - Returns: void
- 
- 
- ```
- Implement the "EntrupyCaptureDelegate" to handle responses
- from this method
- ```
- 
- * Example usage:
- 
- 
+
+ ## Required `product_category` values
+ - `"luxury"`
+ - `"sneakers"`
+ - `"apparel"`
+
+ ### Example: Luxury
  ```swift
+ let luxuryMetadata: [String: Any] = [
+     // required
+     "product_category": "luxury",
+     "brand": "Louis Vuitton",
+     // optional
+     "material": "Monogram Canvas",
+     "customer_item_id": "LV-NEVERFULL-MM-001"
+ ]
+ ```
+
+ ### Example: Sneakers
+ ```swift
+ let sneakersMetadata: [String: Any] = [
+     // required
+     "product_category": "sneakers",
+     "brand": "Nike",
+     // optional
+     "style_name": "Air Jordan 1 Retro High OG SP",
+     "us_size": "9.5",
+     "style_code": "DO7097-100",
+     "customer_item_id": "AJ1-DO7097-100-9_5"
+ ]
+ ```
+
+ ### Example: Apparel
+ ```swift
+ let apparelMetadata: [String: Any] = [
+     "product_category": "apparel",
+     "brand": "BAPE",
+     "item_type": "Outerwear",
+     "customer_item_id": "GU-TEE-CLASSIC-BLK-M" // optional
+ ]
+ ```
+
+ ## Usage Example
+ ```swift
+
+  // Check if authorization token is valid
+ if EntrupyApp.sharedInstance().isAuthorizationValid() {
  
- // Swift
- 
- // Create a sneaker metadata dictionary with the following fields
- //
- // brand: the item’s brand.
- // style_name: the item’s full name. Example: “Jordan 1 Retro High White University Blue Black”
- // us_size(optional): the item’s US Size. Example: 8, 8.5, 8.5Y.
- // upc(optional): the item’s UPC.
- // style_code(optional):the item’s style code (AKA “style id”). Example: 555088-134
- // customer_item_id(optional): the unique identifier you use for the item being authenticated (max length = 256).
- // brand and style_name are mandatory
- 
- let input: Dictionary = ["brand": "Nike", "style_name": "Air Jordan 1 Retro  High OG SP'", "us_size": "9.5", "upc": "00195244532483", "style_code": "d07097-100", "customer_item_id": "sku-xyz"]
- 
- // Check if authorization token is valid
- if ( EntrupyApp.sharedInstance().isAuthorizationValid()) {
- 
-     // Implement EntrupyCaptureDelegate
+      // Implement EntrupyCaptureDelegate
      EntrupyApp.sharedInstance().captureDelegate = self
-     
-     // Pass the sneaker metadata and a reference to the presenting view controller
-     EntrupyApp.sharedInstance().startCapture(forItem: input, viewController: self)
+ 
+     // Pass the  metadata and a reference to the presenting view controller
+     EntrupyApp.sharedInstance().startCapture(forItem: sneakersMetadata, viewController: self)
  }
  ```
- 
+ [Entrupy iOS SDK Documentation](https://developer.entrupy.com/docs/mobile-sdks/ios/overview)
+
  */
 -(void) startCaptureForItem:(NSDictionary *)item viewController:(UIViewController *)viewController;
 
@@ -112,8 +135,8 @@ NS_ASSUME_NONNULL_BEGIN
  Implement searchSubmissions to fetch past authentications. The search response is paginated into pages of ‘paginationLimit’ items each. The maximum number of items that can be requested per page is 25. The function takes a pageCursor parameter which determines the page that has to be fetched. Pass an empty array for pageCursor to fetch the first page.
  Repeat the searchSubmissions call, setting the pageCursor with the "next_cursor" array received in the delegate response of the previous call until all pages have been retrieved. If the “next_cursor” array returned is nil or empty it indicates that the last page has been reached.
  
- [SDK web documentation]:
- https://developer.entrupy.com/v1_2_entrupy_sdk.html
+ [Entrupy iOS SDK Documentation]:
+ https://developer.entrupy.com/docs/mobile-sdks/ios/overview
  
  ```
  Implement the "EntrupySearchDelegate" protocol to handle responses
@@ -179,8 +202,8 @@ NS_ASSUME_NONNULL_BEGIN
  
  It is recommended that tokens are created or re-created if expired before calling other SDK methods to avoid additional latency.
  
- [SDK web documentation]:
- https://developer.entrupy.com/v1_2_entrupy_sdk.html
+ [Entrupy iOS SDK Documentation]:
+ https://developer.entrupy.com/docs/mobile-sdks/ios/overview
  
  * Implement the following steps on your app and  backend as indicated.
  
@@ -302,8 +325,8 @@ NS_ASSUME_NONNULL_BEGIN
          }
 
  ```
- [SDK web documentation]:
- https://developer.entrupy.com/v1_2_entrupy_sdk.html
+ [Entrupy iOS SDK Documentation]:
+ https://developer.entrupy.com/docs/mobile-sdks/ios/overview
  
  For more infomation refer to the [SDK web documentation].
  */
@@ -333,6 +356,49 @@ NS_ASSUME_NONNULL_BEGIN
  */
 
 - (void)setFlag:(BOOL)flag forResultWithEntrupyID:(NSString *_Nonnull)entrupyID;
+
+/**
+  Presents the Detail View Controller for a specific authenticated item.
+ 
+  Displays the item's status, results, history, and related actions within the SDK.
+  Supports Entrupy branding and an ETA-based flow—users can leave while authentication runs in the background.
+ 
+  @param entrupyID The unique Entrupy ID for the item.
+  @param viewConfiguration Configuration options, including:
+         - displayTimeline: Show/hide event timeline
+         - displayUploadedImages: Show/hide captured images
+         - enableFlagging: Enable/disable flagging
+         - enableItemDetailEdit: Enable/disable item detail editing
+ 
+  @note Requires valid authorization. Presented modally over the current top view controller.
+ 
+ ```swift
+ guard EntrupyApp.sharedInstance().isAuthorizationValid() else { return }
+
+ //Implement EntrupyDetailViewConfiguration
+ let viewConfig = EntrupyDetailViewConfiguration(
+     displayTimeline: true,
+     displayUploadedImages: true,
+     enableFlagging: true,
+     enableItemDetailEdit: false
+ )
+
+ //Implement EntrupyDetailViewDelegate
+ EntrupyApp.sharedInstance().detailViewDelegate = self
+
+ EntrupyApp.sharedInstance().displayDetailViewForItem(
+     withEntrupyID: entrupyId,
+     withConfiguration: viewConfig
+ )
+ 
+ ```
+ 
+ [Entrupy iOS SDK Documentation]:
+ https://developer.entrupy.com/docs/mobile-sdks/ios/overview
+ 
+ */
+- (void)displayDetailViewForItemWithEntrupyID:(NSString *_Nonnull)entrupyID withConfiguration:(EntrupyDetailViewConfiguration *_Nonnull)viewConfiguration NS_SWIFT_NAME(displayDetailViewForItem(withEntrupyID:withConfiguration:));
+
 
 @end
 

@@ -20,6 +20,9 @@
     "specificationVersion" : 1,
     "computePrecision" : "Float16",
     "isUpdatable" : "0",
+    "stateSchema" : [
+
+    ],
     "availability" : {
       "macOS" : "10.13",
       "tvOS" : "11.0",
@@ -28,19 +31,6 @@
       "iOS" : "11.0",
       "macCatalyst" : "11.0"
     },
-    "neuralNetworkLayerTypeHistogram" : {
-      "Concat" : 1,
-      "ActivationLinear" : 68,
-      "ActivationReLU" : 37,
-      "Softmax" : 1,
-      "Add" : 10,
-      "PoolingAverage" : 1,
-      "UnaryThreshold" : 34,
-      "BatchNorm" : 54,
-      "Convolution" : 70,
-      "Reshape" : 1,
-      "UpsampleNearestNeighbor" : 4
-    },
     "modelType" : {
       "name" : "MLModelType_neuralNetwork"
     },
@@ -48,7 +38,6 @@
       "com.github.apple.coremltools.version" : "4.0b4",
       "com.github.apple.coremltools.source" : "keras==2.3.1"
     },
-    "generatedClassName" : "mlmodel_adidas_yeezy_350_v2_BASEURL_entrupy_app_resources_s3_amazonaws_com_models_sneaker_autocapture_yeezy350v2_1_0_0_model",
     "inputSchema" : [
       {
         "height" : "256",
@@ -63,6 +52,20 @@
         "name" : "in_image"
       }
     ],
+    "generatedClassName" : "mlmodel_adidas_yeezy_350_v2_BASEURL_entrupy_app_resources_s3_amazonaws_com_models_sneaker_autocapture_yeezy350v2_1_0_0_model",
+    "neuralNetworkLayerTypeHistogram" : {
+      "Concat" : 1,
+      "ActivationLinear" : 68,
+      "ActivationReLU" : 37,
+      "Softmax" : 1,
+      "PoolingAverage" : 1,
+      "UnaryThreshold" : 34,
+      "Add" : 10,
+      "BatchNorm" : 54,
+      "Convolution" : 70,
+      "UpsampleINVALID" : 4,
+      "Reshape" : 1
+    },
     "method" : "predict"
   }
 ]
