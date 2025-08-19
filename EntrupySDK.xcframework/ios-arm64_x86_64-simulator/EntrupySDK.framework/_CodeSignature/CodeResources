@@ -2266,7 +2266,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		nAEw2XpTr4HG5n+/xD6kK58l9Tc=
+		LxrzAeOxCd4tg9a10GNuLCNtU3A=
 		</data>
 		<key>Kanit-Black.ttf</key>
 		<data>
@@ -3407,11 +3407,11 @@
 		</data>
 		<key>detector.mlmodelc/coremldata.bin</key>
 		<data>
-		gQk8ZtZhc/V6hDw25fQkxjw1Oag=
+		qVaV91d7IklJxXuL6Eu+zwqM+ME=
 		</data>
 		<key>detector.mlmodelc/metadata.json</key>
 		<data>
-		FgXT3CKYjlWD23FSAiIIeA+nN50=
+		eWX/UNa5n1Ro55G2VDg6Lkd8BNI=
 		</data>
 		<key>detector.mlmodelc/model0/analytics/coremldata.bin</key>
 		<data>
@@ -3565,7 +3565,7 @@
 		</data>
 		<key>mlmodel_adidas_yeezy_350_v2_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_yeezy350v2_1.0.0_model.mlmodelc/coremldata.bin</key>
 		<data>
-		rfXM+PYanvmIrlioG8pYS2ZaEjg=
+		O+kK46Bp5l6rplobeXdZ8LjGc1w=
 		</data>
 		<key>mlmodel_adidas_yeezy_350_v2_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_yeezy350v2_1.0.0_model.mlmodelc/metadata.json</key>
 		<data>
@@ -10739,14 +10739,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2TCNGplUGyF7v8Pp/eBpfIrWsnczem6bJk98e57RhOI=
+			HqhwJUxPX6Y+/fs0B4aakf7WgxMOo+i3H+GVOe5HxQ0=
 			</data>
 		</dict>
 		<key>detector.mlmodelc/metadata.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oiPuQbvjXHjE2TRFdyZ4P4Knzcykur5hzJOqX17XsWo=
+			pEvt3kW3b2KiaiY+k/9/butfgl+c6KISc71S90SGMmg=
 			</data>
 		</dict>
 		<key>detector.mlmodelc/model0/analytics/coremldata.bin</key>
@@ -10921,7 +10921,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+utynyRIdDOmWzZaAV0U97qz1f0pxjC/dk5rY+RDv+Q=
+			Ms90tuGva8fvO6hbRG66l6jD901H27ViJc/Q5QlwCcg=
 			</data>
 		</dict>
 		<key>mlmodel_adidas_yeezy_350_v2_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_yeezy350v2_1.0.0_model.mlmodelc/metadata.json</key>

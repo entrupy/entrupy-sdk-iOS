@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name               = "EntrupySDK"
-  spec.version            = "1.2.9"
+  spec.version            = "2.0.0"
   spec.summary            = "Entrupy SDK"
   spec.description        = "The Entrupy SDK for iOS allows you to integrate Entrupy's authentication functionality into your Swift or Obj-C app"
   spec.homepage           = "https://www.entrupy.com"
