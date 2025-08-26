@@ -1,0 +1,97 @@
+name: Release SDK to CocoaPods
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'EntrupySDK.podspec'
+
+jobs:
+  release:
+    runs-on: macos-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+          token: ${{ secrets.TOKEN }}
+      
+      - name: Check if podspec was modified
+        id: check_podspec
+        run: |
+          if git diff HEAD~1 HEAD --name-only | grep -q "EntrupySDK.podspec"; then
+            echo "podspec_modified=true" >> $GITHUB_OUTPUT
+            echo "Podspec was modified, proceeding with release..."
+          else
+            echo "podspec_modified=false" >> $GITHUB_OUTPUT
+            echo "Podspec not modified, skipping release..."
+          fi
+      
+      - name: Extract SDK version
+        if: steps.check_podspec.outputs.podspec_modified == 'true'
+        id: get_version
+        run: |
+          SDK_VERSION=$(grep -E 'spec\.version\s*=\s*"[^"]*"' EntrupySDK.podspec | sed -E 's/.*"([^"]*)".*/\1/')
+          echo "version=${SDK_VERSION}" >> $GITHUB_OUTPUT
+          echo "SDK Release detected: version ${SDK_VERSION}"
+      
+      - name: Create and push tag
+        if: steps.check_podspec.outputs.podspec_modified == 'true'
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git tag ${{ steps.get_version.outputs.version }}
+          git push origin ${{ steps.get_version.outputs.version }}
+      
+      - name: Setup Ruby
+        if: steps.check_podspec.outputs.podspec_modified == 'true'
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.0'
+      
+      - name: Install CocoaPods
+        if: steps.check_podspec.outputs.podspec_modified == 'true'
+        run: |
+          gem install cocoapods
+          pod --version
+      
+      - name: Publish to CocoaPods
+        if: steps.check_podspec.outputs.podspec_modified == 'true'
+        env:
+          COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
+        run: |
+          pod trunk push EntrupySDK.podspec --allow-warnings
+      
+      - name: Verify release
+        if: steps.check_podspec.outputs.podspec_modified == 'true'
+        run: |
+          echo "Release completed successfully!"
+          echo "Version: ${{ steps.get_version.outputs.version }}"
+          echo ""
+          echo "Please verify:"
+          echo "1. Tag on GitHub: https://github.com/entrupy/entrupy-sdk-iOS/tags"
+          echo "2. CocoaPods listing: https://cocoapods.org/pods/EntrupySDK"
+          echo ""
+          echo "You can also check locally with: pod search EntrupySDK"
+      
+      - name: Create GitHub Release
+        if: steps.check_podspec.outputs.podspec_modified == 'true'
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+        with:
+          tag_name: ${{ steps.get_version.outputs.version }}
+          release_name: Release ${{ steps.get_version.outputs.version }}
+          body: |
+            SDK version ${{ steps.get_version.outputs.version }} has been released.
+            
+            The SDK is now available via CocoaPods:
+            ```ruby
+            pod 'EntrupySDK', '~> ${{ steps.get_version.outputs.version }}'
+            ```
+            
+            View on CocoaPods: https://cocoapods.org/pods/EntrupySDK
+          draft: false
+          prerelease: false
