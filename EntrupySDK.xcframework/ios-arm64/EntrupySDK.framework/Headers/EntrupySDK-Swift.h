@@ -329,6 +329,52 @@ SWIFT_CLASS_NAMED("EntrupyCaptureButton")
 - (enum EntrupyButtonBackgroundState)currentState SWIFT_WARN_UNUSED_RESULT;
 @end
 
+@class NSString;
+@class NSBundle;
+SWIFT_CLASS("_TtC10EntrupySDK36EntrupyCatalogListingsViewController")
+@interface EntrupyCatalogListingsViewController : UIViewController
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UITableView;
+@class NSIndexPath;
+@class UITableViewCell;
+@interface EntrupyCatalogListingsViewController (SWIFT_EXTENSION(EntrupySDK)) <UITableViewDataSource>
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+@end
+
+@interface EntrupyCatalogListingsViewController (SWIFT_EXTENSION(EntrupySDK)) <UITableViewDelegate>
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+@end
+
+SWIFT_CLASS("_TtC10EntrupySDK42EntrupyConditionReportDetailViewController")
+@interface EntrupyConditionReportDetailViewController : UIViewController
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@interface EntrupyConditionReportDetailViewController (SWIFT_EXTENSION(EntrupySDK)) <UITableViewDelegate>
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+@end
+
+@interface EntrupyConditionReportDetailViewController (SWIFT_EXTENSION(EntrupySDK)) <UITableViewDataSource>
+- (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+@end
+
+SWIFT_CLASS("_TtC10EntrupySDK37EntrupyConditionReportDetailViewModel")
+@interface EntrupyConditionReportDetailViewModel : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 SWIFT_CLASS("_TtC10EntrupySDK30EntrupyDetailViewConfiguration")
 @interface EntrupyDetailViewConfiguration : NSObject
 - (nonnull instancetype)initWithDisplayTimeline:(BOOL)displayTimeline displayUploadedImages:(BOOL)displayUploadedImages enableFlagging:(BOOL)enableFlagging enableItemDetailEdit:(BOOL)enableItemDetailEdit OBJC_DESIGNATED_INITIALIZER;
@@ -403,7 +449,6 @@ typedef SWIFT_ENUM_NAMED(NSInteger, EntrupyZoomButtonBackgroundState, "EntrupyZo
 };
 
 @protocol ObjCSnapIQDelegate;
-@class NSString;
 @class ObjCSnapIQResult;
 SWIFT_CLASS_NAMED("SnapIQ")
 @interface ObjCSnapIQ : NSObject
