@@ -166,6 +166,59 @@ Refer to the [SDK web documentation] for more details.
 
 @end
 
+
+@protocol EntrupyRetakeCaptureDelegate <NSObject>
+
+-(void) didRetakeCaptureCompleteSuccessfully:(NSDictionary *_Nonnull)result
+                        forItemWithEntrupyID:(NSString *_Nonnull)entrupyID;
+
+-(void) didUserCancelRetakeCaptureForItemWithEntrupyID: (NSString *_Nonnull)entrupyID;
+
+-(void) didRetakeCaptureFailWithError:(EntrupyErrorCode)errorCode
+                          description:(NSString *_Nonnull)description
+                 localizedDescription: (NSString *_Nonnull)localizedDescription
+                 forItemWithEntrupyID:(NSString *_Nonnull)entrupyID;
+
+-(void) didRetakeCaptureTimeoutForItemWithEntrupyID:(NSString *_Nonnull)entrupyID;
+
+@end
+
+@protocol EntrupySearchRetakeDelegate <NSObject>
+
+-(void) didSearchRetakesCompleteSuccessfully:(NSDictionary *_Nonnull)result;
+
+-(void) didSearchRetakesFailWithError:(EntrupyErrorCode)errorCode description:(NSString *_Nonnull)description localizedDescription: (NSString *_Nonnull)localizedDescription;
+
+@end
+
+@protocol EntrupyMarketEdgeDelegate <NSObject>
+/**
+ Invoked when market edge are successfully fetched for an item.
+
+ - Parameters:
+   - catalog: The market edge data as a dictionary. This dictionary is decodable with `EntrupyMarketEdge` struct using Swift's `JSONDecoder`.
+   - entrupyID: The Entrupy ID associated with the item.
+ */
+- (void)didFetchMarketEdgeCompleteSuccessfully:(NSDictionary *_Nonnull)catalog
+                                       forEntrupyID:(NSString *_Nonnull)entrupyID;
+
+/**
+ Invoked when market edge fetch fails.
+
+ - Parameters:
+   - errorCode: The error code
+   - description: An error description
+   - localizedDescription: A localized error description
+   - entrupyID: The Entrupy ID associated with the item
+ */
+- (void)didFetchMarketEdgeFailWithError:(EntrupyErrorCode)errorCode
+                                  description:(NSString *_Nonnull)description
+                        localizedDescription:(NSString *_Nonnull)localizedDescription
+                                forEntrupyID:(NSString *_Nonnull)entrupyID;
+
+@end
+
+
 @protocol EntrupyAppProtocol <NSObject>
 @property (nonatomic, weak) id<EntrupyLoginDelegate> _Nullable loginDelegate;
 @property (nonatomic, weak) id<EntrupyConfigDelegate> _Nullable configDelegate;

@@ -23,7 +23,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, nullable) void(^backgroundTransferCompletionHandler)(void);
 @property (nonatomic, weak) id<EntrupyFlagDelegate> flagDelegate;
 @property (nonatomic, weak) id<EntrupyDetailViewDelegate> detailViewDelegate;
-
+@property (nonatomic, weak) id<EntrupyRetakeCaptureDelegate> retakeCaptureDelegate;
+@property (nonatomic, weak) id<EntrupySearchRetakeDelegate> searchRetakeDelegate;
+@property (nonatomic, weak) id<EntrupyMarketEdgeDelegate> marketEdgeDelegate;
 
 + (instancetype)sharedInstance;
 
@@ -357,6 +359,35 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)setFlag:(BOOL)flag forResultWithEntrupyID:(NSString *_Nonnull)entrupyID;
 
+
+/**
+ Sets or clears a flag on a result assigned by Entrupy based on what is requested.
+ 
+ - Parameters:
+   - flag: A boolean value indicating whether a flag should be set (true) or cleared (false).
+   - entrupyID: The Entrupy ID associated with the result.
+   - flagReasonId: Function id of the product TODO
+   - message: Text string If flag require message to be sent
+ 
+ - Returns: void
+ 
+ ```
+ Implement the "EntrupyFlagDelegate" to handle responses from this function
+ ```
+ 
+ ```swift
+     //Implement EntrupyFlagDelegate
+     EntrupyApp.sharedInstance().flagDelegate = self
+     
+     //Invoke the setFlag method to update the flag status
+     EntrupyApp.sharedInstance().setFlag("true/false", forResultWithEntrupyID: <Entrupy ID> flagId:<Function id> message:<Custom text>)
+ ```
+ */
+- (void)setFlag:(BOOL)flag
+forResultWithEntrupyID:(NSString *_Nonnull)entrupyID
+   flagReasonId:(NSString*)flagReasonId
+        message:(NSString* _Nullable)message;
+
 /**
   Presents the Detail View Controller for a specific authenticated item.
  
@@ -399,6 +430,49 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)displayDetailViewForItemWithEntrupyID:(NSString *_Nonnull)entrupyID withConfiguration:(EntrupyDetailViewConfiguration *_Nonnull)viewConfiguration NS_SWIFT_NAME(displayDetailViewForItem(withEntrupyID:withConfiguration:));
 
+
+- (void) startRetakeCaptureForItemWithEntrupyID:(NSString *_Nonnull)entrupyID;
+
+
+-(void) searchRetakes;
+
+/**
+ * Fetches market edge for a given Entrupy ID by calling the backend route.
+ *
+ * This method retrieves comprehensive market edge including condition details,
+ * marketplace listings, and other relevant information for the specified authentication result.
+ *
+ * The response will be delivered through the EntrupyMarketEdgeDelegate callbacks:
+ * - didFetchMarketEdgeCompleteSuccessfully: Called when the request succeeds
+ * - didFetchMarketEdgeFailWithError: Called when the request fails
+ *
+ * @param entrupyID The authentication ID for which to fetch market edge
+ *
+ * @note This method requires valid authorization. Ensure the user is logged in before calling.
+ * @note The response data can be parsed using EntrupyMarketEdge struct with JSONSerialization.
+ *
+ * Example usage:
+ * @code
+ * // Set the delegate
+ * entrupyApp.marketEdgeDelegate = self
+ *
+ * // Fetch market edge
+ * entrupyApp.fetchMarketEdgeForItem(withEntrupyID: "ABC123")
+ *
+ * // In the delegate method, parse the response:
+ * func didFetchMarketEdgeCompleteSuccessfully(_ catalog: [AnyHashable : Any], forEntrupyID entrupyID: String) {
+ *     do {
+ *         let data = try JSONSerialization.data(withJSONObject: catalog, options: [])
+ *         let decoder = JSONDecoder()
+ *         let marketEdge = try decoder.decode(EntrupyMarketEdge.self, from: data)
+ *         // Use marketEdge...
+ *     } catch {
+ *         print("Error parsing market edge: \(error.localizedDescription)")
+ *     }
+ * }
+ * @endcode
+ */
+- (void)fetchMarketEdgeForItemWithEntrupyID:(NSString *_Nonnull)entrupyID;
 
 @end
 
