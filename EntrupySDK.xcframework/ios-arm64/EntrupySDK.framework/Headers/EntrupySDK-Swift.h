@@ -377,8 +377,71 @@ typedef SWIFT_ENUM_NAMED(NSInteger, ObjcEntrupyEventName, "EntrupyEventName", op
   ObjcEntrupyEventNameUploadStarted = 38,
   ObjcEntrupyEventNameUploadSuccess = 39,
   ObjcEntrupyEventNameUploadError = 40,
-  ObjcEntrupyEventNameLogging = 41,
+  ObjcEntrupyEventNameMarketEdgeButtonTap = 41,
+  ObjcEntrupyEventNameMarketGradeViewReportButtonTap = 42,
+  ObjcEntrupyEventNameMarketMatchViewAllButtonTap = 43,
+  ObjcEntrupyEventNameMarketMatchViewListingButtonTap = 44,
+  ObjcEntrupyEventNameMarketEdgeRegionChangeButtonTap = 45,
+  ObjcEntrupyEventNameMarketEdgeDisclaimerTap = 46,
+  ObjcEntrupyEventNameMarketEdgeRefresh = 47,
+  ObjcEntrupyEventNameMarketEdgeError = 48,
+  ObjcEntrupyEventNameMarketEdgeStatus = 49,
+  ObjcEntrupyEventNameMarketEdgeScreenExit = 50,
+  ObjcEntrupyEventNameHistoryItemTap = 51,
+  ObjcEntrupyEventNameInboxItemTap = 52,
+  ObjcEntrupyEventNameViewCertificateButtonTap = 53,
+  ObjcEntrupyEventNameViewTimelineButtonTap = 54,
+  ObjcEntrupyEventNameViewDetailsButtonTap = 55,
+  ObjcEntrupyEventNameLogging = 56,
 };
+
+@class NSString;
+@class NSBundle;
+SWIFT_CLASS("_TtC10EntrupySDK38EntrupyMarketGradeDetailViewController")
+@interface EntrupyMarketGradeDetailViewController : UIViewController
+- (void)viewWillAppear:(BOOL)animated;
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UITableView;
+@class NSIndexPath;
+@interface EntrupyMarketGradeDetailViewController (SWIFT_EXTENSION(EntrupySDK)) <UITableViewDelegate>
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+@end
+
+@class UITableViewCell;
+@interface EntrupyMarketGradeDetailViewController (SWIFT_EXTENSION(EntrupySDK)) <UITableViewDataSource>
+- (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+@end
+
+SWIFT_CLASS("_TtC10EntrupySDK32EntrupyMarketMatchViewController")
+@interface EntrupyMarketMatchViewController : UIViewController
+- (void)viewWillAppear:(BOOL)animated;
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@interface EntrupyMarketMatchViewController (SWIFT_EXTENSION(EntrupySDK)) <UITableViewDataSource>
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+@end
+
+@interface EntrupyMarketMatchViewController (SWIFT_EXTENSION(EntrupySDK)) <UITableViewDelegate>
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+@end
+
+SWIFT_CLASS("_TtC10EntrupySDK33EntrupyMarketValueDetailViewModel")
+@interface EntrupyMarketValueDetailViewModel : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
 
 @class UIColor;
 SWIFT_PROTOCOL("_TtP10EntrupySDK12EntrupyTheme_")
@@ -403,7 +466,6 @@ typedef SWIFT_ENUM_NAMED(NSInteger, EntrupyZoomButtonBackgroundState, "EntrupyZo
 };
 
 @protocol ObjCSnapIQDelegate;
-@class NSString;
 @class ObjCSnapIQResult;
 SWIFT_CLASS_NAMED("SnapIQ")
 @interface ObjCSnapIQ : NSObject
