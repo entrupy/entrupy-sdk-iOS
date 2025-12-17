@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
 // swift-module-flags: -target arm64-apple-ios15.8-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name EntrupySDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
 import AVFoundation
 import Combine
 import Compression
@@ -31,6 +31,35 @@ import _SwiftConcurrencyShims
 import zlib
 infix operator +| : DefaultPrecedence
 infix operator +- : DefaultPrecedence
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class EntrupyMarketGradeDetailViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency public func configure(with viewModel: EntrupySDK.EntrupyMarketValueDetailViewModel)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
+  @objc deinit
+}
+extension EntrupySDK.EntrupyMarketGradeDetailViewController : UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+}
+extension EntrupySDK.EntrupyMarketGradeDetailViewController : UIKit.UITableViewDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, estimatedHeightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+}
+@objc public class EntrupyMarketValueDetailViewModel : ObjectiveC.NSObject {
+  public init(condition: EntrupySDK.EntrupyMarketValue, captureResult: EntrupySDK.EntrupyCaptureResult)
+  @objc deinit
+}
+public let KEntrupyLocalizationsUpdatedNotification: Swift.String
+@_hasMissingDesignatedInitializers @objc(ObjcEntrupyLocalizationManager) public class EntrupyLocalizationManager : ObjectiveC.NSObject {
+  @objc deinit
+}
 @objc(ObjcEntrupyEventName) public enum EntrupyEventName : Swift.Int {
   case captureStarted = 1
   case captureSucceeded
@@ -72,9 +101,27 @@ infix operator +- : DefaultPrecedence
   case uploadStarted
   case uploadSuccess
   case uploadError
+  case marketEdgeButtonTap
+  case marketGradeViewReportButtonTap
+  case marketMatchViewAllButtonTap
+  case marketMatchViewListingButtonTap
+  case marketEdgeRegionChangeButtonTap
+  case marketEdgeDisclaimerTap
+  case marketEdgeRefresh
+  case marketEdgeError
+  case marketEdgeStatus
+  case marketEdgeScreenExit
+  case historyItemTap
+  case inboxItemTap
+  case viewCertificateButtonTap
+  case viewTimelineButtonTap
+  case viewDetailsButtonTap
+  case authenticationBeginRequestFailure
   case logging
   public func toString() -> Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -84,6 +131,7 @@ public struct EntrupyCaptureResult : Swift.Codable {
   public var events: [EntrupySDK.EntrupyCaptureResultEvents]?
   public var user: EntrupySDK.EntrupyCaptureResultUser?
   public var price: EntrupySDK.EntrupyCaptureResultPrice?
+  public let batch_request: EntrupySDK.EntrupyCaptureResultBatchRequest?
   public let authentication_id: Swift.String
   public let properties: EntrupySDK.EntrupyCaptureResultProperties
   public var status: EntrupySDK.EntrupyCaptureResultStatus
@@ -123,6 +171,12 @@ public struct EntrupyCaptureResultEventTimes : Swift.Codable {
 }
 public struct EntrupyCaptureResultMoreDetails : Swift.Codable {
   public let certificate: EntrupySDK.EntrupyCaptureResultMoreDetailsCertificate
+  public let catalog_insights: EntrupySDK.EntrupyCaptureResultMoreDetailsCatalogInsights?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupyCaptureResultMoreDetailsCatalogInsights : Swift.Codable {
+  public var supported: Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -163,9 +217,17 @@ public enum EntrupyFlagId : Swift.Equatable, Swift.CustomStringConvertible, Swif
   public static func == (a: EntrupySDK.EntrupyFlagId, b: EntrupySDK.EntrupyFlagId) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
 }
+public struct EntrupyCaptureResultStatusFlagInfo : Swift.Codable {
+  public let id: Swift.String?
+  public let label: Swift.String?
+  public let message: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
 public struct EntrupyCaptureResultStatusFlag : Swift.Codable {
   public var id: EntrupySDK.EntrupyFlagId
   public let is_flaggable: Swift.Bool
+  public let flag_info: EntrupySDK.EntrupyCaptureResultStatusFlagInfo?
   public mutating func toggle()
   public var isFlagged: Swift.Bool {
     get
@@ -227,6 +289,13 @@ public struct EntrupyCaptureResultTimestamp : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
+public struct EntrupyCaptureResultBatchRequest : Swift.Codable {
+  public let customer_state: Swift.String?
+  public let requested_at: Swift.Double?
+  public let retake_reasons: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
 public struct EntrupyCaptureResultPropertiesFunction : Swift.Codable {
   public let id: Swift.String
   public func encode(to encoder: any Swift.Encoder) throws
@@ -258,14 +327,129 @@ public struct EntrupyCaptureResultPrice : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 @objc public protocol EntrupyTheme {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc var backgroundColor: UIKit.UIColor? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc var foregroundColor: UIKit.UIColor? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc var borderColor: UIKit.UIColor? { get }
+  #endif
+}
+public struct EntrupyMarketEdge : Swift.Codable {
+  public let identifier: EntrupySDK.EntrupyMarketEdgeIdentifier
+  public let condition: EntrupySDK.EntrupyMarketValue?
+  public let market_value: EntrupySDK.EntrupyMarketMatchValue?
+  public let marketplace_listings: EntrupySDK.EntrupyMarketMatch?
+  public let client_polling_instruction: EntrupySDK.EntrupyMarketEdgeClientPollingInstructions
+  public let disclaimer: [Swift.String]?
+  public let error: EntrupySDK.EntrupyMarketEdgeError?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupyMarketEdgeIdentifier : Swift.Codable {
+  public let session_uuid: Swift.String
+  public let authentication_id: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupyMarketValue : Swift.Codable {
+  public let pending: Swift.Bool
+  public let values: EntrupySDK.EntrupyMarketGradeReportConditionValue?
+  public let error: EntrupySDK.EntrupyMarketEdgeError?
+  public let section_description: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupyMarketMatchValue : Swift.Codable {
+  public let pending: Swift.Bool
+  public let price: Swift.String?
+  public let error: EntrupySDK.EntrupyMarketEdgeError?
+  public let section_description: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupyMarketGradeReportConditionValue : Swift.Codable {
+  public let rating: Swift.String
+  public let issues: [Swift.String]?
+  public let details: [EntrupySDK.EntrupyMarketValueConditionDetail]?
+  public let rating_explanation: Swift.String
+  public let rating_ui_details: EntrupySDK.EntrupyMarketGradeRatingUIDetails?
+  public let error: EntrupySDK.EntrupyMarketEdgeError?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupyMarketGradeRatingUIDetails : Swift.Codable {
+  public let title: Swift.String
+  public let selected_rating_index: Swift.Int?
+  public let scale: [EntrupySDK.EntrupyMarketGradeRatingScale]
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupyMarketGradeRatingScale : Swift.Codable {
+  public let color: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupyMarketMatch : Swift.Codable {
+  public let pending: Swift.Bool
+  public let section_description: Swift.String
+  public let values: [EntrupySDK.EntrupyMarketMatchListing]?
+  public let error: EntrupySDK.EntrupyMarketEdgeError?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupyMarketValueConditionDetail : Swift.Codable {
+  public let item_region_display_name: Swift.String
+  public let description: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupyMarketEdgeClientPollingInstructions : Swift.Codable {
+  public let polling_rate: Swift.Double
+  public let number_of_retries: Swift.Double
+  public let error: EntrupySDK.EntrupyMarketEdgeError
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupyMarketMatchListing : Swift.Codable {
+  public let title: Swift.String
+  public let platform: Swift.String
+  public let link: Swift.String?
+  public let brand: Swift.String?
+  public let image_url: Swift.String?
+  public let category: Swift.String
+  public let style: Swift.String?
+  public let description: Swift.String?
+  public let price: Swift.String
+  public let currency: Swift.String?
+  public let price_min: Swift.String?
+  public let price_max: Swift.String?
+  public let time_of_report: Swift.Double
+  public let price_difference_perc: Swift.String?
+  public let price_difference: Swift.String?
+  public let price_avg: Swift.String?
+  public let price_days_window: Swift.String?
+  public let price_difference_positive: Swift.Bool?
+  public let error: EntrupySDK.EntrupyMarketEdgeError?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupyMarketEdgeError : Swift.Codable {
+  public let message: Swift.String
+  public let show: Swift.Bool
+  public let retry: Swift.Bool?
+  public let ecode: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @objc(EntrupyZoomButtonBackgroundState) public enum EntrupyZoomButtonBackgroundState : Swift.Int {
   case zoomIn
   case zoomOut
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -273,15 +457,19 @@ public struct EntrupyCaptureResultPrice : Swift.Codable {
 }
 @_inheritsConvenienceInitializers @objc(EntrupyZoomButton) @_Concurrency.MainActor @preconcurrency public class EntrupyZoomButton : UIKit.UIButton {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc(setButtonBackgroundState:) @_Concurrency.MainActor @preconcurrency public func setButtonBackgroundState(_ state: EntrupySDK.EntrupyZoomButtonBackgroundState)
   @objc(currentBackgroundState) @_Concurrency.MainActor @preconcurrency public func currentBackgroundState() -> EntrupySDK.EntrupyZoomButtonBackgroundState
   @objc deinit
 }
 extension Swift.Array {
+  #if compiler(>=5.3) && $NonescapableTypes
   public subscript(safe index: Swift.Int) -> Element? {
     get
   }
+  #endif
 }
 @_hasMissingDesignatedInitializers public class EntrupyAsset : Swift.Codable {
   required public init(from decoder: any Swift.Decoder) throws
@@ -295,6 +483,26 @@ public struct EntrupySearchResult : Swift.Codable {
   public let next_cursor: [Swift.String]?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class EntrupyMarketMatchViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency public func configure(with listings: [EntrupySDK.EntrupyMarketMatchListing], functionId: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
+  @objc deinit
+}
+extension EntrupySDK.EntrupyMarketMatchViewController : UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+}
+extension EntrupySDK.EntrupyMarketMatchViewController : UIKit.UITableViewDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, estimatedHeightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
 }
 @objc public class EntrupyDetailViewConfiguration : ObjectiveC.NSObject {
   final public let displayTimeline: Swift.Bool
@@ -315,7 +523,9 @@ public struct EntrupySearchResult : Swift.Codable {
   case notInCenter
   case tooFar
   case moveFar
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -323,7 +533,9 @@ public struct EntrupySearchResult : Swift.Codable {
 }
 @_inheritsConvenienceInitializers @objc(EntrupyCaptureButton) @_Concurrency.MainActor @preconcurrency public class EntrupyCaptureButton : UIKit.UIButton {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc(setButtonBackgroundState:) @_Concurrency.MainActor @preconcurrency public func setButtonBackgroundState(_ state: EntrupySDK.EntrupyButtonBackgroundState)
   @objc(currentState) @_Concurrency.MainActor @preconcurrency public func currentState() -> EntrupySDK.EntrupyButtonBackgroundState
   @objc deinit
@@ -338,7 +550,9 @@ public struct EntrupySearchResult : Swift.Codable {
   @objc final public let confidence: Swift.Float
   @objc final public let fps: Swift.Double
   @objc final public let inferenceTime: Swift.Double
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(shouldCapture: Swift.Bool, state: Swift.String?, smoothedBox: CoreFoundation.CGRect?, confidence: Swift.Float, fps: Swift.Double, inferenceTime: Swift.Double)
+  #endif
   @objc deinit
 }
 @objc(ObjCSnapIQ) @objcMembers public class SnapIQ : ObjectiveC.NSObject {
@@ -346,7 +560,9 @@ public struct EntrupySearchResult : Swift.Codable {
     get
   }
   @objc weak public var delegate: (any EntrupySDK.SnapIQDelegate)?
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(viewSize: CoreFoundation.CGSize, regionType: Swift.String = "camera", isUltraWideEnabled: Swift.Bool = false, completion: ((Swift.Bool, (any Swift.Error)?) -> Swift.Void)? = nil)
+  #endif
   @objc public func updateViewSize(_ newSize: CoreFoundation.CGSize)
   @objc(processFrameWithSampleBuffer:) public func processFrame(sampleBuffer: CoreMedia.CMSampleBuffer) -> EntrupySDK.SnapIQResult
   @objc public static func isRegionSupported(brandName: Swift.String, regionName: Swift.String) -> Swift.Bool
