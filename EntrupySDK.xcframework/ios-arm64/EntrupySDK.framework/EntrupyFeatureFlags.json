@@ -1,0 +1,10 @@
+{
+    "customFlagEnabled": true,
+    "snapIQUIEnabled": true,
+    "catalogInsightsEnabled": true,
+    "devicePreference": true,
+    "marketEdgePriceIndicatorsEnabled": false,
+    "regionPreferences" : true,
+    "dynamicLocalizations": false,
+    "macroFingerprint": false
+}
