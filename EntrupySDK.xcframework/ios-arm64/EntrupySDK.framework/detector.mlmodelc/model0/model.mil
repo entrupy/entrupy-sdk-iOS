@@ -1,5 +1,5 @@
 program(1.0)
-[buildInfo = dict<tensor<string, []>, tensor<string, []>>({{"coremlc-component-MIL", "3405.2.1"}, {"coremlc-version", "3404.23.1"}})]
+[buildInfo = dict<tensor<string, []>, tensor<string, []>>({{"coremlc-component-MIL", "3500.14.1"}, {"coremlc-version", "3500.32.1"}})]
 {
     func main<ios16>(tensor<fp32, [1, 3, 640, 640]> image) {
             tensor<fp32, []> image__scaled___y_0 = const()[name = tensor<string, []>("image__scaled___y_0"), val = tensor<fp32, []>(0x1.010102p-8)];
