@@ -166,6 +166,132 @@ Refer to the [SDK web documentation] for more details.
 
 @end
 
+
+
+/// Delegate protocol for the SDK’s built-in flagging UI.
+@protocol EntrupyFlagViewDelegate <NSObject>
+
+/**
+ Called when the SDK successfully presents the flag view for the given result.
+
+ - Parameter entrupyID: The Entrupy ID of the result whose flag view was presented.
+ */
+- (void)didDisplayFlagViewForItemWithEntrupyID:(NSString *_Nonnull)entrupyID;
+
+/**
+ Called when the user submits a flag from the built-in flag view.
+
+ - Parameter entrupyID: The Entrupy ID of the result that was flagged.
+ */
+- (void)didUserSubmitFlagForEntrupyID:(NSString *_Nonnull)entrupyID;
+
+/**
+ Called when the user cancels or dismisses the flag view without submitting a flag.
+
+ - Parameter entrupyID: The Entrupy ID of the result whose flag view was dismissed.
+ */
+- (void)didUserCancelFlagViewForItemWithEntrupyID:(NSString *_Nonnull)entrupyID;
+
+/**
+ Called when the SDK fails to present the flag view.
+
+ This can occur due to invalid authorization, an invalid Entrupy ID, missing flag configuration,
+ network failures, or internal SDK errors.
+
+ - Parameters:
+   - errorCode: The specific error code describing the failure.
+   - description: A technical description of the error for debugging.
+   - localizedDescription: A user-friendly, localized error message suitable for display.
+   - entrupyID: The Entrupy ID that was requested but failed to present.
+ */
+- (void)didDisplayFlagViewFailWithError:(EntrupyErrorCode)errorCode
+                             description:(NSString *_Nonnull)description
+                    localizedDescription:(NSString *_Nonnull)localizedDescription
+                           forEntrupyID:(NSString *_Nonnull)entrupyID;
+
+@end
+
+
+@protocol EntrupyRetakeCaptureDelegate <NSObject>
+
+/// Invoked when the user successfully completes the retake capture workflow
+///
+/// - Parameters:
+///   - result: The retake capture result as a dictionary. This dictionary is decodable with `EntrupyCaptureResult` struct using Swift's `JSONDecoder`.
+///   - entrupyID: The Entrupy ID of the item for which retake capture was completed
+-(void) didRetakeCaptureCompleteSuccessfully:(NSDictionary *_Nonnull)result
+                        forItemWithEntrupyID:(NSString *_Nonnull)entrupyID;
+
+/// Invoked if the user cancels the retake capture workflow without completing the process
+/// - Parameter entrupyID: The Entrupy ID of the item for which retake capture was cancelled
+-(void) didUserCancelRetakeCaptureForItemWithEntrupyID: (NSString *_Nonnull)entrupyID;
+
+/// Invoked if the retake capture workflow fails due to an error
+/// - Parameters:
+///   - errorCode: The error code
+///   - description: An error description
+///   - localizedDescription: A localized error description
+///   - entrupyID: The Entrupy ID of the item for which retake capture failed
+-(void) didRetakeCaptureFailWithError:(EntrupyErrorCode)errorCode
+                          description:(NSString *_Nonnull)description
+                 localizedDescription: (NSString *_Nonnull)localizedDescription
+                 forItemWithEntrupyID:(NSString *_Nonnull)entrupyID;
+
+
+/// Invoked if the retake capture workflow times out.
+/// Retake capture sessions are automatically aborted if not completed within the allocated time limit of two hours
+/// - Parameters:
+///   - entrupyID: The Entrupy ID of the item for which retake capture timed out
+ 
+-(void) didRetakeCaptureTimeoutForItemWithEntrupyID:(NSString *_Nonnull)entrupyID;
+
+@end
+
+
+@protocol EntrupySearchRetakeDelegate <NSObject>
+
+/// Invoked if the search retakes request is successful
+///
+/// - Parameter result: The response dictionary containing items that have pending retake requests. This dictionary can be decoded into the `EntrupySearchResult` struct using Swift's `JSONDecoder`
+-(void) didSearchRetakesCompleteSuccessfully:(NSDictionary *_Nonnull)result;
+
+/// Invoked if the search retakes request fails
+/// - Parameters:
+///   - errorCode: The error code
+///   - description: An error description
+///   - localizedDescription: A localized error description
+-(void) didSearchRetakesFailWithError:(EntrupyErrorCode)errorCode description:(NSString *_Nonnull)description localizedDescription: (NSString *_Nonnull)localizedDescription;
+
+@end
+
+@protocol EntrupyMarketEdgeDelegate <NSObject>
+/**
+ Invoked when market edge are successfully fetched for an item.
+
+ - Parameters:
+   - catalog: The market edge data as a dictionary. This dictionary is decodable with `EntrupyMarketEdge` struct using Swift's `JSONDecoder`.
+   - entrupyID: The Entrupy ID associated with the item.
+ */
+- (void)didFetchMarketEdgeCompleteSuccessfully:(NSDictionary *_Nonnull)catalog
+                                       forEntrupyID:(NSString *_Nonnull)entrupyID;
+
+/**
+ Invoked when market edge fetch fails.
+
+ - Parameters:
+   - errorCode: The error code
+   - description: An error description
+   - localizedDescription: A localized error description
+   - entrupyID: The Entrupy ID associated with the item
+ */
+- (void)didFetchMarketEdgeFailWithError:(EntrupyErrorCode)errorCode
+                                  description:(NSString *_Nonnull)description
+                        localizedDescription:(NSString *_Nonnull)localizedDescription
+                                forEntrupyID:(NSString *_Nonnull)entrupyID;
+
+@end
+
+
 @protocol EntrupyAppProtocol <NSObject>
 @property (nonatomic, weak) id<EntrupyLoginDelegate> _Nullable loginDelegate;
 @property (nonatomic, weak) id<EntrupyConfigDelegate> _Nullable configDelegate;

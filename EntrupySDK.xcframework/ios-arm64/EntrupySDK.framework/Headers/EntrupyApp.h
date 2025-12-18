@@ -23,7 +23,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, nullable) void(^backgroundTransferCompletionHandler)(void);
 @property (nonatomic, weak) id<EntrupyFlagDelegate> flagDelegate;
 @property (nonatomic, weak) id<EntrupyDetailViewDelegate> detailViewDelegate;
-
+@property (nonatomic, weak) id<EntrupyFlagViewDelegate> flagViewDelegate;
+@property (nonatomic, weak) id<EntrupyRetakeCaptureDelegate> retakeCaptureDelegate;
+@property (nonatomic, weak) id<EntrupySearchRetakeDelegate> searchRetakeDelegate;
+@property (nonatomic, weak) id<EntrupyMarketEdgeDelegate> marketEdgeDelegate;
 
 + (instancetype)sharedInstance;
 
@@ -279,83 +282,118 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /**
- Retrieves the flag status and eligibility for a result assigned by Entrupy.
+ Retrieves the flag status, eligibility, and supported flag reasons for an Entrupy result.
+
+ Call this method before displaying any flag or clear-flag UI.
+ The response payload can be decoded into `EntrupyFlagDetails`.
+
+ - Important:
+   Always check both the current flag status and `is_flaggable` before enabling flag actions.
 
  - Parameters:
-    -  entrupyID: The Entrupy ID associated with the result.
-    - completionHandler: The closure called upon completion of the request.
-        - `result`: A dictionary containing details about the flag status and eligibility. This dictionary is decodable with `EntrupyCaptureResultStatusFlag` struct using Swift's `JSONDecoder`.
-        - `error`: An error object indicating any failures that occurred during the request.
+   - entrupyID: The Entrupy ID for the result.
+   - completionHandler: Called with the flag details dictionary or an error.
 
- 
- Within the completion handler, handle the response to provide users with options to flag or clear the flag depending on the flag status and eligibility.
- 
- Example usage:
+ ## Response Model Mapping
+
+ The SDK returns a dictionary payload that can be decoded into `EntrupyFlagDetails`, which contains:
+
+ - `flag_status`: Decodes into `EntrupyCaptureResultStatusFlag`
+ - `supported_flag_reasons`: An array of `EntrupyCaptureResultStatusFlagInfo`
+
+ ### EntrupyCaptureResultStatusFlag
+ - `id`: Current flag status (`none`, `flagged`, `resolved`)
+ - `is_flaggable`: Indicates whether the item can currently be flagged
+ - `flag_info`: Optional `EntrupyCaptureResultStatusFlagInfo`
+   (Only populated when the item is already flagged)
+
+ ### EntrupyCaptureResultStatusFlagInfo
+ - `id`: Reason identifier
+   Pass this value as `flagReasonId` when calling `setFlag(...)`
+ - `label`: User-facing reason text for display
+ - `message`:
+   - Always `nil` for `supported_flag_reasons`
+   - Populated only in `flag_status.flag_info` with the user-provided note
+
+ ## Example Usage
+
  ```swift
- EntrupyApp.sharedInstance().getFlagDetailsForResult(withEntrupyID: <Entrupy ID>) { [weak self] result, error in
-             guard let self = self else { return }
-             if let result = result {
-  
-                 do {
-                     let decoder = JSONDecoder()
-                     let jsonData = try JSONSerialization.data(withJSONObject: result)
-                     let parsedResult = try decoder.decode(EntrupyCaptureResultStatusFlag.self, from: jsonData)
+ EntrupyApp.sharedInstance().getFlagDetailsForResult(withEntrupyID: entrupyID) { details, error in
 
-                     if (parsedResult.id == .none || parsedResult.id == .resolved) && parsedResult.is_flaggable {
-                         //Show ‘Flag’ button
-                     }
-                     else if parsedResult.id == .flagged {
-                         //Show ‘Clear Flag’ button
-                     }
-                     else {
-                         //Hide buttons
-                     }
-                   } catch {
-                     print(error)
-                   }
-                 }
-              else {
-                 if let error = error {
-                     let errorCode = (error as NSError).code
-                     switch(errorCode){
-                     //Handle the error codes
-                     }
-                 }
-             }
-         }
+     if let error = error {
+         print("Flag details request failed: \(error.localizedDescription)")
+         return
+     }
 
+     guard let details,
+           let data = try? JSONSerialization.data(withJSONObject: details),
+           let parsed = try? JSONDecoder().decode(EntrupyFlagDetails.self, from: data)
+     else {
+         return
+     }
+
+     let itemFlagStatus = parsed.flag_status.id
+     let isFlaggable = parsed.flag_status.is_flaggable
+
+     // ---- UI Logic ----
+     if (itemFlagStatus == .none || itemFlagStatus == .resolved) && isFlaggable {
+         // Show "Flag" button
+     } else if itemFlagStatus == .flagged {
+         // Show "Clear Flag" button
+     } else {
+         // Hide flag controls
+     }
+
+     let selectedReasonLabel = parsed.flag_status.flag_info?.label ?? ""
+     let userMessage = parsed.flag_status.flag_info?.message ?? ""
+     let supportedReasons = parsed.supported_flag_reasons
+
+     // Use `supportedReasons` to populate the reason picker UI.
+     // On submission, pass the selected reason’s `id` as `flagReasonId` to `setFlag(...)`.
+ }
  ```
  [Entrupy iOS SDK Documentation]:
  https://developer.entrupy.com/docs/mobile-sdks/ios/overview
  
- For more infomation refer to the [SDK web documentation].
+ For more information, refer to the SDK web documentation.
  */
 
 - (void)getFlagDetailsForResultWithEntrupyID:(NSString *)entrupyID completionHandler:(void (^ _Nonnull)(NSDictionary * _Nullable details, NSError * _Nullable error))completionHandler;
 
 /**
- Sets or clears a flag on a result assigned by Entrupy based on what is requested.
- 
- - Parameters:
-   - flag: A boolean value indicating whether a flag should be set (true) or cleared (false).
-   - entrupyID: The Entrupy ID associated with the result.
- 
- - Returns: void
- 
- ```
- Implement the "EntrupyFlagDelegate" to handle responses from this function
- ```
- 
- ```swift
-     //Implement EntrupyFlagDelegate
-     EntrupyApp.sharedInstance().flagDelegate = self
-     
-     //Invoke the setFlag method to update the flag status
-     EntrupyApp.sharedInstance().setFlag("true/false", forResultWithEntrupyID: <Entrupy ID>)
+  Sets or clears a flag for a specific authentication result.
+
+  Call this method to submit a flag request to Entrupy through your custom flagging UI.
+  Retrieve valid `flagReasonId` values from the `supported_flag_reasons` array returned by `getFlagDetailsForResultWithEntrupyID:completionHandler:`.
+  A message may be included to provide additional context to Entrupy reviewers.
+  If you want the SDK to handle reason/message validation automatically, use `displayFlagViewForItemWithEntrupyID:` instead.
+
+  Custom UI approach (recommended sequence):
+  1. Call `getFlagDetailsForResultWithEntrupyID:completionHandler:` to check the current flag status (and any existing flag details) and get `supported_flag_reasons`.
+  2. Present your custom UI (e.g. a list of reasons + optional free-form note field).
+  3. Call `setFlag:forResultWithEntrupyID:flagReasonId:message:` when the user submits (use the selected reason's `id` as `flagReasonId`).
+  4. Implement `EntrupyFlagDelegate` to receive success/failure callbacks and update your UI accordingly.
+
+  - Parameters:
+     - flag: Pass `YES` to set a flag, or `NO` to clear an existing flag.
+     - entrupyID: The Entrupy ID of the item being updated.
+     - flagReasonId: The identifier of the selected flag reason.
+     - message: Additional details provided by the user.
+
+  Example:
+  ```swift
+  EntrupyApp.sharedInstance().flagDelegate = self
+  let userNote = "Additional context for review"
+
+  EntrupyApp.sharedInstance().setFlag(
+      true,
+      forResultWithEntrupyID: entrupyID,
+      flagReasonId: selectedFlagReason.id,
+      message: userNote
+  )
  ```
  */
-
-- (void)setFlag:(BOOL)flag forResultWithEntrupyID:(NSString *_Nonnull)entrupyID;
+- (void)setFlag:(BOOL)flag forResultWithEntrupyID:(NSString *_Nonnull)entrupyID flagReasonId:(NSString* _Nonnull)flagReasonId message:(NSString* _Nullable)message;
 
 /**
   Presents the Detail View Controller for a specific authenticated item.
@@ -399,6 +437,120 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)displayDetailViewForItemWithEntrupyID:(NSString *_Nonnull)entrupyID withConfiguration:(EntrupyDetailViewConfiguration *_Nonnull)viewConfiguration NS_SWIFT_NAME(displayDetailViewForItem(withEntrupyID:withConfiguration:));
 
+/**
+  This method presents the built-in flagging UI that handles the entire flagging workflow
+
+  This view allows users to select a flag reason, add an optional note, and submit a flag. When the user submits the flag in this UI, the SDK
+  automatically handles all necessary validation and sets the flag.
+
+  Implement `EntrupyFlagViewDelegate` to receive delegate callbacks for the flagging workflow.
+
+  - Parameter entrupyID: The Entrupy ID of the result to be flagged.
+
+  Example:
+  ```swift
+  guard EntrupyApp.sharedInstance().isAuthorizationValid() else { return }
+
+  EntrupyApp.sharedInstance().flagViewDelegate = self
+  // Present the built-in flagging UI
+  EntrupyApp.sharedInstance().displayFlagViewForItem(withEntrupyID: entrupyID)
+ 
+ ```
+ */
+- (void)displayFlagViewForItemWithEntrupyID:(NSString *_Nonnull)entrupyID;
+
+
+/**
+ Starts the retake workflow for an item with a pending retake request.
+
+ Use this method to initiate a retake capture session for an item that Entrupy has specifically requested additional images for.
+ This workflow allows users to capture the required images so the authentication process can be completed.
+
+ Calling this method presents the retake workflow modally over the current top view controller.
+ 
+ ```
+ Implement the "EntrupyRetakeCaptureDelegate" protocol to handle responses from this method.
+ ```
+
+ - Parameters:
+   - entrupyID: The unique Entrupy ID of the item requiring a retake.
+
+ ```swift
+ // Swift
+ guard EntrupyApp.sharedInstance().isAuthorizationValid() else { return }
+
+ // Implement EntrupyRetakeCaptureDelegate
+ EntrupyApp.sharedInstance().retakeCaptureDelegate = self
+
+ // Start retake capture for a specific item
+ EntrupyApp.sharedInstance().startRetakeCaptureForItem(withEntrupyID: <Entrupy ID>)
+
+ ```
+ 
+ */
+- (void) startRetakeCaptureForItemWithEntrupyID:(NSString *_Nonnull)entrupyID;
+
+/**
+ Fetches retake submissions that require additional image captures.
+
+ Use this method to retrieve items that have pending retake requests.
+
+ ```
+ Implement the "EntrupySearchRetakeDelegate" protocol to handle responses from this method.
+ ```
+
+ ```swift
+ // Swift
+
+ guard EntrupyApp.sharedInstance().isAuthorizationValid() else { return }
+
+ // Implement EntrupySearchRetakeDelegate
+ EntrupyApp.sharedInstance().searchRetakeDelegate = self
+
+ // Fetch pending retakes
+ EntrupyApp.sharedInstance().searchRetakes()
+ ```
+ 
+ */
+-(void) searchRetakes;
+
+/**
+ * Fetches market edge for a given Entrupy ID by calling the backend route.
+ *
+ * This method retrieves comprehensive market edge including condition details,
+ * marketplace listings, and other relevant information for the specified authentication result.
+ *
+ * The response will be delivered through the EntrupyMarketEdgeDelegate callbacks:
+ * - didFetchMarketEdgeCompleteSuccessfully: Called when the request succeeds
+ * - didFetchMarketEdgeFailWithError: Called when the request fails
+ *
+ * @param entrupyID The authentication ID for which to fetch market edge
+ *
+ * @note This method requires valid authorization. Ensure the user is logged in before calling.
+ * @note The response data can be parsed using EntrupyMarketEdge struct with JSONSerialization.
+ *
+ * Example usage:
+ * @code
+ * // Set the delegate
+ * entrupyApp.marketEdgeDelegate = self
+ *
+ * // Fetch market edge
+ * entrupyApp.fetchMarketEdgeForItem(withEntrupyID: "ABC123")
+ *
+ * // In the delegate method, parse the response:
+ * func didFetchMarketEdgeCompleteSuccessfully(_ catalog: [AnyHashable : Any], forEntrupyID entrupyID: String) {
+ *     do {
+ *         let data = try JSONSerialization.data(withJSONObject: catalog, options: [])
+ *         let decoder = JSONDecoder()
+ *         let marketEdge = try decoder.decode(EntrupyMarketEdge.self, from: data)
+ *         // Use marketEdge...
+ *     } catch {
+ *         print("Error parsing market edge: \(error.localizedDescription)")
+ *     }
+ * }
+ * @endcode
+ */
+- (void)fetchMarketEdgeForItemWithEntrupyID:(NSString *_Nonnull)entrupyID;
 
 @end
 
