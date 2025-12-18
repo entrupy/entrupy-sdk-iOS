@@ -7,8 +7,8 @@
       "IoU threshold" : "0.7",
       "docs" : "https:\/\/docs.ultralytics.com",
       "task" : "detect",
-      "date" : "2025-06-03T15:24:29.391808",
       "imgsz" : "[640, 640]",
+      "date" : "2025-06-03T15:24:29.391808",
       "batch" : "1",
       "args" : "{'batch': 1, 'half': False, 'int8': True, 'nms': True}",
       "names" : "{0: 'camera', 1: 'logo', 2: 'identifier'}"
