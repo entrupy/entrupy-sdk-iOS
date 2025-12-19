@@ -9709,6 +9709,166 @@
             "moduleName": "EntrupySDK"
           },
           {
+            "kind": "Var",
+            "name": "match",
+            "printedName": "match",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyCaptureResultStatusId.Type) -> EntrupySDK.EntrupyCaptureResultStatusId",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyCaptureResultStatusId",
+                    "printedName": "EntrupySDK.EntrupyCaptureResultStatusId",
+                    "usr": "s:10EntrupySDK0A21CaptureResultStatusIdO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyCaptureResultStatusId.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyCaptureResultStatusId",
+                        "printedName": "EntrupySDK.EntrupyCaptureResultStatusId",
+                        "usr": "s:10EntrupySDK0A21CaptureResultStatusIdO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10EntrupySDK0A21CaptureResultStatusIdO5matchyA2CmF",
+            "mangledName": "$s10EntrupySDK0A21CaptureResultStatusIdO5matchyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "no_match",
+            "printedName": "no_match",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyCaptureResultStatusId.Type) -> EntrupySDK.EntrupyCaptureResultStatusId",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyCaptureResultStatusId",
+                    "printedName": "EntrupySDK.EntrupyCaptureResultStatusId",
+                    "usr": "s:10EntrupySDK0A21CaptureResultStatusIdO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyCaptureResultStatusId.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyCaptureResultStatusId",
+                        "printedName": "EntrupySDK.EntrupyCaptureResultStatusId",
+                        "usr": "s:10EntrupySDK0A21CaptureResultStatusIdO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10EntrupySDK0A21CaptureResultStatusIdO8no_matchyA2CmF",
+            "mangledName": "$s10EntrupySDK0A21CaptureResultStatusIdO8no_matchyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "registered",
+            "printedName": "registered",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyCaptureResultStatusId.Type) -> EntrupySDK.EntrupyCaptureResultStatusId",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyCaptureResultStatusId",
+                    "printedName": "EntrupySDK.EntrupyCaptureResultStatusId",
+                    "usr": "s:10EntrupySDK0A21CaptureResultStatusIdO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyCaptureResultStatusId.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyCaptureResultStatusId",
+                        "printedName": "EntrupySDK.EntrupyCaptureResultStatusId",
+                        "usr": "s:10EntrupySDK0A21CaptureResultStatusIdO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10EntrupySDK0A21CaptureResultStatusIdO10registeredyA2CmF",
+            "mangledName": "$s10EntrupySDK0A21CaptureResultStatusIdO10registeredyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "received",
+            "printedName": "received",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyCaptureResultStatusId.Type) -> EntrupySDK.EntrupyCaptureResultStatusId",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyCaptureResultStatusId",
+                    "printedName": "EntrupySDK.EntrupyCaptureResultStatusId",
+                    "usr": "s:10EntrupySDK0A21CaptureResultStatusIdO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyCaptureResultStatusId.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyCaptureResultStatusId",
+                        "printedName": "EntrupySDK.EntrupyCaptureResultStatusId",
+                        "usr": "s:10EntrupySDK0A21CaptureResultStatusIdO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10EntrupySDK0A21CaptureResultStatusIdO8receivedyA2CmF",
+            "mangledName": "$s10EntrupySDK0A21CaptureResultStatusIdO8receivedyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(rawValue:localizeValue:)",
@@ -29222,28 +29382,14 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Views\/BadgeView\/BadgeView.swift",
       "kind": "IntegerLiteral",
-      "offset": 4143,
+      "offset": 4165,
       "length": 2,
       "value": "25"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Views\/BadgeView\/BadgeView.swift",
       "kind": "IntegerLiteral",
-      "offset": 4197,
-      "length": 1,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Views\/BadgeView\/BadgeView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4206,
-      "length": 2,
-      "value": "10"
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Views\/BadgeView\/BadgeView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4218,
+      "offset": 4219,
       "length": 1,
       "value": "5"
     },
@@ -29257,7 +29403,21 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Views\/BadgeView\/BadgeView.swift",
       "kind": "IntegerLiteral",
-      "offset": 4265,
+      "offset": 4240,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Views\/BadgeView\/BadgeView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4250,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Views\/BadgeView\/BadgeView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4287,
       "length": 1,
       "value": "2"
     },
@@ -30069,1050 +30229,1078 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 10242,
+      "offset": 10234,
+      "length": 14,
+      "value": "\"result_match\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
+      "kind": "StringLiteral",
+      "offset": 10373,
       "length": 18,
       "value": "\"result_authentic\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 10381,
+      "offset": 10513,
+      "length": 17,
+      "value": "\"result_no_match\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
+      "kind": "StringLiteral",
+      "offset": 10651,
       "length": 16,
       "value": "\"result_invalid\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 10520,
+      "offset": 10790,
       "length": 17,
       "value": "\"result_analyzed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 10667,
+      "offset": 10934,
+      "length": 19,
+      "value": "\"result_registered\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
+      "kind": "StringLiteral",
+      "offset": 11083,
       "length": 21,
       "value": "\"result_under_review\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 10820,
+      "offset": 11236,
       "length": 22,
       "value": "\"result_not_supported\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 10973,
+      "offset": 11389,
       "length": 21,
       "value": "\"result_unidentified\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 11127,
+      "offset": 11533,
+      "length": 17,
+      "value": "\"result_received\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
+      "kind": "StringLiteral",
+      "offset": 11683,
       "length": 23,
       "value": "\"tap_inside_to_capture\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 11257,
+      "offset": 11813,
       "length": 9,
       "value": "\"zoom_in\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 11379,
+      "offset": 11935,
       "length": 12,
       "value": "\"move_close\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 11506,
+      "offset": 12062,
       "length": 13,
       "value": "\"hold_steady\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 11628,
+      "offset": 12184,
       "length": 10,
       "value": "\"zoom_out\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 11778,
+      "offset": 12334,
       "length": 26,
       "value": "\"launch_screen_background\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 11932,
+      "offset": 12488,
       "length": 20,
       "value": "\"entrupy_logo_solid\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 12075,
+      "offset": 12631,
       "length": 17,
       "value": "\"series_material\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 12211,
+      "offset": 12767,
       "length": 15,
       "value": "\"closed_ticket\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 12366,
+      "offset": 12922,
       "length": 26,
       "value": "\"retake_toast_information\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 12504,
+      "offset": 13060,
       "length": 11,
       "value": "\"authentic\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 12626,
+      "offset": 13182,
       "length": 11,
       "value": "\"close_new\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 12772,
+      "offset": 13328,
       "length": 24,
       "value": "\"tab_my_checks_selected\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 12913,
+      "offset": 13469,
       "length": 14,
       "value": "\"history_edit\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 13064,
+      "offset": 13620,
       "length": 24,
       "value": "\"unselected_placeholder\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 13211,
+      "offset": 13767,
       "length": 17,
       "value": "\"chevron_forward\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 13343,
+      "offset": 13899,
       "length": 13,
       "value": "\"edit_button\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 13486,
+      "offset": 14042,
       "length": 21,
       "value": "\"entrupy_camera_logo\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 13620,
+      "offset": 14176,
       "length": 12,
       "value": "\"micro_mode\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 13736,
+      "offset": 14292,
       "length": 7,
       "value": "\"table\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 13856,
+      "offset": 14412,
       "length": 12,
       "value": "\"timer_icon\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 13974,
+      "offset": 14530,
       "length": 8,
       "value": "\"filter\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 14099,
+      "offset": 14655,
       "length": 14,
       "value": "\"arrow_banner\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 14226,
+      "offset": 14782,
       "length": 12,
       "value": "\"three_dots\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 14361,
+      "offset": 14917,
       "length": 17,
       "value": "\"wave_background\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 14491,
+      "offset": 15047,
       "length": 12,
       "value": "\"chevron_up\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 14616,
+      "offset": 15172,
       "length": 12,
       "value": "\"contact_us\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 14773,
+      "offset": 15329,
       "length": 29,
       "value": "\"verified_by_entrupy_invalid\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 14919,
+      "offset": 15475,
       "length": 14,
       "value": "\"close_circle\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 15053,
+      "offset": 15609,
       "length": 16,
       "value": "\"tap_to_capture\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 15184,
+      "offset": 15740,
       "length": 13,
       "value": "\"tick_circle\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 15295,
+      "offset": 15851,
       "length": 4,
       "value": "\"up\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 15410,
+      "offset": 15966,
       "length": 11,
       "value": "\"user_icon\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 15534,
+      "offset": 16090,
       "length": 12,
       "value": "\"entrupy_id\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 15688,
+      "offset": 16244,
       "length": 27,
       "value": "\"sneaker_placeholder_image\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 15830,
+      "offset": 16386,
       "length": 13,
       "value": "\"camera_icon\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 15988,
+      "offset": 16544,
       "length": 29,
       "value": "\"verified_by_entrupy_neutral\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 16134,
+      "offset": 16690,
       "length": 14,
       "value": "\"mobile_shake\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 16292,
+      "offset": 16848,
       "length": 28,
       "value": "\"tab_notifications_selected\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 16443,
+      "offset": 16999,
       "length": 17,
       "value": "\"nike_background\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 16579,
+      "offset": 17135,
       "length": 15,
       "value": "\"chevron_right\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 16706,
+      "offset": 17262,
       "length": 11,
       "value": "\"separator\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 16827,
+      "offset": 17383,
       "length": 10,
       "value": "\"checkbox\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 16950,
+      "offset": 17506,
       "length": 12,
       "value": "\"rhs_shadow\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 17088,
+      "offset": 17644,
       "length": 19,
       "value": "\"tab_menu_selected\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 17213,
+      "offset": 17769,
       "length": 8,
       "value": "\"videos\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 17342,
+      "offset": 17898,
       "length": 16,
       "value": "\"image_captured\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 17466,
+      "offset": 18022,
       "length": 9,
       "value": "\"barcode\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 17591,
+      "offset": 18147,
       "length": 14,
       "value": "\"how_it_works\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 17715,
+      "offset": 18271,
       "length": 10,
       "value": "\"lighting\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 17851,
+      "offset": 18407,
       "length": 19,
       "value": "\"blur_detection_on\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 17981,
+      "offset": 18537,
       "length": 11,
       "value": "\"chat_icon\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 18105,
+      "offset": 18661,
       "length": 12,
       "value": "\"lhs_shadow\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 18232,
+      "offset": 18788,
       "length": 13,
       "value": "\"flag_result\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 18398,
+      "offset": 18954,
       "length": 33,
       "value": "\"attach_entrupy_lens_placeholder\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 18548,
+      "offset": 19104,
       "length": 14,
       "value": "\"chevron_down\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 18675,
+      "offset": 19231,
       "length": 12,
       "value": "\"toast_lock\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 18799,
+      "offset": 19355,
       "length": 11,
       "value": "\"alignment\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 18925,
+      "offset": 19481,
       "length": 13,
       "value": "\"adidas_logo\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 19040,
+      "offset": 19596,
       "length": 6,
       "value": "\"down\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 19159,
+      "offset": 19715,
       "length": 12,
       "value": "\"gucci_logo\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 19279,
+      "offset": 19835,
       "length": 9,
       "value": "\"invalid\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 19401,
+      "offset": 19957,
       "length": 12,
       "value": "\"arrow_left\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 19542,
+      "offset": 20098,
       "length": 20,
       "value": "\"certificate_issued\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 19670,
+      "offset": 20226,
       "length": 9,
       "value": "\"checked\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 19801,
+      "offset": 20357,
       "length": 17,
       "value": "\"radio_button_on\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 19936,
+      "offset": 20492,
       "length": 14,
       "value": "\"unidentified\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 20071,
+      "offset": 20627,
       "length": 16,
       "value": "\"capture_button\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 20202,
+      "offset": 20758,
       "length": 13,
       "value": "\"arrow_right\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 20330,
+      "offset": 20886,
       "length": 13,
       "value": "\"toast_check\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 20461,
+      "offset": 21017,
       "length": 15,
       "value": "\"tab_my_checks\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 20607,
+      "offset": 21163,
       "length": 21,
       "value": "\"handbag_placeholder\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 20743,
+      "offset": 21299,
       "length": 13,
       "value": "\"customer_id\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 20882,
+      "offset": 21438,
       "length": 19,
       "value": "\"tab_home_selected\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 21011,
+      "offset": 21567,
       "length": 10,
       "value": "\"download\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 21131,
+      "offset": 21687,
       "length": 10,
       "value": "\"MenuBack\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 21245,
+      "offset": 21801,
       "length": 7,
       "value": "\"blogs\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 21369,
+      "offset": 21925,
       "length": 14,
       "value": "\"entrupy_logo\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 21494,
+      "offset": 22050,
       "length": 11,
       "value": "\"nike_logo\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 21630,
+      "offset": 22186,
       "length": 18,
       "value": "\"notification_new\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 21761,
+      "offset": 22317,
       "length": 12,
       "value": "\"app_update\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 21890,
+      "offset": 22446,
       "length": 14,
       "value": "\"flash_cancel\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 22013,
+      "offset": 22569,
       "length": 10,
       "value": "\"tab_home\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 22146,
+      "offset": 22702,
       "length": 17,
       "value": "\"flash_activated\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 22278,
+      "offset": 22834,
       "length": 13,
       "value": "\"toast_clock\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 22410,
+      "offset": 22966,
       "length": 15,
       "value": "\"not_supported\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 22540,
+      "offset": 23096,
       "length": 13,
       "value": "\"open_ticket\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 22684,
+      "offset": 23240,
       "length": 21,
       "value": "\"financial_guarantee\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 22838,
+      "offset": 23394,
       "length": 22,
       "value": "\"generic_instructions\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 22964,
+      "offset": 23520,
       "length": 7,
       "value": "\"check\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 23084,
+      "offset": 23640,
       "length": 12,
       "value": "\"request_on\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 23198,
+      "offset": 23754,
       "length": 6,
       "value": "\"hide\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 23324,
+      "offset": 23880,
       "length": 15,
       "value": "\"MenuBackShade\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 23489,
+      "offset": 24045,
       "length": 31,
       "value": "\"popup_instruction_placeholder\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 23667,
+      "offset": 24223,
       "length": 30,
       "value": "\"verified_by_entrupy_accepted\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 23821,
+      "offset": 24377,
       "length": 18,
       "value": "\"radio_button_off\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 23956,
+      "offset": 24512,
       "length": 14,
       "value": "\"barcode_icon\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 24079,
+      "offset": 24635,
       "length": 10,
       "value": "\"order_id\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 24193,
+      "offset": 24749,
       "length": 7,
       "value": "\"about\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 24334,
+      "offset": 24890,
       "length": 23,
       "value": "\"icon_timeline_entrupy\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 24483,
+      "offset": 25039,
       "length": 19,
       "value": "\"rfid_sensors_icon\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 24623,
+      "offset": 25179,
       "length": 16,
       "value": "\"rectangle_icon\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 24792,
+      "offset": 25348,
       "length": 33,
       "value": "\"detach_entrupy_lens_placeholder\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 24958,
+      "offset": 25514,
       "length": 22,
       "value": "\"selected_placeholder\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 25108,
+      "offset": 25664,
       "length": 20,
       "value": "\"icon_timeline_user\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 25255,
+      "offset": 25811,
       "length": 19,
       "value": "\"adidas_background\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 25392,
+      "offset": 25948,
       "length": 15,
       "value": "\"entrupy_id_v2\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 25517,
+      "offset": 26073,
       "length": 10,
       "value": "\"obstruct\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 25655,
+      "offset": 26211,
       "length": 20,
       "value": "\"retake_toast_check\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 25779,
+      "offset": 26335,
       "length": 7,
       "value": "\"share\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 25914,
+      "offset": 26470,
       "length": 20,
       "value": "\"image_not_captured\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 26049,
+      "offset": 26605,
       "length": 13,
       "value": "\"denied_icon\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 26187,
+      "offset": 26743,
       "length": 18,
       "value": "\"gucci_background\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 26329,
+      "offset": 26885,
       "length": 18,
       "value": "\"terms_of_service\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 26460,
+      "offset": 27016,
       "length": 12,
       "value": "\"macro_mode\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 26581,
+      "offset": 27137,
       "length": 10,
       "value": "\"tab_scan\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 26697,
+      "offset": 27253,
       "length": 8,
       "value": "\"search\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 26812,
+      "offset": 27368,
       "length": 9,
       "value": "\"log_out\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 26935,
+      "offset": 27491,
       "length": 12,
       "value": "\"fullscreen\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 27068,
+      "offset": 27624,
       "length": 16,
       "value": "\"guideline_icon\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 27204,
+      "offset": 27760,
       "length": 16,
       "value": "\"no_events_icon\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 27339,
+      "offset": 27895,
       "length": 15,
       "value": "\"accepted_icon\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 27493,
+      "offset": 28049,
       "length": 26,
       "value": "\"entrupy_camera_logo_dark\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 27661,
+      "offset": 28217,
       "length": 27,
       "value": "\"notification_new_selected\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 27815,
+      "offset": 28371,
       "length": 19,
       "value": "\"troubleshoot_help\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 27949,
+      "offset": 28505,
       "length": 13,
       "value": "\"toast_error\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 28081,
+      "offset": 28637,
       "length": 15,
       "value": "\"download_icon\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 28198,
+      "offset": 28754,
       "length": 6,
       "value": "\"show\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 28325,
+      "offset": 28881,
       "length": 16,
       "value": "\"privacy_policy\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 28443,
+      "offset": 28999,
       "length": 6,
       "value": "\"faqs\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 28585,
+      "offset": 29141,
       "length": 24,
       "value": "\"certificate_request_on\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 28732,
+      "offset": 29288,
       "length": 17,
       "value": "\"image_guideline\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 28853,
+      "offset": 29409,
       "length": 7,
       "value": "\"brand\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 28979,
+      "offset": 29535,
       "length": 15,
       "value": "\"flash_default\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 29103,
+      "offset": 29659,
       "length": 10,
       "value": "\"tab_menu\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 29240,
+      "offset": 29796,
       "length": 19,
       "value": "\"tab_notifications\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 29370,
+      "offset": 29926,
       "length": 11,
       "value": "\"result_on\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 29492,
+      "offset": 30048,
       "length": 11,
       "value": "\"star_icon\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 29639,
+      "offset": 30195,
       "length": 24,
       "value": "\"device_preference_icon\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 29765,
+      "offset": 30321,
       "length": 6,
       "value": "\"info\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 29910,
+      "offset": 30466,
       "length": 26,
       "value": "\"home_banner_foreground_2\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 30075,
+      "offset": 30631,
       "length": 26,
       "value": "\"home_banner_background_1\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 30240,
+      "offset": 30796,
       "length": 26,
       "value": "\"home_banner_foreground_1\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceImage.swift",
       "kind": "StringLiteral",
-      "offset": 30405,
+      "offset": 30961,
       "length": 26,
       "value": "\"home_banner_background_2\""
     },
@@ -32715,7 +32903,7 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/PublicAPI\/PublicModels\/EntrupyCaptureResult.swift",
       "kind": "Dictionary",
-      "offset": 6405,
+      "offset": 6418,
       "length": 3,
       "value": "[]"
     },
@@ -46925,392 +47113,420 @@
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 34492,
+      "offset": 34477,
+      "length": 14,
+      "value": "\"result_match\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 34629,
+      "length": 17,
+      "value": "\"result_no_match\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 34794,
       "length": 22,
       "value": "\"result_not_supported\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 34641,
+      "offset": 34943,
       "length": 11,
       "value": "\"result_on\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 34798,
+      "offset": 35093,
+      "length": 17,
+      "value": "\"result_received\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 35253,
+      "length": 19,
+      "value": "\"result_registered\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 35418,
       "length": 21,
       "value": "\"result_under_review\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 34966,
+      "offset": 35586,
       "length": 21,
       "value": "\"result_unidentified\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 35131,
+      "offset": 35751,
       "length": 20,
       "value": "\"retake_toast_check\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 35307,
+      "offset": 35927,
       "length": 26,
       "value": "\"retake_toast_information\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 35475,
+      "offset": 36095,
       "length": 19,
       "value": "\"rfid_sensors_icon\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 35623,
+      "offset": 36243,
       "length": 12,
       "value": "\"rhs_shadow\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 35757,
+      "offset": 36377,
       "length": 8,
       "value": "\"search\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 35914,
+      "offset": 36534,
       "length": 22,
       "value": "\"selected_placeholder\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 36064,
+      "offset": 36684,
       "length": 11,
       "value": "\"separator\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 36214,
+      "offset": 36834,
       "length": 17,
       "value": "\"series_material\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 36372,
+      "offset": 36992,
       "length": 18,
       "value": "\"server_connected\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 36538,
+      "offset": 37158,
       "length": 22,
       "value": "\"server_not_connected\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 36700,
+      "offset": 37320,
       "length": 18,
       "value": "\"server_not_setup\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 36838,
+      "offset": 37458,
       "length": 7,
       "value": "\"share\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 36963,
+      "offset": 37583,
       "length": 6,
       "value": "\"show\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 37104,
+      "offset": 37724,
       "length": 15,
       "value": "\"smart_capture\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 37272,
+      "offset": 37892,
       "length": 27,
       "value": "\"sneaker_placeholder_image\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 37426,
+      "offset": 38046,
       "length": 11,
       "value": "\"star_icon\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 37568,
+      "offset": 38188,
       "length": 13,
       "value": "\"stockx_logo\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 37733,
+      "offset": 38353,
       "length": 24,
       "value": "\"summary_condition_icon\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 37882,
+      "offset": 38502,
       "length": 10,
       "value": "\"tab_home\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 38034,
+      "offset": 38654,
       "length": 19,
       "value": "\"tab_home_selected\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 38178,
+      "offset": 38798,
       "length": 10,
       "value": "\"tab_menu\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 38330,
+      "offset": 38950,
       "length": 19,
       "value": "\"tab_menu_selected\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 38483,
+      "offset": 39103,
       "length": 15,
       "value": "\"tab_my_checks\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 38649,
+      "offset": 39269,
       "length": 24,
       "value": "\"tab_my_checks_selected\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 38816,
+      "offset": 39436,
       "length": 19,
       "value": "\"tab_notifications\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 38995,
+      "offset": 39615,
       "length": 28,
       "value": "\"tab_notifications_selected\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 39148,
+      "offset": 39768,
       "length": 10,
       "value": "\"tab_scan\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 39278,
+      "offset": 39898,
       "length": 7,
       "value": "\"table\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 39434,
+      "offset": 40054,
       "length": 23,
       "value": "\"tap_inside_to_capture\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 39593,
+      "offset": 40213,
       "length": 16,
       "value": "\"tap_to_capture\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 39749,
+      "offset": 40369,
       "length": 18,
       "value": "\"terms_of_service\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 39896,
+      "offset": 40516,
       "length": 12,
       "value": "\"three_dots\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 40039,
+      "offset": 40659,
       "length": 13,
       "value": "\"tick_circle\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 40172,
+      "offset": 40792,
       "length": 7,
       "value": "\"timer\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 40308,
+      "offset": 40928,
       "length": 12,
       "value": "\"timer_icon\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 40451,
+      "offset": 41071,
       "length": 13,
       "value": "\"toast_check\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 40595,
+      "offset": 41215,
       "length": 13,
       "value": "\"toast_clock\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 40739,
+      "offset": 41359,
       "length": 13,
       "value": "\"toast_error\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 40881,
+      "offset": 41501,
       "length": 12,
       "value": "\"toast_lock\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 41044,
+      "offset": 41664,
       "length": 23,
       "value": "\"transparent_rectangle\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 41210,
+      "offset": 41830,
       "length": 19,
       "value": "\"troubleshoot_help\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 41363,
+      "offset": 41983,
       "length": 14,
       "value": "\"unidentified\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 41530,
+      "offset": 42150,
       "length": 24,
       "value": "\"unselected_placeholder\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 41668,
+      "offset": 42288,
       "length": 4,
       "value": "\"up\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 41799,
+      "offset": 42419,
       "length": 11,
       "value": "\"user_icon\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 41973,
+      "offset": 42593,
       "length": 30,
       "value": "\"verified_by_entrupy_accepted\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 42164,
+      "offset": 42784,
       "length": 29,
       "value": "\"verified_by_entrupy_invalid\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 42354,
+      "offset": 42974,
       "length": 29,
       "value": "\"verified_by_entrupy_neutral\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 42505,
+      "offset": 43125,
       "length": 8,
       "value": "\"videos\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 42652,
+      "offset": 43272,
       "length": 17,
       "value": "\"wave_background\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 42792,
+      "offset": 43412,
       "length": 9,
       "value": "\"zoom_in\""
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/entrupy-gyjohxbposgexsfjmfaemozeqsbh\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphoneos\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 42926,
+      "offset": 43546,
       "length": 10,
       "value": "\"zoom_out\""
     }
