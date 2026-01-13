@@ -10,6 +10,8 @@
 
 @protocol EntrupyTheme;
 @class EntrupyDetailViewConfiguration;
+@class EntrupyMarketEdgeViewConfiguration;
+
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -27,6 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak) id<EntrupyRetakeCaptureDelegate> retakeCaptureDelegate;
 @property (nonatomic, weak) id<EntrupySearchRetakeDelegate> searchRetakeDelegate;
 @property (nonatomic, weak) id<EntrupyMarketEdgeDelegate> marketEdgeDelegate;
+@property (nonatomic, weak) id<EntrupyMarketEdgeViewDelegate> marketEdgeViewDelegate;
 
 + (instancetype)sharedInstance;
 
@@ -436,6 +439,16 @@ NS_ASSUME_NONNULL_BEGIN
  
  */
 - (void)displayDetailViewForItemWithEntrupyID:(NSString *_Nonnull)entrupyID withConfiguration:(EntrupyDetailViewConfiguration *_Nonnull)viewConfiguration NS_SWIFT_NAME(displayDetailViewForItem(withEntrupyID:withConfiguration:));
+
+/**
+ Presents the Market Edge view for a specific authentication result.
+
+ @param entrupyID The Entrupy ID for the item to display.
+ @param viewConfiguration Controls visibility of Market Edge sections.
+ */
+- (void)displayMarketEdgeViewForItemWithEntrupyID:(NSString *_Nonnull)entrupyID
+                                withConfiguration:(EntrupyMarketEdgeViewConfiguration *_Nonnull)viewConfiguration NS_SWIFT_NAME(displayMarketEdgeViewForItem(withEntrupyID:withConfiguration:));
+
 
 /**
   This method presents the built-in flagging UI that handles the entire flagging workflow

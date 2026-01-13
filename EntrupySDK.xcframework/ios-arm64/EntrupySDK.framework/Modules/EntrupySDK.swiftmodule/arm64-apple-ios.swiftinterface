@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
+// swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
 // swift-module-flags: -target arm64-apple-ios15.8 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name EntrupySDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
 import AVFoundation
 import Combine
 import Compression
@@ -54,10 +54,6 @@ extension EntrupySDK.EntrupyMarketGradeDetailViewController : UIKit.UITableViewD
 }
 @objc public class EntrupyMarketValueDetailViewModel : ObjectiveC.NSObject {
   public init(condition: EntrupySDK.EntrupyMarketValue, captureResult: EntrupySDK.EntrupyCaptureResult)
-  @objc deinit
-}
-public let KEntrupyLocalizationsUpdatedNotification: Swift.String
-@_hasMissingDesignatedInitializers @objc(ObjcEntrupyLocalizationManager) public class EntrupyLocalizationManager : ObjectiveC.NSObject {
   @objc deinit
 }
 @objc(ObjcEntrupyEventName) public enum EntrupyEventName : Swift.Int {
@@ -116,6 +112,7 @@ public let KEntrupyLocalizationsUpdatedNotification: Swift.String
   case viewCertificateButtonTap
   case viewTimelineButtonTap
   case viewDetailsButtonTap
+  case networkLog
   case authenticationBeginRequestFailure
   case logging
   public func toString() -> Swift.String
@@ -249,6 +246,10 @@ public enum EntrupyCaptureResultStatusId : Swift.Equatable, Swift.CustomStringCo
   case invalid
   case analyzed
   case other(Swift.String)
+  case match
+  case no_match
+  case registered
+  case received
   public init(rawValue: Swift.String, localizeValue: Swift.String)
   public var description: Swift.String {
     get
@@ -477,6 +478,10 @@ extension Swift.Array {
   }
   #endif
 }
+@_hasMissingDesignatedInitializers @objc(ObjcEntrupyLocalizationManager) public class EntrupyLocalizationManager : ObjectiveC.NSObject {
+  @objc deinit
+}
+public let KEntrupyLocalizationsUpdatedNotification: Swift.String
 @_hasMissingDesignatedInitializers public class EntrupyAsset : Swift.Codable {
   required public init(from decoder: any Swift.Decoder) throws
   final public let id: Swift.String
@@ -544,6 +549,15 @@ extension EntrupySDK.EntrupyMarketMatchViewController : UIKit.UITableViewDelegat
   #endif
   @objc(setButtonBackgroundState:) @_Concurrency.MainActor @preconcurrency public func setButtonBackgroundState(_ state: EntrupySDK.EntrupyButtonBackgroundState)
   @objc(currentState) @_Concurrency.MainActor @preconcurrency public func currentState() -> EntrupySDK.EntrupyButtonBackgroundState
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class EntrupyMarketEdgeViewConfiguration : ObjectiveC.NSObject {
+  final public let displayMarketGrade: Swift.Bool
+  final public let displayMarketValue: Swift.Bool
+  final public let displayMarketMatch: Swift.Bool
+  final public let displayRegionSelection: Swift.Bool
+  @objc override dynamic public init()
+  @objc public init(displayMarketGrade: Swift.Bool = true, displayMarketValue: Swift.Bool = true, displayMarketMatch: Swift.Bool = true, displayRegionSelection: Swift.Bool = true)
   @objc deinit
 }
 @objc(ObjCSnapIQDelegate) public protocol SnapIQDelegate {

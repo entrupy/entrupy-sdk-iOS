@@ -264,6 +264,36 @@ Refer to the [SDK web documentation] for more details.
 
 @end
 
+@protocol EntrupyMarketEdgeViewDelegate <NSObject>
+/**
+ Invoked when the SDK successfully presents the market edge view for an item.
+
+ - Parameter entrupyID: The unique Entrupy ID of the item being displayed in the market edge view
+*/
+- (void)didDisplayMarketEdgeViewForItemWithEntrupyID:(NSString *_Nonnull)entrupyID;
+
+/**
+ Called when the Market Edge View Controller is dismissed by the user.
+ 
+ @param entrupyID The unique Entrupy ID of the item that was being viewed
+*/
+- (void)didDismissMarketEdgeViewForItemWithEntrupyID:(NSString *_Nonnull)entrupyID;
+
+/**
+ Called when the SDK fails to present the Market Edge view.
+ 
+ @param errorCode The specific error code describing the type of failure
+ @param description A technical description of the error for debugging
+ @param localizedDescription A user-friendly, localized error message suitable for display
+ @param entrupyID The Entrupy ID that was requested but failed to display
+*/
+- (void)didDisplayMarketEdgeViewFailWithError:(EntrupyErrorCode)errorCode
+                                         description:(NSString *_Nonnull)description
+                                localizedDescription:(NSString *_Nonnull)localizedDescription
+                                       forEntrupyID:(NSString *_Nonnull)entrupyID;
+
+@end
+
 @protocol EntrupyMarketEdgeDelegate <NSObject>
 /**
  Invoked when market edge are successfully fetched for an item.

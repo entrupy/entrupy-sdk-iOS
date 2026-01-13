@@ -5,6 +5,6 @@
     "devicePreference": true,
     "marketEdgePriceIndicatorsEnabled": false,
     "regionPreferences" : true,
-    "dynamicLocalizations": false,
+    "dynamicLocalizations": true,
     "macroFingerprint": false
 }
