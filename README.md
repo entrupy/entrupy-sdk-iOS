@@ -22,24 +22,22 @@ To integrate `EntrupySDK` into your Xcode project:
 
 ### CocoaPods
 
-1. Open your iOS project and increase the min SDK target to **iOS 15.8+**.
-2. Update your `Podfile` to include the platform and the `EntrupySDK` pod:
+1.  Add the Entrupy SDK to your `Podfile`:
 
-```ruby
-platform :ios, '15.8'
+    ```ruby
+    platform :ios, '15.8'
+    use_frameworks!
 
-target 'YOUR_TARGET_NAME' do
-    # ...
-    pod 'EntrupySDK'
-    # ...
-end
-```
+    target 'YourAppTarget' do
+      pod 'EntrupySDK', '~> X.X.X' # Replace X.X.X with the latest SDK version
+    end
+    ```
+    :::note
+    Refer to the SDK's release page for the latest version number.
+    :::
 
-3. Open terminal in the root directory and run:
-
-```bash
-pod install
-```
+2.  Run `pod install` in your project directory from the terminal.
+3.  Open the generated `.xcworkspace` file in Xcode and build your project.
 
 ## Usage
 
