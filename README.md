@@ -11,15 +11,14 @@ The Entrupy SDK for iOS allows you to integrate Entrupy's authentication functio
 
 ### Swift Package Manager (SPM)
 
-> [!IMPORTANT]
-> Swift Package Manager support is available starting from version **2.0.3** and later.
-
 To integrate `EntrupySDK` into your Xcode project:
 
 1. Select **File** > **Add Packages...**
 2. Enter the repository URL: `https://github.com/entrupy/entrupy-sdk-iOS.git`
-3. Set the **Dependency Rule** to **Up to Next Major Version** and use `2.0.3`.
-4. Select the `entrupy-sdk-ios` library and add it to your app target.
+3. Select package `entrupy-sdk-ios`.  
+4. Set the **Dependency Rule** to **Up to Next Major Version**.  
+5. Click **Add Package**.  
+6. In the **Choose Package Products** prompt, add the library to your app target.
 
 ### CocoaPods
 
