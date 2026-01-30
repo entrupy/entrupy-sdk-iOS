@@ -283,9 +283,12 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 @import CoreFoundation;
 @import CoreMedia;
+@import Foundation;
 @import ObjectiveC;
 @import UIKit;
 #endif
+
+#import <EntrupySDK/EntrupySDK.h>
 
 #endif
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -306,6 +309,176 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 #if defined(__OBJC__)
+
+@protocol EntrupyLoginDelegate;
+@protocol EntrupyConfigDelegate;
+@protocol EntrupyCaptureDelegate;
+@protocol EntrupySearchDelegate;
+@protocol EntrupyFlagDelegate;
+@protocol EntrupyDetailViewDelegate;
+@protocol EntrupyFlagViewDelegate;
+@protocol EntrupyRetakeCaptureDelegate;
+@protocol EntrupySearchRetakeDelegate;
+@protocol EntrupyMarketEdgeDelegate;
+@protocol EntrupyMarketEdgeViewDelegate;
+@protocol EntrupyTheme;
+/// Modern Swift facade for Entrupy SDK
+/// Provides async/await APIs while maintaining backward compatibility with Objective-C delegates
+/// IMPORTANT: This is the public-facing EntrupyApp class. During incremental migration,
+/// it internally uses EntrupyApp_Legacy (the Objective-C implementation) for actual work.
+/// After full migration, EntrupyApp_Legacy will be removed.
+SWIFT_CLASS_NAMED("EntrupyApp")
+@interface EntrupyApp : NSObject
+/// Shared instance (backward compatible with Objective-C)
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) EntrupyApp * _Nonnull shared;)
++ (EntrupyApp * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
+/// Legacy singleton accessor (for Objective-C compatibility)
++ (EntrupyApp * _Nonnull)sharedInstance SWIFT_WARN_UNUSED_RESULT;
+/// Legacy delegate properties for Objective-C compatibility
+/// These are set by EntrupyApp.m and used for delegate callbacks
+/// Using didSet to automatically forward delegates to legacyApp to ensure references are never lost
+@property (nonatomic, weak) id <EntrupyLoginDelegate> _Nullable loginDelegate;
+@property (nonatomic, weak) id <EntrupyConfigDelegate> _Nullable configDelegate;
+@property (nonatomic, weak) id <EntrupyCaptureDelegate> _Nullable captureDelegate;
+@property (nonatomic, weak) id <EntrupySearchDelegate> _Nullable searchDelegate;
+@property (nonatomic, weak) id <EntrupyFlagDelegate> _Nullable flagDelegate;
+@property (nonatomic, weak) id <EntrupyDetailViewDelegate> _Nullable detailViewDelegate;
+@property (nonatomic, weak) id <EntrupyFlagViewDelegate> _Nullable flagViewDelegate;
+@property (nonatomic, weak) id <EntrupyRetakeCaptureDelegate> _Nullable retakeCaptureDelegate;
+@property (nonatomic, weak) id <EntrupySearchRetakeDelegate> _Nullable searchRetakeDelegate;
+@property (nonatomic, weak) id <EntrupyMarketEdgeDelegate> _Nullable marketEdgeDelegate;
+@property (nonatomic, weak) id <EntrupyMarketEdgeViewDelegate> _Nullable marketEdgeViewDelegate;
+@property (nonatomic, strong) id <EntrupyTheme> _Nullable theme;
+@property (nonatomic, copy) void (^ _Nullable backgroundTransferCompletionHandler)(void);
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@class NSString;
+@class UIViewController;
+@class EntrupyDetailViewConfiguration;
+@class EntrupyMarketEdgeViewConfiguration;
+@class UIApplication;
+@interface EntrupyApp (SWIFT_EXTENSION(EntrupySDK))
+/// Legacy: Login user with signed request (Objective-C compatible)
+/// During migration: Calls Objective-C implementation in EntrupyApp.m
+/// After migration: Uses new Swift authorization service
+/// This method calls the legacy Objective-C implementation and propagates delegate callbacks.
+/// Delegates are automatically forwarded via didSet when set on the Swift facade.
+/// \param signedRequest Signed authorization request from backend
+///
+- (void)loginUserWithSignedRequest:(NSString * _Nonnull)signedRequest;
+/// Legacy: Generate SDK authorization request (Objective-C compatible)
+///
+/// returns:
+/// Authorization request string to be signed by backend
+- (NSString * _Nonnull)generateSDKAuthorizationRequest SWIFT_WARN_UNUSED_RESULT;
+/// Legacy: Check if authorization is valid (Objective-C compatible)
+///
+/// returns:
+/// true if authorization token is valid
+- (BOOL)isAuthorizationValid SWIFT_WARN_UNUSED_RESULT;
+/// Legacy: Fetch configuration type (Objective-C compatible)
+/// During migration: Calls Objective-C implementation
+/// After migration: Uses new Swift configuration service
+/// This method calls the legacy Objective-C implementation and propagates delegate callbacks.
+/// Delegates are automatically forwarded via didSet when set on the Swift facade.
+/// \param configType Configuration type (production or debug)
+///
+- (void)fetchConfigurationType:(EntrupyConfigType)configType;
+/// Legacy: Start capture for item (Objective-C compatible)
+/// This method calls the legacy Objective-C implementation and propagates delegate callbacks.
+/// Delegates are automatically forwarded via didSet when set on the Swift facade.
+/// \param item Dictionary containing item metadata
+///
+/// \param viewController View controller to present capture workflow
+///
+- (void)startCaptureForItem:(NSDictionary<NSString *, id> * _Nonnull)item viewController:(UIViewController * _Nonnull)viewController;
+/// Legacy: Search submissions (Objective-C compatible)
+/// This method calls the legacy Objective-C implementation and propagates delegate callbacks.
+/// Delegates are automatically forwarded via didSet when set on the Swift facade.
+/// \param pageCursor Cursor for pagination
+///
+/// \param filters Search filters array
+///
+/// \param startDate Start date (0 to omit)
+///
+/// \param endDate End date (0 to omit)
+///
+/// \param paginationLimit Number of items per page (max 25)
+///
+- (void)searchSubmissionsAt:(NSArray * _Nonnull)pageCursor filters:(NSArray * _Nonnull)filters startDate:(NSTimeInterval)startDate endDate:(NSTimeInterval)endDate paginationLimit:(NSInteger)paginationLimit;
+/// Legacy: Get flag details for result (Objective-C compatible)
+/// This method calls the legacy Objective-C implementation which uses completion handlers.
+/// For Swift callers, the dictionary is automatically bridged from NSDictionary to [AnyHashable: Any]?.
+/// \param entrupyID Entrupy ID of the result
+///
+/// \param completionHandler Completion handler with details dictionary or error
+///
+- (void)getFlagDetailsForResultWithEntrupyID:(NSString * _Nonnull)entrupyID completionHandler:(void (^ _Nonnull)(NSDictionary * _Nullable, NSError * _Nullable))completionHandler;
+/// Legacy: Set flag for result (Objective-C compatible)
+/// This method calls the legacy Objective-C implementation and propagates delegate callbacks.
+/// Delegates are automatically forwarded via didSet when set on the Swift facade.
+/// \param flag true to set flag, false to clear
+///
+/// \param entrupyID Entrupy ID of the result
+///
+/// \param flagReasonId ID of the flag reason
+///
+/// \param message Optional message for the flag
+///
+- (void)setFlag:(BOOL)flag forResultWithEntrupyID:(NSString * _Nonnull)entrupyID flagReasonId:(NSString * _Nonnull)flagReasonId message:(NSString * _Nullable)message;
+/// Legacy: Display detail view for item (Objective-C compatible)
+/// This method calls the legacy Objective-C implementation and propagates delegate callbacks.
+/// The delegate set on the Swift facade is forwarded to the legacy implementation.
+/// \param entrupyID Entrupy ID of the item
+///
+/// \param configuration View configuration options
+///
+- (void)displayDetailViewForItemWithEntrupyID:(NSString * _Nonnull)entrupyID withConfiguration:(EntrupyDetailViewConfiguration * _Nonnull)configuration;
+/// Legacy: Display market edge view for item (Objective-C compatible)
+/// This method calls the legacy Objective-C implementation and propagates delegate callbacks.
+/// The delegate set on the Swift facade is forwarded to the legacy implementation.
+/// \param entrupyID Entrupy ID of the item
+///
+/// \param configuration View configuration options
+///
+- (void)displayMarketEdgeViewForItemWithEntrupyID:(NSString * _Nonnull)entrupyID withConfiguration:(EntrupyMarketEdgeViewConfiguration * _Nonnull)configuration;
+/// Legacy: Display flag view for item (Objective-C compatible)
+/// This method calls the legacy Objective-C implementation and propagates delegate callbacks.
+/// The delegate set on the Swift facade is forwarded to the legacy implementation.
+/// \param entrupyID Entrupy ID of the result
+///
+- (void)displayFlagViewForItemWithEntrupyID:(NSString * _Nonnull)entrupyID;
+/// Legacy: Start retake capture for item (Objective-C compatible)
+/// This method calls the legacy Objective-C implementation and propagates delegate callbacks.
+/// The delegate set on the Swift facade is forwarded to the legacy implementation.
+/// \param entrupyID Entrupy ID of the item requiring retake
+///
+- (void)startRetakeCaptureForItemWithEntrupyID:(NSString * _Nonnull)entrupyID;
+/// Legacy: Search retakes (Objective-C compatible)
+/// This method calls the legacy Objective-C implementation and propagates delegate callbacks.
+/// Delegates are automatically forwarded via didSet when set on the Swift facade.
+- (void)searchRetakes;
+/// Legacy: Fetch market edge for item (Objective-C compatible)
+/// This method calls the legacy Objective-C implementation and propagates delegate callbacks.
+/// The delegate set on the Swift facade is forwarded to the legacy implementation.
+/// \param entrupyID Entrupy ID of the item
+///
+- (void)fetchMarketEdgeForItemWithEntrupyID:(NSString * _Nonnull)entrupyID;
+/// Legacy: Cleanup user data (Objective-C compatible)
+/// This method calls the legacy Objective-C implementation.
+- (void)cleanup;
+/// Legacy: Intercept application background URL session (Objective-C compatible)
+/// During migration: Calls Objective-C implementation
+/// \param application UIApplication instance
+///
+/// \param identifier URL session identifier
+///
+/// \param completionHandler Completion handler
+///
+- (void)interceptApplication:(UIApplication * _Nonnull)application handleEventsForBackgroundURLSession:(NSString * _Nonnull)identifier completionHandler:(void (^ _Nonnull)(void))completionHandler;
+@end
 
 typedef SWIFT_ENUM_NAMED(NSInteger, EntrupyButtonBackgroundState, "EntrupyButtonBackgroundState", open) {
   EntrupyButtonBackgroundStateTapToCapture = 0,
@@ -409,7 +582,6 @@ SWIFT_CLASS("_TtC10EntrupySDK34EntrupyMarketEdgeViewConfiguration")
 - (nonnull instancetype)initWithDisplayMarketGrade:(BOOL)displayMarketGrade displayMarketValue:(BOOL)displayMarketValue displayMarketMatch:(BOOL)displayMarketMatch displayRegionSelection:(BOOL)displayRegionSelection OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class NSString;
 @class NSBundle;
 SWIFT_CLASS("_TtC10EntrupySDK38EntrupyMarketGradeDetailViewController")
 @interface EntrupyMarketGradeDetailViewController : UIViewController
@@ -826,9 +998,12 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 @import CoreFoundation;
 @import CoreMedia;
+@import Foundation;
 @import ObjectiveC;
 @import UIKit;
 #endif
+
+#import <EntrupySDK/EntrupySDK.h>
 
 #endif
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -849,6 +1024,176 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 #if defined(__OBJC__)
+
+@protocol EntrupyLoginDelegate;
+@protocol EntrupyConfigDelegate;
+@protocol EntrupyCaptureDelegate;
+@protocol EntrupySearchDelegate;
+@protocol EntrupyFlagDelegate;
+@protocol EntrupyDetailViewDelegate;
+@protocol EntrupyFlagViewDelegate;
+@protocol EntrupyRetakeCaptureDelegate;
+@protocol EntrupySearchRetakeDelegate;
+@protocol EntrupyMarketEdgeDelegate;
+@protocol EntrupyMarketEdgeViewDelegate;
+@protocol EntrupyTheme;
+/// Modern Swift facade for Entrupy SDK
+/// Provides async/await APIs while maintaining backward compatibility with Objective-C delegates
+/// IMPORTANT: This is the public-facing EntrupyApp class. During incremental migration,
+/// it internally uses EntrupyApp_Legacy (the Objective-C implementation) for actual work.
+/// After full migration, EntrupyApp_Legacy will be removed.
+SWIFT_CLASS_NAMED("EntrupyApp")
+@interface EntrupyApp : NSObject
+/// Shared instance (backward compatible with Objective-C)
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) EntrupyApp * _Nonnull shared;)
++ (EntrupyApp * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
+/// Legacy singleton accessor (for Objective-C compatibility)
++ (EntrupyApp * _Nonnull)sharedInstance SWIFT_WARN_UNUSED_RESULT;
+/// Legacy delegate properties for Objective-C compatibility
+/// These are set by EntrupyApp.m and used for delegate callbacks
+/// Using didSet to automatically forward delegates to legacyApp to ensure references are never lost
+@property (nonatomic, weak) id <EntrupyLoginDelegate> _Nullable loginDelegate;
+@property (nonatomic, weak) id <EntrupyConfigDelegate> _Nullable configDelegate;
+@property (nonatomic, weak) id <EntrupyCaptureDelegate> _Nullable captureDelegate;
+@property (nonatomic, weak) id <EntrupySearchDelegate> _Nullable searchDelegate;
+@property (nonatomic, weak) id <EntrupyFlagDelegate> _Nullable flagDelegate;
+@property (nonatomic, weak) id <EntrupyDetailViewDelegate> _Nullable detailViewDelegate;
+@property (nonatomic, weak) id <EntrupyFlagViewDelegate> _Nullable flagViewDelegate;
+@property (nonatomic, weak) id <EntrupyRetakeCaptureDelegate> _Nullable retakeCaptureDelegate;
+@property (nonatomic, weak) id <EntrupySearchRetakeDelegate> _Nullable searchRetakeDelegate;
+@property (nonatomic, weak) id <EntrupyMarketEdgeDelegate> _Nullable marketEdgeDelegate;
+@property (nonatomic, weak) id <EntrupyMarketEdgeViewDelegate> _Nullable marketEdgeViewDelegate;
+@property (nonatomic, strong) id <EntrupyTheme> _Nullable theme;
+@property (nonatomic, copy) void (^ _Nullable backgroundTransferCompletionHandler)(void);
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@class NSString;
+@class UIViewController;
+@class EntrupyDetailViewConfiguration;
+@class EntrupyMarketEdgeViewConfiguration;
+@class UIApplication;
+@interface EntrupyApp (SWIFT_EXTENSION(EntrupySDK))
+/// Legacy: Login user with signed request (Objective-C compatible)
+/// During migration: Calls Objective-C implementation in EntrupyApp.m
+/// After migration: Uses new Swift authorization service
+/// This method calls the legacy Objective-C implementation and propagates delegate callbacks.
+/// Delegates are automatically forwarded via didSet when set on the Swift facade.
+/// \param signedRequest Signed authorization request from backend
+///
+- (void)loginUserWithSignedRequest:(NSString * _Nonnull)signedRequest;
+/// Legacy: Generate SDK authorization request (Objective-C compatible)
+///
+/// returns:
+/// Authorization request string to be signed by backend
+- (NSString * _Nonnull)generateSDKAuthorizationRequest SWIFT_WARN_UNUSED_RESULT;
+/// Legacy: Check if authorization is valid (Objective-C compatible)
+///
+/// returns:
+/// true if authorization token is valid
+- (BOOL)isAuthorizationValid SWIFT_WARN_UNUSED_RESULT;
+/// Legacy: Fetch configuration type (Objective-C compatible)
+/// During migration: Calls Objective-C implementation
+/// After migration: Uses new Swift configuration service
+/// This method calls the legacy Objective-C implementation and propagates delegate callbacks.
+/// Delegates are automatically forwarded via didSet when set on the Swift facade.
+/// \param configType Configuration type (production or debug)
+///
+- (void)fetchConfigurationType:(EntrupyConfigType)configType;
+/// Legacy: Start capture for item (Objective-C compatible)
+/// This method calls the legacy Objective-C implementation and propagates delegate callbacks.
+/// Delegates are automatically forwarded via didSet when set on the Swift facade.
+/// \param item Dictionary containing item metadata
+///
+/// \param viewController View controller to present capture workflow
+///
+- (void)startCaptureForItem:(NSDictionary<NSString *, id> * _Nonnull)item viewController:(UIViewController * _Nonnull)viewController;
+/// Legacy: Search submissions (Objective-C compatible)
+/// This method calls the legacy Objective-C implementation and propagates delegate callbacks.
+/// Delegates are automatically forwarded via didSet when set on the Swift facade.
+/// \param pageCursor Cursor for pagination
+///
+/// \param filters Search filters array
+///
+/// \param startDate Start date (0 to omit)
+///
+/// \param endDate End date (0 to omit)
+///
+/// \param paginationLimit Number of items per page (max 25)
+///
+- (void)searchSubmissionsAt:(NSArray * _Nonnull)pageCursor filters:(NSArray * _Nonnull)filters startDate:(NSTimeInterval)startDate endDate:(NSTimeInterval)endDate paginationLimit:(NSInteger)paginationLimit;
+/// Legacy: Get flag details for result (Objective-C compatible)
+/// This method calls the legacy Objective-C implementation which uses completion handlers.
+/// For Swift callers, the dictionary is automatically bridged from NSDictionary to [AnyHashable: Any]?.
+/// \param entrupyID Entrupy ID of the result
+///
+/// \param completionHandler Completion handler with details dictionary or error
+///
+- (void)getFlagDetailsForResultWithEntrupyID:(NSString * _Nonnull)entrupyID completionHandler:(void (^ _Nonnull)(NSDictionary * _Nullable, NSError * _Nullable))completionHandler;
+/// Legacy: Set flag for result (Objective-C compatible)
+/// This method calls the legacy Objective-C implementation and propagates delegate callbacks.
+/// Delegates are automatically forwarded via didSet when set on the Swift facade.
+/// \param flag true to set flag, false to clear
+///
+/// \param entrupyID Entrupy ID of the result
+///
+/// \param flagReasonId ID of the flag reason
+///
+/// \param message Optional message for the flag
+///
+- (void)setFlag:(BOOL)flag forResultWithEntrupyID:(NSString * _Nonnull)entrupyID flagReasonId:(NSString * _Nonnull)flagReasonId message:(NSString * _Nullable)message;
+/// Legacy: Display detail view for item (Objective-C compatible)
+/// This method calls the legacy Objective-C implementation and propagates delegate callbacks.
+/// The delegate set on the Swift facade is forwarded to the legacy implementation.
+/// \param entrupyID Entrupy ID of the item
+///
+/// \param configuration View configuration options
+///
+- (void)displayDetailViewForItemWithEntrupyID:(NSString * _Nonnull)entrupyID withConfiguration:(EntrupyDetailViewConfiguration * _Nonnull)configuration;
+/// Legacy: Display market edge view for item (Objective-C compatible)
+/// This method calls the legacy Objective-C implementation and propagates delegate callbacks.
+/// The delegate set on the Swift facade is forwarded to the legacy implementation.
+/// \param entrupyID Entrupy ID of the item
+///
+/// \param configuration View configuration options
+///
+- (void)displayMarketEdgeViewForItemWithEntrupyID:(NSString * _Nonnull)entrupyID withConfiguration:(EntrupyMarketEdgeViewConfiguration * _Nonnull)configuration;
+/// Legacy: Display flag view for item (Objective-C compatible)
+/// This method calls the legacy Objective-C implementation and propagates delegate callbacks.
+/// The delegate set on the Swift facade is forwarded to the legacy implementation.
+/// \param entrupyID Entrupy ID of the result
+///
+- (void)displayFlagViewForItemWithEntrupyID:(NSString * _Nonnull)entrupyID;
+/// Legacy: Start retake capture for item (Objective-C compatible)
+/// This method calls the legacy Objective-C implementation and propagates delegate callbacks.
+/// The delegate set on the Swift facade is forwarded to the legacy implementation.
+/// \param entrupyID Entrupy ID of the item requiring retake
+///
+- (void)startRetakeCaptureForItemWithEntrupyID:(NSString * _Nonnull)entrupyID;
+/// Legacy: Search retakes (Objective-C compatible)
+/// This method calls the legacy Objective-C implementation and propagates delegate callbacks.
+/// Delegates are automatically forwarded via didSet when set on the Swift facade.
+- (void)searchRetakes;
+/// Legacy: Fetch market edge for item (Objective-C compatible)
+/// This method calls the legacy Objective-C implementation and propagates delegate callbacks.
+/// The delegate set on the Swift facade is forwarded to the legacy implementation.
+/// \param entrupyID Entrupy ID of the item
+///
+- (void)fetchMarketEdgeForItemWithEntrupyID:(NSString * _Nonnull)entrupyID;
+/// Legacy: Cleanup user data (Objective-C compatible)
+/// This method calls the legacy Objective-C implementation.
+- (void)cleanup;
+/// Legacy: Intercept application background URL session (Objective-C compatible)
+/// During migration: Calls Objective-C implementation
+/// \param application UIApplication instance
+///
+/// \param identifier URL session identifier
+///
+/// \param completionHandler Completion handler
+///
+- (void)interceptApplication:(UIApplication * _Nonnull)application handleEventsForBackgroundURLSession:(NSString * _Nonnull)identifier completionHandler:(void (^ _Nonnull)(void))completionHandler;
+@end
 
 typedef SWIFT_ENUM_NAMED(NSInteger, EntrupyButtonBackgroundState, "EntrupyButtonBackgroundState", open) {
   EntrupyButtonBackgroundStateTapToCapture = 0,
@@ -952,7 +1297,6 @@ SWIFT_CLASS("_TtC10EntrupySDK34EntrupyMarketEdgeViewConfiguration")
 - (nonnull instancetype)initWithDisplayMarketGrade:(BOOL)displayMarketGrade displayMarketValue:(BOOL)displayMarketValue displayMarketMatch:(BOOL)displayMarketMatch displayRegionSelection:(BOOL)displayRegionSelection OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class NSString;
 @class NSBundle;
 SWIFT_CLASS("_TtC10EntrupySDK38EntrupyMarketGradeDetailViewController")
 @interface EntrupyMarketGradeDetailViewController : UIViewController

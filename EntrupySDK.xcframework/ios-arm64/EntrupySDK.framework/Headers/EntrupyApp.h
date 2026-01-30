@@ -15,7 +15,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface EntrupyApp: NSObject<EntrupyAppProtocol>
+// Internal legacy implementation - use EntrupyApp (Swift) for public API
+@interface EntrupyApp_Legacy: NSObject<EntrupyAppProtocol>
 
 @property (nonatomic, weak) id<EntrupyLoginDelegate> loginDelegate;
 @property (nonatomic, weak) id<EntrupyConfigDelegate> configDelegate;
