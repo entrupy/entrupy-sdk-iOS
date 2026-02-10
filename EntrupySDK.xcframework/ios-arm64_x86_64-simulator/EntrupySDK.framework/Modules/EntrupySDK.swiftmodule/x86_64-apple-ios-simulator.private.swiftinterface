@@ -211,8 +211,8 @@ public enum EntrupyFlagId : Swift.Equatable, Swift.CustomStringConvertible, Swif
   public var description: Swift.String {
     get
   }
-  public static func == (a: EntrupySDK.EntrupyFlagId, b: EntrupySDK.EntrupyFlagId) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
+  public static func == (a: EntrupySDK.EntrupyFlagId, b: EntrupySDK.EntrupyFlagId) -> Swift.Bool
 }
 public struct EntrupyCaptureResultStatusFlagInfo : Swift.Codable {
   public let id: Swift.String?
@@ -249,13 +249,20 @@ public enum EntrupyCaptureResultStatusId : Swift.Equatable, Swift.CustomStringCo
   case match
   case no_match
   case registered
+  case canceled
+  case data_required
+  case not_available
+  case registration_invalid
+  case registration_not_supported
+  case match_found
+  case no_match_found
   case received
   public init(rawValue: Swift.String, localizeValue: Swift.String)
   public var description: Swift.String {
     get
   }
-  public static func == (a: EntrupySDK.EntrupyCaptureResultStatusId, b: EntrupySDK.EntrupyCaptureResultStatusId) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
+  public static func == (a: EntrupySDK.EntrupyCaptureResultStatusId, b: EntrupySDK.EntrupyCaptureResultStatusId) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
@@ -478,6 +485,96 @@ extension Swift.Array {
   }
   #endif
 }
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(EntrupyApp) public class EntrupyApp : ObjectiveC.NSObject {
+  @objc public static let shared: EntrupySDK.EntrupyApp
+  @objc public static func sharedInstance() -> EntrupySDK.EntrupyApp
+  @objc weak public var loginDelegate: (any EntrupySDK.EntrupyLoginDelegate)? {
+    @objc get
+    @objc set
+  }
+  @objc weak public var configDelegate: (any EntrupySDK.EntrupyConfigDelegate)? {
+    @objc get
+    @objc set
+  }
+  @objc weak public var captureDelegate: (any EntrupySDK.EntrupyCaptureDelegate)? {
+    @objc get
+    @objc set
+  }
+  @objc weak public var searchDelegate: (any EntrupySDK.EntrupySearchDelegate)? {
+    @objc get
+    @objc set
+  }
+  @objc weak public var flagDelegate: (any EntrupySDK.EntrupyFlagDelegate)? {
+    @objc get
+    @objc set
+  }
+  @objc weak public var detailViewDelegate: (any EntrupySDK.EntrupyDetailViewDelegate)? {
+    @objc get
+    @objc set
+  }
+  @objc weak public var flagViewDelegate: (any EntrupySDK.EntrupyFlagViewDelegate)? {
+    @objc get
+    @objc set
+  }
+  @objc weak public var retakeCaptureDelegate: (any EntrupySDK.EntrupyRetakeCaptureDelegate)? {
+    @objc get
+    @objc set
+  }
+  @objc weak public var searchRetakeDelegate: (any EntrupySDK.EntrupySearchRetakeDelegate)? {
+    @objc get
+    @objc set
+  }
+  @objc weak public var marketEdgeDelegate: (any EntrupySDK.EntrupyMarketEdgeDelegate)? {
+    @objc get
+    @objc set
+  }
+  @objc weak public var marketEdgeViewDelegate: (any EntrupySDK.EntrupyMarketEdgeViewDelegate)? {
+    @objc get
+    @objc set
+  }
+  @objc public var theme: (any EntrupySDK.EntrupyTheme)?
+  @objc public var backgroundTransferCompletionHandler: (() -> Swift.Void)?
+  @objc deinit
+}
+extension EntrupySDK.EntrupyApp {
+  @objc dynamic public func loginUser(withSignedRequest signedRequest: Swift.String)
+  @objc dynamic public func generateSDKAuthorizationRequest() -> Swift.String
+  @objc dynamic public func isAuthorizationValid() -> Swift.Bool
+  @objc dynamic public func fetchConfigurationType(_ configType: EntrupySDK.EntrupyConfigType)
+  @objc dynamic public func startCapture(forItem item: [Swift.String : Any], viewController: UIKit.UIViewController)
+  @objc dynamic public func searchSubmissions(at pageCursor: [Any], filters: [Any], startDate: Foundation.TimeInterval, endDate: Foundation.TimeInterval, paginationLimit: Swift.Int)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc dynamic public func searchAuthenticationItems(query: EntrupySDK.EntrupySearchQuery, completion: @escaping (Foundation.NSDictionary?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc dynamic public func getFlagDetailsForResult(withEntrupyID entrupyID: Swift.String, completionHandler: @escaping ([Swift.AnyHashable : Any]?, (any Swift.Error)?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc dynamic public func setFlag(_ flag: Swift.Bool, forResultWithEntrupyID entrupyID: Swift.String, flagReasonId: Swift.String, message: Swift.String?)
+  #endif
+  @objc(displayDetailViewForItemWithEntrupyID:withConfiguration:) dynamic public func displayDetailViewForItem(withEntrupyID entrupyID: Swift.String, withConfiguration configuration: EntrupySDK.EntrupyDetailViewConfiguration)
+  @objc(displayMarketEdgeViewForItemWithEntrupyID:withConfiguration:) dynamic public func displayMarketEdgeViewForItem(withEntrupyID entrupyID: Swift.String, withConfiguration configuration: EntrupySDK.EntrupyMarketEdgeViewConfiguration)
+  @objc dynamic public func displayFlagViewForItem(withEntrupyID entrupyID: Swift.String)
+  @objc dynamic public func startRetakeCaptureForItem(withEntrupyID entrupyID: Swift.String)
+  @objc dynamic public func searchRetakes()
+  @objc dynamic public func fetchMarketEdgeForItem(withEntrupyID entrupyID: Swift.String)
+  @objc dynamic public func cleanup()
+  @objc dynamic public func interceptApplication(_ application: UIKit.UIApplication, handleEventsForBackgroundURLSession identifier: Swift.String, completionHandler: @escaping () -> Swift.Void)
+}
+public struct EntrupySearchItemsResult : Swift.Codable {
+  public let metadata: EntrupySDK.EntrupySearchItemsResultMetadata
+  public let total_count: Swift.Int
+  public let item_count: Swift.Int
+  public let items: [EntrupySDK.EntrupyCaptureResult]?
+  public let next_cursor: [Swift.String]?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupySearchItemsResultMetadata : Swift.Codable {
+  public let result_mode: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
 @_hasMissingDesignatedInitializers @objc(ObjcEntrupyLocalizationManager) public class EntrupyLocalizationManager : ObjectiveC.NSObject {
   @objc deinit
 }
@@ -494,6 +591,50 @@ public struct EntrupySearchResult : Swift.Codable {
   public let next_cursor: [Swift.String]?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers @objc public class EntrupySearchQuery : ObjectiveC.NSObject {
+  public var dateRange: EntrupySDK.EntrupySearchQuery.DateRange?
+  public var filters: [EntrupySDK.EntrupySearchFilter]
+  public var resultMode: EntrupySDK.ResultMode
+  public var limit: Swift.Int
+  public var cursor: [Swift.String]?
+  public enum DateRange {
+    case last(days: Swift.Int)
+    case custom(start: Swift.String, end: Swift.String)
+  }
+  @objc override dynamic public init()
+  @objc deinit
+}
+public enum ResultMode {
+  case countOnly
+  case results
+  case other(Swift.String)
+}
+public enum EntrupySearchFilter {
+  case status([EntrupySDK.EntrupySearchFilter.AuthenticationStatus])
+  case category([EntrupySDK.EntrupySearchFilter.Category])
+  case brands([Swift.String])
+  case flag([EntrupySDK.EntrupySearchFilter.FlagStatus])
+  public enum AuthenticationStatus {
+    case authentic
+    case underReview
+    case invalid
+    case notSupported
+    case unidentified
+    case other(Swift.String)
+  }
+  public enum Category {
+    case luxury
+    case apparel
+    case sneakers
+    case other(Swift.String)
+  }
+  public enum FlagStatus {
+    case none
+    case flagged
+    case resolved
+    case other(Swift.String)
+  }
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class EntrupyMarketMatchViewController : UIKit.UIViewController {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)

@@ -3,12 +3,12 @@
     "metadataOutputVersion" : "3.0",
     "userDefinedMetadata" : {
       "stride" : "32",
-      "IoU threshold" : "0.7",
       "Confidence threshold" : "0.25",
+      "IoU threshold" : "0.7",
       "docs" : "https:\/\/docs.ultralytics.com",
       "task" : "detect",
-      "imgsz" : "[640, 640]",
       "date" : "2025-06-03T15:24:29.391808",
+      "imgsz" : "[640, 640]",
       "batch" : "1",
       "args" : "{'batch': 1, 'half': False, 'int8': True, 'nms': True}",
       "names" : "{0: 'camera', 1: 'logo', 2: 'identifier'}"
