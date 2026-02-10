@@ -211,8 +211,8 @@ public enum EntrupyFlagId : Swift.Equatable, Swift.CustomStringConvertible, Swif
   public var description: Swift.String {
     get
   }
-  public static func == (a: EntrupySDK.EntrupyFlagId, b: EntrupySDK.EntrupyFlagId) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
+  public static func == (a: EntrupySDK.EntrupyFlagId, b: EntrupySDK.EntrupyFlagId) -> Swift.Bool
 }
 public struct EntrupyCaptureResultStatusFlagInfo : Swift.Codable {
   public let id: Swift.String?
@@ -261,8 +261,8 @@ public enum EntrupyCaptureResultStatusId : Swift.Equatable, Swift.CustomStringCo
   public var description: Swift.String {
     get
   }
-  public static func == (a: EntrupySDK.EntrupyCaptureResultStatusId, b: EntrupySDK.EntrupyCaptureResultStatusId) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
+  public static func == (a: EntrupySDK.EntrupyCaptureResultStatusId, b: EntrupySDK.EntrupyCaptureResultStatusId) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
@@ -544,6 +544,9 @@ extension EntrupySDK.EntrupyApp {
   @objc dynamic public func startCapture(forItem item: [Swift.String : Any], viewController: UIKit.UIViewController)
   @objc dynamic public func searchSubmissions(at pageCursor: [Any], filters: [Any], startDate: Foundation.TimeInterval, endDate: Foundation.TimeInterval, paginationLimit: Swift.Int)
   #if compiler(>=5.3) && $NonescapableTypes
+  @objc dynamic public func searchAuthenticationItems(query: EntrupySDK.EntrupySearchQuery, completion: @escaping (Foundation.NSDictionary?, Foundation.NSError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc dynamic public func getFlagDetailsForResult(withEntrupyID entrupyID: Swift.String, completionHandler: @escaping ([Swift.AnyHashable : Any]?, (any Swift.Error)?) -> Swift.Void)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
@@ -557,6 +560,20 @@ extension EntrupySDK.EntrupyApp {
   @objc dynamic public func fetchMarketEdgeForItem(withEntrupyID entrupyID: Swift.String)
   @objc dynamic public func cleanup()
   @objc dynamic public func interceptApplication(_ application: UIKit.UIApplication, handleEventsForBackgroundURLSession identifier: Swift.String, completionHandler: @escaping () -> Swift.Void)
+}
+public struct EntrupySearchItemsResult : Swift.Codable {
+  public let metadata: EntrupySDK.EntrupySearchItemsResultMetadata
+  public let total_count: Swift.Int
+  public let item_count: Swift.Int
+  public let items: [EntrupySDK.EntrupyCaptureResult]?
+  public let next_cursor: [Swift.String]?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupySearchItemsResultMetadata : Swift.Codable {
+  public let result_mode: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @_hasMissingDesignatedInitializers @objc(ObjcEntrupyLocalizationManager) public class EntrupyLocalizationManager : ObjectiveC.NSObject {
   @objc deinit
@@ -574,6 +591,50 @@ public struct EntrupySearchResult : Swift.Codable {
   public let next_cursor: [Swift.String]?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers @objc public class EntrupySearchQuery : ObjectiveC.NSObject {
+  public var dateRange: EntrupySDK.EntrupySearchQuery.DateRange?
+  public var filters: [EntrupySDK.EntrupySearchFilter]
+  public var resultMode: EntrupySDK.ResultMode
+  public var limit: Swift.Int
+  public var cursor: [Swift.String]?
+  public enum DateRange {
+    case last(days: Swift.Int)
+    case custom(start: Swift.String, end: Swift.String)
+  }
+  @objc override dynamic public init()
+  @objc deinit
+}
+public enum ResultMode {
+  case countOnly
+  case results
+  case other(Swift.String)
+}
+public enum EntrupySearchFilter {
+  case status([EntrupySDK.EntrupySearchFilter.AuthenticationStatus])
+  case category([EntrupySDK.EntrupySearchFilter.Category])
+  case brands([Swift.String])
+  case flag([EntrupySDK.EntrupySearchFilter.FlagStatus])
+  public enum AuthenticationStatus {
+    case authentic
+    case underReview
+    case invalid
+    case notSupported
+    case unidentified
+    case other(Swift.String)
+  }
+  public enum Category {
+    case luxury
+    case apparel
+    case sneakers
+    case other(Swift.String)
+  }
+  public enum FlagStatus {
+    case none
+    case flagged
+    case resolved
+    case other(Swift.String)
+  }
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class EntrupyMarketMatchViewController : UIKit.UIViewController {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
@@ -630,149 +691,6 @@ extension EntrupySDK.EntrupyMarketMatchViewController : UIKit.UITableViewDelegat
   @objc(setButtonBackgroundState:) @_Concurrency.MainActor @preconcurrency public func setButtonBackgroundState(_ state: EntrupySDK.EntrupyButtonBackgroundState)
   @objc(currentState) @_Concurrency.MainActor @preconcurrency public func currentState() -> EntrupySDK.EntrupyButtonBackgroundState
   @objc deinit
-}
-public struct EntrupyMarketEdgeInsight : Swift.Codable {
-  public let item: EntrupySDK.EntrupyMarketEdgeInsightItem
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct EntrupyMarketEdgeInsightItem : Swift.Codable {
-  public let identifier: EntrupySDK.EntrupyMarketEdgeInsightIdentifier
-  public let timestamp: EntrupySDK.EntrupyMarketEdgeInsightTimestamp
-  public let status: EntrupySDK.EntrupyMarketEdgeInsightStatus
-  public let result: EntrupySDK.EntrupyMarketEdgeInsightResult?
-  public let polling: EntrupySDK.EntrupyMarketEdgeInsightPolling?
-  public let disclaimer: [Swift.String]?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct EntrupyMarketEdgeInsightIdentifier : Swift.Codable {
-  public let session_uuid: Swift.String
-  public let authentication_id: Swift.String
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct EntrupyMarketEdgeInsightTimestamp : Swift.Codable {
-  public let created_at: Swift.String
-  public let last_updated_at: Swift.String
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct EntrupyMarketEdgeInsightStatus : Swift.Codable {
-  public let id: Swift.String
-  public let keep_polling: Swift.Bool?
-  public let error: EntrupySDK.EntrupyMarketEdgeInsightError?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct EntrupyMarketEdgeInsightResult : Swift.Codable {
-  public let market_grade: EntrupySDK.EntrupyMarketEdgeInsightMarketGrade?
-  public let market_value: EntrupySDK.EntrupyMarketEdgeInsightMarketValue?
-  public let market_match: EntrupySDK.EntrupyMarketEdgeInsightMarketMatch?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct EntrupyMarketEdgeInsightMarketGrade : Swift.Codable {
-  public let section_description: Swift.String
-  public let status: EntrupySDK.EntrupyMarketEdgeInsightSectionStatus
-  public let response: EntrupySDK.EntrupyMarketEdgeInsightMarketGradeResponse?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct EntrupyMarketEdgeInsightMarketGradeResponse : Swift.Codable {
-  public let grade: Swift.String
-  public let issues: [Swift.String]?
-  public let details: [EntrupySDK.EntrupyMarketEdgeInsightGradeDetail]?
-  public let rating_explanation: Swift.String?
-  public let rating_ui_details: EntrupySDK.EntrupyMarketEdgeInsightRatingUIDetails?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct EntrupyMarketEdgeInsightGradeDetail : Swift.Codable {
-  public let item_region: Swift.String
-  public let display_name: Swift.String
-  public let description: Swift.String
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct EntrupyMarketEdgeInsightRatingUIDetails : Swift.Codable {
-  public let title: Swift.String
-  public let selected_rating_index: Swift.Int?
-  public let scale: [EntrupySDK.EntrupyMarketEdgeInsightRatingScale]
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct EntrupyMarketEdgeInsightRatingScale : Swift.Codable {
-  public let color: Swift.String
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct EntrupyMarketEdgeInsightMarketValue : Swift.Codable {
-  public let section_description: Swift.String
-  public let status: EntrupySDK.EntrupyMarketEdgeInsightSectionStatus
-  public let response: EntrupySDK.EntrupyMarketEdgeInsightMarketValueResponse?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct EntrupyMarketEdgeInsightMarketValueResponse : Swift.Codable {
-  public let price: Swift.String
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct EntrupyMarketEdgeInsightMarketMatch : Swift.Codable {
-  public let section_description: Swift.String
-  public let status: EntrupySDK.EntrupyMarketEdgeInsightSectionStatus
-  public let response: EntrupySDK.EntrupyMarketEdgeInsightMarketMatchResponse?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct EntrupyMarketEdgeInsightMarketMatchResponse : Swift.Codable {
-  public let values: [EntrupySDK.EntrupyMarketEdgeInsightMarketMatchListing]?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct EntrupyMarketEdgeInsightMarketMatchListing : Swift.Codable {
-  public let title: Swift.String
-  public let brand: Swift.String?
-  public let platform: Swift.String
-  public let link: Swift.String?
-  public let image_url: Swift.String?
-  public let category: Swift.String
-  public let style: Swift.String?
-  public let description: Swift.String?
-  public let price: Swift.String
-  public let currency: Swift.String?
-  public let price_min: Swift.String?
-  public let price_max: Swift.String?
-  public let price_difference_perc: Swift.String?
-  public let price_difference: Swift.String?
-  public let price_avg: Swift.String?
-  public let price_days_window: Swift.String?
-  public let price_difference_positive: Swift.Bool?
-  public let time_of_report: Swift.Double
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct EntrupyMarketEdgeInsightSectionStatus : Swift.Codable {
-  public let id: Swift.String
-  public let keep_polling: Swift.Bool?
-  public let error: EntrupySDK.EntrupyMarketEdgeInsightError?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct EntrupyMarketEdgeInsightPolling : Swift.Codable {
-  public let supported: Swift.Bool
-  public let recommended_interval_seconds: Swift.Int
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct EntrupyMarketEdgeInsightError : Swift.Codable {
-  public let message: Swift.String?
-  public let show: Swift.Bool?
-  public let retry: Swift.Bool?
-  public let ecode: Swift.String?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
 }
 @_inheritsConvenienceInitializers @objc public class EntrupyMarketEdgeViewConfiguration : ObjectiveC.NSObject {
   final public let displayMarketGrade: Swift.Bool

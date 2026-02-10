@@ -11,6 +11,7 @@
 @protocol EntrupyTheme;
 @class EntrupyDetailViewConfiguration;
 @class EntrupyMarketEdgeViewConfiguration;
+@class EntrupySearchQuery;
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -565,6 +566,82 @@ NS_ASSUME_NONNULL_BEGIN
  * @endcode
  */
 - (void)fetchMarketEdgeForItemWithEntrupyID:(NSString *_Nonnull)entrupyID;
+
+/**
+ Searches authentication items using date ranges and customizable filters.
+ Depending on the selected result mode, the response returns either paginated full item history or aggregate counts only.
+ 
+ This method provides a flexible way to query authentication results with various filter options.
+ The response is paginated and can be configured to return full result objects or just counts.
+ 
+ ## Response Model
+ 
+ The result dictionary can be decoded into `EntrupySearchItemsResult`:
+ - `metadata`: Contains `result_mode` (`.results` or `.countOnly`)
+ - `total_count`: Total number of items matching the query
+ - `item_count`: Number of items in the current page
+ - `items`: Array of `EntrupyCaptureResult` objects (nil when using `.countOnly`)
+ - `next_cursor`: Cursor for fetching the next page (nil if last page)
+ 
+ ## Filter Examples
+ 
+ ```swift
+ filters: [
+     .status([.authentic, .underReview]),
+     .brands(["louis_vuitton", "gucci"]),
+     .category([.luxury, .apparel]),
+     .flag([.flagged])
+ ]
+ ```
+ 
+ ## Usage Example
+ 
+ ```swift
+ guard EntrupyApp.sharedInstance().isAuthorizationValid() else { return }
+
+ // pagination state
+ var nextPageCursor: String? = nil
+ 
+ let query = EntrupySearchQuery(
+     dateRange: .last(days: 7),
+     filters: [
+         .status([.authentic]),
+         .category([.luxury, .apparel])
+     ],
+     resultMode: .results,  // or .countOnly
+     limit: 20,
+     cursor: nextPageCursor
+ )
+ 
+ EntrupyApp.sharedInstance().searchAuthenticationItems(query: query) { result, error in
+     guard let result = result,
+           let data = try? JSONSerialization.data(withJSONObject: result),
+           let searchResult = try? JSONDecoder().decode(EntrupySearchItemsResult.self, from: data)
+     else {
+         return
+     }
+     
+     print("Total: \(searchResult.total_count)")
+     if let items = searchResult.items {
+         // Process items
+     }
+ 
+    // Persist cursor for next page if available
+    nextPageCursor = searchResult.next_cursor
+ }
+ ```
+ 
+ - Parameter query: Search query with dateRange, filters, resultMode, limit, and cursor
+ - Parameter completion: Handler called with result dictionary or error
+ 
+ - Note: The product category filter is required for results.
+ 
+ For additional details on search and filtering, please refer to the  [Entrupy iOS SDK Documentation](https://developer.entrupy.com/docs/mobile-sdks/ios/sdk-reference/direct-access-api-guides/programmatic-search-items)
+ */
+
+- (void)searchAuthenticationItems:(EntrupySearchQuery *_Nonnull)query
+                       completion:(void (^_Nonnull)(NSDictionary * _Nullable result, NSError * _Nullable error))completion
+                            NS_SWIFT_NAME(searchAuthenticationItems(query:completion:));
 
 @end
 

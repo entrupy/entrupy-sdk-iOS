@@ -356,6 +356,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) EntrupyApp *
 
 @class NSString;
 @class UIViewController;
+@class EntrupySearchQuery;
+@class NSError;
 @class EntrupyDetailViewConfiguration;
 @class EntrupyMarketEdgeViewConfiguration;
 @class UIApplication;
@@ -408,6 +410,81 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) EntrupyApp *
 /// \param paginationLimit Number of items per page (max 25)
 ///
 - (void)searchSubmissionsAt:(NSArray * _Nonnull)pageCursor filters:(NSArray * _Nonnull)filters startDate:(NSTimeInterval)startDate endDate:(NSTimeInterval)endDate paginationLimit:(NSInteger)paginationLimit;
+/// Searches authentication items using date ranges and customizable filters.
+/// Depending on the selected result mode, the response returns either paginated full item history or aggregate counts only.
+/// This method provides a flexible way to query authentication results with various filter options.
+/// The response is paginated and can be configured to return full result objects or just counts.
+/// <h2>Response Model</h2>
+/// The result dictionary can be decoded into <code>EntrupySearchItemsResult</code>:
+/// <ul>
+///   <li>
+///     <code>metadata</code>: Contains <code>result_mode</code> (<code>.results</code> or <code>.countOnly</code>)
+///   </li>
+///   <li>
+///     <code>total_count</code>: Total number of items matching the query
+///   </li>
+///   <li>
+///     <code>item_count</code>: Number of items in the current page
+///   </li>
+///   <li>
+///     <code>items</code>: Array of <code>EntrupyCaptureResult</code> objects (nil when using <code>.countOnly</code>)
+///   </li>
+///   <li>
+///     <code>next_cursor</code>: Cursor for fetching the next page (nil if last page)
+///   </li>
+/// </ul>
+/// <h2>Filter Examples</h2>
+/// \code
+/// filters: [
+///     .status([.authentic, .underReview]),
+///     .brands(["louis_vuitton", "gucci"]),
+///     .category([.luxury, .apparel]),
+///     .flag([.flagged])
+/// ]
+///
+/// \endcode<h2>Usage Example</h2>
+/// \code
+/// guard EntrupyApp.sharedInstance().isAuthorizationValid() else { return }
+///
+/// // pagination state
+/// var nextPageCursor: String? = nil
+///
+/// let query = EntrupySearchQuery(
+///     dateRange: .last(days: 7),
+///     filters: [
+///         .status([.authentic]),
+///         .category([.luxury, .apparel])
+///     ],
+///     resultMode: .results,  // or .countOnly
+///     limit: 20,
+///     cursor: nextPageCursor
+/// )
+///
+/// EntrupyApp.sharedInstance().searchAuthenticationItems(query: query) { result, error in
+///     guard let result = result,
+///           let data = try? JSONSerialization.data(withJSONObject: result),
+///           let searchResult = try? JSONDecoder().decode(EntrupySearchItemsResult.self, from: data)
+///     else {
+///         return
+///     }
+///     
+///     print("Total: \(searchResult.total_count)")
+///     if let items = searchResult.items {
+///         // Process items
+///     }
+///
+///    // Persist cursor for next page if available
+///    nextPageCursor = searchResult.next_cursor
+/// }
+///
+/// \endcodenote:
+/// The product category filter is required for results.
+/// For additional details on search and filtering, please refer to the  <a href="https://developer.entrupy.com/docs/mobile-sdks/ios/sdk-reference/direct-access-api-guides/programmatic-search-items">Entrupy iOS SDK Documentation</a>
+/// \param query Search query with dateRange, filters, resultMode, limit, and cursor
+///
+/// \param completion Handler called with result dictionary or error
+///
+- (void)searchAuthenticationItemsWithQuery:(EntrupySearchQuery * _Nonnull)query completion:(void (^ _Nonnull)(NSDictionary * _Nullable, NSError * _Nullable))completion;
 /// Legacy: Get flag details for result (Objective-C compatible)
 /// This method calls the legacy Objective-C implementation which uses completion handlers.
 /// For Swift callers, the dictionary is automatically bridged from NSDictionary to [AnyHashable: Any]?.
@@ -627,6 +704,11 @@ SWIFT_CLASS("_TtC10EntrupySDK33EntrupyMarketValueDetailViewModel")
 @interface EntrupyMarketValueDetailViewModel : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+SWIFT_CLASS("_TtC10EntrupySDK18EntrupySearchQuery")
+@interface EntrupySearchQuery : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class UIColor;
@@ -1071,6 +1153,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) EntrupyApp *
 
 @class NSString;
 @class UIViewController;
+@class EntrupySearchQuery;
+@class NSError;
 @class EntrupyDetailViewConfiguration;
 @class EntrupyMarketEdgeViewConfiguration;
 @class UIApplication;
@@ -1123,6 +1207,81 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) EntrupyApp *
 /// \param paginationLimit Number of items per page (max 25)
 ///
 - (void)searchSubmissionsAt:(NSArray * _Nonnull)pageCursor filters:(NSArray * _Nonnull)filters startDate:(NSTimeInterval)startDate endDate:(NSTimeInterval)endDate paginationLimit:(NSInteger)paginationLimit;
+/// Searches authentication items using date ranges and customizable filters.
+/// Depending on the selected result mode, the response returns either paginated full item history or aggregate counts only.
+/// This method provides a flexible way to query authentication results with various filter options.
+/// The response is paginated and can be configured to return full result objects or just counts.
+/// <h2>Response Model</h2>
+/// The result dictionary can be decoded into <code>EntrupySearchItemsResult</code>:
+/// <ul>
+///   <li>
+///     <code>metadata</code>: Contains <code>result_mode</code> (<code>.results</code> or <code>.countOnly</code>)
+///   </li>
+///   <li>
+///     <code>total_count</code>: Total number of items matching the query
+///   </li>
+///   <li>
+///     <code>item_count</code>: Number of items in the current page
+///   </li>
+///   <li>
+///     <code>items</code>: Array of <code>EntrupyCaptureResult</code> objects (nil when using <code>.countOnly</code>)
+///   </li>
+///   <li>
+///     <code>next_cursor</code>: Cursor for fetching the next page (nil if last page)
+///   </li>
+/// </ul>
+/// <h2>Filter Examples</h2>
+/// \code
+/// filters: [
+///     .status([.authentic, .underReview]),
+///     .brands(["louis_vuitton", "gucci"]),
+///     .category([.luxury, .apparel]),
+///     .flag([.flagged])
+/// ]
+///
+/// \endcode<h2>Usage Example</h2>
+/// \code
+/// guard EntrupyApp.sharedInstance().isAuthorizationValid() else { return }
+///
+/// // pagination state
+/// var nextPageCursor: String? = nil
+///
+/// let query = EntrupySearchQuery(
+///     dateRange: .last(days: 7),
+///     filters: [
+///         .status([.authentic]),
+///         .category([.luxury, .apparel])
+///     ],
+///     resultMode: .results,  // or .countOnly
+///     limit: 20,
+///     cursor: nextPageCursor
+/// )
+///
+/// EntrupyApp.sharedInstance().searchAuthenticationItems(query: query) { result, error in
+///     guard let result = result,
+///           let data = try? JSONSerialization.data(withJSONObject: result),
+///           let searchResult = try? JSONDecoder().decode(EntrupySearchItemsResult.self, from: data)
+///     else {
+///         return
+///     }
+///     
+///     print("Total: \(searchResult.total_count)")
+///     if let items = searchResult.items {
+///         // Process items
+///     }
+///
+///    // Persist cursor for next page if available
+///    nextPageCursor = searchResult.next_cursor
+/// }
+///
+/// \endcodenote:
+/// The product category filter is required for results.
+/// For additional details on search and filtering, please refer to the  <a href="https://developer.entrupy.com/docs/mobile-sdks/ios/sdk-reference/direct-access-api-guides/programmatic-search-items">Entrupy iOS SDK Documentation</a>
+/// \param query Search query with dateRange, filters, resultMode, limit, and cursor
+///
+/// \param completion Handler called with result dictionary or error
+///
+- (void)searchAuthenticationItemsWithQuery:(EntrupySearchQuery * _Nonnull)query completion:(void (^ _Nonnull)(NSDictionary * _Nullable, NSError * _Nullable))completion;
 /// Legacy: Get flag details for result (Objective-C compatible)
 /// This method calls the legacy Objective-C implementation which uses completion handlers.
 /// For Swift callers, the dictionary is automatically bridged from NSDictionary to [AnyHashable: Any]?.
@@ -1342,6 +1501,11 @@ SWIFT_CLASS("_TtC10EntrupySDK33EntrupyMarketValueDetailViewModel")
 @interface EntrupyMarketValueDetailViewModel : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+SWIFT_CLASS("_TtC10EntrupySDK18EntrupySearchQuery")
+@interface EntrupySearchQuery : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class UIColor;
