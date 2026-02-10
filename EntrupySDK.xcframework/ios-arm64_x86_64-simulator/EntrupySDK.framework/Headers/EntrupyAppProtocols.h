@@ -321,7 +321,6 @@ Refer to the [SDK web documentation] for more details.
 
 @end
 
-
 @protocol EntrupyAppProtocol <NSObject>
 @property (nonatomic, weak) id<EntrupyLoginDelegate> _Nullable loginDelegate;
 @property (nonatomic, weak) id<EntrupyConfigDelegate> _Nullable configDelegate;

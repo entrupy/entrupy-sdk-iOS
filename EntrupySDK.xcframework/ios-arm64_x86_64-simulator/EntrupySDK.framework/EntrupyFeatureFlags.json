@@ -6,5 +6,6 @@
     "marketEdgePriceIndicatorsEnabled": false,
     "regionPreferences" : true,
     "dynamicLocalizations": true,
-    "macroFingerprint": false
+    "macroFingerprint": false,
+    "marketEdgeNewStructure" : false
 }
