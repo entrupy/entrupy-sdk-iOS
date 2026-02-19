@@ -1944,6 +1944,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "EntrupySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "CoreGraphics",
         "printedName": "CoreGraphics",
         "declKind": "Import",
@@ -17908,16 +17918,6 @@
         "printedName": "Security",
         "declKind": "Import",
         "moduleName": "EntrupySDK"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "EntrupySDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
       },
       {
         "kind": "Import",
@@ -38002,22 +38002,29 @@
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/EntrupyStepsStackViewController\/EntrupyStepsStackViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 2972,
+      "length": 34,
+      "value": "\"entrupy_steps_stack_vc_tableview\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/EntrupyStepsStackViewController\/EntrupyStepsStackViewController.swift",
       "kind": "Array",
-      "offset": 3095,
+      "offset": 3174,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/EntrupyStepsStackViewController\/EntrupyStepsStackViewController.swift",
       "kind": "StringLiteral",
-      "offset": 3139,
+      "offset": 3218,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/EntrupyStepsStackViewController\/EntrupyStepsStackViewController.swift",
       "kind": "StringLiteral",
-      "offset": 3177,
+      "offset": 3256,
       "length": 2,
       "value": "\"\""
     },
@@ -38090,6 +38097,13 @@
       "offset": 6684,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Configuration\/Capabilities\/EntrupyManualZoomCapability.swift",
+      "kind": "StringLiteral",
+      "offset": 242,
+      "length": 25,
+      "value": "\"fingerprint_manual_zoom\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Lottie-iOS\/Private\/MainThread\/NodeRenderSystem\/NodeProperties\/EntrupyValueContainer.swift",
@@ -39231,13 +39245,6 @@
       "offset": 3884,
       "length": 1,
       "value": "1"
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/InternalAPI\/EntrupyCaptureResultViewAPI\/EntrupyPriceRequestModel.swift",
-      "kind": "Dictionary",
-      "offset": 391,
-      "length": 3,
-      "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/ZoomButton\/EntrupyZoomButton.swift",
@@ -40663,7 +40670,7 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/MarketEdge\/ViewModel\/EntrupyMarketEdgeViewModel.swift",
       "kind": "Dictionary",
-      "offset": 17195,
+      "offset": 16879,
       "length": 3,
       "value": "[]"
     },
@@ -42406,7 +42413,7 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/CaptureResult\/EntrupyCaptureResultViewModel.swift",
       "kind": "Array",
-      "offset": 9134,
+      "offset": 8637,
       "length": 2,
       "value": "[]"
     },
@@ -49059,6 +49066,20 @@
       "offset": 104531,
       "length": 25,
       "value": "\"You’re All Caught Up!\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceString.swift",
+      "kind": "StringLiteral",
+      "offset": 104729,
+      "length": 33,
+      "value": "\"tts_qr_select_brand_instruction\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Resources\/EntrupyResourceString.swift",
+      "kind": "StringLiteral",
+      "offset": 104773,
+      "length": 52,
+      "value": "\"Select the brand to continue with this QR session.\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Views\/PopupInstruction\/Bulleted List\/EntrupyBulletedList.swift",
