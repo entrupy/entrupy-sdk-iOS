@@ -513,13 +513,32 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) EntrupyApp *
 /// \param configuration View configuration options
 ///
 - (void)displayDetailViewForItemWithEntrupyID:(NSString * _Nonnull)entrupyID withConfiguration:(EntrupyDetailViewConfiguration * _Nonnull)configuration;
-/// Legacy: Display market edge view for item (Objective-C compatible)
-/// This method calls the legacy Objective-C implementation and propagates delegate callbacks.
-/// The delegate set on the Swift facade is forwarded to the legacy implementation.
-/// \param entrupyID Entrupy ID of the item
+/// Presents the Market Edge view for a specific authentication result.
+/// @param entrupyID The Entrupy ID for the item to display.
+/// @param viewConfiguration Configuration options, including:
+/// - displayMarketGrade: Show/hide market grade
+/// - displayMarketValue: Show/hide market value
+/// - displayMarketMatch: Show/hide market match
+/// - displayRegionSelection: Show/hide region selection
+/// @note The view is Presented modally over the current top view controller.
+/// \code
+/// guard EntrupyApp.sharedInstance().isAuthorizationValid() else {
+///     print("User not authorized. Cannot display Market Edge view.")
+///     return
+/// }
 ///
-/// \param configuration View configuration options
+/// let configuration = EntrupyMarketEdgeViewConfiguration(
+///     displayMarketGrade: true,
+///     displayMarketValue: true,
+///     displayMarketMatch: true,
+///     displayRegionSelection: true
+/// )
 ///
+/// //Implement EntrupyMarketEdgeViewDelegate to receive presentation callbacks.
+/// EntrupyApp.sharedInstance().marketEdgeViewDelegate = self
+/// EntrupyApp.sharedInstance().displayMarketEdgeViewForItem(withEntrupyID: entrupyID, withConfiguration: configuration)
+///
+/// \endcode
 - (void)displayMarketEdgeViewForItemWithEntrupyID:(NSString * _Nonnull)entrupyID withConfiguration:(EntrupyMarketEdgeViewConfiguration * _Nonnull)configuration;
 /// Legacy: Display flag view for item (Objective-C compatible)
 /// This method calls the legacy Objective-C implementation and propagates delegate callbacks.
@@ -537,10 +556,85 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) EntrupyApp *
 /// This method calls the legacy Objective-C implementation and propagates delegate callbacks.
 /// Delegates are automatically forwarded via didSet when set on the Swift facade.
 - (void)searchRetakes;
-/// Legacy: Fetch market edge for item (Objective-C compatible)
-/// This method calls the legacy Objective-C implementation and propagates delegate callbacks.
-/// The delegate set on the Swift facade is forwarded to the legacy implementation.
-/// \param entrupyID Entrupy ID of the item
+/// Fetches MarketEdge data for a given Entrupy ID.
+/// This API retrieves MarketEdge information associated with an authentication result.
+/// The response can be decoded into the SDK provided <code>EntrupyMarketEdge</code> model, which
+/// represents a consolidated data for an item.
+/// <code>EntrupyMarketEdge</code> includes:
+/// important:
+/// Ensure the user is logged in before invoking this API.
+/// <ul>
+///   <li>
+///     <code>identifier</code>: Authentication identifiers for the item.
+///   </li>
+///   <li>
+///     <code>market_grade</code>: Condition rating based on submitted images, including rating details,
+///     item report information, and region-level descriptions (<code>EntrupyMarketGrade</code>).
+///   </li>
+///   <li>
+///     <code>market_value</code>: Estimated market value derived from recent market data, including
+///     price and currency (<code>EntrupyMarketValue</code>).
+///   </li>
+///   <li>
+///     <code>market_match</code>: Recent marketplace listings similar to the submitted item, such as
+///     brand, style, and price (<code>EntrupyMarketMatch</code>).
+///   </li>
+///   <li>
+///     <code>disclaimer</code>: Disclaimer text associated with MarketGrade and MarketValue.
+///   </li>
+///   <li>
+///     <code>error</code>: Error information when MarketEdge data is unavailable.
+///   </li>
+/// </ul>
+/// <h3>Usage Example</h3>
+/// \code
+/// // Assign the delegate
+/// entrupyApp.marketEdgeDelegate = self
+///
+/// // Request MarketEdge data
+/// entrupyApp.fetchMarketEdgeForItem(withEntrupyID: entrupyID)
+///
+/// // Handle success
+/// func didFetchMarketEdgeCompleteSuccessfully(
+///     _ response: [AnyHashable: Any],
+///     forEntrupyID entrupyID: String
+/// ) {
+///     do {
+///         let data = try JSONSerialization.data(withJSONObject: response, options: [])
+///         let marketEdge = try JSONDecoder().decode(EntrupyMarketEdge.self, from: data)
+///
+///           // Check for MarketEdge level error
+///           if let error = marketEdge.error {
+///             // Handle MarketEdge error
+///             return
+///         }
+///
+///         // Access MarketEdge properties
+///         let identifier = marketEdge.identifier
+///         let marketGrade = marketEdge.market_grade
+///         let marketValue = marketEdge.market_value
+///         let marketMatch = marketEdge.market_match
+///         let disclaimer = marketEdge.disclaimer
+///         
+///
+///         // Use the parsed data to populate UI or business logic
+///     } catch {
+///         // Handle decoding errors
+///     }
+/// }
+///
+/// // Handle failure
+/// func didFetchMarketEdgeFailWithError(
+///     _ errorCode: EntrupyErrorCode,
+///     description: String,
+///     localizedDescription: String,
+///     forEntrupyID entrupyID: String
+/// ) {
+///     // Access the error code and localized description for failure cases
+/// }
+///
+///
+/// \endcode\param entrupyID The Entrupy authentication ID for which MarketEdge data should be fetched.
 ///
 - (void)fetchMarketEdgeForItemWithEntrupyID:(NSString * _Nonnull)entrupyID;
 /// Legacy: Cleanup user data (Objective-C compatible)
@@ -682,6 +776,12 @@ SWIFT_CLASS("_TtC10EntrupySDK38EntrupyMarketGradeDetailViewController")
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 @end
 
+SWIFT_CLASS("_TtC10EntrupySDK33EntrupyMarketGradeDetailViewModel")
+@interface EntrupyMarketGradeDetailViewModel : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 SWIFT_CLASS("_TtC10EntrupySDK32EntrupyMarketMatchViewController")
 @interface EntrupyMarketMatchViewController : UIViewController
 - (void)viewWillAppear:(BOOL)animated;
@@ -698,12 +798,6 @@ SWIFT_CLASS("_TtC10EntrupySDK32EntrupyMarketMatchViewController")
 @interface EntrupyMarketMatchViewController (SWIFT_EXTENSION(EntrupySDK)) <UITableViewDelegate>
 - (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (CGFloat)tableView:(UITableView * _Nonnull)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
-@end
-
-SWIFT_CLASS("_TtC10EntrupySDK33EntrupyMarketValueDetailViewModel")
-@interface EntrupyMarketValueDetailViewModel : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 SWIFT_CLASS("_TtC10EntrupySDK18EntrupySearchQuery")

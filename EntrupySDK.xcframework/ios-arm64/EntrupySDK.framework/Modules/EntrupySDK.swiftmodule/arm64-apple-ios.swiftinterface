@@ -34,7 +34,7 @@ infix operator +- : DefaultPrecedence
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class EntrupyMarketGradeDetailViewController : UIKit.UIViewController {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
-  @_Concurrency.MainActor @preconcurrency public func configure(with viewModel: EntrupySDK.EntrupyMarketValueDetailViewModel)
+  @_Concurrency.MainActor @preconcurrency public func configure(with viewModel: EntrupySDK.EntrupyMarketGradeDetailViewModel)
   #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
   #endif
@@ -52,8 +52,8 @@ extension EntrupySDK.EntrupyMarketGradeDetailViewController : UIKit.UITableViewD
   @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
   @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, estimatedHeightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
 }
-@objc public class EntrupyMarketValueDetailViewModel : ObjectiveC.NSObject {
-  public init(condition: EntrupySDK.EntrupyMarketValue, captureResult: EntrupySDK.EntrupyCaptureResult)
+@objc public class EntrupyMarketGradeDetailViewModel : ObjectiveC.NSObject {
+  public init(marketGrade: EntrupySDK.EntrupyMarketGrade, captureResult: EntrupySDK.EntrupyCaptureResult)
   @objc deinit
 }
 @objc(ObjcEntrupyEventName) public enum EntrupyEventName : Swift.Int {
@@ -353,41 +353,37 @@ public struct EntrupyCaptureResultPrice : Swift.Codable {
 }
 public struct EntrupyMarketEdge : Swift.Codable {
   public let identifier: EntrupySDK.EntrupyMarketEdgeIdentifier
-  public let condition: EntrupySDK.EntrupyMarketValue?
-  public let market_value: EntrupySDK.EntrupyMarketMatchValue?
-  public let marketplace_listings: EntrupySDK.EntrupyMarketMatch?
-  public let client_polling_instruction: EntrupySDK.EntrupyMarketEdgeClientPollingInstructions
+  public let market_grade: EntrupySDK.EntrupyMarketGrade?
+  public let market_value: EntrupySDK.EntrupyMarketValue?
+  public let market_match: EntrupySDK.EntrupyMarketMatch?
   public let disclaimer: [Swift.String]?
   public let error: EntrupySDK.EntrupyMarketEdgeError?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct EntrupyMarketEdgeIdentifier : Swift.Codable {
-  public let session_uuid: Swift.String
   public let authentication_id: Swift.String
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-public struct EntrupyMarketValue : Swift.Codable {
-  public let pending: Swift.Bool
-  public let values: EntrupySDK.EntrupyMarketGradeReportConditionValue?
+public struct EntrupyMarketGrade : Swift.Codable {
+  public let values: EntrupySDK.EntrupyMarketGradeValue?
   public let error: EntrupySDK.EntrupyMarketEdgeError?
   public let section_description: Swift.String
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-public struct EntrupyMarketMatchValue : Swift.Codable {
-  public let pending: Swift.Bool
+public struct EntrupyMarketValue : Swift.Codable {
   public let price: Swift.String?
   public let error: EntrupySDK.EntrupyMarketEdgeError?
   public let section_description: Swift.String
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-public struct EntrupyMarketGradeReportConditionValue : Swift.Codable {
+public struct EntrupyMarketGradeValue : Swift.Codable {
   public let rating: Swift.String
   public let issues: [Swift.String]?
-  public let details: [EntrupySDK.EntrupyMarketValueConditionDetail]?
+  public let details: [EntrupySDK.EntrupyMarketGradeDetail]?
   public let rating_explanation: Swift.String
   public let rating_ui_details: EntrupySDK.EntrupyMarketGradeRatingUIDetails?
   public let error: EntrupySDK.EntrupyMarketEdgeError?
@@ -409,12 +405,12 @@ public struct EntrupyMarketGradeRatingScale : Swift.Codable {
 public struct EntrupyMarketMatch : Swift.Codable {
   public let pending: Swift.Bool
   public let section_description: Swift.String
-  public let values: [EntrupySDK.EntrupyMarketMatchListing]?
+  public let values: [EntrupySDK.EntrupyMarketMatchValue]?
   public let error: EntrupySDK.EntrupyMarketEdgeError?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-public struct EntrupyMarketValueConditionDetail : Swift.Codable {
+public struct EntrupyMarketGradeDetail : Swift.Codable {
   public let item_region_display_name: Swift.String
   public let description: Swift.String
   public func encode(to encoder: any Swift.Encoder) throws
@@ -427,7 +423,7 @@ public struct EntrupyMarketEdgeClientPollingInstructions : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-public struct EntrupyMarketMatchListing : Swift.Codable {
+public struct EntrupyMarketMatchValue : Swift.Codable {
   public let title: Swift.String
   public let platform: Swift.String
   public let link: Swift.String?
@@ -639,7 +635,7 @@ public enum EntrupySearchFilter {
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class EntrupyMarketMatchViewController : UIKit.UIViewController {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
-  @_Concurrency.MainActor @preconcurrency public func configure(with listings: [EntrupySDK.EntrupyMarketMatchListing], functionId: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func configure(with listings: [EntrupySDK.EntrupyMarketMatchValue], functionId: Swift.String)
   #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
   #endif
