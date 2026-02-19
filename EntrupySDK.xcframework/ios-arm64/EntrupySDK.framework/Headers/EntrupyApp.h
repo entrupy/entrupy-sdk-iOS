@@ -446,7 +446,31 @@ NS_ASSUME_NONNULL_BEGIN
  Presents the Market Edge view for a specific authentication result.
 
  @param entrupyID The Entrupy ID for the item to display.
- @param viewConfiguration Controls visibility of Market Edge sections.
+ @param viewConfiguration Configuration options, including:
+        - displayMarketGrade: Show/hide market grade
+        - displayMarketValue: Show/hide market value
+        - displayMarketMatch: Show/hide market match
+        - displayRegionSelection: Show/hide region selection
+
+ @note The view is Presented modally over the current top view controller.
+
+ ```swift
+ guard EntrupyApp.sharedInstance().isAuthorizationValid() else {
+     print("User not authorized. Cannot display Market Edge view.")
+     return
+ }
+
+ let configuration = EntrupyMarketEdgeViewConfiguration(
+     displayMarketGrade: true,
+     displayMarketValue: true,
+     displayMarketMatch: true,
+     displayRegionSelection: true
+ )
+
+  //Implement EntrupyMarketEdgeViewDelegate to receive presentation callbacks.
+ EntrupyApp.sharedInstance().marketEdgeViewDelegate = self
+ EntrupyApp.sharedInstance().displayMarketEdgeViewForItem(withEntrupyID: entrupyID, withConfiguration: configuration)
+ ```
  */
 - (void)displayMarketEdgeViewForItemWithEntrupyID:(NSString *_Nonnull)entrupyID
                                 withConfiguration:(EntrupyMarketEdgeViewConfiguration *_Nonnull)viewConfiguration NS_SWIFT_NAME(displayMarketEdgeViewForItem(withEntrupyID:withConfiguration:));
@@ -529,42 +553,77 @@ NS_ASSUME_NONNULL_BEGIN
  */
 -(void) searchRetakes;
 
+
 /**
- * Fetches market edge for a given Entrupy ID by calling the backend route.
- *
- * This method retrieves comprehensive market edge including condition details,
- * marketplace listings, and other relevant information for the specified authentication result.
- *
- * The response will be delivered through the EntrupyMarketEdgeDelegate callbacks:
- * - didFetchMarketEdgeCompleteSuccessfully: Called when the request succeeds
- * - didFetchMarketEdgeFailWithError: Called when the request fails
- *
- * @param entrupyID The authentication ID for which to fetch market edge
- *
- * @note This method requires valid authorization. Ensure the user is logged in before calling.
- * @note The response data can be parsed using EntrupyMarketEdge struct with JSONSerialization.
- *
- * Example usage:
- * @code
- * // Set the delegate
- * entrupyApp.marketEdgeDelegate = self
- *
- * // Fetch market edge
- * entrupyApp.fetchMarketEdgeForItem(withEntrupyID: "ABC123")
- *
- * // In the delegate method, parse the response:
- * func didFetchMarketEdgeCompleteSuccessfully(_ catalog: [AnyHashable : Any], forEntrupyID entrupyID: String) {
- *     do {
- *         let data = try JSONSerialization.data(withJSONObject: catalog, options: [])
- *         let decoder = JSONDecoder()
- *         let marketEdge = try decoder.decode(EntrupyMarketEdge.self, from: data)
- *         // Use marketEdge...
- *     } catch {
- *         print("Error parsing market edge: \(error.localizedDescription)")
- *     }
- * }
- * @endcode
- */
+  Fetches MarketEdge data for a given Entrupy ID.
+
+  This API retrieves MarketEdge information associated with an authentication result.
+  The response can be decoded into the SDK provided `EntrupyMarketEdge` model, which
+  represents a consolidated data for an item.
+
+  `EntrupyMarketEdge` includes:
+  - `identifier`: Authentication identifiers for the item.
+  - `market_grade`: Condition rating based on submitted images, including rating details,
+    item report information, and region-level descriptions (`EntrupyMarketGrade`).
+  - `market_value`: Estimated market value derived from recent market data, including
+    price and currency (`EntrupyMarketValue`).
+  - `market_match`: Recent marketplace listings similar to the submitted item, such as
+    brand, style, and price (`EntrupyMarketMatch`).
+  - `disclaimer`: Disclaimer text associated with MarketGrade and MarketValue.
+  - `error`: Error information when MarketEdge data is unavailable.
+
+  - Parameter entrupyID: The Entrupy authentication ID for which MarketEdge data should be fetched.
+
+  - Important: Ensure the user is logged in before invoking this API.
+
+  ### Usage Example
+  ```swift
+  // Assign the delegate
+  entrupyApp.marketEdgeDelegate = self
+
+  // Request MarketEdge data
+  entrupyApp.fetchMarketEdgeForItem(withEntrupyID: entrupyID)
+
+  // Handle success
+  func didFetchMarketEdgeCompleteSuccessfully(
+      _ response: [AnyHashable: Any],
+      forEntrupyID entrupyID: String
+  ) {
+      do {
+          let data = try JSONSerialization.data(withJSONObject: response, options: [])
+          let marketEdge = try JSONDecoder().decode(EntrupyMarketEdge.self, from: data)
+ 
+            // Check for MarketEdge level error
+            if let error = marketEdge.error {
+              // Handle MarketEdge error
+              return
+          }
+ 
+          // Access MarketEdge properties
+          let identifier = marketEdge.identifier
+          let marketGrade = marketEdge.market_grade
+          let marketValue = marketEdge.market_value
+          let marketMatch = marketEdge.market_match
+          let disclaimer = marketEdge.disclaimer
+          
+
+          // Use the parsed data to populate UI or business logic
+      } catch {
+          // Handle decoding errors
+      }
+  }
+
+  // Handle failure
+  func didFetchMarketEdgeFailWithError(
+      _ errorCode: EntrupyErrorCode,
+      description: String,
+      localizedDescription: String,
+      forEntrupyID entrupyID: String
+  ) {
+      // Access the error code and localized description for failure cases
+  }
+ 
+*/
 - (void)fetchMarketEdgeForItemWithEntrupyID:(NSString *_Nonnull)entrupyID;
 
 /**

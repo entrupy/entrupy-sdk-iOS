@@ -264,6 +264,8 @@ Refer to the [SDK web documentation] for more details.
 
 @end
 
+
+
 @protocol EntrupyMarketEdgeViewDelegate <NSObject>
 /**
  Invoked when the SDK successfully presents the market edge view for an item.
@@ -294,15 +296,17 @@ Refer to the [SDK web documentation] for more details.
 
 @end
 
+
+
 @protocol EntrupyMarketEdgeDelegate <NSObject>
 /**
  Invoked when market edge are successfully fetched for an item.
 
  - Parameters:
-   - catalog: The market edge data as a dictionary. This dictionary is decodable with `EntrupyMarketEdge` struct using Swift's `JSONDecoder`.
+   - response: The market edge data as a dictionary. This dictionary is decodable with `EntrupyMarketEdge` struct using Swift's `JSONDecoder`.
    - entrupyID: The Entrupy ID associated with the item.
  */
-- (void)didFetchMarketEdgeCompleteSuccessfully:(NSDictionary *_Nonnull)catalog
+- (void)didFetchMarketEdgeCompleteSuccessfully:(NSDictionary *_Nonnull)response
                                        forEntrupyID:(NSString *_Nonnull)entrupyID;
 
 /**

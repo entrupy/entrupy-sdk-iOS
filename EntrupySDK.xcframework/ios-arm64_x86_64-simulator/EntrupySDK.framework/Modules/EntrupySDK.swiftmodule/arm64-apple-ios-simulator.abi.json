@@ -488,14 +488,14 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "EntrupyMarketValueDetailViewModel",
-                "printedName": "EntrupySDK.EntrupyMarketValueDetailViewModel",
-                "usr": "c:@M@EntrupySDK@objc(cs)EntrupyMarketValueDetailViewModel"
+                "name": "EntrupyMarketGradeDetailViewModel",
+                "printedName": "EntrupySDK.EntrupyMarketGradeDetailViewModel",
+                "usr": "c:@M@EntrupySDK@objc(cs)EntrupyMarketGradeDetailViewModel"
               }
             ],
             "declKind": "Func",
-            "usr": "s:10EntrupySDK0A31MarketGradeDetailViewControllerC9configure4withyAA0ac5ValueeF5ModelC_tF",
-            "mangledName": "$s10EntrupySDK0A31MarketGradeDetailViewControllerC9configure4withyAA0ac5ValueeF5ModelC_tF",
+            "usr": "s:10EntrupySDK0A31MarketGradeDetailViewControllerC9configure4withyAA0acdeF5ModelC_tF",
+            "mangledName": "$s10EntrupySDK0A31MarketGradeDetailViewControllerC9configure4withyAA0acdeF5ModelC_tF",
             "moduleName": "EntrupySDK",
             "declAttributes": [
               "Preconcurrency",
@@ -1134,25 +1134,25 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "EntrupyMarketValueDetailViewModel",
-        "printedName": "EntrupyMarketValueDetailViewModel",
+        "name": "EntrupyMarketGradeDetailViewModel",
+        "printedName": "EntrupyMarketGradeDetailViewModel",
         "children": [
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(condition:captureResult:)",
+            "printedName": "init(marketGrade:captureResult:)",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "EntrupyMarketValueDetailViewModel",
-                "printedName": "EntrupySDK.EntrupyMarketValueDetailViewModel",
-                "usr": "c:@M@EntrupySDK@objc(cs)EntrupyMarketValueDetailViewModel"
+                "name": "EntrupyMarketGradeDetailViewModel",
+                "printedName": "EntrupySDK.EntrupyMarketGradeDetailViewModel",
+                "usr": "c:@M@EntrupySDK@objc(cs)EntrupyMarketGradeDetailViewModel"
               },
               {
                 "kind": "TypeNominal",
-                "name": "EntrupyMarketValue",
-                "printedName": "EntrupySDK.EntrupyMarketValue",
-                "usr": "s:10EntrupySDK0A11MarketValueV"
+                "name": "EntrupyMarketGrade",
+                "printedName": "EntrupySDK.EntrupyMarketGrade",
+                "usr": "s:10EntrupySDK0A11MarketGradeV"
               },
               {
                 "kind": "TypeNominal",
@@ -1162,8 +1162,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:10EntrupySDK0A26MarketValueDetailViewModelC9condition13captureResultAcA0acD0V_AA0a7CaptureJ0Vtcfc",
-            "mangledName": "$s10EntrupySDK0A26MarketValueDetailViewModelC9condition13captureResultAcA0acD0V_AA0a7CaptureJ0Vtcfc",
+            "usr": "s:10EntrupySDK0A26MarketGradeDetailViewModelC06marketD013captureResultAcA0acD0V_AA0a7CaptureJ0Vtcfc",
+            "mangledName": "$s10EntrupySDK0A26MarketGradeDetailViewModelC06marketD013captureResultAcA0acD0V_AA0a7CaptureJ0Vtcfc",
             "moduleName": "EntrupySDK",
             "declAttributes": [
               "AccessControl"
@@ -1177,14 +1177,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "EntrupyMarketValueDetailViewModel",
-                "printedName": "EntrupySDK.EntrupyMarketValueDetailViewModel",
-                "usr": "c:@M@EntrupySDK@objc(cs)EntrupyMarketValueDetailViewModel"
+                "name": "EntrupyMarketGradeDetailViewModel",
+                "printedName": "EntrupySDK.EntrupyMarketGradeDetailViewModel",
+                "usr": "c:@M@EntrupySDK@objc(cs)EntrupyMarketGradeDetailViewModel"
               }
             ],
             "declKind": "Constructor",
-            "usr": "c:@M@EntrupySDK@objc(cs)EntrupyMarketValueDetailViewModel(im)init",
-            "mangledName": "$s10EntrupySDK0A26MarketValueDetailViewModelCACycfc",
+            "usr": "c:@M@EntrupySDK@objc(cs)EntrupyMarketGradeDetailViewModel(im)init",
+            "mangledName": "$s10EntrupySDK0A26MarketGradeDetailViewModelCACycfc",
             "moduleName": "EntrupySDK",
             "overriding": true,
             "implicit": true,
@@ -1198,8 +1198,8 @@
           }
         ],
         "declKind": "Class",
-        "usr": "c:@M@EntrupySDK@objc(cs)EntrupyMarketValueDetailViewModel",
-        "mangledName": "$s10EntrupySDK0A26MarketValueDetailViewModelC",
+        "usr": "c:@M@EntrupySDK@objc(cs)EntrupyMarketGradeDetailViewModel",
+        "mangledName": "$s10EntrupySDK0A26MarketGradeDetailViewModelC",
         "moduleName": "EntrupySDK",
         "declAttributes": [
           "AccessControl",
@@ -13618,8 +13618,68 @@
           },
           {
             "kind": "Var",
-            "name": "condition",
-            "printedName": "condition",
+            "name": "market_grade",
+            "printedName": "market_grade",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "EntrupySDK.EntrupyMarketGrade?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyMarketGrade",
+                    "printedName": "EntrupySDK.EntrupyMarketGrade",
+                    "usr": "s:10EntrupySDK0A11MarketGradeV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10EntrupySDK0A10MarketEdgeV12market_gradeAA0aC5GradeVSgvp",
+            "mangledName": "$s10EntrupySDK0A10MarketEdgeV12market_gradeAA0aC5GradeVSgvp",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "EntrupySDK.EntrupyMarketGrade?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyMarketGrade",
+                        "printedName": "EntrupySDK.EntrupyMarketGrade",
+                        "usr": "s:10EntrupySDK0A11MarketGradeV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10EntrupySDK0A10MarketEdgeV12market_gradeAA0aC5GradeVSgvg",
+                "mangledName": "$s10EntrupySDK0A10MarketEdgeV12market_gradeAA0aC5GradeVSgvg",
+                "moduleName": "EntrupySDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "market_value",
+            "printedName": "market_value",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -13637,8 +13697,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:10EntrupySDK0A10MarketEdgeV9conditionAA0aC5ValueVSgvp",
-            "mangledName": "$s10EntrupySDK0A10MarketEdgeV9conditionAA0aC5ValueVSgvp",
+            "usr": "s:10EntrupySDK0A10MarketEdgeV12market_valueAA0aC5ValueVSgvp",
+            "mangledName": "$s10EntrupySDK0A10MarketEdgeV12market_valueAA0aC5ValueVSgvp",
             "moduleName": "EntrupySDK",
             "declAttributes": [
               "HasStorage",
@@ -13668,8 +13728,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A10MarketEdgeV9conditionAA0aC5ValueVSgvg",
-                "mangledName": "$s10EntrupySDK0A10MarketEdgeV9conditionAA0aC5ValueVSgvg",
+                "usr": "s:10EntrupySDK0A10MarketEdgeV12market_valueAA0aC5ValueVSgvg",
+                "mangledName": "$s10EntrupySDK0A10MarketEdgeV12market_valueAA0aC5ValueVSgvg",
                 "moduleName": "EntrupySDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -13678,68 +13738,8 @@
           },
           {
             "kind": "Var",
-            "name": "market_value",
-            "printedName": "market_value",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "EntrupySDK.EntrupyMarketMatchValue?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "EntrupyMarketMatchValue",
-                    "printedName": "EntrupySDK.EntrupyMarketMatchValue",
-                    "usr": "s:10EntrupySDK0A16MarketMatchValueV"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:10EntrupySDK0A10MarketEdgeV12market_valueAA0aC10MatchValueVSgvp",
-            "mangledName": "$s10EntrupySDK0A10MarketEdgeV12market_valueAA0aC10MatchValueVSgvp",
-            "moduleName": "EntrupySDK",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "EntrupySDK.EntrupyMarketMatchValue?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "EntrupyMarketMatchValue",
-                        "printedName": "EntrupySDK.EntrupyMarketMatchValue",
-                        "usr": "s:10EntrupySDK0A16MarketMatchValueV"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A10MarketEdgeV12market_valueAA0aC10MatchValueVSgvg",
-                "mangledName": "$s10EntrupySDK0A10MarketEdgeV12market_valueAA0aC10MatchValueVSgvg",
-                "moduleName": "EntrupySDK",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "marketplace_listings",
-            "printedName": "marketplace_listings",
+            "name": "market_match",
+            "printedName": "market_match",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -13757,8 +13757,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:10EntrupySDK0A10MarketEdgeV20marketplace_listingsAA0aC5MatchVSgvp",
-            "mangledName": "$s10EntrupySDK0A10MarketEdgeV20marketplace_listingsAA0aC5MatchVSgvp",
+            "usr": "s:10EntrupySDK0A10MarketEdgeV12market_matchAA0aC5MatchVSgvp",
+            "mangledName": "$s10EntrupySDK0A10MarketEdgeV12market_matchAA0aC5MatchVSgvp",
             "moduleName": "EntrupySDK",
             "declAttributes": [
               "HasStorage",
@@ -13788,52 +13788,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A10MarketEdgeV20marketplace_listingsAA0aC5MatchVSgvg",
-                "mangledName": "$s10EntrupySDK0A10MarketEdgeV20marketplace_listingsAA0aC5MatchVSgvg",
-                "moduleName": "EntrupySDK",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "client_polling_instruction",
-            "printedName": "client_polling_instruction",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "EntrupyMarketEdgeClientPollingInstructions",
-                "printedName": "EntrupySDK.EntrupyMarketEdgeClientPollingInstructions",
-                "usr": "s:10EntrupySDK0A35MarketEdgeClientPollingInstructionsV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:10EntrupySDK0A10MarketEdgeV26client_polling_instructionAA0acD25ClientPollingInstructionsVvp",
-            "mangledName": "$s10EntrupySDK0A10MarketEdgeV26client_polling_instructionAA0acD25ClientPollingInstructionsVvp",
-            "moduleName": "EntrupySDK",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "EntrupyMarketEdgeClientPollingInstructions",
-                    "printedName": "EntrupySDK.EntrupyMarketEdgeClientPollingInstructions",
-                    "usr": "s:10EntrupySDK0A35MarketEdgeClientPollingInstructionsV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A10MarketEdgeV26client_polling_instructionAA0acD25ClientPollingInstructionsVvg",
-                "mangledName": "$s10EntrupySDK0A10MarketEdgeV26client_polling_instructionAA0acD25ClientPollingInstructionsVvg",
+                "usr": "s:10EntrupySDK0A10MarketEdgeV12market_matchAA0aC5MatchVSgvg",
+                "mangledName": "$s10EntrupySDK0A10MarketEdgeV12market_matchAA0aC5MatchVSgvg",
                 "moduleName": "EntrupySDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -14073,50 +14029,6 @@
         "children": [
           {
             "kind": "Var",
-            "name": "session_uuid",
-            "printedName": "session_uuid",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:10EntrupySDK0A20MarketEdgeIdentifierV12session_uuidSSvp",
-            "mangledName": "$s10EntrupySDK0A20MarketEdgeIdentifierV12session_uuidSSvp",
-            "moduleName": "EntrupySDK",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A20MarketEdgeIdentifierV12session_uuidSSvg",
-                "mangledName": "$s10EntrupySDK0A20MarketEdgeIdentifierV12session_uuidSSvg",
-                "moduleName": "EntrupySDK",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
             "name": "authentication_id",
             "printedName": "authentication_id",
             "children": [
@@ -14251,53 +14163,9 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "EntrupyMarketValue",
-        "printedName": "EntrupyMarketValue",
+        "name": "EntrupyMarketGrade",
+        "printedName": "EntrupyMarketGrade",
         "children": [
-          {
-            "kind": "Var",
-            "name": "pending",
-            "printedName": "pending",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:10EntrupySDK0A11MarketValueV7pendingSbvp",
-            "mangledName": "$s10EntrupySDK0A11MarketValueV7pendingSbvp",
-            "moduleName": "EntrupySDK",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A11MarketValueV7pendingSbvg",
-                "mangledName": "$s10EntrupySDK0A11MarketValueV7pendingSbvg",
-                "moduleName": "EntrupySDK",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
           {
             "kind": "Var",
             "name": "values",
@@ -14306,21 +14174,21 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "EntrupySDK.EntrupyMarketGradeReportConditionValue?",
+                "printedName": "EntrupySDK.EntrupyMarketGradeValue?",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "EntrupyMarketGradeReportConditionValue",
-                    "printedName": "EntrupySDK.EntrupyMarketGradeReportConditionValue",
-                    "usr": "s:10EntrupySDK0A31MarketGradeReportConditionValueV"
+                    "name": "EntrupyMarketGradeValue",
+                    "printedName": "EntrupySDK.EntrupyMarketGradeValue",
+                    "usr": "s:10EntrupySDK0A16MarketGradeValueV"
                   }
                 ],
                 "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:10EntrupySDK0A11MarketValueV6valuesAA0ac20GradeReportConditionD0VSgvp",
-            "mangledName": "$s10EntrupySDK0A11MarketValueV6valuesAA0ac20GradeReportConditionD0VSgvp",
+            "usr": "s:10EntrupySDK0A11MarketGradeV6valuesAA0acD5ValueVSgvp",
+            "mangledName": "$s10EntrupySDK0A11MarketGradeV6valuesAA0acD5ValueVSgvp",
             "moduleName": "EntrupySDK",
             "declAttributes": [
               "HasStorage",
@@ -14337,21 +14205,280 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "EntrupySDK.EntrupyMarketGradeReportConditionValue?",
+                    "printedName": "EntrupySDK.EntrupyMarketGradeValue?",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "EntrupyMarketGradeReportConditionValue",
-                        "printedName": "EntrupySDK.EntrupyMarketGradeReportConditionValue",
-                        "usr": "s:10EntrupySDK0A31MarketGradeReportConditionValueV"
+                        "name": "EntrupyMarketGradeValue",
+                        "printedName": "EntrupySDK.EntrupyMarketGradeValue",
+                        "usr": "s:10EntrupySDK0A16MarketGradeValueV"
                       }
                     ],
                     "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A11MarketValueV6valuesAA0ac20GradeReportConditionD0VSgvg",
-                "mangledName": "$s10EntrupySDK0A11MarketValueV6valuesAA0ac20GradeReportConditionD0VSgvg",
+                "usr": "s:10EntrupySDK0A11MarketGradeV6valuesAA0acD5ValueVSgvg",
+                "mangledName": "$s10EntrupySDK0A11MarketGradeV6valuesAA0acD5ValueVSgvg",
+                "moduleName": "EntrupySDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "error",
+            "printedName": "error",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "EntrupySDK.EntrupyMarketEdgeError?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyMarketEdgeError",
+                    "printedName": "EntrupySDK.EntrupyMarketEdgeError",
+                    "usr": "s:10EntrupySDK0A15MarketEdgeErrorV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10EntrupySDK0A11MarketGradeV5errorAA0aC9EdgeErrorVSgvp",
+            "mangledName": "$s10EntrupySDK0A11MarketGradeV5errorAA0aC9EdgeErrorVSgvp",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "EntrupySDK.EntrupyMarketEdgeError?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyMarketEdgeError",
+                        "printedName": "EntrupySDK.EntrupyMarketEdgeError",
+                        "usr": "s:10EntrupySDK0A15MarketEdgeErrorV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10EntrupySDK0A11MarketGradeV5errorAA0aC9EdgeErrorVSgvg",
+                "mangledName": "$s10EntrupySDK0A11MarketGradeV5errorAA0aC9EdgeErrorVSgvg",
+                "moduleName": "EntrupySDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "section_description",
+            "printedName": "section_description",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10EntrupySDK0A11MarketGradeV19section_descriptionSSvp",
+            "mangledName": "$s10EntrupySDK0A11MarketGradeV19section_descriptionSSvp",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10EntrupySDK0A11MarketGradeV19section_descriptionSSvg",
+                "mangledName": "$s10EntrupySDK0A11MarketGradeV19section_descriptionSSvg",
+                "moduleName": "EntrupySDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "EntrupyMarketGrade",
+                "printedName": "EntrupySDK.EntrupyMarketGrade",
+                "usr": "s:10EntrupySDK0A11MarketGradeV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10EntrupySDK0A11MarketGradeV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s10EntrupySDK0A11MarketGradeV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "EntrupySDK",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10EntrupySDK0A11MarketGradeV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s10EntrupySDK0A11MarketGradeV6encode2toys7Encoder_p_tKF",
+            "moduleName": "EntrupySDK",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:10EntrupySDK0A11MarketGradeV",
+        "mangledName": "$s10EntrupySDK0A11MarketGradeV",
+        "moduleName": "EntrupySDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "EntrupyMarketValue",
+        "printedName": "EntrupyMarketValue",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "price",
+            "printedName": "price",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10EntrupySDK0A11MarketValueV5priceSSSgvp",
+            "mangledName": "$s10EntrupySDK0A11MarketValueV5priceSSSgvp",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10EntrupySDK0A11MarketValueV5priceSSSgvg",
+                "mangledName": "$s10EntrupySDK0A11MarketValueV5priceSSSgvg",
                 "moduleName": "EntrupySDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -14554,311 +14681,8 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "EntrupyMarketMatchValue",
-        "printedName": "EntrupyMarketMatchValue",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "pending",
-            "printedName": "pending",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:10EntrupySDK0A16MarketMatchValueV7pendingSbvp",
-            "mangledName": "$s10EntrupySDK0A16MarketMatchValueV7pendingSbvp",
-            "moduleName": "EntrupySDK",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A16MarketMatchValueV7pendingSbvg",
-                "mangledName": "$s10EntrupySDK0A16MarketMatchValueV7pendingSbvg",
-                "moduleName": "EntrupySDK",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "price",
-            "printedName": "price",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:10EntrupySDK0A16MarketMatchValueV5priceSSSgvp",
-            "mangledName": "$s10EntrupySDK0A16MarketMatchValueV5priceSSSgvp",
-            "moduleName": "EntrupySDK",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A16MarketMatchValueV5priceSSSgvg",
-                "mangledName": "$s10EntrupySDK0A16MarketMatchValueV5priceSSSgvg",
-                "moduleName": "EntrupySDK",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "error",
-            "printedName": "error",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "EntrupySDK.EntrupyMarketEdgeError?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "EntrupyMarketEdgeError",
-                    "printedName": "EntrupySDK.EntrupyMarketEdgeError",
-                    "usr": "s:10EntrupySDK0A15MarketEdgeErrorV"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:10EntrupySDK0A16MarketMatchValueV5errorAA0aC9EdgeErrorVSgvp",
-            "mangledName": "$s10EntrupySDK0A16MarketMatchValueV5errorAA0aC9EdgeErrorVSgvp",
-            "moduleName": "EntrupySDK",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "EntrupySDK.EntrupyMarketEdgeError?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "EntrupyMarketEdgeError",
-                        "printedName": "EntrupySDK.EntrupyMarketEdgeError",
-                        "usr": "s:10EntrupySDK0A15MarketEdgeErrorV"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A16MarketMatchValueV5errorAA0aC9EdgeErrorVSgvg",
-                "mangledName": "$s10EntrupySDK0A16MarketMatchValueV5errorAA0aC9EdgeErrorVSgvg",
-                "moduleName": "EntrupySDK",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "section_description",
-            "printedName": "section_description",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:10EntrupySDK0A16MarketMatchValueV19section_descriptionSSvp",
-            "mangledName": "$s10EntrupySDK0A16MarketMatchValueV19section_descriptionSSvp",
-            "moduleName": "EntrupySDK",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A16MarketMatchValueV19section_descriptionSSvg",
-                "mangledName": "$s10EntrupySDK0A16MarketMatchValueV19section_descriptionSSvg",
-                "moduleName": "EntrupySDK",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(from:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "EntrupyMarketMatchValue",
-                "printedName": "EntrupySDK.EntrupyMarketMatchValue",
-                "usr": "s:10EntrupySDK0A16MarketMatchValueV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Decoder",
-                "printedName": "any Swift.Decoder",
-                "usr": "s:s7DecoderP"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:10EntrupySDK0A16MarketMatchValueV4fromACs7Decoder_p_tKcfc",
-            "mangledName": "$s10EntrupySDK0A16MarketMatchValueV4fromACs7Decoder_p_tKcfc",
-            "moduleName": "EntrupySDK",
-            "implicit": true,
-            "throwing": true,
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Function",
-            "name": "encode",
-            "printedName": "encode(to:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Encoder",
-                "printedName": "any Swift.Encoder",
-                "usr": "s:s7EncoderP"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:10EntrupySDK0A16MarketMatchValueV6encode2toys7Encoder_p_tKF",
-            "mangledName": "$s10EntrupySDK0A16MarketMatchValueV6encode2toys7Encoder_p_tKF",
-            "moduleName": "EntrupySDK",
-            "implicit": true,
-            "throwing": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Struct",
-        "usr": "s:10EntrupySDK0A16MarketMatchValueV",
-        "mangledName": "$s10EntrupySDK0A16MarketMatchValueV",
-        "moduleName": "EntrupySDK",
-        "declAttributes": [
-          "AccessControl"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Decodable",
-            "printedName": "Decodable",
-            "usr": "s:Se",
-            "mangledName": "$sSe"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Encodable",
-            "printedName": "Encodable",
-            "usr": "s:SE",
-            "mangledName": "$sSE"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "EntrupyMarketGradeReportConditionValue",
-        "printedName": "EntrupyMarketGradeReportConditionValue",
+        "name": "EntrupyMarketGradeValue",
+        "printedName": "EntrupyMarketGradeValue",
         "children": [
           {
             "kind": "Var",
@@ -14873,8 +14697,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:10EntrupySDK0A31MarketGradeReportConditionValueV6ratingSSvp",
-            "mangledName": "$s10EntrupySDK0A31MarketGradeReportConditionValueV6ratingSSvp",
+            "usr": "s:10EntrupySDK0A16MarketGradeValueV6ratingSSvp",
+            "mangledName": "$s10EntrupySDK0A16MarketGradeValueV6ratingSSvp",
             "moduleName": "EntrupySDK",
             "declAttributes": [
               "HasStorage",
@@ -14896,8 +14720,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A31MarketGradeReportConditionValueV6ratingSSvg",
-                "mangledName": "$s10EntrupySDK0A31MarketGradeReportConditionValueV6ratingSSvg",
+                "usr": "s:10EntrupySDK0A16MarketGradeValueV6ratingSSvg",
+                "mangledName": "$s10EntrupySDK0A16MarketGradeValueV6ratingSSvg",
                 "moduleName": "EntrupySDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -14933,8 +14757,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:10EntrupySDK0A31MarketGradeReportConditionValueV6issuesSaySSGSgvp",
-            "mangledName": "$s10EntrupySDK0A31MarketGradeReportConditionValueV6issuesSaySSGSgvp",
+            "usr": "s:10EntrupySDK0A16MarketGradeValueV6issuesSaySSGSgvp",
+            "mangledName": "$s10EntrupySDK0A16MarketGradeValueV6issuesSaySSGSgvp",
             "moduleName": "EntrupySDK",
             "declAttributes": [
               "HasStorage",
@@ -14972,8 +14796,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A31MarketGradeReportConditionValueV6issuesSaySSGSgvg",
-                "mangledName": "$s10EntrupySDK0A31MarketGradeReportConditionValueV6issuesSaySSGSgvg",
+                "usr": "s:10EntrupySDK0A16MarketGradeValueV6issuesSaySSGSgvg",
+                "mangledName": "$s10EntrupySDK0A16MarketGradeValueV6issuesSaySSGSgvg",
                 "moduleName": "EntrupySDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -14988,18 +14812,18 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "[EntrupySDK.EntrupyMarketValueConditionDetail]?",
+                "printedName": "[EntrupySDK.EntrupyMarketGradeDetail]?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "Array",
-                    "printedName": "[EntrupySDK.EntrupyMarketValueConditionDetail]",
+                    "printedName": "[EntrupySDK.EntrupyMarketGradeDetail]",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "EntrupyMarketValueConditionDetail",
-                        "printedName": "EntrupySDK.EntrupyMarketValueConditionDetail",
-                        "usr": "s:10EntrupySDK0A26MarketValueConditionDetailV"
+                        "name": "EntrupyMarketGradeDetail",
+                        "printedName": "EntrupySDK.EntrupyMarketGradeDetail",
+                        "usr": "s:10EntrupySDK0A17MarketGradeDetailV"
                       }
                     ],
                     "usr": "s:Sa"
@@ -15009,8 +14833,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:10EntrupySDK0A31MarketGradeReportConditionValueV7detailsSayAA0acgF6DetailVGSgvp",
-            "mangledName": "$s10EntrupySDK0A31MarketGradeReportConditionValueV7detailsSayAA0acgF6DetailVGSgvp",
+            "usr": "s:10EntrupySDK0A16MarketGradeValueV7detailsSayAA0acD6DetailVGSgvp",
+            "mangledName": "$s10EntrupySDK0A16MarketGradeValueV7detailsSayAA0acD6DetailVGSgvp",
             "moduleName": "EntrupySDK",
             "declAttributes": [
               "HasStorage",
@@ -15027,18 +14851,18 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "[EntrupySDK.EntrupyMarketValueConditionDetail]?",
+                    "printedName": "[EntrupySDK.EntrupyMarketGradeDetail]?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "Array",
-                        "printedName": "[EntrupySDK.EntrupyMarketValueConditionDetail]",
+                        "printedName": "[EntrupySDK.EntrupyMarketGradeDetail]",
                         "children": [
                           {
                             "kind": "TypeNominal",
-                            "name": "EntrupyMarketValueConditionDetail",
-                            "printedName": "EntrupySDK.EntrupyMarketValueConditionDetail",
-                            "usr": "s:10EntrupySDK0A26MarketValueConditionDetailV"
+                            "name": "EntrupyMarketGradeDetail",
+                            "printedName": "EntrupySDK.EntrupyMarketGradeDetail",
+                            "usr": "s:10EntrupySDK0A17MarketGradeDetailV"
                           }
                         ],
                         "usr": "s:Sa"
@@ -15048,8 +14872,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A31MarketGradeReportConditionValueV7detailsSayAA0acgF6DetailVGSgvg",
-                "mangledName": "$s10EntrupySDK0A31MarketGradeReportConditionValueV7detailsSayAA0acgF6DetailVGSgvg",
+                "usr": "s:10EntrupySDK0A16MarketGradeValueV7detailsSayAA0acD6DetailVGSgvg",
+                "mangledName": "$s10EntrupySDK0A16MarketGradeValueV7detailsSayAA0acD6DetailVGSgvg",
                 "moduleName": "EntrupySDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -15069,8 +14893,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:10EntrupySDK0A31MarketGradeReportConditionValueV18rating_explanationSSvp",
-            "mangledName": "$s10EntrupySDK0A31MarketGradeReportConditionValueV18rating_explanationSSvp",
+            "usr": "s:10EntrupySDK0A16MarketGradeValueV18rating_explanationSSvp",
+            "mangledName": "$s10EntrupySDK0A16MarketGradeValueV18rating_explanationSSvp",
             "moduleName": "EntrupySDK",
             "declAttributes": [
               "HasStorage",
@@ -15092,8 +14916,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A31MarketGradeReportConditionValueV18rating_explanationSSvg",
-                "mangledName": "$s10EntrupySDK0A31MarketGradeReportConditionValueV18rating_explanationSSvg",
+                "usr": "s:10EntrupySDK0A16MarketGradeValueV18rating_explanationSSvg",
+                "mangledName": "$s10EntrupySDK0A16MarketGradeValueV18rating_explanationSSvg",
                 "moduleName": "EntrupySDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -15121,8 +14945,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:10EntrupySDK0A31MarketGradeReportConditionValueV17rating_ui_detailsAA0acD15RatingUIDetailsVSgvp",
-            "mangledName": "$s10EntrupySDK0A31MarketGradeReportConditionValueV17rating_ui_detailsAA0acD15RatingUIDetailsVSgvp",
+            "usr": "s:10EntrupySDK0A16MarketGradeValueV17rating_ui_detailsAA0acD15RatingUIDetailsVSgvp",
+            "mangledName": "$s10EntrupySDK0A16MarketGradeValueV17rating_ui_detailsAA0acD15RatingUIDetailsVSgvp",
             "moduleName": "EntrupySDK",
             "declAttributes": [
               "HasStorage",
@@ -15152,8 +14976,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A31MarketGradeReportConditionValueV17rating_ui_detailsAA0acD15RatingUIDetailsVSgvg",
-                "mangledName": "$s10EntrupySDK0A31MarketGradeReportConditionValueV17rating_ui_detailsAA0acD15RatingUIDetailsVSgvg",
+                "usr": "s:10EntrupySDK0A16MarketGradeValueV17rating_ui_detailsAA0acD15RatingUIDetailsVSgvg",
+                "mangledName": "$s10EntrupySDK0A16MarketGradeValueV17rating_ui_detailsAA0acD15RatingUIDetailsVSgvg",
                 "moduleName": "EntrupySDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -15181,8 +15005,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:10EntrupySDK0A31MarketGradeReportConditionValueV5errorAA0aC9EdgeErrorVSgvp",
-            "mangledName": "$s10EntrupySDK0A31MarketGradeReportConditionValueV5errorAA0aC9EdgeErrorVSgvp",
+            "usr": "s:10EntrupySDK0A16MarketGradeValueV5errorAA0aC9EdgeErrorVSgvp",
+            "mangledName": "$s10EntrupySDK0A16MarketGradeValueV5errorAA0aC9EdgeErrorVSgvp",
             "moduleName": "EntrupySDK",
             "declAttributes": [
               "HasStorage",
@@ -15212,8 +15036,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A31MarketGradeReportConditionValueV5errorAA0aC9EdgeErrorVSgvg",
-                "mangledName": "$s10EntrupySDK0A31MarketGradeReportConditionValueV5errorAA0aC9EdgeErrorVSgvg",
+                "usr": "s:10EntrupySDK0A16MarketGradeValueV5errorAA0aC9EdgeErrorVSgvg",
+                "mangledName": "$s10EntrupySDK0A16MarketGradeValueV5errorAA0aC9EdgeErrorVSgvg",
                 "moduleName": "EntrupySDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -15227,9 +15051,9 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "EntrupyMarketGradeReportConditionValue",
-                "printedName": "EntrupySDK.EntrupyMarketGradeReportConditionValue",
-                "usr": "s:10EntrupySDK0A31MarketGradeReportConditionValueV"
+                "name": "EntrupyMarketGradeValue",
+                "printedName": "EntrupySDK.EntrupyMarketGradeValue",
+                "usr": "s:10EntrupySDK0A16MarketGradeValueV"
               },
               {
                 "kind": "TypeNominal",
@@ -15239,8 +15063,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:10EntrupySDK0A31MarketGradeReportConditionValueV4fromACs7Decoder_p_tKcfc",
-            "mangledName": "$s10EntrupySDK0A31MarketGradeReportConditionValueV4fromACs7Decoder_p_tKcfc",
+            "usr": "s:10EntrupySDK0A16MarketGradeValueV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s10EntrupySDK0A16MarketGradeValueV4fromACs7Decoder_p_tKcfc",
             "moduleName": "EntrupySDK",
             "implicit": true,
             "throwing": true,
@@ -15264,8 +15088,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:10EntrupySDK0A31MarketGradeReportConditionValueV6encode2toys7Encoder_p_tKF",
-            "mangledName": "$s10EntrupySDK0A31MarketGradeReportConditionValueV6encode2toys7Encoder_p_tKF",
+            "usr": "s:10EntrupySDK0A16MarketGradeValueV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s10EntrupySDK0A16MarketGradeValueV6encode2toys7Encoder_p_tKF",
             "moduleName": "EntrupySDK",
             "implicit": true,
             "throwing": true,
@@ -15273,8 +15097,8 @@
           }
         ],
         "declKind": "Struct",
-        "usr": "s:10EntrupySDK0A31MarketGradeReportConditionValueV",
-        "mangledName": "$s10EntrupySDK0A31MarketGradeReportConditionValueV",
+        "usr": "s:10EntrupySDK0A16MarketGradeValueV",
+        "mangledName": "$s10EntrupySDK0A16MarketGradeValueV",
         "moduleName": "EntrupySDK",
         "declAttributes": [
           "AccessControl"
@@ -15809,18 +15633,18 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "[EntrupySDK.EntrupyMarketMatchListing]?",
+                "printedName": "[EntrupySDK.EntrupyMarketMatchValue]?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "Array",
-                    "printedName": "[EntrupySDK.EntrupyMarketMatchListing]",
+                    "printedName": "[EntrupySDK.EntrupyMarketMatchValue]",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "EntrupyMarketMatchListing",
-                        "printedName": "EntrupySDK.EntrupyMarketMatchListing",
-                        "usr": "s:10EntrupySDK0A18MarketMatchListingV"
+                        "name": "EntrupyMarketMatchValue",
+                        "printedName": "EntrupySDK.EntrupyMarketMatchValue",
+                        "usr": "s:10EntrupySDK0A16MarketMatchValueV"
                       }
                     ],
                     "usr": "s:Sa"
@@ -15830,8 +15654,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:10EntrupySDK0A11MarketMatchV6valuesSayAA0acD7ListingVGSgvp",
-            "mangledName": "$s10EntrupySDK0A11MarketMatchV6valuesSayAA0acD7ListingVGSgvp",
+            "usr": "s:10EntrupySDK0A11MarketMatchV6valuesSayAA0acD5ValueVGSgvp",
+            "mangledName": "$s10EntrupySDK0A11MarketMatchV6valuesSayAA0acD5ValueVGSgvp",
             "moduleName": "EntrupySDK",
             "declAttributes": [
               "HasStorage",
@@ -15848,18 +15672,18 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "[EntrupySDK.EntrupyMarketMatchListing]?",
+                    "printedName": "[EntrupySDK.EntrupyMarketMatchValue]?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "Array",
-                        "printedName": "[EntrupySDK.EntrupyMarketMatchListing]",
+                        "printedName": "[EntrupySDK.EntrupyMarketMatchValue]",
                         "children": [
                           {
                             "kind": "TypeNominal",
-                            "name": "EntrupyMarketMatchListing",
-                            "printedName": "EntrupySDK.EntrupyMarketMatchListing",
-                            "usr": "s:10EntrupySDK0A18MarketMatchListingV"
+                            "name": "EntrupyMarketMatchValue",
+                            "printedName": "EntrupySDK.EntrupyMarketMatchValue",
+                            "usr": "s:10EntrupySDK0A16MarketMatchValueV"
                           }
                         ],
                         "usr": "s:Sa"
@@ -15869,8 +15693,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A11MarketMatchV6valuesSayAA0acD7ListingVGSgvg",
-                "mangledName": "$s10EntrupySDK0A11MarketMatchV6valuesSayAA0acD7ListingVGSgvg",
+                "usr": "s:10EntrupySDK0A11MarketMatchV6valuesSayAA0acD5ValueVGSgvg",
+                "mangledName": "$s10EntrupySDK0A11MarketMatchV6valuesSayAA0acD5ValueVGSgvg",
                 "moduleName": "EntrupySDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -16029,8 +15853,8 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "EntrupyMarketValueConditionDetail",
-        "printedName": "EntrupyMarketValueConditionDetail",
+        "name": "EntrupyMarketGradeDetail",
+        "printedName": "EntrupyMarketGradeDetail",
         "children": [
           {
             "kind": "Var",
@@ -16045,8 +15869,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:10EntrupySDK0A26MarketValueConditionDetailV24item_region_display_nameSSvp",
-            "mangledName": "$s10EntrupySDK0A26MarketValueConditionDetailV24item_region_display_nameSSvp",
+            "usr": "s:10EntrupySDK0A17MarketGradeDetailV24item_region_display_nameSSvp",
+            "mangledName": "$s10EntrupySDK0A17MarketGradeDetailV24item_region_display_nameSSvp",
             "moduleName": "EntrupySDK",
             "declAttributes": [
               "HasStorage",
@@ -16068,8 +15892,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A26MarketValueConditionDetailV24item_region_display_nameSSvg",
-                "mangledName": "$s10EntrupySDK0A26MarketValueConditionDetailV24item_region_display_nameSSvg",
+                "usr": "s:10EntrupySDK0A17MarketGradeDetailV24item_region_display_nameSSvg",
+                "mangledName": "$s10EntrupySDK0A17MarketGradeDetailV24item_region_display_nameSSvg",
                 "moduleName": "EntrupySDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -16089,8 +15913,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:10EntrupySDK0A26MarketValueConditionDetailV11descriptionSSvp",
-            "mangledName": "$s10EntrupySDK0A26MarketValueConditionDetailV11descriptionSSvp",
+            "usr": "s:10EntrupySDK0A17MarketGradeDetailV11descriptionSSvp",
+            "mangledName": "$s10EntrupySDK0A17MarketGradeDetailV11descriptionSSvp",
             "moduleName": "EntrupySDK",
             "declAttributes": [
               "HasStorage",
@@ -16112,8 +15936,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A26MarketValueConditionDetailV11descriptionSSvg",
-                "mangledName": "$s10EntrupySDK0A26MarketValueConditionDetailV11descriptionSSvg",
+                "usr": "s:10EntrupySDK0A17MarketGradeDetailV11descriptionSSvg",
+                "mangledName": "$s10EntrupySDK0A17MarketGradeDetailV11descriptionSSvg",
                 "moduleName": "EntrupySDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -16127,9 +15951,9 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "EntrupyMarketValueConditionDetail",
-                "printedName": "EntrupySDK.EntrupyMarketValueConditionDetail",
-                "usr": "s:10EntrupySDK0A26MarketValueConditionDetailV"
+                "name": "EntrupyMarketGradeDetail",
+                "printedName": "EntrupySDK.EntrupyMarketGradeDetail",
+                "usr": "s:10EntrupySDK0A17MarketGradeDetailV"
               },
               {
                 "kind": "TypeNominal",
@@ -16139,8 +15963,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:10EntrupySDK0A26MarketValueConditionDetailV4fromACs7Decoder_p_tKcfc",
-            "mangledName": "$s10EntrupySDK0A26MarketValueConditionDetailV4fromACs7Decoder_p_tKcfc",
+            "usr": "s:10EntrupySDK0A17MarketGradeDetailV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s10EntrupySDK0A17MarketGradeDetailV4fromACs7Decoder_p_tKcfc",
             "moduleName": "EntrupySDK",
             "implicit": true,
             "throwing": true,
@@ -16164,8 +15988,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:10EntrupySDK0A26MarketValueConditionDetailV6encode2toys7Encoder_p_tKF",
-            "mangledName": "$s10EntrupySDK0A26MarketValueConditionDetailV6encode2toys7Encoder_p_tKF",
+            "usr": "s:10EntrupySDK0A17MarketGradeDetailV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s10EntrupySDK0A17MarketGradeDetailV6encode2toys7Encoder_p_tKF",
             "moduleName": "EntrupySDK",
             "implicit": true,
             "throwing": true,
@@ -16173,8 +15997,8 @@
           }
         ],
         "declKind": "Struct",
-        "usr": "s:10EntrupySDK0A26MarketValueConditionDetailV",
-        "mangledName": "$s10EntrupySDK0A26MarketValueConditionDetailV",
+        "usr": "s:10EntrupySDK0A17MarketGradeDetailV",
+        "mangledName": "$s10EntrupySDK0A17MarketGradeDetailV",
         "moduleName": "EntrupySDK",
         "declAttributes": [
           "AccessControl"
@@ -16439,8 +16263,8 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "EntrupyMarketMatchListing",
-        "printedName": "EntrupyMarketMatchListing",
+        "name": "EntrupyMarketMatchValue",
+        "printedName": "EntrupyMarketMatchValue",
         "children": [
           {
             "kind": "Var",
@@ -16455,8 +16279,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:10EntrupySDK0A18MarketMatchListingV5titleSSvp",
-            "mangledName": "$s10EntrupySDK0A18MarketMatchListingV5titleSSvp",
+            "usr": "s:10EntrupySDK0A16MarketMatchValueV5titleSSvp",
+            "mangledName": "$s10EntrupySDK0A16MarketMatchValueV5titleSSvp",
             "moduleName": "EntrupySDK",
             "declAttributes": [
               "HasStorage",
@@ -16478,8 +16302,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A18MarketMatchListingV5titleSSvg",
-                "mangledName": "$s10EntrupySDK0A18MarketMatchListingV5titleSSvg",
+                "usr": "s:10EntrupySDK0A16MarketMatchValueV5titleSSvg",
+                "mangledName": "$s10EntrupySDK0A16MarketMatchValueV5titleSSvg",
                 "moduleName": "EntrupySDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -16499,8 +16323,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:10EntrupySDK0A18MarketMatchListingV8platformSSvp",
-            "mangledName": "$s10EntrupySDK0A18MarketMatchListingV8platformSSvp",
+            "usr": "s:10EntrupySDK0A16MarketMatchValueV8platformSSvp",
+            "mangledName": "$s10EntrupySDK0A16MarketMatchValueV8platformSSvp",
             "moduleName": "EntrupySDK",
             "declAttributes": [
               "HasStorage",
@@ -16522,8 +16346,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A18MarketMatchListingV8platformSSvg",
-                "mangledName": "$s10EntrupySDK0A18MarketMatchListingV8platformSSvg",
+                "usr": "s:10EntrupySDK0A16MarketMatchValueV8platformSSvg",
+                "mangledName": "$s10EntrupySDK0A16MarketMatchValueV8platformSSvg",
                 "moduleName": "EntrupySDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -16551,8 +16375,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:10EntrupySDK0A18MarketMatchListingV4linkSSSgvp",
-            "mangledName": "$s10EntrupySDK0A18MarketMatchListingV4linkSSSgvp",
+            "usr": "s:10EntrupySDK0A16MarketMatchValueV4linkSSSgvp",
+            "mangledName": "$s10EntrupySDK0A16MarketMatchValueV4linkSSSgvp",
             "moduleName": "EntrupySDK",
             "declAttributes": [
               "HasStorage",
@@ -16582,8 +16406,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A18MarketMatchListingV4linkSSSgvg",
-                "mangledName": "$s10EntrupySDK0A18MarketMatchListingV4linkSSSgvg",
+                "usr": "s:10EntrupySDK0A16MarketMatchValueV4linkSSSgvg",
+                "mangledName": "$s10EntrupySDK0A16MarketMatchValueV4linkSSSgvg",
                 "moduleName": "EntrupySDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -16611,8 +16435,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:10EntrupySDK0A18MarketMatchListingV5brandSSSgvp",
-            "mangledName": "$s10EntrupySDK0A18MarketMatchListingV5brandSSSgvp",
+            "usr": "s:10EntrupySDK0A16MarketMatchValueV5brandSSSgvp",
+            "mangledName": "$s10EntrupySDK0A16MarketMatchValueV5brandSSSgvp",
             "moduleName": "EntrupySDK",
             "declAttributes": [
               "HasStorage",
@@ -16642,8 +16466,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A18MarketMatchListingV5brandSSSgvg",
-                "mangledName": "$s10EntrupySDK0A18MarketMatchListingV5brandSSSgvg",
+                "usr": "s:10EntrupySDK0A16MarketMatchValueV5brandSSSgvg",
+                "mangledName": "$s10EntrupySDK0A16MarketMatchValueV5brandSSSgvg",
                 "moduleName": "EntrupySDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -16671,8 +16495,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:10EntrupySDK0A18MarketMatchListingV9image_urlSSSgvp",
-            "mangledName": "$s10EntrupySDK0A18MarketMatchListingV9image_urlSSSgvp",
+            "usr": "s:10EntrupySDK0A16MarketMatchValueV9image_urlSSSgvp",
+            "mangledName": "$s10EntrupySDK0A16MarketMatchValueV9image_urlSSSgvp",
             "moduleName": "EntrupySDK",
             "declAttributes": [
               "HasStorage",
@@ -16702,8 +16526,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A18MarketMatchListingV9image_urlSSSgvg",
-                "mangledName": "$s10EntrupySDK0A18MarketMatchListingV9image_urlSSSgvg",
+                "usr": "s:10EntrupySDK0A16MarketMatchValueV9image_urlSSSgvg",
+                "mangledName": "$s10EntrupySDK0A16MarketMatchValueV9image_urlSSSgvg",
                 "moduleName": "EntrupySDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -16723,8 +16547,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:10EntrupySDK0A18MarketMatchListingV8categorySSvp",
-            "mangledName": "$s10EntrupySDK0A18MarketMatchListingV8categorySSvp",
+            "usr": "s:10EntrupySDK0A16MarketMatchValueV8categorySSvp",
+            "mangledName": "$s10EntrupySDK0A16MarketMatchValueV8categorySSvp",
             "moduleName": "EntrupySDK",
             "declAttributes": [
               "HasStorage",
@@ -16746,8 +16570,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A18MarketMatchListingV8categorySSvg",
-                "mangledName": "$s10EntrupySDK0A18MarketMatchListingV8categorySSvg",
+                "usr": "s:10EntrupySDK0A16MarketMatchValueV8categorySSvg",
+                "mangledName": "$s10EntrupySDK0A16MarketMatchValueV8categorySSvg",
                 "moduleName": "EntrupySDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -16775,8 +16599,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:10EntrupySDK0A18MarketMatchListingV5styleSSSgvp",
-            "mangledName": "$s10EntrupySDK0A18MarketMatchListingV5styleSSSgvp",
+            "usr": "s:10EntrupySDK0A16MarketMatchValueV5styleSSSgvp",
+            "mangledName": "$s10EntrupySDK0A16MarketMatchValueV5styleSSSgvp",
             "moduleName": "EntrupySDK",
             "declAttributes": [
               "HasStorage",
@@ -16806,8 +16630,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A18MarketMatchListingV5styleSSSgvg",
-                "mangledName": "$s10EntrupySDK0A18MarketMatchListingV5styleSSSgvg",
+                "usr": "s:10EntrupySDK0A16MarketMatchValueV5styleSSSgvg",
+                "mangledName": "$s10EntrupySDK0A16MarketMatchValueV5styleSSSgvg",
                 "moduleName": "EntrupySDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -16835,8 +16659,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:10EntrupySDK0A18MarketMatchListingV11descriptionSSSgvp",
-            "mangledName": "$s10EntrupySDK0A18MarketMatchListingV11descriptionSSSgvp",
+            "usr": "s:10EntrupySDK0A16MarketMatchValueV11descriptionSSSgvp",
+            "mangledName": "$s10EntrupySDK0A16MarketMatchValueV11descriptionSSSgvp",
             "moduleName": "EntrupySDK",
             "declAttributes": [
               "HasStorage",
@@ -16866,8 +16690,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A18MarketMatchListingV11descriptionSSSgvg",
-                "mangledName": "$s10EntrupySDK0A18MarketMatchListingV11descriptionSSSgvg",
+                "usr": "s:10EntrupySDK0A16MarketMatchValueV11descriptionSSSgvg",
+                "mangledName": "$s10EntrupySDK0A16MarketMatchValueV11descriptionSSSgvg",
                 "moduleName": "EntrupySDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -16887,8 +16711,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:10EntrupySDK0A18MarketMatchListingV5priceSSvp",
-            "mangledName": "$s10EntrupySDK0A18MarketMatchListingV5priceSSvp",
+            "usr": "s:10EntrupySDK0A16MarketMatchValueV5priceSSvp",
+            "mangledName": "$s10EntrupySDK0A16MarketMatchValueV5priceSSvp",
             "moduleName": "EntrupySDK",
             "declAttributes": [
               "HasStorage",
@@ -16910,8 +16734,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A18MarketMatchListingV5priceSSvg",
-                "mangledName": "$s10EntrupySDK0A18MarketMatchListingV5priceSSvg",
+                "usr": "s:10EntrupySDK0A16MarketMatchValueV5priceSSvg",
+                "mangledName": "$s10EntrupySDK0A16MarketMatchValueV5priceSSvg",
                 "moduleName": "EntrupySDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -16939,8 +16763,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:10EntrupySDK0A18MarketMatchListingV8currencySSSgvp",
-            "mangledName": "$s10EntrupySDK0A18MarketMatchListingV8currencySSSgvp",
+            "usr": "s:10EntrupySDK0A16MarketMatchValueV8currencySSSgvp",
+            "mangledName": "$s10EntrupySDK0A16MarketMatchValueV8currencySSSgvp",
             "moduleName": "EntrupySDK",
             "declAttributes": [
               "HasStorage",
@@ -16970,8 +16794,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A18MarketMatchListingV8currencySSSgvg",
-                "mangledName": "$s10EntrupySDK0A18MarketMatchListingV8currencySSSgvg",
+                "usr": "s:10EntrupySDK0A16MarketMatchValueV8currencySSSgvg",
+                "mangledName": "$s10EntrupySDK0A16MarketMatchValueV8currencySSSgvg",
                 "moduleName": "EntrupySDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -16999,8 +16823,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:10EntrupySDK0A18MarketMatchListingV9price_minSSSgvp",
-            "mangledName": "$s10EntrupySDK0A18MarketMatchListingV9price_minSSSgvp",
+            "usr": "s:10EntrupySDK0A16MarketMatchValueV9price_minSSSgvp",
+            "mangledName": "$s10EntrupySDK0A16MarketMatchValueV9price_minSSSgvp",
             "moduleName": "EntrupySDK",
             "declAttributes": [
               "HasStorage",
@@ -17030,8 +16854,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A18MarketMatchListingV9price_minSSSgvg",
-                "mangledName": "$s10EntrupySDK0A18MarketMatchListingV9price_minSSSgvg",
+                "usr": "s:10EntrupySDK0A16MarketMatchValueV9price_minSSSgvg",
+                "mangledName": "$s10EntrupySDK0A16MarketMatchValueV9price_minSSSgvg",
                 "moduleName": "EntrupySDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -17059,8 +16883,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:10EntrupySDK0A18MarketMatchListingV9price_maxSSSgvp",
-            "mangledName": "$s10EntrupySDK0A18MarketMatchListingV9price_maxSSSgvp",
+            "usr": "s:10EntrupySDK0A16MarketMatchValueV9price_maxSSSgvp",
+            "mangledName": "$s10EntrupySDK0A16MarketMatchValueV9price_maxSSSgvp",
             "moduleName": "EntrupySDK",
             "declAttributes": [
               "HasStorage",
@@ -17090,8 +16914,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A18MarketMatchListingV9price_maxSSSgvg",
-                "mangledName": "$s10EntrupySDK0A18MarketMatchListingV9price_maxSSSgvg",
+                "usr": "s:10EntrupySDK0A16MarketMatchValueV9price_maxSSSgvg",
+                "mangledName": "$s10EntrupySDK0A16MarketMatchValueV9price_maxSSSgvg",
                 "moduleName": "EntrupySDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -17111,8 +16935,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:10EntrupySDK0A18MarketMatchListingV14time_of_reportSdvp",
-            "mangledName": "$s10EntrupySDK0A18MarketMatchListingV14time_of_reportSdvp",
+            "usr": "s:10EntrupySDK0A16MarketMatchValueV14time_of_reportSdvp",
+            "mangledName": "$s10EntrupySDK0A16MarketMatchValueV14time_of_reportSdvp",
             "moduleName": "EntrupySDK",
             "declAttributes": [
               "HasStorage",
@@ -17134,8 +16958,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A18MarketMatchListingV14time_of_reportSdvg",
-                "mangledName": "$s10EntrupySDK0A18MarketMatchListingV14time_of_reportSdvg",
+                "usr": "s:10EntrupySDK0A16MarketMatchValueV14time_of_reportSdvg",
+                "mangledName": "$s10EntrupySDK0A16MarketMatchValueV14time_of_reportSdvg",
                 "moduleName": "EntrupySDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -17163,8 +16987,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:10EntrupySDK0A18MarketMatchListingV21price_difference_percSSSgvp",
-            "mangledName": "$s10EntrupySDK0A18MarketMatchListingV21price_difference_percSSSgvp",
+            "usr": "s:10EntrupySDK0A16MarketMatchValueV21price_difference_percSSSgvp",
+            "mangledName": "$s10EntrupySDK0A16MarketMatchValueV21price_difference_percSSSgvp",
             "moduleName": "EntrupySDK",
             "declAttributes": [
               "HasStorage",
@@ -17194,8 +17018,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A18MarketMatchListingV21price_difference_percSSSgvg",
-                "mangledName": "$s10EntrupySDK0A18MarketMatchListingV21price_difference_percSSSgvg",
+                "usr": "s:10EntrupySDK0A16MarketMatchValueV21price_difference_percSSSgvg",
+                "mangledName": "$s10EntrupySDK0A16MarketMatchValueV21price_difference_percSSSgvg",
                 "moduleName": "EntrupySDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -17223,8 +17047,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:10EntrupySDK0A18MarketMatchListingV16price_differenceSSSgvp",
-            "mangledName": "$s10EntrupySDK0A18MarketMatchListingV16price_differenceSSSgvp",
+            "usr": "s:10EntrupySDK0A16MarketMatchValueV16price_differenceSSSgvp",
+            "mangledName": "$s10EntrupySDK0A16MarketMatchValueV16price_differenceSSSgvp",
             "moduleName": "EntrupySDK",
             "declAttributes": [
               "HasStorage",
@@ -17254,8 +17078,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A18MarketMatchListingV16price_differenceSSSgvg",
-                "mangledName": "$s10EntrupySDK0A18MarketMatchListingV16price_differenceSSSgvg",
+                "usr": "s:10EntrupySDK0A16MarketMatchValueV16price_differenceSSSgvg",
+                "mangledName": "$s10EntrupySDK0A16MarketMatchValueV16price_differenceSSSgvg",
                 "moduleName": "EntrupySDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -17283,8 +17107,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:10EntrupySDK0A18MarketMatchListingV9price_avgSSSgvp",
-            "mangledName": "$s10EntrupySDK0A18MarketMatchListingV9price_avgSSSgvp",
+            "usr": "s:10EntrupySDK0A16MarketMatchValueV9price_avgSSSgvp",
+            "mangledName": "$s10EntrupySDK0A16MarketMatchValueV9price_avgSSSgvp",
             "moduleName": "EntrupySDK",
             "declAttributes": [
               "HasStorage",
@@ -17314,8 +17138,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A18MarketMatchListingV9price_avgSSSgvg",
-                "mangledName": "$s10EntrupySDK0A18MarketMatchListingV9price_avgSSSgvg",
+                "usr": "s:10EntrupySDK0A16MarketMatchValueV9price_avgSSSgvg",
+                "mangledName": "$s10EntrupySDK0A16MarketMatchValueV9price_avgSSSgvg",
                 "moduleName": "EntrupySDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -17343,8 +17167,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:10EntrupySDK0A18MarketMatchListingV17price_days_windowSSSgvp",
-            "mangledName": "$s10EntrupySDK0A18MarketMatchListingV17price_days_windowSSSgvp",
+            "usr": "s:10EntrupySDK0A16MarketMatchValueV17price_days_windowSSSgvp",
+            "mangledName": "$s10EntrupySDK0A16MarketMatchValueV17price_days_windowSSSgvp",
             "moduleName": "EntrupySDK",
             "declAttributes": [
               "HasStorage",
@@ -17374,8 +17198,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A18MarketMatchListingV17price_days_windowSSSgvg",
-                "mangledName": "$s10EntrupySDK0A18MarketMatchListingV17price_days_windowSSSgvg",
+                "usr": "s:10EntrupySDK0A16MarketMatchValueV17price_days_windowSSSgvg",
+                "mangledName": "$s10EntrupySDK0A16MarketMatchValueV17price_days_windowSSSgvg",
                 "moduleName": "EntrupySDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -17403,8 +17227,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:10EntrupySDK0A18MarketMatchListingV25price_difference_positiveSbSgvp",
-            "mangledName": "$s10EntrupySDK0A18MarketMatchListingV25price_difference_positiveSbSgvp",
+            "usr": "s:10EntrupySDK0A16MarketMatchValueV25price_difference_positiveSbSgvp",
+            "mangledName": "$s10EntrupySDK0A16MarketMatchValueV25price_difference_positiveSbSgvp",
             "moduleName": "EntrupySDK",
             "declAttributes": [
               "HasStorage",
@@ -17434,8 +17258,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A18MarketMatchListingV25price_difference_positiveSbSgvg",
-                "mangledName": "$s10EntrupySDK0A18MarketMatchListingV25price_difference_positiveSbSgvg",
+                "usr": "s:10EntrupySDK0A16MarketMatchValueV25price_difference_positiveSbSgvg",
+                "mangledName": "$s10EntrupySDK0A16MarketMatchValueV25price_difference_positiveSbSgvg",
                 "moduleName": "EntrupySDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -17463,8 +17287,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:10EntrupySDK0A18MarketMatchListingV5errorAA0aC9EdgeErrorVSgvp",
-            "mangledName": "$s10EntrupySDK0A18MarketMatchListingV5errorAA0aC9EdgeErrorVSgvp",
+            "usr": "s:10EntrupySDK0A16MarketMatchValueV5errorAA0aC9EdgeErrorVSgvp",
+            "mangledName": "$s10EntrupySDK0A16MarketMatchValueV5errorAA0aC9EdgeErrorVSgvp",
             "moduleName": "EntrupySDK",
             "declAttributes": [
               "HasStorage",
@@ -17494,8 +17318,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10EntrupySDK0A18MarketMatchListingV5errorAA0aC9EdgeErrorVSgvg",
-                "mangledName": "$s10EntrupySDK0A18MarketMatchListingV5errorAA0aC9EdgeErrorVSgvg",
+                "usr": "s:10EntrupySDK0A16MarketMatchValueV5errorAA0aC9EdgeErrorVSgvg",
+                "mangledName": "$s10EntrupySDK0A16MarketMatchValueV5errorAA0aC9EdgeErrorVSgvg",
                 "moduleName": "EntrupySDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -17509,9 +17333,9 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "EntrupyMarketMatchListing",
-                "printedName": "EntrupySDK.EntrupyMarketMatchListing",
-                "usr": "s:10EntrupySDK0A18MarketMatchListingV"
+                "name": "EntrupyMarketMatchValue",
+                "printedName": "EntrupySDK.EntrupyMarketMatchValue",
+                "usr": "s:10EntrupySDK0A16MarketMatchValueV"
               },
               {
                 "kind": "TypeNominal",
@@ -17521,8 +17345,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:10EntrupySDK0A18MarketMatchListingV4fromACs7Decoder_p_tKcfc",
-            "mangledName": "$s10EntrupySDK0A18MarketMatchListingV4fromACs7Decoder_p_tKcfc",
+            "usr": "s:10EntrupySDK0A16MarketMatchValueV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s10EntrupySDK0A16MarketMatchValueV4fromACs7Decoder_p_tKcfc",
             "moduleName": "EntrupySDK",
             "implicit": true,
             "throwing": true,
@@ -17546,8 +17370,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:10EntrupySDK0A18MarketMatchListingV6encode2toys7Encoder_p_tKF",
-            "mangledName": "$s10EntrupySDK0A18MarketMatchListingV6encode2toys7Encoder_p_tKF",
+            "usr": "s:10EntrupySDK0A16MarketMatchValueV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s10EntrupySDK0A16MarketMatchValueV6encode2toys7Encoder_p_tKF",
             "moduleName": "EntrupySDK",
             "implicit": true,
             "throwing": true,
@@ -17555,8 +17379,8 @@
           }
         ],
         "declKind": "Struct",
-        "usr": "s:10EntrupySDK0A18MarketMatchListingV",
-        "mangledName": "$s10EntrupySDK0A18MarketMatchListingV",
+        "usr": "s:10EntrupySDK0A16MarketMatchValueV",
+        "mangledName": "$s10EntrupySDK0A16MarketMatchValueV",
         "moduleName": "EntrupySDK",
         "declAttributes": [
           "AccessControl"
@@ -26113,13 +25937,13 @@
               {
                 "kind": "TypeNominal",
                 "name": "Array",
-                "printedName": "[EntrupySDK.EntrupyMarketMatchListing]",
+                "printedName": "[EntrupySDK.EntrupyMarketMatchValue]",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "EntrupyMarketMatchListing",
-                    "printedName": "EntrupySDK.EntrupyMarketMatchListing",
-                    "usr": "s:10EntrupySDK0A18MarketMatchListingV"
+                    "name": "EntrupyMarketMatchValue",
+                    "printedName": "EntrupySDK.EntrupyMarketMatchValue",
+                    "usr": "s:10EntrupySDK0A16MarketMatchValueV"
                   }
                 ],
                 "usr": "s:Sa"
@@ -26132,8 +25956,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:10EntrupySDK0A25MarketMatchViewControllerC9configure4with10functionIdySayAA0acD7ListingVG_SStF",
-            "mangledName": "$s10EntrupySDK0A25MarketMatchViewControllerC9configure4with10functionIdySayAA0acD7ListingVG_SStF",
+            "usr": "s:10EntrupySDK0A25MarketMatchViewControllerC9configure4with10functionIdySayAA0acD5ValueVG_SStF",
+            "mangledName": "$s10EntrupySDK0A25MarketMatchViewControllerC9configure4with10functionIdySayAA0acD5ValueVG_SStF",
             "moduleName": "EntrupySDK",
             "declAttributes": [
               "Preconcurrency",
@@ -39247,6 +39071,20 @@
       "value": "1"
     },
     {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/PublicAPI\/PublicModels\/EntrupyMarketEdge.swift",
+      "kind": "StringLiteral",
+      "offset": 707,
+      "length": 11,
+      "value": "\"condition\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/PublicAPI\/PublicModels\/EntrupyMarketEdge.swift",
+      "kind": "StringLiteral",
+      "offset": 773,
+      "length": 22,
+      "value": "\"marketplace_listings\""
+    },
+    {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/ZoomButton\/EntrupyZoomButton.swift",
       "kind": "IntegerLiteral",
       "offset": 228,
@@ -40292,84 +40130,84 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/MarketEdge\/UI\/MarketMatch\/EntrupyMarketMatchTableViewCollection.swift",
       "kind": "Array",
-      "offset": 332,
+      "offset": 330,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/MarketEdge\/UI\/MarketMatch\/EntrupyMarketMatchTableViewCollection.swift",
       "kind": "IntegerLiteral",
-      "offset": 558,
+      "offset": 556,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/MarketEdge\/UI\/MarketMatch\/EntrupyMarketMatchTableViewCollection.swift",
       "kind": "IntegerLiteral",
-      "offset": 601,
+      "offset": 599,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/MarketEdge\/UI\/MarketMatch\/EntrupyMarketMatchTableViewCollection.swift",
       "kind": "IntegerLiteral",
-      "offset": 651,
+      "offset": 649,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/MarketEdge\/UI\/MarketMatch\/EntrupyMarketMatchTableViewCollection.swift",
       "kind": "IntegerLiteral",
-      "offset": 660,
+      "offset": 658,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/MarketEdge\/UI\/MarketMatch\/EntrupyMarketMatchTableViewCollection.swift",
       "kind": "IntegerLiteral",
-      "offset": 671,
+      "offset": 669,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/MarketEdge\/UI\/MarketMatch\/EntrupyMarketMatchTableViewCollection.swift",
       "kind": "IntegerLiteral",
-      "offset": 681,
+      "offset": 679,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/MarketEdge\/UI\/MarketMatch\/EntrupyMarketMatchTableViewCollection.swift",
       "kind": "BooleanLiteral",
-      "offset": 914,
+      "offset": 912,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/MarketEdge\/UI\/MarketMatch\/EntrupyMarketMatchTableViewCollection.swift",
       "kind": "BooleanLiteral",
-      "offset": 961,
+      "offset": 959,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/MarketEdge\/UI\/MarketMatch\/EntrupyMarketMatchTableViewCollection.swift",
       "kind": "BooleanLiteral",
-      "offset": 1070,
+      "offset": 1068,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/MarketEdge\/UI\/MarketMatch\/EntrupyMarketMatchTableViewCollection.swift",
       "kind": "BooleanLiteral",
-      "offset": 1456,
+      "offset": 1454,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/MarketEdge\/UI\/MarketMatch\/EntrupyMarketMatchTableViewCollection.swift",
       "kind": "BooleanLiteral",
-      "offset": 1732,
+      "offset": 1730,
       "length": 4,
       "value": "true"
     },
@@ -40670,7 +40508,7 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/MarketEdge\/ViewModel\/EntrupyMarketEdgeViewModel.swift",
       "kind": "Dictionary",
-      "offset": 16879,
+      "offset": 15977,
       "length": 3,
       "value": "[]"
     },
@@ -50407,7 +50245,7 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/MarketEdge\/ViewModel\/EntrupyMarketMatchViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 777,
+      "offset": 773,
       "length": 5,
       "value": "false"
     },
