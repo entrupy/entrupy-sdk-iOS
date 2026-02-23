@@ -129,7 +129,11 @@ public struct EntrupyCaptureResult : Swift.Codable {
   public var user: EntrupySDK.EntrupyCaptureResultUser?
   public var price: EntrupySDK.EntrupyCaptureResultPrice?
   public let batch_request: EntrupySDK.EntrupyCaptureResultBatchRequest?
+  @available(*, deprecated, message: "Use entrupy_id instead. authentication_id will be removed in a future SDK version.")
   public let authentication_id: Swift.String
+  public var entrupy_id: Swift.String {
+    get
+  }
   public let properties: EntrupySDK.EntrupyCaptureResultProperties
   public var status: EntrupySDK.EntrupyCaptureResultStatus
   public let more_details: EntrupySDK.EntrupyCaptureResultMoreDetails?
@@ -362,7 +366,11 @@ public struct EntrupyMarketEdge : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct EntrupyMarketEdgeIdentifier : Swift.Codable {
+  @available(*, deprecated, message: "Use entrupy_id instead. authentication_id will be removed in a future SDK version.")
   public let authentication_id: Swift.String
+  public var entrupy_id: Swift.String {
+    get
+  }
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }

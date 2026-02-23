@@ -2,15 +2,15 @@
   {
     "metadataOutputVersion" : "3.0",
     "userDefinedMetadata" : {
-      "stride" : "32",
       "IoU threshold" : "0.7",
+      "stride" : "32",
       "Confidence threshold" : "0.25",
       "docs" : "https:\/\/docs.ultralytics.com",
       "task" : "detect",
       "date" : "2025-06-03T15:24:29.391808",
       "imgsz" : "[640, 640]",
-      "batch" : "1",
       "args" : "{'batch': 1, 'half': False, 'int8': True, 'nms': True}",
+      "batch" : "1",
       "names" : "{0: 'camera', 1: 'logo', 2: 'identifier'}"
     },
     "classLabels" : [

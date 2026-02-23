@@ -5269,9 +5269,11 @@
             "usr": "s:10EntrupySDK0A13CaptureResultV17authentication_idSSvp",
             "mangledName": "$s10EntrupySDK0A13CaptureResultV17authentication_idSSvp",
             "moduleName": "EntrupySDK",
+            "deprecated": true,
             "declAttributes": [
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "Available"
             ],
             "isLet": true,
             "hasStorage": true,
@@ -5293,6 +5295,47 @@
                 "mangledName": "$s10EntrupySDK0A13CaptureResultV17authentication_idSSvg",
                 "moduleName": "EntrupySDK",
                 "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "entrupy_id",
+            "printedName": "entrupy_id",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10EntrupySDK0A13CaptureResultV10entrupy_idSSvp",
+            "mangledName": "$s10EntrupySDK0A13CaptureResultV10entrupy_idSSvp",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10EntrupySDK0A13CaptureResultV10entrupy_idSSvg",
+                "mangledName": "$s10EntrupySDK0A13CaptureResultV10entrupy_idSSvg",
+                "moduleName": "EntrupySDK",
                 "accessorKind": "get"
               }
             ]
@@ -14043,9 +14086,11 @@
             "usr": "s:10EntrupySDK0A20MarketEdgeIdentifierV17authentication_idSSvp",
             "mangledName": "$s10EntrupySDK0A20MarketEdgeIdentifierV17authentication_idSSvp",
             "moduleName": "EntrupySDK",
+            "deprecated": true,
             "declAttributes": [
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "Available"
             ],
             "isLet": true,
             "hasStorage": true,
@@ -14067,6 +14112,46 @@
                 "mangledName": "$s10EntrupySDK0A20MarketEdgeIdentifierV17authentication_idSSvg",
                 "moduleName": "EntrupySDK",
                 "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "entrupy_id",
+            "printedName": "entrupy_id",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10EntrupySDK0A20MarketEdgeIdentifierV10entrupy_idSSvp",
+            "mangledName": "$s10EntrupySDK0A20MarketEdgeIdentifierV10entrupy_idSSvp",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10EntrupySDK0A20MarketEdgeIdentifierV10entrupy_idSSvg",
+                "mangledName": "$s10EntrupySDK0A20MarketEdgeIdentifierV10entrupy_idSSvg",
+                "moduleName": "EntrupySDK",
                 "accessorKind": "get"
               }
             ]
@@ -38667,7 +38752,7 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/PublicAPI\/PublicModels\/EntrupyCaptureResult.swift",
       "kind": "Dictionary",
-      "offset": 7186,
+      "offset": 7454,
       "length": 3,
       "value": "[]"
     },
@@ -42251,7 +42336,7 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/CaptureResult\/EntrupyCaptureResultViewModel.swift",
       "kind": "Array",
-      "offset": 8637,
+      "offset": 8602,
       "length": 2,
       "value": "[]"
     },
@@ -42286,21 +42371,21 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/CaptureResult\/EntrupyCaptureResultViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 23886,
+      "offset": 23837,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/CaptureResult\/EntrupyCaptureResultViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 23901,
+      "offset": 23852,
       "length": 13,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/CaptureResult\/EntrupyCaptureResultViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 23928,
+      "offset": 23879,
       "length": 14,
       "value": "2"
     },
@@ -49720,49 +49805,49 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Views\/ItemSelection\/ItemSelectionCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 2070,
+      "offset": 2063,
       "length": 2,
       "value": "14"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Views\/ItemSelection\/ItemSelectionCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 2196,
+      "offset": 2189,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Views\/ItemSelection\/ItemSelectionCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 2333,
+      "offset": 2326,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Views\/ItemSelection\/ItemSelectionCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 2459,
+      "offset": 2452,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Views\/ItemSelection\/ItemSelectionCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 2697,
+      "offset": 2690,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Views\/ItemSelection\/ItemSelectionCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 2992,
+      "offset": 2985,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Views\/ItemSelection\/ItemSelectionCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 6168,
+      "offset": 6154,
       "length": 4,
       "value": "true"
     },
