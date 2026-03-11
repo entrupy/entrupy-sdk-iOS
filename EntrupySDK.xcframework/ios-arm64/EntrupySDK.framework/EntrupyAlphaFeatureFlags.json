@@ -8,5 +8,8 @@
     "dynamicLocalizations": true,
     "macroFingerprint": true,
     "marketEdgeNewStructure" : false,
-    "tikTokShopQRWorkflow" : true
+    "authorizationServiceV2": true,
+    "configurationServiceV2": true,
+    "tikTokShopQRWorkflow" : true,
+    "resultDetailServiceV2": true
 }

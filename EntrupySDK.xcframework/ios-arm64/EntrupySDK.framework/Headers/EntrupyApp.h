@@ -702,6 +702,11 @@ NS_ASSUME_NONNULL_BEGIN
                        completion:(void (^_Nonnull)(NSDictionary * _Nullable result, NSError * _Nullable error))completion
                             NS_SWIFT_NAME(searchAuthenticationItems(query:completion:));
 
+/// For internal use. Do not call from client code.
+- (void)updateDefaultConfigsWithCategoryIndex:(NSInteger)categoryIndex
+                                  rawResponse:(NSDictionary *)rawResponse
+                                  completion:(void (^)(NSError * _Nullable))completion;
+
 @end
 
 NS_ASSUME_NONNULL_END
