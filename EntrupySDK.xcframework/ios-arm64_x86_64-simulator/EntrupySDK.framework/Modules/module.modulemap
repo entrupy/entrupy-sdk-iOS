@@ -7,5 +7,4 @@ framework module EntrupySDK {
 
 module EntrupySDK.Swift {
   header "EntrupySDK-Swift.h"
-  requires objc
 }

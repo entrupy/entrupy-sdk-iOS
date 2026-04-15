@@ -6,7 +6,12 @@
     "marketEdgePriceIndicatorsEnabled": false,
     "regionPreferences" : true,
     "dynamicLocalizations": true,
+    "authorizationServiceV2": true,
+    "configurationServiceV2": true,
+    "resultDetailServiceV2": true,
+    "captureServiceV2": true,
     "macroFingerprint": true,
     "marketEdgeNewStructure" : false,
-    "tikTokShopQRWorkflow" : false
+    "tikTokShopQRWorkflow" : true,
+    "configVersion": "backend_choice"
 }
