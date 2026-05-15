@@ -9,6 +9,7 @@
 #import "EntrupyAppProtocols.h"
 
 @protocol EntrupyTheme;
+@protocol CaptureObjectDataSource;
 @class EntrupyDetailViewConfiguration;
 @class EntrupyMarketEdgeViewConfiguration;
 @class EntrupySearchQuery;
@@ -701,6 +702,22 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)searchAuthenticationItems:(EntrupySearchQuery *_Nonnull)query
                        completion:(void (^_Nonnull)(NSDictionary * _Nullable result, NSError * _Nullable error))completion
                             NS_SWIFT_NAME(searchAuthenticationItems(query:completion:));
+
+/// For internal use. Do not call from client code.
+- (void)updateDefaultConfigsWithCategoryIndex:(NSInteger)categoryIndex
+                                  rawResponse:(NSDictionary *)rawResponse
+                                  completion:(void (^)(NSError * _Nullable))completion;
+
+/// For internal use. Swift pre-capture sets state then starts authentication capture (legacy builds data source).
+- (void)startAuthenticationCaptureWithValidatedItem:(NSDictionary *)item viewController:(UIViewController *)viewController;
+
+/// For internal use. Do not use from client code. Starts retake capture with a pre-fetched config response (Swift sets context and presents).
+- (void)startRetakeCaptureWithConfigResponse:(NSDictionary *)configResponse item:(NSDictionary *)item viewController:(UIViewController *)viewController;
+
+/// For internal use. Legacy fallback for compare flow: searches for an existing session by barcode and fetches the compare config.
+- (void)searchAndFetchConfigForCompareWithBarcode:(NSString *)barcode
+                                         metadata:(NSDictionary *)metadata
+                                   viewController:(UIViewController *)viewController;
 
 @end
 
