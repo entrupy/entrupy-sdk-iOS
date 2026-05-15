@@ -8,5 +8,13 @@
     "dynamicLocalizations": true,
     "macroFingerprint": true,
     "marketEdgeNewStructure" : false,
-    "tikTokShopQRWorkflow" : true
+    "authorizationServiceV2": true,
+    "configurationServiceV2": true,
+    "tikTokShopQRWorkflow" : true,
+    "resultDetailServiceV2": true,
+    "captureServiceV2": true,
+    "configVersion": "backend_choice",
+    "captureViewControllerV2": true,
+    "certificateTransfer": false,
+    "searchFilterV2": true
 }
