@@ -310,6 +310,12 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 #if defined(__OBJC__)
 
+typedef SWIFT_ENUM_NAMED(NSInteger, ObjCBrightness, "Brightness", open) {
+  ObjCBrightnessNormal = 0,
+  ObjCBrightnessUnderexposed = 1,
+  ObjCBrightnessOverexposed = 2,
+};
+
 @protocol EntrupyLoginDelegate;
 @protocol EntrupyConfigDelegate;
 @protocol EntrupyCaptureDelegate;
@@ -366,7 +372,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) EntrupyApp *
 /// During migration: Calls Objective-C implementation in EntrupyApp.m
 /// After migration: Uses new Swift authorization service
 /// This method calls the legacy Objective-C implementation and propagates delegate callbacks.
-/// Delegates are automatically forwarded via didSet when set on the Swift facade.
+/// The delegate set on the Swift facade is forwarded to the legacy implementation.
 /// \param signedRequest Signed authorization request from backend
 ///
 - (void)loginUserWithSignedRequest:(NSString * _Nonnull)signedRequest;
@@ -395,7 +401,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) EntrupyApp *
 ///
 /// \param viewController View controller to present capture workflow
 ///
-- (void)startCaptureForItem:(NSDictionary<NSString *, id> * _Nonnull)item viewController:(UIViewController * _Nonnull)viewController;
+- (void)startCaptureForItem:(NSDictionary * _Nonnull)item viewController:(UIViewController * _Nonnull)viewController;
 /// Legacy: Search submissions (Objective-C compatible)
 /// This method calls the legacy Objective-C implementation and propagates delegate callbacks.
 /// Delegates are automatically forwarded via didSet when set on the Swift facade.
@@ -506,8 +512,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) EntrupyApp *
 ///
 - (void)setFlag:(BOOL)flag forResultWithEntrupyID:(NSString * _Nonnull)entrupyID flagReasonId:(NSString * _Nonnull)flagReasonId message:(NSString * _Nullable)message;
 /// Legacy: Display detail view for item (Objective-C compatible)
-/// This method calls the legacy Objective-C implementation and propagates delegate callbacks.
-/// The delegate set on the Swift facade is forwarded to the legacy implementation.
+/// When detail view is migrated and detailViewService is set, uses the new Swift service.
+/// Otherwise calls the legacy Objective-C implementation.
 /// \param entrupyID Entrupy ID of the item
 ///
 /// \param configuration View configuration options
@@ -658,10 +664,14 @@ typedef SWIFT_ENUM_NAMED(NSInteger, EntrupyButtonBackgroundState, "EntrupyButton
   EntrupyButtonBackgroundStateHandSteady = 3,
   EntrupyButtonBackgroundStateTapInsideToCapture = 4,
   EntrupyButtonBackgroundStateAutoCaptureActivated = 5,
-  EntrupyButtonBackgroundStateNotDetected = 6,
-  EntrupyButtonBackgroundStateNotInCenter = 7,
-  EntrupyButtonBackgroundStateTooFar = 8,
-  EntrupyButtonBackgroundStateMoveFar = 9,
+  EntrupyButtonBackgroundStateSnapiqCapturing = 6,
+  EntrupyButtonBackgroundStateNotDetected = 7,
+  EntrupyButtonBackgroundStateNotInCenter = 8,
+  EntrupyButtonBackgroundStateTooFar = 9,
+  EntrupyButtonBackgroundStateMoveFar = 10,
+  EntrupyButtonBackgroundStateImageTooBright = 11,
+  EntrupyButtonBackgroundStateImageTooDark = 12,
+  EntrupyButtonBackgroundStatePhotoCaptured = 13,
 };
 
 @class NSCoder;
@@ -738,7 +748,10 @@ typedef SWIFT_ENUM_NAMED(NSInteger, ObjcEntrupyEventName, "EntrupyEventName", op
   ObjcEntrupyEventNameViewDetailsButtonTap = 55,
   ObjcEntrupyEventNameNetworkLog = 56,
   ObjcEntrupyEventNameAuthenticationBeginRequestFailure = 57,
-  ObjcEntrupyEventNameLogging = 58,
+  ObjcEntrupyEventNameSnapIQLog = 58,
+  ObjcEntrupyEventNameSnapIQSessionStarted = 59,
+  ObjcEntrupyEventNameSnapIQAutoCaptureTriggered = 60,
+  ObjcEntrupyEventNameLogging = 61,
 };
 
 SWIFT_CLASS_NAMED("EntrupyLocalizationManager")
@@ -827,46 +840,79 @@ typedef SWIFT_ENUM_NAMED(NSInteger, EntrupyZoomButtonBackgroundState, "EntrupyZo
   EntrupyZoomButtonBackgroundStateZoomOut = 1,
 };
 
+@protocol ObjCExposureAnalyserDelegate;
+SWIFT_CLASS_NAMED("ExposureAnalyser")
+@interface ObjCExposureAnalyser : NSObject
+@property (nonatomic, weak) id <ObjCExposureAnalyserDelegate> _Nullable delegate;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+SWIFT_PROTOCOL_NAMED("ExposureAnalyserDelegate")
+@protocol ObjCExposureAnalyserDelegate
+- (void)exposureAnalyser:(ObjCExposureAnalyser * _Nonnull)analyser didAnalyse:(enum ObjCBrightness)brightness;
+@end
+
 @protocol ObjCSnapIQDelegate;
+@protocol ObjCSnapIQLoggingDelegate;
 @class ObjCSnapIQResult;
 SWIFT_CLASS_NAMED("SnapIQ")
-@interface ObjCSnapIQ : NSObject
+@interface ObjCSnapIQ : NSObject <ObjCExposureAnalyserDelegate>
 @property (nonatomic, readonly) BOOL isModelReady;
 /// Delegate to receive detection results
 @property (nonatomic, weak) id <ObjCSnapIQDelegate> _Nullable delegate;
-/// Parameters:
-/// <ul>
-///   <li>
-///     viewSize: The size of the view where boxes will be displayed
-///   </li>
-///   <li>
-///     regionType: The type of region to detect and filter
-///   </li>
-///   <li>
-///     isUltraWideEnabled: Whether ultra-wide lens is enabled for capture
-///   </li>
-///   <li>
-///     completion: Callback to handle model loading results
-///   </li>
-/// </ul>
-- (nonnull instancetype)initWithViewSize:(CGSize)viewSize regionType:(NSString * _Nonnull)regionType isUltraWideEnabled:(BOOL)isUltraWideEnabled completion:(void (^ _Nullable)(BOOL, NSError * _Nullable))completion OBJC_DESIGNATED_INITIALIZER;
+/// Delegate to receive logging events
+@property (nonatomic, weak) id <ObjCSnapIQLoggingDelegate> _Nullable loggingDelegate;
 - (void)updateViewSize:(CGSize)newSize;
+/// Resets temporal state (useful when switching to a new sample or restarting capture)
+- (void)resetTemporalState;
 /// Process a camera frame and perform detection
 /// \param sampleBuffer The camera frame buffer to process
 ///
+/// \param zoomApplied When false, runs AutoZoom to determine optimal zoom level.
+/// When true, runs the normal auto-capture workflow.
+///
 ///
 /// returns:
-/// A SnapIQResult containing the detected box and auto-capture analysis
-- (ObjCSnapIQResult * _Nonnull)processFrameWithSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer SWIFT_WARN_UNUSED_RESULT;
+/// A SnapIQResult containing detection results, zoom info, and auto-capture analysis
+- (ObjCSnapIQResult * _Nonnull)processFrameWithSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer zoomApplied:(BOOL)zoomApplied SWIFT_WARN_UNUSED_RESULT;
 + (BOOL)isRegionSupportedWithBrandName:(NSString * _Nonnull)brandName regionName:(NSString * _Nonnull)regionName SWIFT_WARN_UNUSED_RESULT;
++ (NSDictionary<NSString *, id> * _Nonnull)getConfigInfo SWIFT_WARN_UNUSED_RESULT;
++ (NSArray<NSDictionary<NSString *, id> *> * _Nonnull)getBrandIdentifiers SWIFT_WARN_UNUSED_RESULT;
+- (void)logLatestFrameResult;
+- (void)exposureAnalyser:(ObjCExposureAnalyser * _Nonnull)analyser didAnalyse:(enum ObjCBrightness)brightness;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@class AVCaptureDevice;
+@interface ObjCSnapIQ (SWIFT_EXTENSION(EntrupySDK))
+/// ObjC selector: initWithViewSize:regionType:modelPath:captureDevice:configurationDictionary:completion:
+/// Keys in <code>configurationDictionary</code> map to <code>SnapIQConfiguration</code> property names (camelCase).
+/// Unrecognised keys are silently ignored; missing keys fall back to <code>SnapIQConfiguration</code> defaults.
+/// Nil validation is handled by the caller (EntrupyCaptureViewController).
+- (nonnull instancetype)initWithViewSize:(CGSize)viewSize regionType:(NSString * _Nonnull)regionType modelPath:(NSString * _Nullable)modelPath captureDevice:(AVCaptureDevice * _Nullable)captureDevice configurationDictionary:(NSDictionary<NSString *, id> * _Nullable)configurationDictionary completion:(void (^ _Nullable)(BOOL, NSError * _Nullable))completion;
 @end
 
 /// Delegate protocol for receiving SnapIQ detection results
 SWIFT_PROTOCOL_NAMED("SnapIQDelegate")
 @protocol ObjCSnapIQDelegate
 - (void)didProcessFrameWithResult:(ObjCSnapIQResult * _Nonnull)result;
+@end
+
+/// Log result containing event name and timestamped logs
+SWIFT_CLASS_NAMED("SnapIQLogResult")
+@interface ObjCSnapIQLogResult : NSObject
+@property (nonatomic, readonly, copy) NSString * _Nonnull eventName;
+@property (nonatomic, readonly, copy) NSDictionary<NSString *, NSString *> * _Nonnull eventLogs;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+/// Delegate protocol for receiving SnapIQ logging events
+SWIFT_PROTOCOL_NAMED("SnapIQLoggingDelegate")
+@protocol ObjCSnapIQLoggingDelegate
+- (void)ReceiveLog:(ObjCSnapIQLogResult * _Nonnull)logResult;
 @end
 
 /// Combined result containing both detected box and auto-capture analysis
@@ -877,6 +923,8 @@ SWIFT_CLASS_NAMED("SnapIQResult")
 @property (nonatomic, readonly) float confidence;
 @property (nonatomic, readonly) double fps;
 @property (nonatomic, readonly) double inferenceTime;
+@property (nonatomic, readonly) BOOL zoomSet;
+@property (nonatomic, readonly) double zoomLevel;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
