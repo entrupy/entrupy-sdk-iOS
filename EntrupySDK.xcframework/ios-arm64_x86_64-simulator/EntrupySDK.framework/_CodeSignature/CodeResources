@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		tT/TdyWtBV2PvaTvXyfdiUUoBjU=
+		nD66sMeo/YZPYHT5lspgAZkBPU0=
 		</data>
 		<key>Base.lproj/EntrupyCaptureViewController.nib</key>
 		<data>
@@ -322,7 +322,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		KuFL1Yaw5gvLwRNgfX6l7Tes6QQ=
+		aiMJAjXOEY7kEznSskHpliD+Wq8=
 		</data>
 		<key>Kanit-Black.ttf</key>
 		<data>
@@ -430,7 +430,7 @@
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		ps0qXEoeh0dmbUR1YNP6sn6CBug=
+		SVkr1DpNdLGWYvRWh5um6LCR/kU=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -446,11 +446,11 @@
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		hE6zu8OkS7KP8SS2cadNqbCzfSQ=
+		+FQl22v5YKwBBkMcCNOOXN7JpTY=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		ps0qXEoeh0dmbUR1YNP6sn6CBug=
+		SVkr1DpNdLGWYvRWh5um6LCR/kU=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -466,7 +466,7 @@
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		J5KfWLDohnPfG6ognx2/pMHrvZk=
+		87pSYModsckNUSwdKxKBmPMva4A=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1470,7 +1470,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			a+abbAO7Bq0OTSf8zY0CM6OtmeM=
+			2AJcQGJUslunAE18eRZowU4dAJo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1569,7 +1569,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			z/asEYaL2AiL1wx1DMCeoNcesV8=
+			RdoTD9zxa593oB748PotrWcKmUM=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1589,7 +1589,7 @@
 		</data>
 		<key>mlmodel_adidas_yeezy_350_v2_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_yeezy350v2_1.0.0_model.mlmodelc/coremldata.bin</key>
 		<data>
-		rfXM+PYanvmIrlioG8pYS2ZaEjg=
+		O+kK46Bp5l6rplobeXdZ8LjGc1w=
 		</data>
 		<key>mlmodel_adidas_yeezy_350_v2_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_yeezy350v2_1.0.0_model.mlmodelc/metadata.json</key>
 		<data>
@@ -2822,7 +2822,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Xpcm1UeQQSDLi0RhzKcEKRBQZoc=
+			wO54GW98sD4KxMucKR5AO6FfhHk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2840,7 +2840,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			cyUoM7S99eIxbXZ0Bm2chOituOA=
+			I/Sui7RvHwXb1rQjDmTcGXJkyJg=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2852,7 +2852,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YU503bN4EhczhBvW+BCArKjMYdL0We83S3wRgbhgcFU=
+			CBoIrWUfk8y2ug7AfvKLPKBPARsHQIeXNnHbSqzR/ew=
 			</data>
 		</dict>
 		<key>Base.lproj/EntrupyCaptureViewController.nib</key>
@@ -3587,7 +3587,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Y1S8VHagKxWdwIZFYbSWADm+Vm7UftsvbCoWurWm5Po=
+			Ril+dKfwD1R+/oyMLvveLL477UhfuuE9U8A07Hu8Dn0=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -3615,14 +3615,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			x9AX/QMPCdfgHgIEdfIX5XtC0HTf8J9XIrBxR+PMMKc=
+			Ex7n6r+1RpFMMK2VytQCNAzJ15Jp9cKuMNmZ7KE47YQ=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Y1S8VHagKxWdwIZFYbSWADm+Vm7UftsvbCoWurWm5Po=
+			Ril+dKfwD1R+/oyMLvveLL477UhfuuE9U8A07Hu8Dn0=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -3650,7 +3650,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			j5+khALotJBcllSkiYlnEJp0XjQ5YMVq02Crprou5fk=
+			OmERULHv6xIR59ntlqcPgLJeWwPC8mdzW1sPxp+q6Yw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -5363,7 +5363,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2mWxh/Fn7FLrC0iS8LJ4LmuMMFmFU5FhIBU0KtOciMg=
+			5gqlYZjDSRWACAEITdwxPVf6IemjwwIwiV5KRr8GHKk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -5462,7 +5462,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			O06uEHnqdPuQrJCBNBijyzDnxc83mu0NwTFNt1yBybE=
+			fLk/kaYDtRraN2sl8j5ffe43RjGSjxQhitkUzqCkYV0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -5487,7 +5487,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+utynyRIdDOmWzZaAV0U97qz1f0pxjC/dk5rY+RDv+Q=
+			Ms90tuGva8fvO6hbRG66l6jD901H27ViJc/Q5QlwCcg=
 			</data>
 		</dict>
 		<key>mlmodel_adidas_yeezy_350_v2_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_yeezy350v2_1.0.0_model.mlmodelc/metadata.json</key>
@@ -7567,7 +7567,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nF5Gp8yvILqIH9lJwY9/7cLBYOgkj6CNIW+mGIDafwg=
+			wLxYB5OFqkIDBybXjs7OQwg6o/CDNeFwqIqZClla1UA=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -7585,7 +7585,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RUm9hIrjegYWUTcwEA5/ctZn3R7layJMgarwyl2LlYs=
+			V0MXnsuBIYMnBeJoqObSwY+4EWhNvO6viNyPdhWiIHE=
 			</data>
 			<key>optional</key>
 			<true/>
