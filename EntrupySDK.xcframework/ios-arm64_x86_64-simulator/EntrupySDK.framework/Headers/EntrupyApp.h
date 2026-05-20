@@ -79,58 +79,43 @@ NS_ASSUME_NONNULL_BEGIN
  
  - Returns: void
 
- ## Required `product_category` values
- - `"luxury"`
- - `"sneakers"`
- - `"apparel"`
+ ## Item Metadata
 
- ### Example: Luxury
- ```swift
- let luxuryMetadata: [String: Any] = [
-     // required
-     "product_category": "luxury",
-     "brand": "Louis Vuitton",
-     // optional
-     "material": "Monogram Canvas",
-     "customer_item_id": "LV-NEVERFULL-MM-001"
- ]
- ```
+ The SDK accepts `brand` and `item_type` to identify the capture flow.
+ When both match a configured capture flow, the SDK navigates directly to it.
+ When no match is found and no `product_category` is provided, an error is returned
+ via `didCaptureFailWithError`.
 
- ### Example: Sneakers
+ ### Recommended fields
+ - `brand` (String): The brand of the item (e.g., "Nike", "Louis Vuitton", "BAPE")
+ - `item_type` (String): The type of item (e.g., "Sneakers", "Outerwear", "Bags")
+ Both `brand` and `item_type` are required for capture flow resolution.
+ Legacy integrations may continue using `product_category` instead.
+
+ ### Optional fields
+ - `customer_item_id` (String): Unique identifier from your system
+ - `us_size` (String): e.g., "8", "8.5", "8.5Y"
+ - `style_code` (String): e.g., "555088-134"
+ - `upc` (String): The item's Universal Product Code
+
+ ### Example
  ```swift
- let sneakersMetadata: [String: Any] = [
-     // required
-     "product_category": "sneakers",
+ let itemMetadata: [String: Any] = [
      "brand": "Nike",
-     // optional
-     "style_name": "Air Jordan 1 Retro High OG SP",
-     "us_size": "9.5",
-     "style_code": "DO7097-100",
+     "item_type": "Sneakers",
      "customer_item_id": "AJ1-DO7097-100-9_5"
  ]
  ```
 
- ### Example: Apparel
- ```swift
- let apparelMetadata: [String: Any] = [
-     "product_category": "apparel",
-     "brand": "BAPE",
-     "item_type": "Outerwear",
-     "customer_item_id": "GU-TEE-CLASSIC-BLK-M" // optional
- ]
- ```
+ ### Legacy: `product_category` (backwards compatible)
+ Existing integrations using `product_category` ("luxury", "sneakers", "apparel")
+ continue to work. New integrations should use `brand` + `item_type`.
 
  ## Usage Example
  ```swift
-
-  // Check if authorization token is valid
  if EntrupyApp.sharedInstance().isAuthorizationValid() {
- 
-      // Implement EntrupyCaptureDelegate
      EntrupyApp.sharedInstance().captureDelegate = self
- 
-     // Pass the  metadata and a reference to the presenting view controller
-     EntrupyApp.sharedInstance().startCapture(forItem: sneakersMetadata, viewController: self)
+     EntrupyApp.sharedInstance().startCapture(forItem: itemMetadata, viewController: self)
  }
  ```
  [Entrupy iOS SDK Documentation](https://developer.entrupy.com/docs/mobile-sdks/ios/overview)

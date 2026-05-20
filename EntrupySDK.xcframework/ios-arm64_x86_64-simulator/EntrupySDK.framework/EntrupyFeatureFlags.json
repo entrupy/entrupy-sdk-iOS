@@ -16,5 +16,6 @@
     "configVersion": "backend_choice",
     "captureViewControllerV2": false,
     "certificateTransfer": false,
-    "searchFilterV2": true
+    "searchFilterV2": true,
+    "postHog": false
 }
