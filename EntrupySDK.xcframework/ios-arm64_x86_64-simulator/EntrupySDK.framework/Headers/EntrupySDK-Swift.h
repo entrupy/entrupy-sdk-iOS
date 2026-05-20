@@ -683,6 +683,13 @@ SWIFT_CLASS_NAMED("EntrupyCaptureButton")
 - (enum EntrupyButtonBackgroundState)currentState SWIFT_WARN_UNUSED_RESULT;
 @end
 
+SWIFT_CLASS("_TtC10EntrupySDK39EntrupyCaptureFlowMenuSectionHeaderView")
+@interface EntrupyCaptureFlowMenuSectionHeaderView : UICollectionReusableView
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)prepareForReuse;
+@end
+
 SWIFT_CLASS("_TtC10EntrupySDK30EntrupyDetailViewConfiguration")
 @interface EntrupyDetailViewConfiguration : NSObject
 - (nonnull instancetype)initWithDisplayTimeline:(BOOL)displayTimeline displayUploadedImages:(BOOL)displayUploadedImages enableFlagging:(BOOL)enableFlagging enableItemDetailEdit:(BOOL)enableItemDetailEdit OBJC_DESIGNATED_INITIALIZER;
@@ -813,6 +820,20 @@ SWIFT_CLASS("_TtC10EntrupySDK32EntrupyMarketMatchViewController")
 - (CGFloat)tableView:(UITableView * _Nonnull)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 @end
 
+SWIFT_CLASS("_TtC10EntrupySDK20EntrupyOneColumnCell")
+@interface EntrupyOneColumnCell : UICollectionViewCell
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)prepareForReuse;
+@end
+
+SWIFT_CLASS("_TtC10EntrupySDK20EntrupyOneColumnView")
+@interface EntrupyOneColumnView : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)layoutSubviews;
+@end
+
 SWIFT_CLASS("_TtC10EntrupySDK18EntrupySearchQuery")
 @interface EntrupySearchQuery : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -824,6 +845,20 @@ SWIFT_PROTOCOL("_TtP10EntrupySDK12EntrupyTheme_")
 @property (nonatomic, readonly, strong) UIColor * _Nullable backgroundColor;
 @property (nonatomic, readonly, strong) UIColor * _Nullable foregroundColor;
 @property (nonatomic, readonly, strong) UIColor * _Nullable borderColor;
+@end
+
+SWIFT_CLASS("_TtC10EntrupySDK20EntrupyTwoColumnCell")
+@interface EntrupyTwoColumnCell : UICollectionViewCell
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)prepareForReuse;
+@end
+
+SWIFT_CLASS("_TtC10EntrupySDK20EntrupyTwoColumnView")
+@interface EntrupyTwoColumnView : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)layoutSubviews;
 @end
 
 enum EntrupyZoomButtonBackgroundState : NSInteger;
@@ -1622,6 +1657,13 @@ SWIFT_CLASS_NAMED("EntrupyCaptureButton")
 - (enum EntrupyButtonBackgroundState)currentState SWIFT_WARN_UNUSED_RESULT;
 @end
 
+SWIFT_CLASS("_TtC10EntrupySDK39EntrupyCaptureFlowMenuSectionHeaderView")
+@interface EntrupyCaptureFlowMenuSectionHeaderView : UICollectionReusableView
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)prepareForReuse;
+@end
+
 SWIFT_CLASS("_TtC10EntrupySDK30EntrupyDetailViewConfiguration")
 @interface EntrupyDetailViewConfiguration : NSObject
 - (nonnull instancetype)initWithDisplayTimeline:(BOOL)displayTimeline displayUploadedImages:(BOOL)displayUploadedImages enableFlagging:(BOOL)enableFlagging enableItemDetailEdit:(BOOL)enableItemDetailEdit OBJC_DESIGNATED_INITIALIZER;
@@ -1752,6 +1794,20 @@ SWIFT_CLASS("_TtC10EntrupySDK32EntrupyMarketMatchViewController")
 - (CGFloat)tableView:(UITableView * _Nonnull)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 @end
 
+SWIFT_CLASS("_TtC10EntrupySDK20EntrupyOneColumnCell")
+@interface EntrupyOneColumnCell : UICollectionViewCell
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)prepareForReuse;
+@end
+
+SWIFT_CLASS("_TtC10EntrupySDK20EntrupyOneColumnView")
+@interface EntrupyOneColumnView : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)layoutSubviews;
+@end
+
 SWIFT_CLASS("_TtC10EntrupySDK18EntrupySearchQuery")
 @interface EntrupySearchQuery : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -1763,6 +1819,20 @@ SWIFT_PROTOCOL("_TtP10EntrupySDK12EntrupyTheme_")
 @property (nonatomic, readonly, strong) UIColor * _Nullable backgroundColor;
 @property (nonatomic, readonly, strong) UIColor * _Nullable foregroundColor;
 @property (nonatomic, readonly, strong) UIColor * _Nullable borderColor;
+@end
+
+SWIFT_CLASS("_TtC10EntrupySDK20EntrupyTwoColumnCell")
+@interface EntrupyTwoColumnCell : UICollectionViewCell
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)prepareForReuse;
+@end
+
+SWIFT_CLASS("_TtC10EntrupySDK20EntrupyTwoColumnView")
+@interface EntrupyTwoColumnView : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)layoutSubviews;
 @end
 
 enum EntrupyZoomButtonBackgroundState : NSInteger;

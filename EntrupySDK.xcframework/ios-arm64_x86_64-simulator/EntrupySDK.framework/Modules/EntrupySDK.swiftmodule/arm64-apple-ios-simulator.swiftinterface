@@ -977,6 +977,210 @@ public struct SnapIQConfiguration {
 }
 extension Foundation.Bundle : @unchecked Swift.Sendable {
 }
+public class EntrupyCaptureFlowMenuDataSource {
+  public struct MenuLayer {
+    public enum Layout : Swift.String {
+      case twoColumn
+      case oneColumn
+      case oneColumnGrouped
+      #if compiler(>=5.3) && $NonescapableTypes
+      public init?(rawValue: Swift.String)
+      #endif
+      public typealias RawValue = Swift.String
+      public var rawValue: Swift.String {
+        get
+      }
+    }
+    public let key: Swift.String
+    public let layout: EntrupySDK.EntrupyCaptureFlowMenuDataSource.MenuLayer.Layout
+    public let groupKey: Swift.String?
+    public let groupValueOrder: [Swift.String]
+    public static func make(from response: EntrupySDK.EntrupyMenuLayerResponse) -> EntrupySDK.EntrupyCaptureFlowMenuDataSource.MenuLayer
+  }
+  public init(captureFlowOptions: [EntrupySDK.EntrupyCaptureFlowOptionResponse], captureFlowHighlights: [EntrupySDK.EntrupyCaptureFlowHighlightResponse], menuLayers: [EntrupySDK.EntrupyCaptureFlowMenuDataSource.MenuLayer])
+  public var rootLayout: EntrupySDK.EntrupyCaptureFlowMenuDataSource.MenuLayer.Layout {
+    get
+  }
+  public func buildPageSource() -> [EntrupySDK.EntrupyCaptureFlowItemRow]
+  @objc deinit
+}
+final public class EntrupyCaptureFlowItemRow {
+  public enum RowType : Swift.String {
+    case menu
+    case authentication
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init?(rawValue: Swift.String)
+    #endif
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum MetadataKey {
+    public static let captureFlowUUID: Swift.String
+    public static let childPageLayout: Swift.String
+    public static let highlightTags: Swift.String
+    public static let pricingInfo: Swift.String
+  }
+  final public let localizedDisplayName: Swift.String
+  final public let localizedCaption: Swift.String?
+  final public let priceDisplayString: Swift.String?
+  final public let menuTextColor: Swift.String
+  final public let imageURL: Swift.String?
+  final public let captureFlowUUID: Swift.String?
+  final public let metadata: [Swift.String : Any]
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(type: EntrupySDK.EntrupyCaptureFlowItemRow.RowType, displayName: Swift.String, localizedCaption: Swift.String? = nil, priceDisplayString: Swift.String? = nil, menuTextColor: Swift.String = "default", imageURL: Swift.String? = nil, captureFlowUUID: Swift.String? = nil, metadata: [Swift.String : Any] = [:], children: [EntrupySDK.EntrupyCaptureFlowItemRow] = [])
+  #endif
+  final public var type: EntrupySDK.EntrupyCaptureFlowItemRow.RowType {
+    get
+  }
+  final public var typedChildren: [EntrupySDK.EntrupyCaptureFlowItemRow] {
+    get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class EntrupyCaptureFlowMenuTreeNode {
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class EntrupyCaptureFlowMenuSectionHeaderView : UIKit.UICollectionReusableView {
+  @_Concurrency.MainActor @preconcurrency public static let identifier: Swift.String
+  @_Concurrency.MainActor @preconcurrency @objc override final public func prepareForReuse()
+  @_Concurrency.MainActor @preconcurrency final public func configure(title: Swift.String)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class EntrupyOneColumnCell : UIKit.UICollectionViewCell {
+  @_Concurrency.MainActor @preconcurrency public static let identifier: Swift.String
+  @_Concurrency.MainActor @preconcurrency @objc override final public func prepareForReuse()
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency final public func configure(title: Swift.String, subtitle: Swift.String? = nil, creditsText: Swift.String? = nil, imageURL: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public static func height(for width: CoreFoundation.CGFloat, title: Swift.String, subtitle: Swift.String?, creditsText: Swift.String?, minimumHeight: CoreFoundation.CGFloat = 68) -> CoreFoundation.CGFloat
+  #endif
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class EntrupyOneColumnView : UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency @objc override final public func layoutSubviews()
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency final public func configure(title: Swift.String, subtitle: Swift.String? = nil, creditsText: Swift.String? = nil, image: UIKit.UIImage? = nil)
+  #endif
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class EntrupyTwoColumnCell : UIKit.UICollectionViewCell {
+  @_Concurrency.MainActor @preconcurrency public static let identifier: Swift.String
+  @_Concurrency.MainActor @preconcurrency @objc override final public func prepareForReuse()
+  @_Concurrency.MainActor @preconcurrency final public func configure(with row: EntrupySDK.EntrupyCaptureFlowItemRow)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency final public func configure(label: Swift.String, imageURL: Swift.String?)
+  #endif
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class EntrupyTwoColumnView : UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency @objc override final public func layoutSubviews()
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency final public func configure(title: Swift.String, image: UIKit.UIImage? = nil)
+  #endif
+  @objc deinit
+}
+public struct EntrupyCaptureFlowMenuConfigModel : Swift.Codable {
+  public let account_state: EntrupySDK.EntrupyAccountStateResponse
+  public let capture_flow_highlights: [EntrupySDK.EntrupyCaptureFlowHighlightResponse]?
+  public let capture_flow_options: [EntrupySDK.EntrupyCaptureFlowOptionResponse]
+  public let capture_flow_version: Swift.String
+  public let config_schema: Swift.String
+  public let exp: Foundation.TimeInterval
+  public let iat: Foundation.TimeInterval
+  public let main_display: EntrupySDK.EntrupyCaptureMenuConfigMainDisplayModel
+  public let menu_settings: EntrupySDK.EntrupyCaptureFlowMenuSettingsResponse
+  public let user_uuid: Swift.String
+  public let uuid: Swift.String
+  public let uuid_match: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupyCaptureMenuConfigMainDisplayModel : Swift.Codable {
+  public let account_status: EntrupySDK.EntrupyCaptureMenuConfigAccountStatusModel?
+  public let tts_qr_session: EntrupySDK.EntrupyTikTokQRSession?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupyTikTokQRSession : Swift.Codable {
+  public let enabled: Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupyCaptureMenuConfigAccountStatusModel : Swift.Codable {
+  public let account_standing_message: Swift.String?
+  public let active: Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupyCaptureFlowCreditRangeResponse : Swift.Codable {
+  public let min: Swift.Int?
+  public let max: Swift.Int?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupyCaptureFlowPricingInfoResponse : Swift.Codable {
+  public let pricing_available: Swift.Bool?
+  public let pricing_tags: [Swift.String]?
+  public let price_display_string: Swift.String?
+  public let credit_range: EntrupySDK.EntrupyCaptureFlowCreditRangeResponse?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupyCaptureFlowMetadataKeyValueResponse : Swift.Codable {
+  public let key: Swift.String
+  public let value: Swift.String
+  public let localized_value: Swift.String
+  public let localized_caption: Swift.String?
+  public let image_url: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupyCaptureFlowOptionResponse : Swift.Codable {
+  public let capture_flow_uuid: Swift.String
+  public let capture_flow_name: Swift.String
+  public let metadata_options: [[EntrupySDK.EntrupyCaptureFlowMetadataKeyValueResponse]]
+  public let pricing_info: EntrupySDK.EntrupyCaptureFlowPricingInfoResponse?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupyCaptureFlowHighlightResponse : Swift.Codable {
+  public let tag: Swift.String
+  public let capture_flow_uuids: [Swift.String]
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupyMenuLayerResponse : Swift.Codable {
+  public let key: Swift.String
+  public let layout: Swift.String
+  public let group_key: Swift.String?
+  public let group_value_order: [Swift.String]?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupyCaptureFlowMenuSettingsResponse : Swift.Codable {
+  public let presentation_mode: Swift.String?
+  public let menu_layers: [EntrupySDK.EntrupyMenuLayerResponse]?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupyAccountStatePermissionsResponse : Swift.Codable {
+  public let can_submit: Swift.Bool?
+  public let can_compare: Swift.Bool?
+  public let can_register: Swift.Bool?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupyAccountStateResponse : Swift.Codable {
+  public let permissions: EntrupySDK.EntrupyAccountStatePermissionsResponse?
+  public let suspended: Swift.Bool?
+  public let display_message: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
 extension EntrupySDK.MotionSensorState : Swift.Equatable {}
 extension EntrupySDK.MotionSensorState : Swift.Hashable {}
 extension EntrupySDK.AutoZoomGuidance : Swift.Equatable {}
@@ -995,3 +1199,9 @@ extension EntrupySDK.EntrupyZoomButtonBackgroundState : Swift.RawRepresentable {
 extension EntrupySDK.EntrupyButtonBackgroundState : Swift.Equatable {}
 extension EntrupySDK.EntrupyButtonBackgroundState : Swift.Hashable {}
 extension EntrupySDK.EntrupyButtonBackgroundState : Swift.RawRepresentable {}
+extension EntrupySDK.EntrupyCaptureFlowMenuDataSource.MenuLayer.Layout : Swift.Equatable {}
+extension EntrupySDK.EntrupyCaptureFlowMenuDataSource.MenuLayer.Layout : Swift.Hashable {}
+extension EntrupySDK.EntrupyCaptureFlowMenuDataSource.MenuLayer.Layout : Swift.RawRepresentable {}
+extension EntrupySDK.EntrupyCaptureFlowItemRow.RowType : Swift.Equatable {}
+extension EntrupySDK.EntrupyCaptureFlowItemRow.RowType : Swift.Hashable {}
+extension EntrupySDK.EntrupyCaptureFlowItemRow.RowType : Swift.RawRepresentable {}
