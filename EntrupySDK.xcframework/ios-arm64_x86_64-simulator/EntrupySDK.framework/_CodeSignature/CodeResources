@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		nD66sMeo/YZPYHT5lspgAZkBPU0=
+		tT/TdyWtBV2PvaTvXyfdiUUoBjU=
 		</data>
 		<key>Base.lproj/EntrupyCaptureViewController.nib</key>
 		<data>
@@ -82,7 +82,7 @@
 		</data>
 		<key>EntrupyFeatureFlags.json</key>
 		<data>
-		fxuHlNwaR7ziy4hqhMDzaJyeLo0=
+		V83WSxs0aRc9aU0pRFv2fteAOt8=
 		</data>
 		<key>EntrupyGalleryCollectionViewCell.nib</key>
 		<data>
@@ -322,7 +322,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		aiMJAjXOEY7kEznSskHpliD+Wq8=
+		8Vjno71j6BGaU685JVmM56zmAOk=
 		</data>
 		<key>Kanit-Black.ttf</key>
 		<data>
@@ -1621,7 +1621,7 @@
 		</data>
 		<key>mlmodel_nike_air_jordan_1_high_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_jordan1_1.0.0_model.mlmodelc/coremldata.bin</key>
 		<data>
-		rfXM+PYanvmIrlioG8pYS2ZaEjg=
+		O+kK46Bp5l6rplobeXdZ8LjGc1w=
 		</data>
 		<key>mlmodel_nike_air_jordan_1_high_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_jordan1_1.0.0_model.mlmodelc/metadata.json</key>
 		<data>
@@ -2852,7 +2852,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			CBoIrWUfk8y2ug7AfvKLPKBPARsHQIeXNnHbSqzR/ew=
+			YU503bN4EhczhBvW+BCArKjMYdL0We83S3wRgbhgcFU=
 			</data>
 		</dict>
 		<key>Base.lproj/EntrupyCaptureViewController.nib</key>
@@ -2985,7 +2985,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			X1AlDA+eWDA0+vc/sOs+pQKzwYi4tPadibOidDq0Xow=
+			sD4OFh4mZI3+0Egg4f5OIoKl3fUSpVeyK10KDVTHmfA=
 			</data>
 		</dict>
 		<key>EntrupyGalleryCollectionViewCell.nib</key>
@@ -5543,7 +5543,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+utynyRIdDOmWzZaAV0U97qz1f0pxjC/dk5rY+RDv+Q=
+			Ms90tuGva8fvO6hbRG66l6jD901H27ViJc/Q5QlwCcg=
 			</data>
 		</dict>
 		<key>mlmodel_nike_air_jordan_1_high_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_jordan1_1.0.0_model.mlmodelc/metadata.json</key>
