@@ -209,6 +209,7 @@ public class AutoZoom {
   }
 }
 public enum EntrupyTransferStatus : Swift.Equatable {
+  case available
   case pending
   case completed
   case cancelled
@@ -235,10 +236,14 @@ public struct EntrupyCertTransferInfo : Swift.Codable {
   public let is_eligible: Swift.Bool?
   public let status: EntrupySDK.EntrupyTransferStatus
   public let transfer_id: Swift.String?
-  public let pending_recipient_name: Swift.String?
+  public let is_control_visible: Swift.Bool?
+  public let recipient_name: Swift.String?
   public let initiated_at: Swift.String?
   public let expires_at: Swift.String?
   public var isEligible: Swift.Bool {
+    get
+  }
+  public var isControlVisible: Swift.Bool {
     get
   }
   #if compiler(>=5.3) && $NonescapableTypes
@@ -247,7 +252,7 @@ public struct EntrupyCertTransferInfo : Swift.Codable {
   }
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  public var pendingRecipientName: Swift.String? {
+  public var recipientName: Swift.String? {
     get
   }
   #endif
@@ -705,6 +710,7 @@ extension EntrupySDK.EntrupyApp {
   #if compiler(>=5.3) && $NonescapableTypes
   @objc dynamic public func searchAuthenticationItems(query: EntrupySDK.EntrupySearchQuery, completion: @escaping (Foundation.NSDictionary?, Foundation.NSError?) -> Swift.Void)
   #endif
+  public func fetchTransferInbox() async throws -> EntrupySDK.EntrupySearchResult
   #if compiler(>=5.3) && $NonescapableTypes
   @objc dynamic public func getFlagDetailsForResult(withEntrupyID entrupyID: Swift.String, completionHandler: @escaping ([Swift.AnyHashable : Any]?, (any Swift.Error)?) -> Swift.Void)
   #endif
