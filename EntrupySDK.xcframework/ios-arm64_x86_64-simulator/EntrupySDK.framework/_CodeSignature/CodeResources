@@ -430,7 +430,7 @@
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		7pHNIXFwMREQKRU5CTiSmzyV85g=
+		ejb35SxmVFaE9xl9ola7Nr0o4uE=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -450,7 +450,7 @@
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		7pHNIXFwMREQKRU5CTiSmzyV85g=
+		ejb35SxmVFaE9xl9ola7Nr0o4uE=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -3587,7 +3587,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/W1MFLP+gZt/u00aLtwkOi6nwTjOfnbaFWN3dgiMHFo=
+			AlwAPidpU9nFWHC4y9cH0UqnDyKMlkUTXSkgIwKdWls=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -3622,7 +3622,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/W1MFLP+gZt/u00aLtwkOi6nwTjOfnbaFWN3dgiMHFo=
+			AlwAPidpU9nFWHC4y9cH0UqnDyKMlkUTXSkgIwKdWls=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
