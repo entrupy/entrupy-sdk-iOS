@@ -989,6 +989,7 @@ public class EntrupyCaptureFlowMenuDataSource {
       case twoColumn
       case oneColumn
       case oneColumnGrouped
+      case mixColumnGrouped
       #if compiler(>=5.3) && $NonescapableTypes
       public init?(rawValue: Swift.String)
       #endif
@@ -1035,8 +1036,9 @@ final public class EntrupyCaptureFlowItemRow {
   final public let imageURL: Swift.String?
   final public let captureFlowUUID: Swift.String?
   final public let metadata: [Swift.String : Any]
+  final public let sourceMetadataKey: Swift.String?
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(type: EntrupySDK.EntrupyCaptureFlowItemRow.RowType, displayName: Swift.String, localizedCaption: Swift.String? = nil, priceDisplayString: Swift.String? = nil, menuTextColor: Swift.String = "default", imageURL: Swift.String? = nil, captureFlowUUID: Swift.String? = nil, metadata: [Swift.String : Any] = [:], children: [EntrupySDK.EntrupyCaptureFlowItemRow] = [])
+  public init(type: EntrupySDK.EntrupyCaptureFlowItemRow.RowType, displayName: Swift.String, localizedCaption: Swift.String? = nil, priceDisplayString: Swift.String? = nil, menuTextColor: Swift.String = "default", imageURL: Swift.String? = nil, captureFlowUUID: Swift.String? = nil, metadata: [Swift.String : Any] = [:], sourceMetadataKey: Swift.String? = nil, children: [EntrupySDK.EntrupyCaptureFlowItemRow] = [])
   #endif
   final public var type: EntrupySDK.EntrupyCaptureFlowItemRow.RowType {
     get
@@ -1108,6 +1110,13 @@ public struct EntrupyCaptureFlowMenuConfigModel : Swift.Codable {
 public struct EntrupyCaptureMenuConfigMainDisplayModel : Swift.Codable {
   public let account_status: EntrupySDK.EntrupyCaptureMenuConfigAccountStatusModel?
   public let tts_qr_session: EntrupySDK.EntrupyTikTokQRSession?
+  public let qr_search: EntrupySDK.EntrupyQRSearch?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EntrupyQRSearch : Swift.Codable {
+  public let enabled: Swift.Bool
+  public let format: Swift.String
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
