@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		GiXVXKyvrXLueFn3uB2bPqTJDWg=
+		CiKMbdkeN6/fUvL2YrHWt3NLbIc=
 		</data>
 		<key>Base.lproj/EntrupyCaptureViewController.nib</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Base.lproj/EntrupyCaptureViewControllerV2.nib</key>
 		<data>
-		Qepg9daztFXYW9UHvBXfSipw4LU=
+		18BYGOuJTllRsgBMCz1hKm25WuQ=
 		</data>
 		<key>Base.lproj/EntrupyTOCropViewControllerLocalizable.strings</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>EntrupyAlphaFeatureFlags.json</key>
 		<data>
-		ar3GKFbB+ervXzJKGoE0Sn/qd78=
+		2oVieAGLMegABrR794GSNCcl+yI=
 		</data>
 		<key>EntrupyBannerView.nib</key>
 		<data>
@@ -82,7 +82,7 @@
 		</data>
 		<key>EntrupyFeatureFlags.json</key>
 		<data>
-		V83WSxs0aRc9aU0pRFv2fteAOt8=
+		X2V+yex+rO5Ybg74yrEfrObeoPI=
 		</data>
 		<key>EntrupyGalleryCollectionViewCell.nib</key>
 		<data>
@@ -282,7 +282,7 @@
 		</data>
 		<key>Headers/EntrupySDK-Swift.h</key>
 		<data>
-		R6CAbRLNlIO+g9MhKRBBaAFaPR8=
+		lp2wSE56VvPqyfxbGSCxnsYsYMw=
 		</data>
 		<key>Headers/EntrupySDK.h</key>
 		<data>
@@ -426,43 +426,43 @@
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		DehhlWjkongeBouZbdc6SvFH7m8=
+		4Oq9Du/nb6XI1vPHRQ5/Rqhbxaw=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		BiillT5hVxBw3HXkwpc2ZKGhDNo=
+		8ntYKVvbWqMWo+fsU+JAbtrAIek=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		5XYo/4xuU79pvaJsvmKBw/v+Y9w=
+		QxHFwlxILPaoPhekGfuRqZ38B44=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		BiillT5hVxBw3HXkwpc2ZKGhDNo=
+		8ntYKVvbWqMWo+fsU+JAbtrAIek=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ChCkG88Zonoxs9zx5mqniyfhTK8=
+		rbdN6aYQ8ArzY96uA98rltVE9f4=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		DehhlWjkongeBouZbdc6SvFH7m8=
+		4Oq9Du/nb6XI1vPHRQ5/Rqhbxaw=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		K2EGfkU9BicGZDCoCNl8IHV4qQs=
+		rsf11Scq/k5HkVbMBf0UV7GHXxw=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		s6bNOgDOJ0NbtxngKk2yhdTFeTw=
+		8S+1ZhYGnR9hVAPBXAOQpQZUGzo=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		K2EGfkU9BicGZDCoCNl8IHV4qQs=
+		rsf11Scq/k5HkVbMBf0UV7GHXxw=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		NAje8TUmc/Mu/exjn/zP5nze/P8=
+		lzZ/XcEcfFFcE0rsl7bP206moZE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1409,6 +1409,26 @@
 		<data>
 		mluAqdVT/YmTE6U1ZSGUX6/AQqI=
 		</data>
+		<key>blur_classifier.mlmodelc/analytics/coremldata.bin</key>
+		<data>
+		fO4lU2EdmeCbfBSepAOnAKT/rcs=
+		</data>
+		<key>blur_classifier.mlmodelc/coremldata.bin</key>
+		<data>
+		XEyy9LxhbDVcs4vPM2+abF1meOw=
+		</data>
+		<key>blur_classifier.mlmodelc/metadata.json</key>
+		<data>
+		of0zmYL/ra5zjk4CotgIZL79Zbc=
+		</data>
+		<key>blur_classifier.mlmodelc/model.mil</key>
+		<data>
+		cYknh0E1DrLeXUaJcWNYlrJYabo=
+		</data>
+		<key>blur_classifier.mlmodelc/weights/weight.bin</key>
+		<data>
+		uwJ50mTlHUuGHjbYYiwVTGJ7yMg=
+		</data>
 		<key>box-label-barcode.png</key>
 		<data>
 		xPoQJHJfgWBYxTk+uIFiEAwZuGA=
@@ -1466,7 +1486,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			EfGjOoVb/UikKDhPxibLJLdbB6M=
+			v9JXrtIOkJV0PuMTBLpLDRTxLQU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1565,7 +1585,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			kMENuRqRa3pVbi2k0OmFowuPDug=
+			6s71prMW/rJdAvfI8vYrqecSrBo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2818,7 +2838,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			qhdvfQq0fnBmH9EyVCbFsuR8ryo=
+			apBIIXp+DSJ17E1Oj+xHlhVkSRE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2836,7 +2856,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			FgHsuPMwLuQ3J38S1iHzbt/9OJM=
+			UkZWUoWelJlKDlCG8n31twG/kBk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2848,7 +2868,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HYYGVVx6JQxURVJotI0XDIicYnDbwPJQ731W0RF/x0I=
+			DQ6OZTHLW6oKthZaj5e79uEujvNSVcIP0+Gk7Q6V3+A=
 			</data>
 		</dict>
 		<key>Base.lproj/EntrupyCaptureViewController.nib</key>
@@ -2862,7 +2882,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Xk8RqrrG9rnnxqW9aym6hFJ74o405jxWrhJEg/EjkMc=
+			Vmsov/dyVZES+d+D1tHOglWmDuKJ1KBwyiuzPrkW96k=
 			</data>
 		</dict>
 		<key>Base.lproj/EntrupyTOCropViewControllerLocalizable.strings</key>
@@ -2883,7 +2903,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2uLv3+JNjOLIkYO2rJDKAejkrOAw8PiAoP/i8ZVhWN8=
+			ecaMzFmF8cMNYtRvE1reMtzPX/uytBEyvbjbmyohnEE=
 			</data>
 		</dict>
 		<key>EntrupyBannerView.nib</key>
@@ -2981,7 +3001,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			sD4OFh4mZI3+0Egg4f5OIoKl3fUSpVeyK10KDVTHmfA=
+			gjtz6mAnh3lneFviZCkmD1yKPU7gQct9MTqOLcJRuNw=
 			</data>
 		</dict>
 		<key>EntrupyGalleryCollectionViewCell.nib</key>
@@ -3331,7 +3351,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JgwIk+lHFRDhk9cLhpcXKEb10LJ7gRFS6yKFFlPDiFw=
+			XqsJQlgU0w6f4MPhGsffo6lQL0DSOZKda0do50J+dnQ=
 			</data>
 		</dict>
 		<key>Headers/EntrupySDK.h</key>
@@ -3576,70 +3596,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xK2mkSSssbx6d/jOKhs0qkDtEj0h8woC6GCTdsgo+mg=
+			xO+1L//BeAibJlRX3s4+dvesvJxWbLJOBGWQcLYs7pE=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YzYwoxPeTjWL5b3c0BcvHVTwfvlr0DIHpaV+DSRHDPs=
+			1dpuDPEIOVv7ajcp3Iy7lpEXz9eBtOZAHpkpbnkIXCU=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hveuKjYGA02fLSJaAAdFgZOKbCc6dXuAiZ1d7wVLhbU=
+			d8F67/VnNswMP+UwgQfyKjO37IV0nVNJNORnnUB7DOc=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YzYwoxPeTjWL5b3c0BcvHVTwfvlr0DIHpaV+DSRHDPs=
+			1dpuDPEIOVv7ajcp3Iy7lpEXz9eBtOZAHpkpbnkIXCU=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4bp8BtCh/pykxp3w+OiVCcptcvSWycIgZH4pMYMyzwg=
+			6nPNGG0sSfsh534uElqDykMON5Q0JVdchRnSEMqsSgo=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xK2mkSSssbx6d/jOKhs0qkDtEj0h8woC6GCTdsgo+mg=
+			xO+1L//BeAibJlRX3s4+dvesvJxWbLJOBGWQcLYs7pE=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pRtTQUCWvX85fGoAiyTywGYOYgfUvScbJS+0E5me5UU=
+			H1gs1fZeblxJWjYYaEdh4mCiPgVoQzyKaSh5BBedlDs=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PNatg8Tb7BSEqz3sZDurQoFicHcJen41p3Gk4x2ZVsI=
+			sf1tsUkk2uztguUf9zJVvzIYeYBR1XlkDOE2FhK8S8g=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pRtTQUCWvX85fGoAiyTywGYOYgfUvScbJS+0E5me5UU=
+			H1gs1fZeblxJWjYYaEdh4mCiPgVoQzyKaSh5BBedlDs=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cBpee3WnD384lUZacxN7mIErFRDAZ4qOwILKdZn0XAE=
+			lZq7bpzTSjxeBz5dfFYfyt3lNU5eCLZnxOYHWil4FTk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -5289,6 +5309,41 @@
 			hQ2V1UvNnDTFAzJ5noMff2U1+bocWL2jOeVMeWOQGCI=
 			</data>
 		</dict>
+		<key>blur_classifier.mlmodelc/analytics/coremldata.bin</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			gAIh2xnfmIk3lc0PVjr6NogVw9xrhjRcSadSZw0G0CI=
+			</data>
+		</dict>
+		<key>blur_classifier.mlmodelc/coremldata.bin</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			5Kal713WZL8yKHZVgjeBPCuHqYyob7qaOH3elXejeOU=
+			</data>
+		</dict>
+		<key>blur_classifier.mlmodelc/metadata.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			JRfeh7TauRs2M0Q3kK8wsOdE1T0OUaImWi0gPImRIrc=
+			</data>
+		</dict>
+		<key>blur_classifier.mlmodelc/model.mil</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			nSYDtkd2bug/cIisV4+kWKHx4W4U1xFhHQgPuq6bTgU=
+			</data>
+		</dict>
+		<key>blur_classifier.mlmodelc/weights/weight.bin</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			YNlLhlZM+5MWytJN75035vTabXXr6kGS8jLbgV92u5k=
+			</data>
+		</dict>
 		<key>box-label-barcode.png</key>
 		<dict>
 			<key>hash2</key>
@@ -5352,7 +5407,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			F3o2Yh5wGHNjy/xFr18fVbHIExxZ+liPqYY6KiohIxQ=
+			ULjroTyNgzcwYaiFJcM+p3RaoctC/WJKSAAKNr4/BsE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -5451,7 +5506,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			A8dtAHc1tD43Tkbpj0Jg+98qbloo1u0Tog+zHlJL9us=
+			ODh7hL4k8VF4T48FKpoyRJr/hRTo+ntXUaTGNilPoik=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -7556,7 +7611,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xvyBKyq06Yf7ns/Ey/PHGv6sjcp281+BxiQyoKDTqes=
+			P8LcFG2iVNdqOwZgbOR1qossrZJoozNY5Qo49mDNWqw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -7574,7 +7629,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qiJ/t2ke8ivE9s+hk7EpgTY+Hym4PZdS+p/X8EKB9Po=
+			fg/bEWATnEXgIYlYtR8hxlozXZFsRq29YJciaVJUO+I=
 			</data>
 			<key>optional</key>
 			<true/>

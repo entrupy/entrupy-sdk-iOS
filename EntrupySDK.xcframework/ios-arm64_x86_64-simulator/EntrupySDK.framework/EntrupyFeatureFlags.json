@@ -17,5 +17,10 @@
     "captureViewControllerV2": true,
     "certificateTransfer": false,
     "searchFilterV2": true,
-    "postHog": false
+    "imageMemoryCacheV2": false,
+    "postHog": false,
+    "captureMenuFastPath": false,
+    "twoPhaseOverlayDownload": false,
+    "instructionToast": false,
+    "captureFlowInstructions": false
 }

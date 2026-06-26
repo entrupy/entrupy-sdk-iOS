@@ -316,6 +316,12 @@ typedef SWIFT_ENUM_NAMED(NSInteger, ObjCBrightness, "Brightness", open) {
   ObjCBrightnessOverexposed = 2,
 };
 
+typedef SWIFT_ENUM_NAMED(NSInteger, ObjCBrightnessV3, "BrightnessV3", open) {
+  ObjCBrightnessV3Normal = 0,
+  ObjCBrightnessV3Underexposed = 1,
+  ObjCBrightnessV3Overexposed = 2,
+};
+
 @protocol EntrupyLoginDelegate;
 @protocol EntrupyConfigDelegate;
 @protocol EntrupyCaptureDelegate;
@@ -674,6 +680,26 @@ typedef SWIFT_ENUM_NAMED(NSInteger, EntrupyButtonBackgroundState, "EntrupyButton
   EntrupyButtonBackgroundStatePhotoCaptured = 13,
 };
 
+@class UIImage;
+@class EntrupyImageRequestToken;
+SWIFT_CLASS_NAMED("EntrupyCacheDownloadUtils")
+@interface ObjcEntrupyCacheDownloadUtils : NSObject
++ (EntrupyImageRequestToken * _Nonnull)downloadToCacheImageWithURL:(NSString * _Nonnull)url withIdentifier:(NSString * _Nonnull)identifier withQuality:(float)jpegQuality completionBlock:(void (^ _Nonnull)(BOOL, UIImage * _Nullable, NSError * _Nullable))completionBlock;
+/// NSCacheDirectory has a limit of 255 characteres for file names
+/// as we save a lot of urls this is an attempt to reduce the url length and if we necessary we get a suffix of 255 chars.
+/// Removing: “_”, “-”, “/”, “https:”, “.”(if not .jpg)
++ (NSString * _Nonnull)getShorterIdentifierFor:(NSString * _Nonnull)identifier SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+SWIFT_CLASS_NAMED("EntrupyCacheDownloadUtilsV2")
+@interface ObjcEntrupyCacheDownloadUtilsV2 : NSObject
+/// Legacy facade preserved for Objective-C and back-compatibility.
++ (EntrupyImageRequestToken * _Nonnull)downloadToCacheImageWithURL:(NSString * _Nonnull)url withIdentifier:(NSString * _Nonnull)identifier withQuality:(float)jpegQuality completionBlock:(void (^ _Nonnull)(BOOL, UIImage * _Nullable, NSError * _Nullable))completionBlock;
++ (NSString * _Nonnull)getShorterIdentifierFor:(NSString * _Nonnull)identifier SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class NSCoder;
 SWIFT_CLASS_NAMED("EntrupyCaptureButton")
 @interface EntrupyCaptureButton : UIButton
@@ -760,6 +786,16 @@ typedef SWIFT_ENUM_NAMED(NSInteger, ObjcEntrupyEventName, "EntrupyEventName", op
   ObjcEntrupyEventNameSnapIQAutoCaptureTriggered = 60,
   ObjcEntrupyEventNameLogging = 61,
 };
+
+/// Lightweight, ObjC-bridged handle returned from image download requests. Callers
+/// store the token and invoke <code>cancel()</code> on cell reuse / view disappearance to drop
+/// in-flight network work and suppress late completion callbacks.
+SWIFT_CLASS_NAMED("EntrupyImageRequestToken")
+@interface EntrupyImageRequestToken : NSObject
+@property (nonatomic, readonly) BOOL isCancelled;
+- (void)cancel;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
 
 SWIFT_CLASS_NAMED("EntrupyLocalizationManager")
 @interface ObjcEntrupyLocalizationManager : NSObject
@@ -888,29 +924,52 @@ SWIFT_PROTOCOL_NAMED("ExposureAnalyserDelegate")
 - (void)exposureAnalyser:(ObjCExposureAnalyser * _Nonnull)analyser didAnalyse:(enum ObjCBrightness)brightness;
 @end
 
+@class ObjCExposureAnalyserV3;
+SWIFT_PROTOCOL_NAMED("ExposureAnalyserDelegateV3")
+@protocol ObjCExposureAnalyserDelegateV3
+- (void)exposureAnalyser:(ObjCExposureAnalyserV3 * _Nonnull)analyser didAnalyse:(enum ObjCBrightnessV3)brightness;
+@end
+
+SWIFT_CLASS_NAMED("ExposureAnalyserV3")
+@interface ObjCExposureAnalyserV3 : NSObject
+@property (nonatomic, weak) id <ObjCExposureAnalyserDelegateV3> _Nullable delegate;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 @protocol ObjCSnapIQDelegate;
+@protocol ObjCSnapIQNonRoiDelegate;
 @protocol ObjCSnapIQLoggingDelegate;
 @class ObjCSnapIQResult;
+@class ObjCSnapIQNonRoiResult;
 SWIFT_CLASS_NAMED("SnapIQ")
 @interface ObjCSnapIQ : NSObject <ObjCExposureAnalyserDelegate>
 @property (nonatomic, readonly) BOOL isModelReady;
 /// Delegate to receive detection results
 @property (nonatomic, weak) id <ObjCSnapIQDelegate> _Nullable delegate;
+/// Delegate to receive non-ROI capture results
+@property (nonatomic, weak) id <ObjCSnapIQNonRoiDelegate> _Nullable nonRoiDelegate;
 /// Delegate to receive logging events
 @property (nonatomic, weak) id <ObjCSnapIQLoggingDelegate> _Nullable loggingDelegate;
 - (void)updateViewSize:(CGSize)newSize;
 /// Resets temporal state (useful when switching to a new sample or restarting capture)
 - (void)resetTemporalState;
-/// Process a camera frame and perform detection
+/// Process a camera frame and perform detection + auto-capture analysis
 /// \param sampleBuffer The camera frame buffer to process
-///
-/// \param zoomApplied When false, runs AutoZoom to determine optimal zoom level.
-/// When true, runs the normal auto-capture workflow.
 ///
 ///
 /// returns:
-/// A SnapIQResult containing detection results, zoom info, and auto-capture analysis
-- (ObjCSnapIQResult * _Nonnull)processFrameWithSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer zoomApplied:(BOOL)zoomApplied SWIFT_WARN_UNUSED_RESULT;
+/// A SnapIQResult containing detection results and auto-capture analysis
+- (ObjCSnapIQResult * _Nonnull)processFrameWithSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer SWIFT_WARN_UNUSED_RESULT;
+/// Process a camera frame for non-ROI regions (no YOLO detector). Capture
+/// is gated on stability, exposure, and blur only and stays blocked until
+/// all three are ideal.
+/// \param sampleBuffer The camera frame buffer to process
+///
+///
+/// returns:
+/// A SnapIQNonRoiResult containing the block/unblock decision and guidance state
+- (ObjCSnapIQNonRoiResult * _Nonnull)processFrameNonRoiWithSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer SWIFT_WARN_UNUSED_RESULT;
 + (BOOL)isRegionSupportedWithBrandName:(NSString * _Nonnull)brandName regionName:(NSString * _Nonnull)regionName SWIFT_WARN_UNUSED_RESULT;
 + (NSDictionary<NSString *, id> * _Nonnull)getConfigInfo SWIFT_WARN_UNUSED_RESULT;
 + (NSArray<NSDictionary<NSString *, id> *> * _Nonnull)getBrandIdentifiers SWIFT_WARN_UNUSED_RESULT;
@@ -922,11 +981,13 @@ SWIFT_CLASS_NAMED("SnapIQ")
 
 @class AVCaptureDevice;
 @interface ObjCSnapIQ (SWIFT_EXTENSION(EntrupySDK))
-/// ObjC selector: initWithViewSize:regionType:modelPath:captureDevice:configurationDictionary:completion:
+/// ObjC selector: initWithViewSize:regionType:modelPath:blurModelPath:captureDevice:configurationDictionary:completion:
 /// Keys in <code>configurationDictionary</code> map to <code>SnapIQConfiguration</code> property names (camelCase).
 /// Unrecognised keys are silently ignored; missing keys fall back to <code>SnapIQConfiguration</code> defaults.
-/// Nil validation is handled by the caller (EntrupyCaptureViewController).
-- (nonnull instancetype)initWithViewSize:(CGSize)viewSize regionType:(NSString * _Nonnull)regionType modelPath:(NSString * _Nullable)modelPath captureDevice:(AVCaptureDevice * _Nullable)captureDevice configurationDictionary:(NSDictionary<NSString *, id> * _Nullable)configurationDictionary completion:(void (^ _Nullable)(BOOL, NSError * _Nullable))completion;
+/// Nil validation is handled by the caller (EntrupyCaptureViewController / EntrupyCaptureViewControllerV2).
+/// SnapIQ v4 requires both <code>modelPath</code> and <code>blurModelPath</code>: if either is missing, model
+/// loading fails and <code>isModelReady</code> stays false (there is no bundled fallback).
+- (nonnull instancetype)initWithViewSize:(CGSize)viewSize regionType:(NSString * _Nonnull)regionType modelPath:(NSString * _Nullable)modelPath blurModelPath:(NSString * _Nullable)blurModelPath captureDevice:(AVCaptureDevice * _Nullable)captureDevice configurationDictionary:(NSDictionary<NSString *, id> * _Nullable)configurationDictionary completion:(void (^ _Nullable)(BOOL, NSError * _Nullable))completion;
 @end
 
 /// Delegate protocol for receiving SnapIQ detection results
@@ -935,9 +996,25 @@ SWIFT_PROTOCOL_NAMED("SnapIQDelegate")
 - (void)didProcessFrameWithResult:(ObjCSnapIQResult * _Nonnull)result;
 @end
 
+@class ObjCSnapIQResultV3;
+/// Delegate protocol for receiving SnapIQV3 detection results
+SWIFT_PROTOCOL_NAMED("SnapIQDelegateV3")
+@protocol ObjCSnapIQDelegateV3
+- (void)didProcessFrameWithResult:(ObjCSnapIQResultV3 * _Nonnull)result;
+@end
+
 /// Log result containing event name and timestamped logs
 SWIFT_CLASS_NAMED("SnapIQLogResult")
 @interface ObjCSnapIQLogResult : NSObject
+@property (nonatomic, readonly, copy) NSString * _Nonnull eventName;
+@property (nonatomic, readonly, copy) NSDictionary<NSString *, NSString *> * _Nonnull eventLogs;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+/// Log result containing event name and timestamped logs
+SWIFT_CLASS_NAMED("SnapIQLogResultV3")
+@interface ObjCSnapIQLogResultV3 : NSObject
 @property (nonatomic, readonly, copy) NSString * _Nonnull eventName;
 @property (nonatomic, readonly, copy) NSDictionary<NSString *, NSString *> * _Nonnull eventLogs;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -950,9 +1027,47 @@ SWIFT_PROTOCOL_NAMED("SnapIQLoggingDelegate")
 - (void)ReceiveLog:(ObjCSnapIQLogResult * _Nonnull)logResult;
 @end
 
+/// Delegate protocol for receiving SnapIQV3 logging events
+SWIFT_PROTOCOL_NAMED("SnapIQLoggingDelegateV3")
+@protocol ObjCSnapIQLoggingDelegateV3
+- (void)ReceiveLog:(ObjCSnapIQLogResultV3 * _Nonnull)logResult;
+@end
+
+/// Delegate protocol for receiving SnapIQ non-ROI capture results
+SWIFT_PROTOCOL_NAMED("SnapIQNonRoiDelegate")
+@protocol ObjCSnapIQNonRoiDelegate
+- (void)didProcessNonRoiFrameWithResult:(ObjCSnapIQNonRoiResult * _Nonnull)result;
+@end
+
+/// Capture result for non-ROI regions: a block/unblock decision plus the
+/// guidance state behind it. No detection box, confidence, or auto-capture —
+/// non-ROI regions have no YOLO detector.
+SWIFT_CLASS_NAMED("SnapIQNonRoiResult")
+@interface ObjCSnapIQNonRoiResult : NSObject
+@property (nonatomic, readonly) BOOL shouldCapture;
+@property (nonatomic, readonly, copy) NSString * _Nullable state;
+@property (nonatomic, readonly) NSInteger blurLevel;
+@property (nonatomic, readonly) double inferenceTime;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 /// Combined result containing both detected box and auto-capture analysis
 SWIFT_CLASS_NAMED("SnapIQResult")
 @interface ObjCSnapIQResult : NSObject
+@property (nonatomic, readonly) BOOL shouldCapture;
+@property (nonatomic, readonly, copy) NSString * _Nullable state;
+@property (nonatomic, readonly) float confidence;
+@property (nonatomic, readonly) double fps;
+@property (nonatomic, readonly) double inferenceTime;
+@property (nonatomic, readonly) NSInteger blurLevel;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+/// Combined result containing both detected box and auto-capture analysis
+SWIFT_CLASS_NAMED("SnapIQResultV3")
+@interface ObjCSnapIQResultV3 : NSObject
 @property (nonatomic, readonly) BOOL shouldCapture;
 @property (nonatomic, readonly, copy) NSString * _Nullable state;
 @property (nonatomic, readonly) float confidence;
@@ -962,6 +1077,42 @@ SWIFT_CLASS_NAMED("SnapIQResult")
 @property (nonatomic, readonly) double zoomLevel;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+SWIFT_CLASS_NAMED("SnapIQV3")
+@interface ObjCSnapIQV3 : NSObject <ObjCExposureAnalyserDelegateV3>
+@property (nonatomic, readonly) BOOL isModelReady;
+/// Delegate to receive detection results
+@property (nonatomic, weak) id <ObjCSnapIQDelegateV3> _Nullable delegate;
+/// Delegate to receive logging events
+@property (nonatomic, weak) id <ObjCSnapIQLoggingDelegateV3> _Nullable loggingDelegate;
+- (void)updateViewSize:(CGSize)newSize;
+/// Resets temporal state (useful when switching to a new sample or restarting capture)
+- (void)resetTemporalState;
+/// Process a camera frame and perform detection
+/// \param sampleBuffer The camera frame buffer to process
+///
+/// \param zoomApplied When false, runs AutoZoomV3 to determine optimal zoom level.
+/// When true, runs the normal auto-capture workflow.
+///
+///
+/// returns:
+/// A SnapIQResultV3 containing detection results, zoom info, and auto-capture analysis
+- (ObjCSnapIQResultV3 * _Nonnull)processFrameWithSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer zoomApplied:(BOOL)zoomApplied SWIFT_WARN_UNUSED_RESULT;
++ (BOOL)isRegionSupportedWithBrandName:(NSString * _Nonnull)brandName regionName:(NSString * _Nonnull)regionName SWIFT_WARN_UNUSED_RESULT;
++ (NSDictionary<NSString *, id> * _Nonnull)getConfigInfo SWIFT_WARN_UNUSED_RESULT;
++ (NSArray<NSDictionary<NSString *, id> *> * _Nonnull)getBrandIdentifiers SWIFT_WARN_UNUSED_RESULT;
+- (void)logLatestFrameResult;
+- (void)exposureAnalyser:(ObjCExposureAnalyserV3 * _Nonnull)analyser didAnalyse:(enum ObjCBrightnessV3)brightness;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@interface UIImageView (SWIFT_EXTENSION(EntrupySDK))
+/// Cancels any in-flight image download attached to this image view and clears
+/// the stored token. Safe to call repeatedly. Intended for <code>prepareForReuse</code> /
+/// <code>viewWillDisappear</code> callsites where the destination view is no longer interested.
+- (void)cancelImageDownload;
 @end
 
 #endif
@@ -1290,6 +1441,12 @@ typedef SWIFT_ENUM_NAMED(NSInteger, ObjCBrightness, "Brightness", open) {
   ObjCBrightnessOverexposed = 2,
 };
 
+typedef SWIFT_ENUM_NAMED(NSInteger, ObjCBrightnessV3, "BrightnessV3", open) {
+  ObjCBrightnessV3Normal = 0,
+  ObjCBrightnessV3Underexposed = 1,
+  ObjCBrightnessV3Overexposed = 2,
+};
+
 @protocol EntrupyLoginDelegate;
 @protocol EntrupyConfigDelegate;
 @protocol EntrupyCaptureDelegate;
@@ -1648,6 +1805,26 @@ typedef SWIFT_ENUM_NAMED(NSInteger, EntrupyButtonBackgroundState, "EntrupyButton
   EntrupyButtonBackgroundStatePhotoCaptured = 13,
 };
 
+@class UIImage;
+@class EntrupyImageRequestToken;
+SWIFT_CLASS_NAMED("EntrupyCacheDownloadUtils")
+@interface ObjcEntrupyCacheDownloadUtils : NSObject
++ (EntrupyImageRequestToken * _Nonnull)downloadToCacheImageWithURL:(NSString * _Nonnull)url withIdentifier:(NSString * _Nonnull)identifier withQuality:(float)jpegQuality completionBlock:(void (^ _Nonnull)(BOOL, UIImage * _Nullable, NSError * _Nullable))completionBlock;
+/// NSCacheDirectory has a limit of 255 characteres for file names
+/// as we save a lot of urls this is an attempt to reduce the url length and if we necessary we get a suffix of 255 chars.
+/// Removing: “_”, “-”, “/”, “https:”, “.”(if not .jpg)
++ (NSString * _Nonnull)getShorterIdentifierFor:(NSString * _Nonnull)identifier SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+SWIFT_CLASS_NAMED("EntrupyCacheDownloadUtilsV2")
+@interface ObjcEntrupyCacheDownloadUtilsV2 : NSObject
+/// Legacy facade preserved for Objective-C and back-compatibility.
++ (EntrupyImageRequestToken * _Nonnull)downloadToCacheImageWithURL:(NSString * _Nonnull)url withIdentifier:(NSString * _Nonnull)identifier withQuality:(float)jpegQuality completionBlock:(void (^ _Nonnull)(BOOL, UIImage * _Nullable, NSError * _Nullable))completionBlock;
++ (NSString * _Nonnull)getShorterIdentifierFor:(NSString * _Nonnull)identifier SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class NSCoder;
 SWIFT_CLASS_NAMED("EntrupyCaptureButton")
 @interface EntrupyCaptureButton : UIButton
@@ -1734,6 +1911,16 @@ typedef SWIFT_ENUM_NAMED(NSInteger, ObjcEntrupyEventName, "EntrupyEventName", op
   ObjcEntrupyEventNameSnapIQAutoCaptureTriggered = 60,
   ObjcEntrupyEventNameLogging = 61,
 };
+
+/// Lightweight, ObjC-bridged handle returned from image download requests. Callers
+/// store the token and invoke <code>cancel()</code> on cell reuse / view disappearance to drop
+/// in-flight network work and suppress late completion callbacks.
+SWIFT_CLASS_NAMED("EntrupyImageRequestToken")
+@interface EntrupyImageRequestToken : NSObject
+@property (nonatomic, readonly) BOOL isCancelled;
+- (void)cancel;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
 
 SWIFT_CLASS_NAMED("EntrupyLocalizationManager")
 @interface ObjcEntrupyLocalizationManager : NSObject
@@ -1862,29 +2049,52 @@ SWIFT_PROTOCOL_NAMED("ExposureAnalyserDelegate")
 - (void)exposureAnalyser:(ObjCExposureAnalyser * _Nonnull)analyser didAnalyse:(enum ObjCBrightness)brightness;
 @end
 
+@class ObjCExposureAnalyserV3;
+SWIFT_PROTOCOL_NAMED("ExposureAnalyserDelegateV3")
+@protocol ObjCExposureAnalyserDelegateV3
+- (void)exposureAnalyser:(ObjCExposureAnalyserV3 * _Nonnull)analyser didAnalyse:(enum ObjCBrightnessV3)brightness;
+@end
+
+SWIFT_CLASS_NAMED("ExposureAnalyserV3")
+@interface ObjCExposureAnalyserV3 : NSObject
+@property (nonatomic, weak) id <ObjCExposureAnalyserDelegateV3> _Nullable delegate;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 @protocol ObjCSnapIQDelegate;
+@protocol ObjCSnapIQNonRoiDelegate;
 @protocol ObjCSnapIQLoggingDelegate;
 @class ObjCSnapIQResult;
+@class ObjCSnapIQNonRoiResult;
 SWIFT_CLASS_NAMED("SnapIQ")
 @interface ObjCSnapIQ : NSObject <ObjCExposureAnalyserDelegate>
 @property (nonatomic, readonly) BOOL isModelReady;
 /// Delegate to receive detection results
 @property (nonatomic, weak) id <ObjCSnapIQDelegate> _Nullable delegate;
+/// Delegate to receive non-ROI capture results
+@property (nonatomic, weak) id <ObjCSnapIQNonRoiDelegate> _Nullable nonRoiDelegate;
 /// Delegate to receive logging events
 @property (nonatomic, weak) id <ObjCSnapIQLoggingDelegate> _Nullable loggingDelegate;
 - (void)updateViewSize:(CGSize)newSize;
 /// Resets temporal state (useful when switching to a new sample or restarting capture)
 - (void)resetTemporalState;
-/// Process a camera frame and perform detection
+/// Process a camera frame and perform detection + auto-capture analysis
 /// \param sampleBuffer The camera frame buffer to process
-///
-/// \param zoomApplied When false, runs AutoZoom to determine optimal zoom level.
-/// When true, runs the normal auto-capture workflow.
 ///
 ///
 /// returns:
-/// A SnapIQResult containing detection results, zoom info, and auto-capture analysis
-- (ObjCSnapIQResult * _Nonnull)processFrameWithSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer zoomApplied:(BOOL)zoomApplied SWIFT_WARN_UNUSED_RESULT;
+/// A SnapIQResult containing detection results and auto-capture analysis
+- (ObjCSnapIQResult * _Nonnull)processFrameWithSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer SWIFT_WARN_UNUSED_RESULT;
+/// Process a camera frame for non-ROI regions (no YOLO detector). Capture
+/// is gated on stability, exposure, and blur only and stays blocked until
+/// all three are ideal.
+/// \param sampleBuffer The camera frame buffer to process
+///
+///
+/// returns:
+/// A SnapIQNonRoiResult containing the block/unblock decision and guidance state
+- (ObjCSnapIQNonRoiResult * _Nonnull)processFrameNonRoiWithSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer SWIFT_WARN_UNUSED_RESULT;
 + (BOOL)isRegionSupportedWithBrandName:(NSString * _Nonnull)brandName regionName:(NSString * _Nonnull)regionName SWIFT_WARN_UNUSED_RESULT;
 + (NSDictionary<NSString *, id> * _Nonnull)getConfigInfo SWIFT_WARN_UNUSED_RESULT;
 + (NSArray<NSDictionary<NSString *, id> *> * _Nonnull)getBrandIdentifiers SWIFT_WARN_UNUSED_RESULT;
@@ -1896,11 +2106,13 @@ SWIFT_CLASS_NAMED("SnapIQ")
 
 @class AVCaptureDevice;
 @interface ObjCSnapIQ (SWIFT_EXTENSION(EntrupySDK))
-/// ObjC selector: initWithViewSize:regionType:modelPath:captureDevice:configurationDictionary:completion:
+/// ObjC selector: initWithViewSize:regionType:modelPath:blurModelPath:captureDevice:configurationDictionary:completion:
 /// Keys in <code>configurationDictionary</code> map to <code>SnapIQConfiguration</code> property names (camelCase).
 /// Unrecognised keys are silently ignored; missing keys fall back to <code>SnapIQConfiguration</code> defaults.
-/// Nil validation is handled by the caller (EntrupyCaptureViewController).
-- (nonnull instancetype)initWithViewSize:(CGSize)viewSize regionType:(NSString * _Nonnull)regionType modelPath:(NSString * _Nullable)modelPath captureDevice:(AVCaptureDevice * _Nullable)captureDevice configurationDictionary:(NSDictionary<NSString *, id> * _Nullable)configurationDictionary completion:(void (^ _Nullable)(BOOL, NSError * _Nullable))completion;
+/// Nil validation is handled by the caller (EntrupyCaptureViewController / EntrupyCaptureViewControllerV2).
+/// SnapIQ v4 requires both <code>modelPath</code> and <code>blurModelPath</code>: if either is missing, model
+/// loading fails and <code>isModelReady</code> stays false (there is no bundled fallback).
+- (nonnull instancetype)initWithViewSize:(CGSize)viewSize regionType:(NSString * _Nonnull)regionType modelPath:(NSString * _Nullable)modelPath blurModelPath:(NSString * _Nullable)blurModelPath captureDevice:(AVCaptureDevice * _Nullable)captureDevice configurationDictionary:(NSDictionary<NSString *, id> * _Nullable)configurationDictionary completion:(void (^ _Nullable)(BOOL, NSError * _Nullable))completion;
 @end
 
 /// Delegate protocol for receiving SnapIQ detection results
@@ -1909,9 +2121,25 @@ SWIFT_PROTOCOL_NAMED("SnapIQDelegate")
 - (void)didProcessFrameWithResult:(ObjCSnapIQResult * _Nonnull)result;
 @end
 
+@class ObjCSnapIQResultV3;
+/// Delegate protocol for receiving SnapIQV3 detection results
+SWIFT_PROTOCOL_NAMED("SnapIQDelegateV3")
+@protocol ObjCSnapIQDelegateV3
+- (void)didProcessFrameWithResult:(ObjCSnapIQResultV3 * _Nonnull)result;
+@end
+
 /// Log result containing event name and timestamped logs
 SWIFT_CLASS_NAMED("SnapIQLogResult")
 @interface ObjCSnapIQLogResult : NSObject
+@property (nonatomic, readonly, copy) NSString * _Nonnull eventName;
+@property (nonatomic, readonly, copy) NSDictionary<NSString *, NSString *> * _Nonnull eventLogs;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+/// Log result containing event name and timestamped logs
+SWIFT_CLASS_NAMED("SnapIQLogResultV3")
+@interface ObjCSnapIQLogResultV3 : NSObject
 @property (nonatomic, readonly, copy) NSString * _Nonnull eventName;
 @property (nonatomic, readonly, copy) NSDictionary<NSString *, NSString *> * _Nonnull eventLogs;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -1924,9 +2152,47 @@ SWIFT_PROTOCOL_NAMED("SnapIQLoggingDelegate")
 - (void)ReceiveLog:(ObjCSnapIQLogResult * _Nonnull)logResult;
 @end
 
+/// Delegate protocol for receiving SnapIQV3 logging events
+SWIFT_PROTOCOL_NAMED("SnapIQLoggingDelegateV3")
+@protocol ObjCSnapIQLoggingDelegateV3
+- (void)ReceiveLog:(ObjCSnapIQLogResultV3 * _Nonnull)logResult;
+@end
+
+/// Delegate protocol for receiving SnapIQ non-ROI capture results
+SWIFT_PROTOCOL_NAMED("SnapIQNonRoiDelegate")
+@protocol ObjCSnapIQNonRoiDelegate
+- (void)didProcessNonRoiFrameWithResult:(ObjCSnapIQNonRoiResult * _Nonnull)result;
+@end
+
+/// Capture result for non-ROI regions: a block/unblock decision plus the
+/// guidance state behind it. No detection box, confidence, or auto-capture —
+/// non-ROI regions have no YOLO detector.
+SWIFT_CLASS_NAMED("SnapIQNonRoiResult")
+@interface ObjCSnapIQNonRoiResult : NSObject
+@property (nonatomic, readonly) BOOL shouldCapture;
+@property (nonatomic, readonly, copy) NSString * _Nullable state;
+@property (nonatomic, readonly) NSInteger blurLevel;
+@property (nonatomic, readonly) double inferenceTime;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 /// Combined result containing both detected box and auto-capture analysis
 SWIFT_CLASS_NAMED("SnapIQResult")
 @interface ObjCSnapIQResult : NSObject
+@property (nonatomic, readonly) BOOL shouldCapture;
+@property (nonatomic, readonly, copy) NSString * _Nullable state;
+@property (nonatomic, readonly) float confidence;
+@property (nonatomic, readonly) double fps;
+@property (nonatomic, readonly) double inferenceTime;
+@property (nonatomic, readonly) NSInteger blurLevel;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+/// Combined result containing both detected box and auto-capture analysis
+SWIFT_CLASS_NAMED("SnapIQResultV3")
+@interface ObjCSnapIQResultV3 : NSObject
 @property (nonatomic, readonly) BOOL shouldCapture;
 @property (nonatomic, readonly, copy) NSString * _Nullable state;
 @property (nonatomic, readonly) float confidence;
@@ -1936,6 +2202,42 @@ SWIFT_CLASS_NAMED("SnapIQResult")
 @property (nonatomic, readonly) double zoomLevel;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+SWIFT_CLASS_NAMED("SnapIQV3")
+@interface ObjCSnapIQV3 : NSObject <ObjCExposureAnalyserDelegateV3>
+@property (nonatomic, readonly) BOOL isModelReady;
+/// Delegate to receive detection results
+@property (nonatomic, weak) id <ObjCSnapIQDelegateV3> _Nullable delegate;
+/// Delegate to receive logging events
+@property (nonatomic, weak) id <ObjCSnapIQLoggingDelegateV3> _Nullable loggingDelegate;
+- (void)updateViewSize:(CGSize)newSize;
+/// Resets temporal state (useful when switching to a new sample or restarting capture)
+- (void)resetTemporalState;
+/// Process a camera frame and perform detection
+/// \param sampleBuffer The camera frame buffer to process
+///
+/// \param zoomApplied When false, runs AutoZoomV3 to determine optimal zoom level.
+/// When true, runs the normal auto-capture workflow.
+///
+///
+/// returns:
+/// A SnapIQResultV3 containing detection results, zoom info, and auto-capture analysis
+- (ObjCSnapIQResultV3 * _Nonnull)processFrameWithSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer zoomApplied:(BOOL)zoomApplied SWIFT_WARN_UNUSED_RESULT;
++ (BOOL)isRegionSupportedWithBrandName:(NSString * _Nonnull)brandName regionName:(NSString * _Nonnull)regionName SWIFT_WARN_UNUSED_RESULT;
++ (NSDictionary<NSString *, id> * _Nonnull)getConfigInfo SWIFT_WARN_UNUSED_RESULT;
++ (NSArray<NSDictionary<NSString *, id> *> * _Nonnull)getBrandIdentifiers SWIFT_WARN_UNUSED_RESULT;
+- (void)logLatestFrameResult;
+- (void)exposureAnalyser:(ObjCExposureAnalyserV3 * _Nonnull)analyser didAnalyse:(enum ObjCBrightnessV3)brightness;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@interface UIImageView (SWIFT_EXTENSION(EntrupySDK))
+/// Cancels any in-flight image download attached to this image view and clears
+/// the stored token. Safe to call repeatedly. Intended for <code>prepareForReuse</code> /
+/// <code>viewWillDisappear</code> callsites where the destination view is no longer interested.
+- (void)cancelImageDownload;
 @end
 
 #endif
