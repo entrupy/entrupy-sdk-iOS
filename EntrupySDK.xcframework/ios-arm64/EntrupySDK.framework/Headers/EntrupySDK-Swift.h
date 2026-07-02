@@ -705,6 +705,7 @@ SWIFT_CLASS_NAMED("EntrupyCaptureButton")
 @interface EntrupyCaptureButton : UIButton
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+- (void)layoutSubviews;
 - (void)setButtonBackgroundState:(enum EntrupyButtonBackgroundState)state;
 - (enum EntrupyButtonBackgroundState)currentState SWIFT_WARN_UNUSED_RESULT;
 @end

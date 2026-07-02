@@ -18,9 +18,5 @@
     "certificateTransfer": false,
     "searchFilterV2": true,
     "imageMemoryCacheV2": false,
-    "postHog": false,
-    "captureMenuFastPath": false,
-    "twoPhaseOverlayDownload": false,
-    "instructionToast": false,
-    "captureFlowInstructions": false
+    "postHog": false
 }
