@@ -68,7 +68,7 @@ extension EntrupySDK.EntrupyMarketGradeDetailViewController : UIKit.UITableViewD
   @objc deinit
 }
 public protocol MotionSensorDelegate : AnyObject {
-  func motionSensorDidUpdate(state: EntrupySDK.MotionSensorState)
+  func motionSensorDidUpdate(state: EntrupySDK.MotionSensorState, accelerometer: (x: Swift.Double, y: Swift.Double, z: Swift.Double), gyroscope: (x: Swift.Double, y: Swift.Double, z: Swift.Double))
 }
 public enum MotionSensorState {
   case SENSOR_STABLE
@@ -187,6 +187,7 @@ public enum EntrupyTransferStatus : Swift.Equatable {
   case cancelled
   case declined
   case acknowledged
+  case underReview
   case expired
   case failed
   case unknown
@@ -210,6 +211,7 @@ public struct EntrupyCertTransferInfo : Swift.Codable {
   public let transfer_id: Swift.String?
   public let is_control_visible: Swift.Bool?
   public let recipient_name: Swift.String?
+  public let sender_name: Swift.String?
   public let initiated_at: Swift.String?
   public let expires_at: Swift.String?
   public var isEligible: Swift.Bool {
@@ -225,6 +227,11 @@ public struct EntrupyCertTransferInfo : Swift.Codable {
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
   public var recipientName: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var senderName: Swift.String? {
     get
   }
   #endif
@@ -839,6 +846,7 @@ extension EntrupySDK.EntrupyMarketMatchViewController : UIKit.UITableViewDelegat
   case imageTooBright
   case imageTooDark
   case photoCaptured
+  case blurDetectionActive
   #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
   #endif
@@ -923,7 +931,7 @@ extension EntrupySDK.EntrupyMarketMatchViewController : UIKit.UITableViewDelegat
   @objc public static func getBrandIdentifiers() -> [[Swift.String : Any]]
   @objc public func logLatestFrameResult()
   @objc public func exposureAnalyser(_ analyser: EntrupySDK.ExposureAnalyser, didAnalyse brightness: EntrupySDK.Brightness)
-  public func motionSensorDidUpdate(state: EntrupySDK.MotionSensorState)
+  public func motionSensorDidUpdate(state: EntrupySDK.MotionSensorState, accelerometer: (x: Swift.Double, y: Swift.Double, z: Swift.Double), gyroscope: (x: Swift.Double, y: Swift.Double, z: Swift.Double))
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class EntrupyImageAsset : EntrupySDK.EntrupyAsset {
@@ -1235,6 +1243,22 @@ public struct EntrupyAccountStateResponse : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
+public enum EntrupyAnalyticsEvent : Swift.String {
+  case captureStarted
+  case captureCanceled
+  case captureFailed
+  case captureTimedout
+  case captureSubmitted
+  case resultReceived
+  case freshchatConversationStarted
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
 @_inheritsConvenienceInitializers @objc(EntrupyImageRequestToken) @objcMembers final public class EntrupyImageRequestToken : ObjectiveC.NSObject {
   @objc final public var isCancelled: Swift.Bool {
     @objc get
@@ -1446,6 +1470,9 @@ extension EntrupySDK.EntrupyCaptureFlowMenuDataSource.MenuLayer.Layout : Swift.R
 extension EntrupySDK.EntrupyCaptureFlowItemRow.RowType : Swift.Equatable {}
 extension EntrupySDK.EntrupyCaptureFlowItemRow.RowType : Swift.Hashable {}
 extension EntrupySDK.EntrupyCaptureFlowItemRow.RowType : Swift.RawRepresentable {}
+extension EntrupySDK.EntrupyAnalyticsEvent : Swift.Equatable {}
+extension EntrupySDK.EntrupyAnalyticsEvent : Swift.Hashable {}
+extension EntrupySDK.EntrupyAnalyticsEvent : Swift.RawRepresentable {}
 extension EntrupySDK.AutoZoomGuidanceV3 : Swift.Equatable {}
 extension EntrupySDK.AutoZoomGuidanceV3 : Swift.Hashable {}
 extension EntrupySDK.AutoZoomGuidanceV3 : Swift.RawRepresentable {}

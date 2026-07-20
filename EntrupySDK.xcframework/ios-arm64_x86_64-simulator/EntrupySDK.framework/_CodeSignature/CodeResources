@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		u4dz5dwhVIq/0ywRPW3M/wNKWPI=
+		3MsZ9Kpf3SKrCTGc9Qjqh8a5Jeg=
 		</data>
 		<key>Base.lproj/EntrupyCaptureViewController.nib</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Base.lproj/EntrupyCaptureViewControllerV2.nib</key>
 		<data>
-		18BYGOuJTllRsgBMCz1hKm25WuQ=
+		NcaUFR23bFjABN3AChWZZEY51t0=
 		</data>
 		<key>Base.lproj/EntrupyTOCropViewControllerLocalizable.strings</key>
 		<data>
@@ -282,7 +282,7 @@
 		</data>
 		<key>Headers/EntrupySDK-Swift.h</key>
 		<data>
-		Rr8z8jlJfag7qiuAuNeA7R56BY0=
+		LMwZVJkulELPeC1KOeZ7E+Lguu4=
 		</data>
 		<key>Headers/EntrupySDK.h</key>
 		<data>
@@ -318,7 +318,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		EUWUs7BneBBn2nIoCh5LAmxva+4=
+		WdVtOz68r0uOmBwuB1d7z53jw1E=
 		</data>
 		<key>Kanit-Black.ttf</key>
 		<data>
@@ -426,43 +426,43 @@
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		ruerCt5y6W2YOPNQEcCQdBFrzGM=
+		fyzIDNF4fnZiu/r5ixBYFlvDv+k=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		9Uxh1mcNgRJe9vrf4c+Q3Fd/lEA=
+		Z4a8g4q63logt9GK1j07q+d0vT0=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		QxHFwlxILPaoPhekGfuRqZ38B44=
+		OlBfvD8pVoNinmu5th7Hc+VRGsE=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		9Uxh1mcNgRJe9vrf4c+Q3Fd/lEA=
+		Z4a8g4q63logt9GK1j07q+d0vT0=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		NJWWvBN6lK0WTThRCIRpx6KJanA=
+		pe1jQdd3Km8PPjAhU1mzLMFNlIQ=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		ruerCt5y6W2YOPNQEcCQdBFrzGM=
+		fyzIDNF4fnZiu/r5ixBYFlvDv+k=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		RTWyRDlWCkbKsC+gQismWo8hiQo=
+		Iin9AJAjRccmptWlVqG5BrMjA+M=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		8S+1ZhYGnR9hVAPBXAOQpQZUGzo=
+		SIP4UVHrOqYg86q8N5GMbQvEL5I=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		RTWyRDlWCkbKsC+gQismWo8hiQo=
+		Iin9AJAjRccmptWlVqG5BrMjA+M=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		OrgIHpIvWEMYK+/fF07w1O8+Duw=
+		uWboxYwCuTNnrpwEwjN3GWxdod4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1486,7 +1486,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			yqMPKUo+GPnv3ZgxZri2asBcAJA=
+			KQB0s139iuVq+1IFl/K6og0+AcU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1585,7 +1585,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			903gwQXkd1BMM1mkOa9WGv+P/CY=
+			B7tUG7Jy4WEQeBGRipjfIC+ZHjc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1637,7 +1637,7 @@
 		</data>
 		<key>mlmodel_nike_air_jordan_1_high_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_jordan1_1.0.0_model.mlmodelc/coremldata.bin</key>
 		<data>
-		rfXM+PYanvmIrlioG8pYS2ZaEjg=
+		O+kK46Bp5l6rplobeXdZ8LjGc1w=
 		</data>
 		<key>mlmodel_nike_air_jordan_1_high_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_jordan1_1.0.0_model.mlmodelc/metadata.json</key>
 		<data>
@@ -2838,7 +2838,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			D+vxGli+Uq6OySolr7oXXy8e3Ws=
+			xr+m2ZXyjzM6LbN5Y/NcTDiR7uE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2856,7 +2856,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			wLJLanXQQtoDISeP1lCdsoIjPL0=
+			ml10XYgVzOzcfFGUH82kIwYuSX0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2868,7 +2868,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MgnHb+wHqzQtJkAr+1HgPYHuidokgWV1jh0XHndfWGU=
+			PhFmgr02HTWD83mPB0KZbemlZFWKs/fVY8IxlmT7eyU=
 			</data>
 		</dict>
 		<key>Base.lproj/EntrupyCaptureViewController.nib</key>
@@ -2882,7 +2882,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Vmsov/dyVZES+d+D1tHOglWmDuKJ1KBwyiuzPrkW96k=
+			cgGdHLfBq0wyVy6E7GmAbq81+fraU9H9TQXb9JRdzwY=
 			</data>
 		</dict>
 		<key>Base.lproj/EntrupyTOCropViewControllerLocalizable.strings</key>
@@ -3351,7 +3351,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BA/P4s9x5cg2lShMKbz9fjAWjSiOsHob2FefWxnp1iU=
+			uY13pYwWzzVbIn0MG+3yQ0JXmO7ThPBeImJeq+r9aMA=
 			</data>
 		</dict>
 		<key>Headers/EntrupySDK.h</key>
@@ -3596,70 +3596,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			t7zwNA9tpkw7d7iJ8WSsEgboykuU4mBnwn/QYV3k0Yc=
+			qqJ0fjzMoIpE6LlUP05RV/lp2jklioKLeeWDojzZ2Pk=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JJWNXThijiLFlRRxyjENx0+ETyir2b0Twa20iK5M57E=
+			8yUSfUXpnFYlE7xmBCqFjdCSFg4kYr4+wRoPp4QbbRw=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			d8F67/VnNswMP+UwgQfyKjO37IV0nVNJNORnnUB7DOc=
+			t65pMdxGx8kRnAn4UJeu+osbVb/K5ce83cBVeg1LJH4=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JJWNXThijiLFlRRxyjENx0+ETyir2b0Twa20iK5M57E=
+			8yUSfUXpnFYlE7xmBCqFjdCSFg4kYr4+wRoPp4QbbRw=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4FinKHPS79Wa0ky6tkGMlBCPQMkNAzVIES6jSrZONmY=
+			NpnKFk0JFByIE81ccD4hOl62rZFT8rxmZ00ZucCXZZY=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			t7zwNA9tpkw7d7iJ8WSsEgboykuU4mBnwn/QYV3k0Yc=
+			qqJ0fjzMoIpE6LlUP05RV/lp2jklioKLeeWDojzZ2Pk=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kkRk4dafGF9jzd7WAyfAV1EwBUgpQbJFMowZPy1sOZM=
+			Oh5BBLIYLF6b50YTL9xXyP9n1hNIo9ZuXhveBMbec+Y=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sf1tsUkk2uztguUf9zJVvzIYeYBR1XlkDOE2FhK8S8g=
+			lm8YCQ9YCYjHfLb63fte+CTIXPrvIINiCAWrm+axJRE=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kkRk4dafGF9jzd7WAyfAV1EwBUgpQbJFMowZPy1sOZM=
+			Oh5BBLIYLF6b50YTL9xXyP9n1hNIo9ZuXhveBMbec+Y=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			EAGv5MJ8ZiRhga40+/7H96FK9Ntc1EMelnsNUHzoMKw=
+			XM32/0fVu72MOespx6BCnk3x3NfYkrA9Pm9sGswfm3U=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -5407,7 +5407,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/g3DwuplezdPP+ymArOUEHc8YawLtUlifC7T8dUaRcY=
+			7+EXU6EnbJbIdI/8DbjA+kYPGNliIDzviG2FsnMksw4=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -5506,7 +5506,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nKcJEmXA28yBzoVZHpTpgkBKpSdluFzbFX83atMjI5c=
+			WiVDXJdaxd5Z1xIBf8ZPIAazMTuV8Uel4x6cttiOVtI=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -5587,7 +5587,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+utynyRIdDOmWzZaAV0U97qz1f0pxjC/dk5rY+RDv+Q=
+			Ms90tuGva8fvO6hbRG66l6jD901H27ViJc/Q5QlwCcg=
 			</data>
 		</dict>
 		<key>mlmodel_nike_air_jordan_1_high_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_jordan1_1.0.0_model.mlmodelc/metadata.json</key>
@@ -7611,7 +7611,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			UEg+MFn01LYWnBdOiSPJDec+47dl9vXuQZyaut2PhuA=
+			YKJldVBRsLnJnDoAeF+mS1OhpOxtFFBdDHTCGevNECM=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -7629,7 +7629,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cEZxCesRzdN6Huu5TLVKk00JceSopvq30N8K9EYjOdc=
+			PKwO21CCh0Vj/LnOB+60kUp1VCuhtDzMjKMX4zeQldo=
 			</data>
 			<key>optional</key>
 			<true/>

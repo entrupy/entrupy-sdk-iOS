@@ -678,6 +678,10 @@ typedef SWIFT_ENUM_NAMED(NSInteger, EntrupyButtonBackgroundState, "EntrupyButton
   EntrupyButtonBackgroundStateImageTooBright = 11,
   EntrupyButtonBackgroundStateImageTooDark = 12,
   EntrupyButtonBackgroundStatePhotoCaptured = 13,
+/// Steady “blur detection active” baseline for the non-ROI status pill. Shown between blurry
+/// frames so the pill never disappears (it elevates to <code>.blurDetectionOn</code> when blur is detected),
+/// which stops the label from blinking on/off frame-to-frame (EMBL-2223).
+  EntrupyButtonBackgroundStateBlurDetectionActive = 14,
 };
 
 @class UIImage;
@@ -1804,6 +1808,10 @@ typedef SWIFT_ENUM_NAMED(NSInteger, EntrupyButtonBackgroundState, "EntrupyButton
   EntrupyButtonBackgroundStateImageTooBright = 11,
   EntrupyButtonBackgroundStateImageTooDark = 12,
   EntrupyButtonBackgroundStatePhotoCaptured = 13,
+/// Steady “blur detection active” baseline for the non-ROI status pill. Shown between blurry
+/// frames so the pill never disappears (it elevates to <code>.blurDetectionOn</code> when blur is detected),
+/// which stops the label from blinking on/off frame-to-frame (EMBL-2223).
+  EntrupyButtonBackgroundStateBlurDetectionActive = 14,
 };
 
 @class UIImage;
