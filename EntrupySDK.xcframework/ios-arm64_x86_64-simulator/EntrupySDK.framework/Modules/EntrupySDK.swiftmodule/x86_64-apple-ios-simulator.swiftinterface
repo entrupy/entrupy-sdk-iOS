@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
-// swift-module-flags: -target x86_64-apple-ios15.8-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name EntrupySDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
+// swift-compiler-version: Apple Swift version 6.3.3 effective-5.10 (swiftlang-6.3.3.1.3 clang-2100.1.1.101)
+// swift-module-flags: -target x86_64-apple-ios15.8-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name EntrupySDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.3
 import AVFoundation
 import Accelerate
 import AudioToolbox
@@ -46,12 +46,8 @@ extension UIKit.UIImageView {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
   @_Concurrency.MainActor @preconcurrency public func configure(with viewModel: EntrupySDK.EntrupyMarketGradeDetailViewModel)
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  #endif
   @objc deinit
 }
 extension EntrupySDK.EntrupyMarketGradeDetailViewController : UIKit.UITableViewDataSource {
@@ -90,9 +86,7 @@ public class MotionSensors {
   case normal = 0
   case underexposed = 1
   case overexposed = 2
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -104,9 +98,7 @@ public class MotionSensors {
 @objc(ObjCExposureAnalyser) public class ExposureAnalyser : ObjectiveC.NSObject {
   @objc weak public var delegate: (any EntrupySDK.ExposureAnalyserDelegate)?
   public init(configuration: EntrupySDK.SnapIQConfiguration)
-  #if compiler(>=5.3) && $NonescapableTypes
   public func analyse(sampleBuffer: CoreMedia.CMSampleBuffer, roi: CoreFoundation.CGRect?, viewSize: CoreFoundation.CGSize, device: AVFoundation.AVCaptureDevice?)
-  #endif
   @objc deinit
 }
 @objc(ObjcEntrupyEventName) public enum EntrupyEventName : Swift.Int {
@@ -172,9 +164,7 @@ public class MotionSensors {
   case snapIQAutoCaptureTriggered
   case logging
   public func toString() -> Swift.String
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -190,6 +180,7 @@ public enum EntrupyTransferStatus : Swift.Equatable {
   case underReview
   case expired
   case failed
+  case unsuccessful
   case unknown
   public init(rawValue: Swift.String)
   public var rawValue: Swift.String {
@@ -213,38 +204,44 @@ public struct EntrupyCertTransferInfo : Swift.Codable {
   public let recipient_name: Swift.String?
   public let sender_name: Swift.String?
   public let initiated_at: Swift.String?
+  public let claimed_at: Swift.String?
+  public let fp_started_at: Swift.String?
+  public let finalized_at: Swift.String?
   public let expires_at: Swift.String?
+  public let sender_message_max_length: Swift.Int?
   public var isEligible: Swift.Bool {
     get
   }
   public var isControlVisible: Swift.Bool {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public var transferId: Swift.String? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public var recipientName: Swift.String? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public var senderName: Swift.String? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public var initiatedAt: Swift.String? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
+  public var claimedAt: Swift.String? {
+    get
+  }
+  public var fpStartedAt: Swift.String? {
+    get
+  }
+  public var finalizedAt: Swift.String? {
+    get
+  }
   public var expiresAt: Swift.String? {
     get
   }
-  #endif
+  public var senderMessageMaxLength: Swift.Int? {
+    get
+  }
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -367,9 +364,7 @@ public struct EntrupyCaptureResultStatusFlag : Swift.Codable {
   public var isFlagged: Swift.Bool {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(id: EntrupySDK.EntrupyFlagId, is_flaggable: Swift.Bool, flag_info: EntrupySDK.EntrupyCaptureResultStatusFlagInfo? = nil)
-  #endif
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
 }
@@ -469,8 +464,8 @@ public struct EntrupyCaptureResultEvents : Swift.Codable {
   public let type: Swift.String
   public var message: Swift.String?
   public let timestamp: EntrupySDK.EntrupyCaptureResultTimestamp
-  public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
 }
 public struct EntrupyCaptureResultUser : Swift.Codable {
   public let username: Swift.String
@@ -483,15 +478,9 @@ public struct EntrupyCaptureResultPrice : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 @objc public protocol EntrupyTheme {
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc var backgroundColor: UIKit.UIColor? { get }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc var foregroundColor: UIKit.UIColor? { get }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc var borderColor: UIKit.UIColor? { get }
-  #endif
 }
 public struct EntrupyMarketEdge : Swift.Codable {
   public let identifier: EntrupySDK.EntrupyMarketEdgeIdentifier
@@ -603,9 +592,7 @@ public struct EntrupyMarketEdgeError : Swift.Codable {
 @objc(EntrupyZoomButtonBackgroundState) public enum EntrupyZoomButtonBackgroundState : Swift.Int {
   case zoomIn
   case zoomOut
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -613,19 +600,15 @@ public struct EntrupyMarketEdgeError : Swift.Codable {
 }
 @_inheritsConvenienceInitializers @objc(EntrupyZoomButton) @_Concurrency.MainActor @preconcurrency public class EntrupyZoomButton : UIKit.UIButton {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  #endif
   @objc(setButtonBackgroundState:) @_Concurrency.MainActor @preconcurrency public func setButtonBackgroundState(_ state: EntrupySDK.EntrupyZoomButtonBackgroundState)
   @objc(currentBackgroundState) @_Concurrency.MainActor @preconcurrency public func currentBackgroundState() -> EntrupySDK.EntrupyZoomButtonBackgroundState
   @objc deinit
 }
 extension Swift.Array {
-  #if compiler(>=5.3) && $NonescapableTypes
   public subscript(safe index: Swift.Int) -> Element? {
     get
   }
-  #endif
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(EntrupyApp) public class EntrupyApp : ObjectiveC.NSObject {
   @objc public static let shared: EntrupySDK.EntrupyApp
@@ -686,17 +669,11 @@ extension EntrupySDK.EntrupyApp {
   @objc dynamic public func startCapture(forItem item: [Swift.AnyHashable : Any], viewController: UIKit.UIViewController)
   public func startCapture(forItem item: [Swift.String : Any], viewController: UIKit.UIViewController)
   @objc dynamic public func searchSubmissions(at pageCursor: [Any], filters: [Any], startDate: Foundation.TimeInterval, endDate: Foundation.TimeInterval, paginationLimit: Swift.Int)
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc dynamic public func searchAuthenticationItems(query: EntrupySDK.EntrupySearchQuery, completion: @escaping (Foundation.NSDictionary?, Foundation.NSError?) -> Swift.Void)
-  #endif
   public func fetchTransferInbox() async throws -> EntrupySDK.EntrupySearchResult
   public func fetchSessionDetails(entrupyId: Swift.String) async throws -> EntrupySDK.EntrupyCaptureResult
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc dynamic public func getFlagDetailsForResult(withEntrupyID entrupyID: Swift.String, completionHandler: @escaping ([Swift.AnyHashable : Any]?, (any Swift.Error)?) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc dynamic public func setFlag(_ flag: Swift.Bool, forResultWithEntrupyID entrupyID: Swift.String, flagReasonId: Swift.String, message: Swift.String?)
-  #endif
   @objc(displayDetailViewForItemWithEntrupyID:withConfiguration:) dynamic public func displayDetailViewForItem(withEntrupyID entrupyID: Swift.String, withConfiguration configuration: EntrupySDK.EntrupyDetailViewConfiguration)
   @objc(displayMarketEdgeViewForItemWithEntrupyID:withConfiguration:) dynamic public func displayMarketEdgeViewForItem(withEntrupyID entrupyID: Swift.String, withConfiguration configuration: EntrupySDK.EntrupyMarketEdgeViewConfiguration)
   @objc dynamic public func displayFlagViewForItem(withEntrupyID entrupyID: Swift.String)
@@ -725,18 +702,12 @@ public struct EntrupySearchItemsResultMetadata : Swift.Codable {
 }
 public let KEntrupyLocalizationsUpdatedNotification: Swift.String
 @_inheritsConvenienceInitializers @objc(ObjcEntrupyCacheDownloadUtils) @objcMembers final public class EntrupyCacheDownloadUtils : ObjectiveC.NSObject {
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc @discardableResult
   public static func downloadToCacheImage(WithURL url: Swift.String, withIdentifier identifier: Swift.String, withQuality jpegQuality: Swift.Float, completionBlock: @escaping (_ succeeded: Swift.Bool, _ image: UIKit.UIImage?, _ error: (any Swift.Error)?) -> Swift.Void) -> EntrupySDK.EntrupyImageRequestToken
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @discardableResult
   @nonobjc public static func downloadImage(url: Swift.String, identifier: Swift.String, jpegQuality: Swift.Float = 0.7, completion: @escaping (_ succeeded: Swift.Bool, _ image: UIKit.UIImage?, _ error: (any Swift.Error)?) -> Swift.Void) -> EntrupySDK.EntrupyImageRequestToken
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @discardableResult
   @nonobjc public static func downloadImage(url: Swift.String, identifier: Swift.String, jpegQuality: Swift.Float = 0.7, placeholder: UIKit.UIImage? = nil, completion: @escaping (UIKit.UIImage?) -> Swift.Void) -> EntrupySDK.EntrupyImageRequestToken
-  #endif
   @objc public static func getShorterIdentifier(for identifier: Swift.String) -> Swift.String
   @objc override dynamic public init()
   @objc deinit
@@ -799,20 +770,14 @@ public enum EntrupySearchFilter {
   }
 }
 extension EntrupySDK.SnapIQ {
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc(initWithViewSize:regionType:modelPath:blurModelPath:captureDevice:configurationDictionary:completion:) convenience dynamic public init(viewSize: CoreFoundation.CGSize, regionType: Swift.String, modelPath: Swift.String?, blurModelPath: Swift.String?, captureDevice: AVFoundation.AVCaptureDevice?, configurationDictionary: [Swift.String : Any]?, completion: ((Swift.Bool, (any Swift.Error)?) -> Swift.Void)?)
-  #endif
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class EntrupyMarketMatchViewController : UIKit.UIViewController {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
   @_Concurrency.MainActor @preconcurrency public func configure(with listings: [EntrupySDK.EntrupyMarketMatchValue], functionId: Swift.String)
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  #endif
   @objc deinit
 }
 extension EntrupySDK.EntrupyMarketMatchViewController : UIKit.UITableViewDataSource {
@@ -847,9 +812,7 @@ extension EntrupySDK.EntrupyMarketMatchViewController : UIKit.UITableViewDelegat
   case imageTooDark
   case photoCaptured
   case blurDetectionActive
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -857,9 +820,7 @@ extension EntrupySDK.EntrupyMarketMatchViewController : UIKit.UITableViewDelegat
 }
 @_inheritsConvenienceInitializers @objc(EntrupyCaptureButton) @_Concurrency.MainActor @preconcurrency public class EntrupyCaptureButton : UIKit.UIButton {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  #endif
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
   @objc(setButtonBackgroundState:) @_Concurrency.MainActor @preconcurrency public func setButtonBackgroundState(_ state: EntrupySDK.EntrupyButtonBackgroundState)
   @objc(currentState) @_Concurrency.MainActor @preconcurrency public func currentState() -> EntrupySDK.EntrupyButtonBackgroundState
@@ -891,9 +852,7 @@ extension EntrupySDK.EntrupyMarketMatchViewController : UIKit.UITableViewDelegat
   @objc final public let fps: Swift.Double
   @objc final public let inferenceTime: Swift.Double
   @objc final public let blurLevel: Swift.Int
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(shouldCapture: Swift.Bool, state: Swift.String?, smoothedBox: CoreFoundation.CGRect?, confidence: Swift.Float, fps: Swift.Double, inferenceTime: Swift.Double, blurLevel: Swift.Int = -1)
-  #endif
   @objc deinit
 }
 @objc(ObjCSnapIQNonRoiResult) public class SnapIQNonRoiResult : ObjectiveC.NSObject {
@@ -901,9 +860,7 @@ extension EntrupySDK.EntrupyMarketMatchViewController : UIKit.UITableViewDelegat
   @objc final public let state: Swift.String?
   @objc final public let blurLevel: Swift.Int
   @objc final public let inferenceTime: Swift.Double
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(shouldCapture: Swift.Bool, state: Swift.String?, blurLevel: Swift.Int = -1, inferenceTime: Swift.Double = 0.0)
-  #endif
   @objc deinit
 }
 @objc(ObjCSnapIQLogResult) public class SnapIQLogResult : ObjectiveC.NSObject {
@@ -919,9 +876,7 @@ extension EntrupySDK.EntrupyMarketMatchViewController : UIKit.UITableViewDelegat
   @objc weak public var delegate: (any EntrupySDK.SnapIQDelegate)?
   @objc weak public var nonRoiDelegate: (any EntrupySDK.SnapIQNonRoiDelegate)?
   @objc weak public var loggingDelegate: (any EntrupySDK.SnapIQLoggingDelegate)?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(viewSize: CoreFoundation.CGSize, regionType: Swift.String = "camera", modelPath: Swift.String? = nil, blurModelPath: Swift.String? = nil, captureDevice: AVFoundation.AVCaptureDevice? = nil, configuration: EntrupySDK.SnapIQConfiguration, completion: ((Swift.Bool, (any Swift.Error)?) -> Swift.Void)? = nil)
-  #endif
   @objc public func updateViewSize(_ newSize: CoreFoundation.CGSize)
   @objc public func resetTemporalState()
   @objc(processFrameWithSampleBuffer:) public func processFrame(sampleBuffer: CoreMedia.CMSampleBuffer) -> EntrupySDK.SnapIQResult
@@ -992,9 +947,7 @@ public class EntrupyCaptureFlowMenuDataSource {
       case oneColumn
       case oneColumnGrouped
       case mixColumnGrouped
-      #if compiler(>=5.3) && $NonescapableTypes
       public init?(rawValue: Swift.String)
-      #endif
       public typealias RawValue = Swift.String
       public var rawValue: Swift.String {
         get
@@ -1017,9 +970,7 @@ final public class EntrupyCaptureFlowItemRow {
   public enum RowType : Swift.String {
     case menu
     case authentication
-    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
-    #endif
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
@@ -1039,12 +990,11 @@ final public class EntrupyCaptureFlowItemRow {
   final public let captureFlowUUID: Swift.String?
   final public let metadata: [Swift.String : Any]
   final public let sourceMetadataKey: Swift.String?
+  final public let sourceMetadataValue: Swift.String?
   final public var isBrandRow: Swift.Bool {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init(type: EntrupySDK.EntrupyCaptureFlowItemRow.RowType, displayName: Swift.String, localizedCaption: Swift.String? = nil, priceDisplayString: Swift.String? = nil, menuTextColor: Swift.String = "default", imageURL: Swift.String? = nil, captureFlowUUID: Swift.String? = nil, metadata: [Swift.String : Any] = [:], sourceMetadataKey: Swift.String? = nil, children: [EntrupySDK.EntrupyCaptureFlowItemRow] = [])
-  #endif
+  public init(type: EntrupySDK.EntrupyCaptureFlowItemRow.RowType, displayName: Swift.String, localizedCaption: Swift.String? = nil, priceDisplayString: Swift.String? = nil, menuTextColor: Swift.String = "default", imageURL: Swift.String? = nil, captureFlowUUID: Swift.String? = nil, metadata: [Swift.String : Any] = [:], sourceMetadataKey: Swift.String? = nil, sourceMetadataValue: Swift.String? = nil, children: [EntrupySDK.EntrupyCaptureFlowItemRow] = [])
   final public var type: EntrupySDK.EntrupyCaptureFlowItemRow.RowType {
     get
   }
@@ -1077,9 +1027,7 @@ final public class EntrupyCaptureFlowMenuViewModel {
   final public var usesGroupedLayout: Swift.Bool {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func rowItem(at indexPath: Foundation.IndexPath) -> EntrupySDK.EntrupyCaptureFlowItemRow?
-  #endif
   final public func numberOfItems(in section: Swift.Int) -> Swift.Int
   final public func menuItemAccessibilityIdentifier(for title: Swift.String) -> Swift.String
   final public func applyFilter(_ text: Swift.String) -> Swift.Bool
@@ -1087,9 +1035,7 @@ final public class EntrupyCaptureFlowMenuViewModel {
   @objc deinit
 }
 extension EntrupySDK.EntrupyCaptureFlowMenuViewModel {
-  #if compiler(>=5.3) && $NonescapableTypes
-  public static func buildDataSource(from model: EntrupySDK.EntrupyCaptureFlowMenuConfigModel) -> EntrupySDK.EntrupyCaptureFlowMenuDataSource?
-  #endif
+  public static func buildDataSource(from model: EntrupySDK.EntrupyCaptureFlowMenuConfigModel, captureWorkflowFilter: Swift.String? = nil) -> EntrupySDK.EntrupyCaptureFlowMenuDataSource?
   public static func buildFallbackRows(from model: EntrupySDK.EntrupyCaptureFlowMenuConfigModel) -> [EntrupySDK.EntrupyCaptureFlowItemRow]
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class EntrupyCaptureFlowMenuSectionHeaderView : UIKit.UICollectionReusableView {
@@ -1101,41 +1047,27 @@ extension EntrupySDK.EntrupyCaptureFlowMenuViewModel {
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class EntrupyOneColumnCell : UIKit.UICollectionViewCell {
   @_Concurrency.MainActor @preconcurrency public static let identifier: Swift.String
   @_Concurrency.MainActor @preconcurrency @objc override final public func prepareForReuse()
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency final public func configure(title: Swift.String, subtitle: Swift.String? = nil, creditsText: Swift.String? = nil, imageURL: Swift.String?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public static func height(for width: CoreFoundation.CGFloat, title: Swift.String, subtitle: Swift.String?, creditsText: Swift.String?, minimumHeight: CoreFoundation.CGFloat = 68) -> CoreFoundation.CGFloat
-  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class EntrupyOneColumnView : UIKit.UIView {
   @_Concurrency.MainActor @preconcurrency @objc override final public func layoutSubviews()
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency final public func configure(title: Swift.String, subtitle: Swift.String? = nil, creditsText: Swift.String? = nil, image: UIKit.UIImage? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency final public func updateImage(_ image: UIKit.UIImage?)
-  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class EntrupyTwoColumnCell : UIKit.UICollectionViewCell {
   @_Concurrency.MainActor @preconcurrency public static let identifier: Swift.String
   @_Concurrency.MainActor @preconcurrency @objc override final public func prepareForReuse()
   @_Concurrency.MainActor @preconcurrency final public func configure(with row: EntrupySDK.EntrupyCaptureFlowItemRow)
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency final public func configure(label: Swift.String, imageURL: Swift.String?)
-  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class EntrupyTwoColumnView : UIKit.UIView {
   @_Concurrency.MainActor @preconcurrency @objc override final public func layoutSubviews()
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency final public func configure(title: Swift.String, image: UIKit.UIImage? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency final public func updateImage(_ image: UIKit.UIImage?, title: Swift.String)
-  #endif
   @objc deinit
 }
 public struct EntrupyCaptureFlowMenuConfigModel : Swift.Codable {
@@ -1149,6 +1081,7 @@ public struct EntrupyCaptureFlowMenuConfigModel : Swift.Codable {
   public let main_display: EntrupySDK.EntrupyCaptureMenuConfigMainDisplayModel
   public let menu_settings: EntrupySDK.EntrupyCaptureFlowMenuSettingsResponse
   public let user_uuid: Swift.String
+  public let org_uuid: Swift.String?
   public let uuid: Swift.String
   public let uuid_match: Swift.String?
   public func encode(to encoder: any Swift.Encoder) throws
@@ -1251,9 +1184,12 @@ public enum EntrupyAnalyticsEvent : Swift.String {
   case captureSubmitted
   case resultReceived
   case freshchatConversationStarted
-  #if compiler(>=5.3) && $NonescapableTypes
+  case marketEdgeOpened
+  case marketEdgeClosed
+  case marketEdgeSectionViewed
+  case marketEdgeRefreshAttempted
+  case marketEdgeLoadResult
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -1268,18 +1204,12 @@ public enum EntrupyAnalyticsEvent : Swift.String {
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc(ObjcEntrupyCacheDownloadUtilsV2) @objcMembers final public class EntrupyCacheDownloadUtilsV2 : ObjectiveC.NSObject {
-  #if compiler(>=5.3) && $NonescapableTypes
   @discardableResult
   @nonobjc public static func downloadImage(url: Swift.String, identifier: Swift.String, jpegQuality: Swift.Float = 0.7, completion: @escaping (_ succeeded: Swift.Bool, _ image: UIKit.UIImage?, _ error: (any Swift.Error)?) -> Swift.Void) -> EntrupySDK.EntrupyImageRequestToken
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @discardableResult
   @nonobjc public static func downloadImage(url: Swift.String, identifier: Swift.String, jpegQuality: Swift.Float = 0.7, placeholder: UIKit.UIImage? = nil, completion: @escaping (UIKit.UIImage?) -> Swift.Void) -> EntrupySDK.EntrupyImageRequestToken
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc @discardableResult
   public static func downloadToCacheImage(WithURL url: Swift.String, withIdentifier identifier: Swift.String, withQuality jpegQuality: Swift.Float, completionBlock: @escaping (_ succeeded: Swift.Bool, _ image: UIKit.UIImage?, _ error: (any Swift.Error)?) -> Swift.Void) -> EntrupySDK.EntrupyImageRequestToken
-  #endif
   @objc public static func getShorterIdentifier(for identifier: Swift.String) -> Swift.String
   @objc override dynamic public init()
   @objc deinit
@@ -1290,9 +1220,7 @@ public enum AutoZoomGuidanceV3 : Swift.String, Swift.Sendable {
   case moveCloser
   case moveFarther
   case peakDetected
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -1359,9 +1287,7 @@ public struct SnapIQConfigurationV3 {
   case normal = 0
   case underexposed = 1
   case overexposed = 2
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -1373,15 +1299,11 @@ public struct SnapIQConfigurationV3 {
 @objc(ObjCExposureAnalyserV3) public class ExposureAnalyserV3 : ObjectiveC.NSObject {
   @objc weak public var delegate: (any EntrupySDK.ExposureAnalyserDelegateV3)?
   public init(configuration: EntrupySDK.SnapIQConfigurationV3)
-  #if compiler(>=5.3) && $NonescapableTypes
   public func analyse(sampleBuffer: CoreMedia.CMSampleBuffer, roi: CoreFoundation.CGRect?, viewSize: CoreFoundation.CGSize, device: AVFoundation.AVCaptureDevice?)
-  #endif
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class LaplacianVarianceV3 {
-  #if compiler(>=5.3) && $NonescapableTypes
   public static func computeLaplacianVariance(sampleBuffer: CoreMedia.CMSampleBuffer, roi: CoreFoundation.CGRect, viewSize: CoreFoundation.CGSize) -> Swift.Double?
-  #endif
   @objc deinit
 }
 public protocol MotionSensorDelegateV3 : AnyObject {
@@ -1418,9 +1340,7 @@ public class MotionSensorsV3 {
   @objc final public let inferenceTime: Swift.Double
   @objc final public let zoomSet: Swift.Bool
   @objc final public let zoomLevel: Swift.Double
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(shouldCapture: Swift.Bool, state: Swift.String?, smoothedBox: CoreFoundation.CGRect?, confidence: Swift.Float, fps: Swift.Double, inferenceTime: Swift.Double, zoomSet: Swift.Bool = false, zoomLevel: Swift.Double? = nil)
-  #endif
   @objc deinit
 }
 @objc(ObjCSnapIQLogResultV3) public class SnapIQLogResultV3 : ObjectiveC.NSObject {
@@ -1435,9 +1355,7 @@ public class MotionSensorsV3 {
   }
   @objc weak public var delegate: (any EntrupySDK.SnapIQDelegateV3)?
   @objc weak public var loggingDelegate: (any EntrupySDK.SnapIQLoggingDelegateV3)?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(viewSize: CoreFoundation.CGSize, regionType: Swift.String = "camera", modelPath: Swift.String? = nil, captureDevice: AVFoundation.AVCaptureDevice? = nil, configuration: EntrupySDK.SnapIQConfigurationV3 = SnapIQConfigurationV3(), completion: ((Swift.Bool, (any Swift.Error)?) -> Swift.Void)? = nil)
-  #endif
   @objc public func updateViewSize(_ newSize: CoreFoundation.CGSize)
   @objc public func resetTemporalState()
   @objc(processFrameWithSampleBuffer:zoomApplied:) public func processFrame(sampleBuffer: CoreMedia.CMSampleBuffer, zoomApplied: Swift.Bool = false) -> EntrupySDK.SnapIQResultV3

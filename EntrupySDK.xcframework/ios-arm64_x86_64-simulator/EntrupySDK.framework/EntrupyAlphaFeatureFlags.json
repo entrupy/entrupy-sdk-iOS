@@ -15,6 +15,7 @@
     "captureServiceV2": true,
     "configVersion": "backend_choice",
     "captureViewControllerV2": true,
+    "identifierCapture": true,
     "certificateTransfer": false,
     "searchFilterV2": true,
     "imageMemoryCacheV2": true,

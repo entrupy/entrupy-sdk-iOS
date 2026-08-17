@@ -15,8 +15,9 @@
     "tikTokShopQRWorkflow" : true,
     "configVersion": "backend_choice",
     "captureViewControllerV2": true,
+    "identifierCapture": false,
     "certificateTransfer": false,
     "searchFilterV2": true,
     "imageMemoryCacheV2": false,
-    "postHog": false
+    "postHog": true
 }
