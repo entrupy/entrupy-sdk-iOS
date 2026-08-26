@@ -12,10 +12,14 @@
     "configurationServiceV2": true,
     "tikTokShopQRWorkflow" : true,
     "resultDetailServiceV2": true,
+    "flagServiceV2": true,
     "captureServiceV2": true,
     "configVersion": "backend_choice",
     "captureViewControllerV2": true,
+    "identifierCapture": true,
     "certificateTransfer": false,
     "searchFilterV2": true,
-    "postHog": true
+    "imageMemoryCacheV2": true,
+    "postHog": true,
+    "instructionToastPosition": "bottom"
 }

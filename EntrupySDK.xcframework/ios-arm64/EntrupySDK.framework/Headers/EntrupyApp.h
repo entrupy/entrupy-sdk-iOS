@@ -276,7 +276,11 @@ NS_ASSUME_NONNULL_BEGIN
  Retrieves the flag status, eligibility, and supported flag reasons for an Entrupy result.
 
  Call this method before displaying any flag or clear-flag UI.
- The response payload can be decoded into `EntrupyFlagDetails`.
+ `flag_status` is the server's flag dictionary, passed through verbatim (extra keys,
+ null/absent `id`, and missing or non-boolean `is_flaggable` are preserved).
+ `supported_flag_reasons` is typed and redacted to `{id, label}`.
+ The payload can be decoded into `EntrupyFlagDetails` when the standard required
+ flag fields (`id`, `is_flaggable`) are present.
 
  - Important:
    Always check both the current flag status and `is_flaggable` before enabling flag actions.
@@ -287,9 +291,10 @@ NS_ASSUME_NONNULL_BEGIN
 
  ## Response Model Mapping
 
- The SDK returns a dictionary payload that can be decoded into `EntrupyFlagDetails`, which contains:
+ The SDK returns a dictionary payload with:
 
- - `flag_status`: Decodes into `EntrupyCaptureResultStatusFlag`
+ - `flag_status`: The server's flag dictionary, passed through verbatim.
+   Decodes into `EntrupyCaptureResultStatusFlag` when the standard fields exist.
  - `supported_flag_reasons`: An array of `EntrupyCaptureResultStatusFlagInfo`
 
  ### EntrupyCaptureResultStatusFlag

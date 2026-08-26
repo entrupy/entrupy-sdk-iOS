@@ -1,0 +1,102 @@
+[
+  {
+    "metadataOutputVersion" : "3.0",
+    "shortDescription" : "Blur-level classifier (mobilenet_v3_small, 5 classes). Input: 224x224 RGB image. Output: one-hot probability vector at the predicted blur level (0 = sharp, 4 = most blurred), matching the training-time CORN prediction rule.",
+    "outputSchema" : [
+      {
+        "isOptional" : "0",
+        "formattedType" : "String",
+        "type" : "String",
+        "name" : "classLabel",
+        "shortDescription" : ""
+      },
+      {
+        "isOptional" : "0",
+        "keyType" : "String",
+        "formattedType" : "Dictionary (String → Double)",
+        "type" : "Dictionary",
+        "name" : "classLabel_probs",
+        "shortDescription" : ""
+      }
+    ],
+    "storagePrecision" : "Float16",
+    "modelParameters" : [
+
+    ],
+    "author" : "snapiq",
+    "specificationVersion" : 6,
+    "license" : "Proprietary",
+    "mlProgramOperationTypeHistogram" : {
+      "Scatter" : 3,
+      "Concat" : 1,
+      "Greater" : 1,
+      "Linear" : 2,
+      "ThresholdedRelu" : 19,
+      "Sub" : 2,
+      "SliceByIndex" : 2,
+      "SigmoidHard" : 28,
+      "Relu" : 14,
+      "Mul" : 30,
+      "Cast" : 3,
+      "Sigmoid" : 1,
+      "Add" : 6,
+      "ReduceMean" : 10,
+      "Reshape" : 1,
+      "Gather" : 3,
+      "Conv" : 52
+    },
+    "computePrecision" : "Mixed (Float16, Float32, Float64, Int32)",
+    "stateSchema" : [
+
+    ],
+    "isUpdatable" : "0",
+    "availability" : {
+      "macOS" : "12.0",
+      "tvOS" : "15.0",
+      "visionOS" : "1.0",
+      "watchOS" : "8.0",
+      "iOS" : "15.0",
+      "macCatalyst" : "15.0"
+    },
+    "modelType" : {
+      "name" : "MLModelType_mlProgram"
+    },
+    "inputSchema" : [
+      {
+        "height" : "224",
+        "colorspace" : "RGB",
+        "isOptional" : "0",
+        "width" : "224",
+        "isColor" : "1",
+        "formattedType" : "Image (Color 224 × 224)",
+        "hasSizeFlexibility" : "0",
+        "type" : "Image",
+        "shortDescription" : "224x224 RGB image. Pixel values are expected in 0..255; ImageNet normalization is applied inside the model.",
+        "name" : "image"
+      }
+    ],
+    "classLabels" : [
+      "level_0",
+      "level_1",
+      "level_2",
+      "level_3",
+      "level_4"
+    ],
+    "generatedClassName" : "blur_classifier",
+    "userDefinedMetadata" : {
+      "val_acc" : "0.8624",
+      "num_classes" : "5",
+      "model_name" : "mobilenet_v3_small",
+      "com.github.apple.coremltools.version" : "9.0",
+      "input_height" : "224",
+      "val_mae" : "0.1444",
+      "com.github.apple.coremltools.conversion_date" : "2026-06-17",
+      "epoch" : "15",
+      "input_width" : "224",
+      "com.github.apple.coremltools.source_dialect" : "TorchScript",
+      "com.github.apple.coremltools.source" : "torch==2.9.1",
+      "val_within_1" : "0.9950"
+    },
+    "method" : "predict"
+  }
+]
