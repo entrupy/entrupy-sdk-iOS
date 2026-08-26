@@ -562,9 +562,12 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) EntrupyApp *
 /// \param completion Handler called with result dictionary or error
 ///
 - (void)searchAuthenticationItemsWithQuery:(EntrupySearchQuery * _Nonnull)query completion:(void (^ _Nonnull)(NSDictionary * _Nullable, NSError * _Nullable))completion;
-/// Legacy: Get flag details for result (Objective-C compatible)
-/// This method calls the legacy Objective-C implementation which uses completion handlers.
-/// For Swift callers, the dictionary is automatically bridged from NSDictionary to [AnyHashable: Any]?.
+/// Get flag details for result (Objective-C compatible)
+/// When flagging is migrated and <code>flagService</code> is set, uses the Swift service.
+/// Otherwise calls the legacy Objective-C implementation.
+/// <code>flag_status</code> is the server’s flag dictionary, passed through verbatim.
+/// <code>supported_flag_reasons</code> is typed/redacted. The payload decodes into
+/// <code>EntrupyFlagDetails</code> when the standard required flag fields are present.
 /// \param entrupyID Entrupy ID of the result
 ///
 /// \param completionHandler Completion handler with details dictionary or error

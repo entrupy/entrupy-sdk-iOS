@@ -16,7 +16,6 @@ FOUNDATION_EXPORT const unsigned char EntrupySDKVersionString[];
 
 #import <EntrupySDK/EntrupyApp.h>
 #import <EntrupySDK/EntrupyAppProtocols.h>
-#import <EntrupySDK/EntrupyBarcodeCaptureViewController.h>
 #import <EntrupySDK/EntrupyHistoryAPI.h>
 #import <EntrupySDK/EntrupyHistoryDelegate.h>
 #import <EntrupySDK/EntrupyLoadingView.h>

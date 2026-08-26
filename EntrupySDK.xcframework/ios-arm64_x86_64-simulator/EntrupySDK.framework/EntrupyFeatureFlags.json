@@ -9,6 +9,7 @@
     "authorizationServiceV2": true,
     "configurationServiceV2": true,
     "resultDetailServiceV2": true,
+    "flagServiceV2": true,
     "captureServiceV2": true,
     "macroFingerprint": true,
     "marketEdgeNewStructure" : false,
@@ -19,5 +20,6 @@
     "certificateTransfer": false,
     "searchFilterV2": true,
     "imageMemoryCacheV2": false,
-    "postHog": true
+    "postHog": true,
+    "instructionToastPosition": "bottom"
 }

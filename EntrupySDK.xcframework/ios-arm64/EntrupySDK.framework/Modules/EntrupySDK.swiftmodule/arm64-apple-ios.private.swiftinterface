@@ -349,7 +349,7 @@ public enum EntrupyFlagId : Swift.Equatable, Swift.CustomStringConvertible, Swif
   public func encode(to encoder: any Swift.Encoder) throws
   public static func == (a: EntrupySDK.EntrupyFlagId, b: EntrupySDK.EntrupyFlagId) -> Swift.Bool
 }
-public struct EntrupyCaptureResultStatusFlagInfo : Swift.Codable {
+public struct EntrupyCaptureResultStatusFlagInfo : Swift.Codable, Swift.Sendable {
   public let id: Swift.String?
   public let label: Swift.String?
   public let message: Swift.String?
