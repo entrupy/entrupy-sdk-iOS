@@ -209,6 +209,7 @@ public struct EntrupyCertTransferInfo : Swift.Codable {
   public let finalized_at: Swift.String?
   public let expires_at: Swift.String?
   public let sender_message_max_length: Swift.Int?
+  public let transferred_onward: Swift.Bool?
   public var isEligible: Swift.Bool {
     get
   }
@@ -240,6 +241,9 @@ public struct EntrupyCertTransferInfo : Swift.Codable {
     get
   }
   public var senderMessageMaxLength: Swift.Int? {
+    get
+  }
+  public var transferredOnward: Swift.Bool {
     get
   }
   public func encode(to encoder: any Swift.Encoder) throws
@@ -431,8 +435,8 @@ public struct EntrupyCaptureResultTextField : Swift.Codable {
   public let is_identifier: Swift.Bool
   public var content: Swift.String?
   public let display_name: Swift.String
-  public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
 }
 public struct EntrupyCaptureResultTimestamp : Swift.Codable {
   public let display: Swift.String
@@ -671,6 +675,7 @@ extension EntrupySDK.EntrupyApp {
   @objc dynamic public func searchSubmissions(at pageCursor: [Any], filters: [Any], startDate: Foundation.TimeInterval, endDate: Foundation.TimeInterval, paginationLimit: Swift.Int)
   @objc dynamic public func searchAuthenticationItems(query: EntrupySDK.EntrupySearchQuery, completion: @escaping (Foundation.NSDictionary?, Foundation.NSError?) -> Swift.Void)
   public func fetchTransferInbox() async throws -> EntrupySDK.EntrupySearchResult
+  public func fetchTransferInbox(filters: [[Swift.String : Any]], startDate: Foundation.TimeInterval, endDate: Foundation.TimeInterval, cursor: [Swift.String]?, limit: Swift.Int?) async throws -> EntrupySDK.EntrupySearchResult
   public func fetchSessionDetails(entrupyId: Swift.String) async throws -> EntrupySDK.EntrupyCaptureResult
   @objc dynamic public func getFlagDetailsForResult(withEntrupyID entrupyID: Swift.String, completionHandler: @escaping ([Swift.AnyHashable : Any]?, (any Swift.Error)?) -> Swift.Void)
   @objc dynamic public func setFlag(_ flag: Swift.Bool, forResultWithEntrupyID entrupyID: Swift.String, flagReasonId: Swift.String, message: Swift.String?)
