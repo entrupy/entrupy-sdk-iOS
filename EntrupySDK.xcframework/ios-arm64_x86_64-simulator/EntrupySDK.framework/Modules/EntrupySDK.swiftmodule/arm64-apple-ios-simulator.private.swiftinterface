@@ -435,8 +435,8 @@ public struct EntrupyCaptureResultTextField : Swift.Codable {
   public let is_identifier: Swift.Bool
   public var content: Swift.String?
   public let display_name: Swift.String
-  public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
 }
 public struct EntrupyCaptureResultTimestamp : Swift.Codable {
   public let display: Swift.String

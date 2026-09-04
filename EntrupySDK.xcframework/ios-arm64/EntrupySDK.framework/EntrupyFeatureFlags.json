@@ -16,6 +16,7 @@
     "tikTokShopQRWorkflow" : true,
     "configVersion": "backend_choice",
     "captureViewControllerV2": true,
+    "marketEdgeServiceV2": false,
     "identifierCapture": false,
     "certificateTransfer": false,
     "searchFilterV2": true,
