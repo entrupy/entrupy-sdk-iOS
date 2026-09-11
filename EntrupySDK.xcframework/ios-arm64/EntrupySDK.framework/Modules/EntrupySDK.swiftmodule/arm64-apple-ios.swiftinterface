@@ -299,7 +299,7 @@ public struct EntrupyCaptureResultEventTimes : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct EntrupyCaptureResultMoreDetails : Swift.Codable {
-  public let certificate: EntrupySDK.EntrupyCaptureResultMoreDetailsCertificate
+  public let certificate: EntrupySDK.EntrupyCaptureResultMoreDetailsCertificate?
   public let catalog_insights: EntrupySDK.EntrupyCaptureResultMoreDetailsCatalogInsights?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
@@ -1194,6 +1194,15 @@ public enum EntrupyAnalyticsEvent : Swift.String {
   case marketEdgeSectionViewed
   case marketEdgeRefreshAttempted
   case marketEdgeLoadResult
+  case loginOpened
+  case loginStepResult
+  case loginCompleted
+  case loginExited
+  case eventRegistrationOpened
+  case eventRegistrationStepResult
+  case eventRegistrationCompleted
+  case eventRegistrationExited
+  case authenticationApiResult
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
