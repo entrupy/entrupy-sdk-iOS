@@ -69940,7 +69940,7 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Authorization\/Infrastructure\/EntrupyAuthorizationService.swift",
       "kind": "BooleanLiteral",
-      "offset": 12441,
+      "offset": 11464,
       "length": 5,
       "value": "false"
     },
@@ -70633,14 +70633,14 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/MarketEdge\/ViewModel\/EntrupyMarketEdgeViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 16767,
+      "offset": 17439,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/MarketEdge\/ViewModel\/EntrupyMarketEdgeViewModel.swift",
       "kind": "Dictionary",
-      "offset": 31186,
+      "offset": 31858,
       "length": 3,
       "value": "[]"
     },
