@@ -69618,21 +69618,21 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/SDKInterface\/PublicAPI\/EntrupyApp.swift",
       "kind": "BooleanLiteral",
-      "offset": 5573,
+      "offset": 6710,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/SDKInterface\/PublicAPI\/EntrupyApp.swift",
       "kind": "IntegerLiteral",
-      "offset": 129339,
+      "offset": 130476,
       "length": 10,
       "value": "0xE07C01"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/SDKInterface\/PublicAPI\/EntrupyApp.swift",
       "kind": "IntegerLiteral",
-      "offset": 129407,
+      "offset": 130544,
       "length": 10,
       "value": "0xE07C02"
     },
