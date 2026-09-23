@@ -209,6 +209,8 @@ public struct EntrupyCertTransferInfo : Swift.Codable {
   public let expires_at: Swift.String?
   public let sender_message_max_length: Swift.Int?
   public let transferred_onward: Swift.Bool?
+  public let unavailable_title: Swift.String?
+  public let unavailable_message: Swift.String?
   public var isEligible: Swift.Bool {
     get
   }
@@ -243,6 +245,12 @@ public struct EntrupyCertTransferInfo : Swift.Codable {
     get
   }
   public var transferredOnward: Swift.Bool {
+    get
+  }
+  public var unavailableTitle: Swift.String? {
+    get
+  }
+  public var unavailableMessage: Swift.String? {
     get
   }
   public func encode(to encoder: any Swift.Encoder) throws
@@ -670,7 +678,9 @@ extension EntrupySDK.EntrupyApp {
   @objc dynamic public func isAuthorizationValid() -> Swift.Bool
   @objc dynamic public func fetchConfigurationType(_ configType: EntrupySDK.EntrupyConfigType)
   @objc dynamic public func startCapture(forItem item: [Swift.AnyHashable : Any], viewController: UIKit.UIViewController)
+  @objc(startCaptureForItem:viewController:entryPoint:) dynamic public func startCapture(forItem item: [Swift.AnyHashable : Any], viewController: UIKit.UIViewController, entryPoint: EntrupySDK.EntrupyAnalyticsEntryPoint)
   public func startCapture(forItem item: [Swift.String : Any], viewController: UIKit.UIViewController)
+  public func startCapture(forItem item: [Swift.String : Any], viewController: UIKit.UIViewController, entryPoint: EntrupySDK.EntrupyAnalyticsEntryPoint)
   @objc dynamic public func searchSubmissions(at pageCursor: [Any], filters: [Any], startDate: Foundation.TimeInterval, endDate: Foundation.TimeInterval, paginationLimit: Swift.Int)
   @objc dynamic public func searchAuthenticationItems(query: EntrupySDK.EntrupySearchQuery, completion: @escaping (Foundation.NSDictionary?, Foundation.NSError?) -> Swift.Void)
   public func fetchTransferInbox() async throws -> EntrupySDK.EntrupySearchResult
@@ -679,9 +689,11 @@ extension EntrupySDK.EntrupyApp {
   @objc dynamic public func getFlagDetailsForResult(withEntrupyID entrupyID: Swift.String, completionHandler: @escaping ([Swift.AnyHashable : Any]?, (any Swift.Error)?) -> Swift.Void)
   @objc dynamic public func setFlag(_ flag: Swift.Bool, forResultWithEntrupyID entrupyID: Swift.String, flagReasonId: Swift.String, message: Swift.String?)
   @objc(displayDetailViewForItemWithEntrupyID:withConfiguration:) dynamic public func displayDetailViewForItem(withEntrupyID entrupyID: Swift.String, withConfiguration configuration: EntrupySDK.EntrupyDetailViewConfiguration)
+  @objc(displayDetailViewForItemWithEntrupyID:withConfiguration:entryPoint:) dynamic public func displayDetailViewForItem(withEntrupyID entrupyID: Swift.String, withConfiguration configuration: EntrupySDK.EntrupyDetailViewConfiguration, entryPoint: EntrupySDK.EntrupyAnalyticsEntryPoint)
   @objc(displayMarketEdgeViewForItemWithEntrupyID:withConfiguration:) dynamic public func displayMarketEdgeViewForItem(withEntrupyID entrupyID: Swift.String, withConfiguration configuration: EntrupySDK.EntrupyMarketEdgeViewConfiguration)
   @objc dynamic public func displayFlagViewForItem(withEntrupyID entrupyID: Swift.String)
   @objc dynamic public func startRetakeCaptureForItem(withEntrupyID entrupyID: Swift.String)
+  public func startRetakeCaptureForItem(withEntrupyID entrupyID: Swift.String, entryPoint: EntrupySDK.EntrupyAnalyticsEntryPoint)
   @objc dynamic public func searchRetakes()
   @objc dynamic public func fetchMarketEdgeForItem(withEntrupyID entrupyID: Swift.String)
   @objc dynamic public func cleanup()
@@ -1202,6 +1214,26 @@ public enum EntrupyAnalyticsEvent : Swift.String {
   case eventRegistrationCompleted
   case eventRegistrationExited
   case authenticationApiResult
+  case transferInitiateOpened
+  case transferRecipientsLoaded
+  case transferInitiateSubmitted
+  case transferInitiateResult
+  case transferInitiateAbandoned
+  case transferCancelResult
+  case transferClaimOpened
+  case transferClaimResult
+  case transferDeclineResult
+  case transferVerificationStarted
+  case transferVerificationOutcome
+  case transferClaimClosed
+  case tasksTabOpened
+  case tasksTabSwitched
+  case tasksListLoaded
+  case tasksListRefreshed
+  case tasksItemSelected
+  case tasksTransfersFilterApplied
+  case tasksTransfersSearchSubmitted
+  case tasksTabClosed
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -1388,6 +1420,30 @@ public class MotionSensorsV3 {
   public func motionSensorDidUpdate(state: EntrupySDK.MotionSensorStateV3)
   @objc deinit
 }
+@objc public enum EntrupyAnalyticsEntryPoint : Swift.Int {
+  case captureResult
+  case historyDetail
+  case retakesTab
+  case transfersList
+  case inbox
+  case push
+  case deeplink
+  case home
+  case captureMenu
+  case orderId
+  case claimSuccess
+  case sdkApi
+  case transferVerification
+  case unknown
+  public var analyticsValue: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 extension EntrupySDK.MotionSensorState : Swift.Equatable {}
 extension EntrupySDK.MotionSensorState : Swift.Hashable {}
 extension EntrupySDK.Brightness : Swift.Equatable {}
@@ -1420,3 +1476,6 @@ extension EntrupySDK.BrightnessV3 : Swift.Hashable {}
 extension EntrupySDK.BrightnessV3 : Swift.RawRepresentable {}
 extension EntrupySDK.MotionSensorStateV3 : Swift.Equatable {}
 extension EntrupySDK.MotionSensorStateV3 : Swift.Hashable {}
+extension EntrupySDK.EntrupyAnalyticsEntryPoint : Swift.Equatable {}
+extension EntrupySDK.EntrupyAnalyticsEntryPoint : Swift.Hashable {}
+extension EntrupySDK.EntrupyAnalyticsEntryPoint : Swift.RawRepresentable {}
