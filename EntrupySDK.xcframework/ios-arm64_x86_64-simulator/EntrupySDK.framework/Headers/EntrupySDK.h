@@ -23,4 +23,4 @@ FOUNDATION_EXPORT const unsigned char EntrupySDKVersionString[];
 #import <EntrupySDK/EntrupyTOCropViewController.h>
 #import <EntrupySDK/EntrupyOCRUtils.h>
 #import <EntrupySDK/EntrupyHelpers.h>
-
+#import <EntrupySDK/EntrupySessionNotifications.h>

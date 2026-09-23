@@ -43,7 +43,6 @@ extension UIKit.UIImageView {
   @objc @_Concurrency.MainActor @preconcurrency dynamic public func cancelImageDownload()
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class EntrupyMarketGradeDetailViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
   @_Concurrency.MainActor @preconcurrency public func configure(with viewModel: EntrupySDK.EntrupyMarketGradeDetailViewModel)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
@@ -778,7 +777,6 @@ extension EntrupySDK.SnapIQ {
   @objc(initWithViewSize:regionType:modelPath:blurModelPath:captureDevice:configurationDictionary:completion:) convenience dynamic public init(viewSize: CoreFoundation.CGSize, regionType: Swift.String, modelPath: Swift.String?, blurModelPath: Swift.String?, captureDevice: AVFoundation.AVCaptureDevice?, configurationDictionary: [Swift.String : Any]?, completion: ((Swift.Bool, (any Swift.Error)?) -> Swift.Void)?)
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class EntrupyMarketMatchViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
   @_Concurrency.MainActor @preconcurrency public func configure(with listings: [EntrupySDK.EntrupyMarketMatchValue], functionId: Swift.String)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
@@ -1189,6 +1187,7 @@ public enum EntrupyAnalyticsEvent : Swift.String {
   case captureSubmitted
   case resultReceived
   case freshchatConversationStarted
+  case sessionEndedShown
   case marketEdgeOpened
   case marketEdgeClosed
   case marketEdgeSectionViewed
@@ -1337,6 +1336,14 @@ public class MotionSensorsV3 {
   public init(configuration: EntrupySDK.SnapIQConfigurationV3)
   public func startMonitoring()
   public func stopMonitoring()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(EntrupySessionEndedViewController) @_Concurrency.MainActor @preconcurrency final public class EntrupySessionEndedViewController : UIKit.UIViewController {
+  @objc(setOnSignInAgainHandler:) @_Concurrency.MainActor @preconcurrency final public func setOnSignInAgainHandler(_ handler: @escaping @convention(block) () -> Swift.Void)
+  @objc(setSessionEndedEcode:) @_Concurrency.MainActor @preconcurrency final public func setSessionEndedEcode(_ ecode: Swift.String?)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
 @objc(ObjCSnapIQDelegateV3) public protocol SnapIQDelegateV3 {

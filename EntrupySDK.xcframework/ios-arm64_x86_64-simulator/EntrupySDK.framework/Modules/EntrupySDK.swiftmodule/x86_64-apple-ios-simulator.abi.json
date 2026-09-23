@@ -711,39 +711,6 @@
         "children": [
           {
             "kind": "Function",
-            "name": "viewWillAppear",
-            "printedName": "viewWillAppear(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@EntrupySDK@objc(cs)EntrupyMarketGradeDetailViewController(im)viewWillAppear:",
-            "mangledName": "$s10EntrupySDK0A31MarketGradeDetailViewControllerC14viewWillAppearyySbF",
-            "moduleName": "EntrupySDK",
-            "overriding": true,
-            "objc_name": "viewWillAppear:",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "Preconcurrency",
-              "Custom",
-              "Override",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
             "name": "viewDidLoad",
             "printedName": "viewDidLoad()",
             "children": [
@@ -6605,6 +6572,16 @@
         "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "EntrupySDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "EntrupySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -31499,39 +31476,6 @@
         "children": [
           {
             "kind": "Function",
-            "name": "viewWillAppear",
-            "printedName": "viewWillAppear(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@EntrupySDK@objc(cs)EntrupyMarketMatchViewController(im)viewWillAppear:",
-            "mangledName": "$s10EntrupySDK0A25MarketMatchViewControllerC14viewWillAppearyySbF",
-            "moduleName": "EntrupySDK",
-            "overriding": true,
-            "objc_name": "viewWillAppear:",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "Preconcurrency",
-              "Custom",
-              "Override",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
             "name": "viewDidLoad",
             "printedName": "viewDidLoad()",
             "children": [
@@ -50016,6 +49960,46 @@
           },
           {
             "kind": "Var",
+            "name": "sessionEndedShown",
+            "printedName": "sessionEndedShown",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEvent.Type) -> EntrupySDK.EntrupyAnalyticsEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEvent",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                    "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEvent",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                        "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10EntrupySDK0A14AnalyticsEventO17sessionEndedShownyA2CmF",
+            "mangledName": "$s10EntrupySDK0A14AnalyticsEventO17sessionEndedShownyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "marketEdgeOpened",
             "printedName": "marketEdgeOpened",
             "children": [
@@ -57065,6 +57049,335 @@
       },
       {
         "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "EntrupySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "EntrupySessionEndedViewController",
+        "printedName": "EntrupySessionEndedViewController",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "setOnSignInAgainHandler",
+            "printedName": "setOnSignInAgainHandler(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@EntrupySDK@objc(cs)EntrupySessionEndedViewController(im)setOnSignInAgainHandler:",
+            "mangledName": "$s10EntrupySDK0A26SessionEndedViewControllerC23setOnSignInAgainHandleryyyyXLF",
+            "moduleName": "EntrupySDK",
+            "objc_name": "setOnSignInAgainHandler:",
+            "declAttributes": [
+              "Final",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setSessionEndedEcode",
+            "printedName": "setSessionEndedEcode(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@EntrupySDK@objc(cs)EntrupySessionEndedViewController(im)setSessionEndedEcode:",
+            "mangledName": "$s10EntrupySDK0A26SessionEndedViewControllerC03setcD5EcodeyySSSgF",
+            "moduleName": "EntrupySDK",
+            "objc_name": "setSessionEndedEcode:",
+            "declAttributes": [
+              "Final",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "viewDidLoad",
+            "printedName": "viewDidLoad()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@EntrupySDK@objc(cs)EntrupySessionEndedViewController(im)viewDidLoad",
+            "mangledName": "$s10EntrupySDK0A26SessionEndedViewControllerC11viewDidLoadyyF",
+            "moduleName": "EntrupySDK",
+            "overriding": true,
+            "objc_name": "viewDidLoad",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(nibName:bundle:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "EntrupySessionEndedViewController",
+                "printedName": "EntrupySDK.EntrupySessionEndedViewController",
+                "usr": "c:@M@EntrupySDK@objc(cs)EntrupySessionEndedViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Bundle?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bundle",
+                    "printedName": "Foundation.Bundle",
+                    "usr": "c:objc(cs)NSBundle"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@EntrupySDK@objc(cs)EntrupySessionEndedViewController(im)initWithNibName:bundle:",
+            "mangledName": "$s10EntrupySDK0A26SessionEndedViewControllerC7nibName6bundleACSSSg_So8NSBundleCSgtcfc",
+            "moduleName": "EntrupySDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithNibName:bundle:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "EntrupySDK.EntrupySessionEndedViewController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupySessionEndedViewController",
+                    "printedName": "EntrupySDK.EntrupySessionEndedViewController",
+                    "usr": "c:@M@EntrupySDK@objc(cs)EntrupySessionEndedViewController"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@EntrupySDK@objc(cs)EntrupySessionEndedViewController(im)initWithCoder:",
+            "mangledName": "$s10EntrupySDK0A26SessionEndedViewControllerC5coderACSgSo7NSCoderC_tcfc",
+            "moduleName": "EntrupySDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithCoder:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Required"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@EntrupySDK@objc(cs)EntrupySessionEndedViewController",
+        "mangledName": "$s10EntrupySDK0A26SessionEndedViewControllerC",
+        "moduleName": "EntrupySDK",
+        "objc_name": "EntrupySessionEndedViewController",
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom",
+          "Final",
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "superclassUsr": "c:objc(cs)UIViewController",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "UIKit.UIViewController",
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -59263,6 +59576,26 @@
         "printedName": "CoreGraphics",
         "declKind": "Import",
         "moduleName": "EntrupySDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "EntrupySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "EntrupySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -64422,13 +64755,6 @@
       "value": "\"v\""
     },
     {
-      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/MarketEdge\/Controller\/EntrupyMarketGradeDetailViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 409,
-      "length": 40,
-      "value": "\"EntrupyMarketGradeReportViewController\""
-    },
-    {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Lottie-iOS\/Public\/iOS\/Compatibility\/EntrupyCompatibleAnimationView.swift",
       "kind": "IntegerLiteral",
       "offset": 1457,
@@ -67600,13 +67926,6 @@
       "value": "\"entrupy_region_preferences_close_button\""
     },
     {
-      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/RegionPreferences\/EntrupyRegionPreferencesViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 1263,
-      "length": 44,
-      "value": "\"Entrupy Region Preferences View Controller\""
-    },
-    {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Lottie-iOS\/Private\/Model\/ShapeItems\/EntrupyGroup.swift",
       "kind": "StringLiteral",
       "offset": 1263,
@@ -68557,6 +68876,13 @@
       "offset": 1058,
       "length": 4,
       "value": "true"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Configuration\/Capabilities\/EntrupyFlaggingCapabilities.swift",
+      "kind": "StringLiteral",
+      "offset": 232,
+      "length": 10,
+      "value": "\"flagging\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Lottie-iOS\/Private\/Model\/ShapeItems\/EntrupyMerge.swift",
@@ -69618,21 +69944,21 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/SDKInterface\/PublicAPI\/EntrupyApp.swift",
       "kind": "BooleanLiteral",
-      "offset": 6710,
+      "offset": 7221,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/SDKInterface\/PublicAPI\/EntrupyApp.swift",
       "kind": "IntegerLiteral",
-      "offset": 130476,
+      "offset": 133176,
       "length": 10,
       "value": "0xE07C01"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/SDKInterface\/PublicAPI\/EntrupyApp.swift",
       "kind": "IntegerLiteral",
-      "offset": 130544,
+      "offset": 133244,
       "length": 10,
       "value": "0xE07C02"
     },
@@ -69961,42 +70287,42 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/MarketEdge\/Controller\/EntrupyMarketEdgeViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 13860,
+      "offset": 13317,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/MarketEdge\/Controller\/EntrupyMarketEdgeViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 13889,
+      "offset": 13346,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/MarketEdge\/Controller\/EntrupyMarketEdgeViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 13918,
+      "offset": 13375,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/MarketEdge\/Controller\/EntrupyMarketEdgeViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 13947,
+      "offset": 13404,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/MarketEdge\/Controller\/EntrupyMarketEdgeViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 13980,
+      "offset": 13437,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/MarketEdge\/Controller\/EntrupyMarketEdgeViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 14008,
+      "offset": 13465,
       "length": 1,
       "value": "5"
     },
@@ -70640,7 +70966,7 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/MarketEdge\/ViewModel\/EntrupyMarketEdgeViewModel.swift",
       "kind": "Dictionary",
-      "offset": 31858,
+      "offset": 31842,
       "length": 3,
       "value": "[]"
     },
@@ -72082,35 +72408,35 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Network\/Infrastructure\/EntrupyNetworkAnalytics.swift",
       "kind": "IntegerLiteral",
-      "offset": 828,
+      "offset": 826,
       "length": 2,
       "value": "50"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Network\/Infrastructure\/EntrupyNetworkAnalytics.swift",
       "kind": "IntegerLiteral",
-      "offset": 833,
+      "offset": 831,
       "length": 4,
       "value": "1024"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Network\/Infrastructure\/EntrupyNetworkAnalytics.swift",
       "kind": "StringLiteral",
-      "offset": 964,
+      "offset": 962,
       "length": 12,
       "value": "\"[REDACTED]\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Network\/Infrastructure\/EntrupyNetworkAnalytics.swift",
       "kind": "Array",
-      "offset": 1360,
+      "offset": 1358,
       "length": 68,
       "value": "[\"authorization\", \"password\", \"token\"]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Network\/Infrastructure\/EntrupyNetworkAnalytics.swift",
       "kind": "StringLiteral",
-      "offset": 1979,
+      "offset": 1977,
       "length": 30,
       "value": "\"com.entrupy.networkAnalytics\""
     },
@@ -72411,42 +72737,42 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Flag\/EntrupyFlagItemViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1583,
+      "offset": 1830,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Flag\/EntrupyFlagItemViewController.swift",
       "kind": "Array",
-      "offset": 25043,
+      "offset": 25395,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Flag\/EntrupyFlagItemViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 25080,
+      "offset": 25432,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Flag\/EntrupyFlagItemViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 25167,
+      "offset": 25519,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Flag\/EntrupyFlagItemViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 25253,
+      "offset": 25605,
       "length": 3,
       "value": "260"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Flag\/EntrupyFlagItemViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 25467,
+      "offset": 25819,
       "length": 1,
       "value": "1"
     },
@@ -72705,7 +73031,7 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/CaptureResult\/EntrupyCaptureResultViewModel.swift",
       "kind": "Array",
-      "offset": 25582,
+      "offset": 25929,
       "length": 2,
       "value": "[]"
     },
@@ -72740,21 +73066,21 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/CaptureResult\/EntrupyCaptureResultViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 29709,
+      "offset": 30465,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/CaptureResult\/EntrupyCaptureResultViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 29724,
+      "offset": 30480,
       "length": 13,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/CaptureResult\/EntrupyCaptureResultViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 29751,
+      "offset": 30507,
       "length": 14,
       "value": "2"
     },
@@ -73902,7 +74228,7 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/MarketEdge\/Controller\/EntrupyMarketMatchViewController.swift",
       "kind": "StringLiteral",
-      "offset": 403,
+      "offset": 424,
       "length": 34,
       "value": "\"EntrupyMarketMatchViewController\""
     },
@@ -87314,35 +87640,35 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/FeatureFlag\/EntrupyFeatureFlags.swift",
       "kind": "IntegerLiteral",
-      "offset": 15387,
+      "offset": 15526,
       "length": 3,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/FeatureFlag\/EntrupyFeatureFlags.swift",
       "kind": "Array",
-      "offset": 15432,
+      "offset": 15571,
       "length": 17,
       "value": "[\"bottom\", \"top\"]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/FeatureFlag\/EntrupyFeatureFlags.swift",
       "kind": "IntegerLiteral",
-      "offset": 16440,
+      "offset": 16579,
       "length": 13,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/FeatureFlag\/EntrupyFeatureFlags.swift",
       "kind": "IntegerLiteral",
-      "offset": 16467,
+      "offset": 16606,
       "length": 6,
       "value": "2"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/FeatureFlag\/EntrupyFeatureFlags.swift",
       "kind": "Array",
-      "offset": 16515,
+      "offset": 16654,
       "length": 40,
       "value": "[\"v1_only\", \"backend_choice\", \"v2_only\"]"
     },
@@ -88567,98 +88893,105 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2560,
+      "offset": 2579,
+      "length": 21,
+      "value": "\"session_ended_shown\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 2826,
       "length": 19,
       "value": "\"marketedge_opened\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2889,
+      "offset": 3155,
       "length": 19,
       "value": "\"marketedge_closed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 3124,
+      "offset": 3390,
       "length": 27,
       "value": "\"marketedge_section_viewed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 3321,
+      "offset": 3587,
       "length": 30,
       "value": "\"marketedge_refresh_attempted\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 3644,
+      "offset": 3910,
       "length": 24,
       "value": "\"marketedge_load_result\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 3887,
+      "offset": 4153,
       "length": 14,
       "value": "\"login_opened\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 4190,
+      "offset": 4456,
       "length": 19,
       "value": "\"login_step_result\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 4482,
+      "offset": 4748,
       "length": 17,
       "value": "\"login_completed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 4727,
+      "offset": 4993,
       "length": 14,
       "value": "\"login_exited\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 5027,
+      "offset": 5293,
       "length": 27,
       "value": "\"event_registration_opened\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 5401,
+      "offset": 5667,
       "length": 32,
       "value": "\"event_registration_step_result\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 5691,
+      "offset": 5957,
       "length": 30,
       "value": "\"event_registration_completed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 5987,
+      "offset": 6253,
       "length": 27,
       "value": "\"event_registration_exited\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 6324,
+      "offset": 6590,
       "length": 27,
       "value": "\"authentication_api_result\""
     },
