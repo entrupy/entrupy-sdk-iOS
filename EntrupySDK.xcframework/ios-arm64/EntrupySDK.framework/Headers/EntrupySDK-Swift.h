@@ -387,54 +387,6 @@ typedef SWIFT_ENUM_NAMED(NSInteger, ObjCBrightnessV3, "BrightnessV3", open) {
   ObjCBrightnessV3Overexposed = 2,
 };
 
-/// Where the user came from when a flow was opened.
-/// Sent as the <code>entry_point</code> property on capture, transfer, and claim events so a
-/// funnel can be split by its source. The same flow is reachable from several
-/// places — a retake capture starts from the Retakes tab, a push deep link, or the
-/// public <code>startRetakeCaptureForItem</code> API — and without this they are
-/// indistinguishable in PostHog.
-/// Backed by <code>Int</code> rather than <code>String</code> so the enum is usable from Objective-C
-/// call sites; <code>analyticsValue</code> carries the snake_case string PostHog receives.
-/// Android uses the same value set (EMBL-2350).
-typedef SWIFT_ENUM(NSInteger, EntrupyAnalyticsEntryPoint, open) {
-/// The result screen shown immediately after a capture completes.
-  EntrupyAnalyticsEntryPointCaptureResult = 0,
-/// An item opened from the History tab.
-  EntrupyAnalyticsEntryPointHistoryDetail = 1,
-/// An item opened from the Retakes sub-tab of the Tasks tab.
-  EntrupyAnalyticsEntryPointRetakesTab = 2,
-/// A transfer opened from the Transfers sub-tab of the Tasks tab.
-  EntrupyAnalyticsEntryPointTransfersList = 3,
-/// Opened from a cell in the in-app Notifications tab.
-/// Distinct from <code>transfersList</code>: the Notifications inbox and the Transfers sub-tab are
-/// different screens. An earlier revision conflated the two and dropped this value.
-  EntrupyAnalyticsEntryPointInbox = 4,
-/// Opened by tapping a push notification.
-  EntrupyAnalyticsEntryPointPush = 5,
-/// Opened by a universal link or in-app route.
-  EntrupyAnalyticsEntryPointDeeplink = 6,
-/// Opened from the home / main menu screen.
-  EntrupyAnalyticsEntryPointHome = 7,
-/// A capture started from the capture flow menu — the category picker most captures go through.
-  EntrupyAnalyticsEntryPointCaptureMenu = 8,
-/// A capture started after scanning or typing an order id / barcode.
-  EntrupyAnalyticsEntryPointOrderId = 9,
-/// The new certificate opened from the claim success sheet.
-  EntrupyAnalyticsEntryPointClaimSuccess = 10,
-/// Started by an SDK consumer calling the public API directly.
-  EntrupyAnalyticsEntryPointSdkApi = 11,
-/// A recipient’s fingerprint verification capture during a certificate transfer.
-/// This capture runs through the same <code>startCapture</code> path as a normal capture
-/// and would otherwise be counted as one, skewing capture metrics once transfer
-/// ships.
-  EntrupyAnalyticsEntryPointTransferVerification = 12,
-/// The source could not be determined.
-/// Reserved for genuine gaps, so a rising <code>unknown</code> count means something is unattributed
-/// rather than describing the ordinary case. Normal captures report <code>capture_menu</code>, <code>home</code>, or
-/// <code>order_id</code>; external SDK callers report <code>sdk_api</code>.
-  EntrupyAnalyticsEntryPointUnknown = 13,
-};
-
 @protocol EntrupyLoginDelegate;
 @protocol EntrupyConfigDelegate;
 @protocol EntrupyCaptureDelegate;
@@ -521,11 +473,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) EntrupyApp *
 /// \param viewController View controller to present capture workflow
 ///
 - (void)startCaptureForItem:(NSDictionary * _Nonnull)item viewController:(UIViewController * _Nonnull)viewController;
-/// Capture entry point that records where the capture was launched from.
-/// A separate overload rather than a defaulted parameter: the signature above ships in
-/// <code>EntrupyApp.h</code> and this target builds with library evolution, so widening it would break
-/// ABI. Consumers keep calling the original, which reports <code>sdk_api</code>.
-- (void)startCaptureForItem:(NSDictionary * _Nonnull)item viewController:(UIViewController * _Nonnull)viewController entryPoint:(enum EntrupyAnalyticsEntryPoint)entryPoint;
 /// Legacy: Search submissions (Objective-C compatible)
 /// This method calls the legacy Objective-C implementation and propagates delegate callbacks.
 /// Delegates are automatically forwarded via didSet when set on the Swift facade.
@@ -646,11 +593,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) EntrupyApp *
 /// \param configuration View configuration options
 ///
 - (void)displayDetailViewForItemWithEntrupyID:(NSString * _Nonnull)entrupyID withConfiguration:(EntrupyDetailViewConfiguration * _Nonnull)configuration;
-/// Detail-view entry point that records where the user opened the screen from.
-/// A separate overload rather than a defaulted parameter on the Objective-C method above: that
-/// signature ships in <code>EntrupyApp.h</code> and this target builds with library evolution, so widening
-/// it would break ABI. SDK consumers keep calling the original.
-- (void)displayDetailViewForItemWithEntrupyID:(NSString * _Nonnull)entrupyID withConfiguration:(EntrupyDetailViewConfiguration * _Nonnull)configuration entryPoint:(enum EntrupyAnalyticsEntryPoint)entryPoint;
 /// Presents the Market Edge view for a specific authentication result.
 /// @param entrupyID The Entrupy ID for the item to display.
 /// @param viewConfiguration Configuration options, including:
