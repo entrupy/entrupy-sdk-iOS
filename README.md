@@ -2,6 +2,11 @@
 
 The Entrupy SDK for iOS allows you to integrate Entrupy's authentication functionality into your Swift or Objective-C app.
 
+> [!WARNING]
+> With CocoaPods Trunk moving to a permanent read-only state in December 2026, EntrupySDK is officially deprecating distribution via CocoaPods.
+>
+> Starting **December 2, 2026**, new features, bug fixes, and security patches will only be released through Swift Package Manager (SPM). Please migrate to SPM before Trunk becomes read-only.
+
 ## Registering your application
 Contact developer@entrupy.com to get your app’s bundle ID registered with entrupy. Include details about how you plan to use Entrupy in your app. If approved, you will be issued a License Key to use the SDK and credentials to run this app. 
 
@@ -23,7 +28,8 @@ To integrate `EntrupySDK` into your Xcode project:
 5. Click **Add Package**.  
 6. In the **Choose Package Products** prompt, add the library to your app target.
 
-### CocoaPods
+<details>
+<summary>CocoaPods — deprecated. Starting December 2, 2026, new features, bug fixes, and security patches will only be released through SPM. Please migrate before Trunk becomes read-only.</summary>
 
 1.  Add the Entrupy SDK to your `Podfile`:
 
@@ -40,6 +46,8 @@ To integrate `EntrupySDK` into your Xcode project:
 
 2.  Run `pod install` in your project directory from the terminal.
 3.  Open the generated `.xcworkspace` file in Xcode and build your project.
+
+</details>
 
 ## Usage
 
