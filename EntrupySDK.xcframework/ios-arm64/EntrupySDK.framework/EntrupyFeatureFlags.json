@@ -21,7 +21,7 @@
     "marketEdgeServiceV2": false,
     "identifierCapture": false,
     "identifierFirstSignIn": true,
-    "certificateTransfer": true,
+    "certificateTransfer": false,
     "searchFilterV2": true,
     "imageMemoryCacheV2": true,
     "postHog": true,
