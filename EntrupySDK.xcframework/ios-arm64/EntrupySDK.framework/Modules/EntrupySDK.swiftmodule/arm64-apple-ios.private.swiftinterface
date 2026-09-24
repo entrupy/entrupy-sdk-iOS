@@ -43,7 +43,6 @@ extension UIKit.UIImageView {
   @objc @_Concurrency.MainActor @preconcurrency dynamic public func cancelImageDownload()
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class EntrupyMarketGradeDetailViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
   @_Concurrency.MainActor @preconcurrency public func configure(with viewModel: EntrupySDK.EntrupyMarketGradeDetailViewModel)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
@@ -209,6 +208,7 @@ public struct EntrupyCertTransferInfo : Swift.Codable {
   public let finalized_at: Swift.String?
   public let expires_at: Swift.String?
   public let sender_message_max_length: Swift.Int?
+  public let transferred_onward: Swift.Bool?
   public var isEligible: Swift.Bool {
     get
   }
@@ -240,6 +240,9 @@ public struct EntrupyCertTransferInfo : Swift.Codable {
     get
   }
   public var senderMessageMaxLength: Swift.Int? {
+    get
+  }
+  public var transferredOnward: Swift.Bool {
     get
   }
   public func encode(to encoder: any Swift.Encoder) throws
@@ -295,7 +298,7 @@ public struct EntrupyCaptureResultEventTimes : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct EntrupyCaptureResultMoreDetails : Swift.Codable {
-  public let certificate: EntrupySDK.EntrupyCaptureResultMoreDetailsCertificate
+  public let certificate: EntrupySDK.EntrupyCaptureResultMoreDetailsCertificate?
   public let catalog_insights: EntrupySDK.EntrupyCaptureResultMoreDetailsCatalogInsights?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
@@ -431,8 +434,8 @@ public struct EntrupyCaptureResultTextField : Swift.Codable {
   public let is_identifier: Swift.Bool
   public var content: Swift.String?
   public let display_name: Swift.String
-  public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
 }
 public struct EntrupyCaptureResultTimestamp : Swift.Codable {
   public let display: Swift.String
@@ -671,6 +674,7 @@ extension EntrupySDK.EntrupyApp {
   @objc dynamic public func searchSubmissions(at pageCursor: [Any], filters: [Any], startDate: Foundation.TimeInterval, endDate: Foundation.TimeInterval, paginationLimit: Swift.Int)
   @objc dynamic public func searchAuthenticationItems(query: EntrupySDK.EntrupySearchQuery, completion: @escaping (Foundation.NSDictionary?, Foundation.NSError?) -> Swift.Void)
   public func fetchTransferInbox() async throws -> EntrupySDK.EntrupySearchResult
+  public func fetchTransferInbox(filters: [[Swift.String : Any]], startDate: Foundation.TimeInterval, endDate: Foundation.TimeInterval, cursor: [Swift.String]?, limit: Swift.Int?) async throws -> EntrupySDK.EntrupySearchResult
   public func fetchSessionDetails(entrupyId: Swift.String) async throws -> EntrupySDK.EntrupyCaptureResult
   @objc dynamic public func getFlagDetailsForResult(withEntrupyID entrupyID: Swift.String, completionHandler: @escaping ([Swift.AnyHashable : Any]?, (any Swift.Error)?) -> Swift.Void)
   @objc dynamic public func setFlag(_ flag: Swift.Bool, forResultWithEntrupyID entrupyID: Swift.String, flagReasonId: Swift.String, message: Swift.String?)
@@ -773,7 +777,6 @@ extension EntrupySDK.SnapIQ {
   @objc(initWithViewSize:regionType:modelPath:blurModelPath:captureDevice:configurationDictionary:completion:) convenience dynamic public init(viewSize: CoreFoundation.CGSize, regionType: Swift.String, modelPath: Swift.String?, blurModelPath: Swift.String?, captureDevice: AVFoundation.AVCaptureDevice?, configurationDictionary: [Swift.String : Any]?, completion: ((Swift.Bool, (any Swift.Error)?) -> Swift.Void)?)
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class EntrupyMarketMatchViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
   @_Concurrency.MainActor @preconcurrency public func configure(with listings: [EntrupySDK.EntrupyMarketMatchValue], functionId: Swift.String)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
@@ -1184,11 +1187,21 @@ public enum EntrupyAnalyticsEvent : Swift.String {
   case captureSubmitted
   case resultReceived
   case freshchatConversationStarted
+  case sessionEndedShown
   case marketEdgeOpened
   case marketEdgeClosed
   case marketEdgeSectionViewed
   case marketEdgeRefreshAttempted
   case marketEdgeLoadResult
+  case loginOpened
+  case loginStepResult
+  case loginCompleted
+  case loginExited
+  case eventRegistrationOpened
+  case eventRegistrationStepResult
+  case eventRegistrationCompleted
+  case eventRegistrationExited
+  case authenticationApiResult
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -1323,6 +1336,14 @@ public class MotionSensorsV3 {
   public init(configuration: EntrupySDK.SnapIQConfigurationV3)
   public func startMonitoring()
   public func stopMonitoring()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(EntrupySessionEndedViewController) @_Concurrency.MainActor @preconcurrency final public class EntrupySessionEndedViewController : UIKit.UIViewController {
+  @objc(setOnSignInAgainHandler:) @_Concurrency.MainActor @preconcurrency final public func setOnSignInAgainHandler(_ handler: @escaping @convention(block) () -> Swift.Void)
+  @objc(setSessionEndedEcode:) @_Concurrency.MainActor @preconcurrency final public func setSessionEndedEcode(_ ecode: Swift.String?)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
 @objc(ObjCSnapIQDelegateV3) public protocol SnapIQDelegateV3 {

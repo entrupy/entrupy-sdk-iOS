@@ -11,15 +11,19 @@
     "authorizationServiceV2": true,
     "configurationServiceV2": true,
     "tikTokShopQRWorkflow" : true,
+    "eventRegistration": true,
     "resultDetailServiceV2": true,
     "flagServiceV2": true,
+    "searchAuthenticationItemsServiceV2": true,
     "captureServiceV2": true,
+    "marketEdgeServiceV2": true,
     "configVersion": "backend_choice",
     "captureViewControllerV2": true,
     "identifierCapture": true,
-    "certificateTransfer": false,
+    "identifierFirstSignIn": true,
+    "certificateTransfer": true,
     "searchFilterV2": true,
     "imageMemoryCacheV2": true,
     "postHog": true,
-    "instructionToastPosition": "bottom"
+    "instructionToastPosition": "top"
 }

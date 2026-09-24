@@ -885,7 +885,6 @@ SWIFT_CLASS("_TtC10EntrupySDK34EntrupyMarketEdgeViewConfiguration")
 @class NSBundle;
 SWIFT_CLASS("_TtC10EntrupySDK38EntrupyMarketGradeDetailViewController")
 @interface EntrupyMarketGradeDetailViewController : UIViewController
-- (void)viewWillAppear:(BOOL)animated;
 - (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
@@ -913,7 +912,6 @@ SWIFT_CLASS("_TtC10EntrupySDK33EntrupyMarketGradeDetailViewModel")
 
 SWIFT_CLASS("_TtC10EntrupySDK32EntrupyMarketMatchViewController")
 @interface EntrupyMarketMatchViewController : UIViewController
-- (void)viewWillAppear:(BOOL)animated;
 - (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
@@ -946,6 +944,19 @@ SWIFT_CLASS("_TtC10EntrupySDK20EntrupyOneColumnView")
 SWIFT_CLASS("_TtC10EntrupySDK18EntrupySearchQuery")
 @interface EntrupySearchQuery : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+/// Presented full-screen when the backend revokes the session (403 +
+/// <code>authorized: false</code> + <code>invalid_session_token</code>). Public + <code>@objc</code> so the app target’s
+/// <code>SessionEndedCoordinator</code> can instantiate and present it — approved public
+/// API surface.
+SWIFT_CLASS_NAMED("EntrupySessionEndedViewController")
+@interface EntrupySessionEndedViewController : UIViewController
+- (void)setOnSignInAgainHandler:(void (^ _Nonnull)(void))handler;
+- (void)setSessionEndedEcode:(NSString * _Nullable)ecode;
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class UIColor;
