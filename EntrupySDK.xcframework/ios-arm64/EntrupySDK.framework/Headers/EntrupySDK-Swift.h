@@ -574,8 +574,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) EntrupyApp *
 ///
 - (void)getFlagDetailsForResultWithEntrupyID:(NSString * _Nonnull)entrupyID completionHandler:(void (^ _Nonnull)(NSDictionary * _Nullable, NSError * _Nullable))completionHandler;
 /// Legacy: Set flag for result (Objective-C compatible)
-/// This method calls the legacy Objective-C implementation and propagates delegate callbacks.
-/// Delegates are automatically forwarded via didSet when set on the Swift facade.
 /// \param flag true to set flag, false to clear
 ///
 /// \param entrupyID Entrupy ID of the result
@@ -621,8 +619,10 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) EntrupyApp *
 /// \endcode
 - (void)displayMarketEdgeViewForItemWithEntrupyID:(NSString * _Nonnull)entrupyID withConfiguration:(EntrupyMarketEdgeViewConfiguration * _Nonnull)configuration;
 /// Legacy: Display flag view for item (Objective-C compatible)
-/// This method calls the legacy Objective-C implementation and propagates delegate callbacks.
-/// The delegate set on the Swift facade is forwarded to the legacy implementation.
+/// When the flag view migration is enabled (<code>flagViewServiceV2</code>) and the presenter
+/// is set, uses the new Swift flow. Otherwise calls the legacy Objective-C
+/// implementation. Delegates are automatically forwarded via didSet when set on
+/// the Swift facade.
 /// \param entrupyID Entrupy ID of the result
 ///
 - (void)displayFlagViewForItemWithEntrupyID:(NSString * _Nonnull)entrupyID;

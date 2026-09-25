@@ -10,6 +10,8 @@
     "configurationServiceV2": true,
     "resultDetailServiceV2": true,
     "flagServiceV2": true,
+    "flagViewServiceV2": false,
+    "setFlagV2": false,
     "searchAuthenticationItemsServiceV2": false,
     "captureServiceV2": true,
     "macroFingerprint": true,
@@ -25,5 +27,6 @@
     "searchFilterV2": true,
     "imageMemoryCacheV2": true,
     "postHog": true,
+    "captureStoryLogs": true,
     "instructionToastPosition": "bottom"
 }
