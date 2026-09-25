@@ -14,6 +14,8 @@
     "eventRegistration": true,
     "resultDetailServiceV2": true,
     "flagServiceV2": true,
+    "flagViewServiceV2": true,
+    "setFlagV2": true,
     "searchAuthenticationItemsServiceV2": true,
     "captureServiceV2": true,
     "marketEdgeServiceV2": true,
@@ -25,5 +27,6 @@
     "searchFilterV2": true,
     "imageMemoryCacheV2": true,
     "postHog": true,
+    "captureStoryLogs": true,
     "instructionToastPosition": "top"
 }
