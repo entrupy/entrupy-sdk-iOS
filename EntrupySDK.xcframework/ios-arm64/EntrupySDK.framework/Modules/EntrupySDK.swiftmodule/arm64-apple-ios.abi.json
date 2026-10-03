@@ -24972,6 +24972,62 @@
           {
             "kind": "Function",
             "name": "startCapture",
+            "printedName": "startCapture(forItem:viewController:entryPoint:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.AnyHashable : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnyHashable",
+                    "printedName": "Swift.AnyHashable",
+                    "usr": "s:s11AnyHashableV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "EntrupyAnalyticsEntryPoint",
+                "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint",
+                "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@EntrupySDK@objc(cs)EntrupyApp(im)startCaptureForItem:viewController:entryPoint:",
+            "mangledName": "$s10EntrupySDK0A3AppC12startCapture7forItem14viewController10entryPointySDys11AnyHashableVypG_So06UIViewI0CAA0a14AnalyticsEntryK0OtF",
+            "moduleName": "EntrupySDK",
+            "objc_name": "startCaptureForItem:viewController:entryPoint:",
+            "declAttributes": [
+              "Dynamic",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "startCapture",
             "printedName": "startCapture(forItem:viewController:)",
             "children": [
               {
@@ -25008,6 +25064,59 @@
             "declKind": "Func",
             "usr": "s:10EntrupySDK0A3AppC12startCapture7forItem14viewControllerySDySSypG_So06UIViewI0CtF",
             "mangledName": "$s10EntrupySDK0A3AppC12startCapture7forItem14viewControllerySDySSypG_So06UIViewI0CtF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "startCapture",
+            "printedName": "startCapture(forItem:viewController:entryPoint:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "EntrupyAnalyticsEntryPoint",
+                "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint",
+                "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10EntrupySDK0A3AppC12startCapture7forItem14viewController10entryPointySDySSypG_So06UIViewI0CAA0a14AnalyticsEntryK0OtF",
+            "mangledName": "$s10EntrupySDK0A3AppC12startCapture7forItem14viewController10entryPointySDySSypG_So06UIViewI0CAA0a14AnalyticsEntryK0OtF",
             "moduleName": "EntrupySDK",
             "declAttributes": [
               "AccessControl",
@@ -25502,6 +25611,49 @@
           },
           {
             "kind": "Function",
+            "name": "displayDetailViewForItem",
+            "printedName": "displayDetailViewForItem(withEntrupyID:withConfiguration:entryPoint:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "EntrupyDetailViewConfiguration",
+                "printedName": "EntrupySDK.EntrupyDetailViewConfiguration",
+                "usr": "c:@M@EntrupySDK@objc(cs)EntrupyDetailViewConfiguration"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "EntrupyAnalyticsEntryPoint",
+                "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint",
+                "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@EntrupySDK@objc(cs)EntrupyApp(im)displayDetailViewForItemWithEntrupyID:withConfiguration:entryPoint:",
+            "mangledName": "$s10EntrupySDK0A3AppC24displayDetailViewForItem04withA2ID0I13Configuration10entryPointySS_AA0aefK0CAA0a14AnalyticsEntryM0OtF",
+            "moduleName": "EntrupySDK",
+            "objc_name": "displayDetailViewForItemWithEntrupyID:withConfiguration:entryPoint:",
+            "declAttributes": [
+              "Dynamic",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "displayMarketEdgeViewForItem",
             "printedName": "displayMarketEdgeViewForItem(withEntrupyID:withConfiguration:)",
             "children": [
@@ -25594,6 +25746,40 @@
               "Dynamic",
               "AccessControl",
               "ObjC",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "startRetakeCaptureForItem",
+            "printedName": "startRetakeCaptureForItem(withEntrupyID:entryPoint:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "EntrupyAnalyticsEntryPoint",
+                "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint",
+                "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10EntrupySDK0A3AppC25startRetakeCaptureForItem04withA2ID10entryPointySS_AA0a14AnalyticsEntryL0OtF",
+            "mangledName": "$s10EntrupySDK0A3AppC25startRetakeCaptureForItem04withA2ID10entryPointySS_AA0a14AnalyticsEntryL0OtF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "AccessControl",
               "RawDocComment"
             ],
             "isFromExtension": true,
@@ -50569,6 +50755,806 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "transferInitiateOpened",
+            "printedName": "transferInitiateOpened",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEvent.Type) -> EntrupySDK.EntrupyAnalyticsEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEvent",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                    "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEvent",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                        "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10EntrupySDK0A14AnalyticsEventO22transferInitiateOpenedyA2CmF",
+            "mangledName": "$s10EntrupySDK0A14AnalyticsEventO22transferInitiateOpenedyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "transferRecipientsLoaded",
+            "printedName": "transferRecipientsLoaded",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEvent.Type) -> EntrupySDK.EntrupyAnalyticsEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEvent",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                    "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEvent",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                        "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10EntrupySDK0A14AnalyticsEventO24transferRecipientsLoadedyA2CmF",
+            "mangledName": "$s10EntrupySDK0A14AnalyticsEventO24transferRecipientsLoadedyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "transferInitiateSubmitted",
+            "printedName": "transferInitiateSubmitted",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEvent.Type) -> EntrupySDK.EntrupyAnalyticsEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEvent",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                    "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEvent",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                        "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10EntrupySDK0A14AnalyticsEventO25transferInitiateSubmittedyA2CmF",
+            "mangledName": "$s10EntrupySDK0A14AnalyticsEventO25transferInitiateSubmittedyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "transferInitiateResult",
+            "printedName": "transferInitiateResult",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEvent.Type) -> EntrupySDK.EntrupyAnalyticsEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEvent",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                    "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEvent",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                        "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10EntrupySDK0A14AnalyticsEventO22transferInitiateResultyA2CmF",
+            "mangledName": "$s10EntrupySDK0A14AnalyticsEventO22transferInitiateResultyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "transferInitiateAbandoned",
+            "printedName": "transferInitiateAbandoned",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEvent.Type) -> EntrupySDK.EntrupyAnalyticsEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEvent",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                    "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEvent",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                        "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10EntrupySDK0A14AnalyticsEventO25transferInitiateAbandonedyA2CmF",
+            "mangledName": "$s10EntrupySDK0A14AnalyticsEventO25transferInitiateAbandonedyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "transferCancelResult",
+            "printedName": "transferCancelResult",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEvent.Type) -> EntrupySDK.EntrupyAnalyticsEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEvent",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                    "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEvent",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                        "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10EntrupySDK0A14AnalyticsEventO20transferCancelResultyA2CmF",
+            "mangledName": "$s10EntrupySDK0A14AnalyticsEventO20transferCancelResultyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "transferClaimOpened",
+            "printedName": "transferClaimOpened",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEvent.Type) -> EntrupySDK.EntrupyAnalyticsEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEvent",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                    "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEvent",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                        "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10EntrupySDK0A14AnalyticsEventO19transferClaimOpenedyA2CmF",
+            "mangledName": "$s10EntrupySDK0A14AnalyticsEventO19transferClaimOpenedyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "transferClaimResult",
+            "printedName": "transferClaimResult",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEvent.Type) -> EntrupySDK.EntrupyAnalyticsEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEvent",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                    "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEvent",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                        "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10EntrupySDK0A14AnalyticsEventO19transferClaimResultyA2CmF",
+            "mangledName": "$s10EntrupySDK0A14AnalyticsEventO19transferClaimResultyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "transferDeclineResult",
+            "printedName": "transferDeclineResult",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEvent.Type) -> EntrupySDK.EntrupyAnalyticsEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEvent",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                    "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEvent",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                        "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10EntrupySDK0A14AnalyticsEventO21transferDeclineResultyA2CmF",
+            "mangledName": "$s10EntrupySDK0A14AnalyticsEventO21transferDeclineResultyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "transferVerificationStarted",
+            "printedName": "transferVerificationStarted",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEvent.Type) -> EntrupySDK.EntrupyAnalyticsEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEvent",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                    "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEvent",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                        "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10EntrupySDK0A14AnalyticsEventO27transferVerificationStartedyA2CmF",
+            "mangledName": "$s10EntrupySDK0A14AnalyticsEventO27transferVerificationStartedyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "transferVerificationOutcome",
+            "printedName": "transferVerificationOutcome",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEvent.Type) -> EntrupySDK.EntrupyAnalyticsEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEvent",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                    "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEvent",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                        "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10EntrupySDK0A14AnalyticsEventO27transferVerificationOutcomeyA2CmF",
+            "mangledName": "$s10EntrupySDK0A14AnalyticsEventO27transferVerificationOutcomeyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "transferClaimClosed",
+            "printedName": "transferClaimClosed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEvent.Type) -> EntrupySDK.EntrupyAnalyticsEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEvent",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                    "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEvent",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                        "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10EntrupySDK0A14AnalyticsEventO19transferClaimClosedyA2CmF",
+            "mangledName": "$s10EntrupySDK0A14AnalyticsEventO19transferClaimClosedyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "tasksTabOpened",
+            "printedName": "tasksTabOpened",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEvent.Type) -> EntrupySDK.EntrupyAnalyticsEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEvent",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                    "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEvent",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                        "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10EntrupySDK0A14AnalyticsEventO14tasksTabOpenedyA2CmF",
+            "mangledName": "$s10EntrupySDK0A14AnalyticsEventO14tasksTabOpenedyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "tasksTabSwitched",
+            "printedName": "tasksTabSwitched",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEvent.Type) -> EntrupySDK.EntrupyAnalyticsEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEvent",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                    "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEvent",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                        "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10EntrupySDK0A14AnalyticsEventO16tasksTabSwitchedyA2CmF",
+            "mangledName": "$s10EntrupySDK0A14AnalyticsEventO16tasksTabSwitchedyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "tasksListLoaded",
+            "printedName": "tasksListLoaded",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEvent.Type) -> EntrupySDK.EntrupyAnalyticsEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEvent",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                    "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEvent",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                        "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10EntrupySDK0A14AnalyticsEventO15tasksListLoadedyA2CmF",
+            "mangledName": "$s10EntrupySDK0A14AnalyticsEventO15tasksListLoadedyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "tasksListRefreshed",
+            "printedName": "tasksListRefreshed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEvent.Type) -> EntrupySDK.EntrupyAnalyticsEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEvent",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                    "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEvent",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                        "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10EntrupySDK0A14AnalyticsEventO18tasksListRefreshedyA2CmF",
+            "mangledName": "$s10EntrupySDK0A14AnalyticsEventO18tasksListRefreshedyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "tasksItemSelected",
+            "printedName": "tasksItemSelected",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEvent.Type) -> EntrupySDK.EntrupyAnalyticsEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEvent",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                    "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEvent",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                        "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10EntrupySDK0A14AnalyticsEventO17tasksItemSelectedyA2CmF",
+            "mangledName": "$s10EntrupySDK0A14AnalyticsEventO17tasksItemSelectedyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "tasksTransfersFilterApplied",
+            "printedName": "tasksTransfersFilterApplied",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEvent.Type) -> EntrupySDK.EntrupyAnalyticsEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEvent",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                    "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEvent",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                        "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10EntrupySDK0A14AnalyticsEventO27tasksTransfersFilterAppliedyA2CmF",
+            "mangledName": "$s10EntrupySDK0A14AnalyticsEventO27tasksTransfersFilterAppliedyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "tasksTransfersSearchSubmitted",
+            "printedName": "tasksTransfersSearchSubmitted",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEvent.Type) -> EntrupySDK.EntrupyAnalyticsEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEvent",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                    "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEvent",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                        "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10EntrupySDK0A14AnalyticsEventO29tasksTransfersSearchSubmittedyA2CmF",
+            "mangledName": "$s10EntrupySDK0A14AnalyticsEventO29tasksTransfersSearchSubmittedyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "tasksTabClosed",
+            "printedName": "tasksTabClosed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEvent.Type) -> EntrupySDK.EntrupyAnalyticsEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEvent",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                    "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEvent",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                        "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10EntrupySDK0A14AnalyticsEventO14tasksTabClosedyA2CmF",
+            "mangledName": "$s10EntrupySDK0A14AnalyticsEventO14tasksTabClosedyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(rawValue:)",
@@ -59639,6 +60625,833 @@
       },
       {
         "kind": "Import",
+        "name": "CoreFoundation",
+        "printedName": "CoreFoundation",
+        "declKind": "Import",
+        "moduleName": "EntrupySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "EntrupySDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "EntrupySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "EntrupyAnalyticsEntryPoint",
+        "printedName": "EntrupyAnalyticsEntryPoint",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "captureResult",
+            "printedName": "captureResult",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEntryPoint.Type) -> EntrupySDK.EntrupyAnalyticsEntryPoint",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEntryPoint",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint",
+                    "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEntryPoint",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint",
+                        "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint@EntrupyAnalyticsEntryPointCaptureResult",
+            "mangledName": "$s10EntrupySDK0A19AnalyticsEntryPointO13captureResultyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "historyDetail",
+            "printedName": "historyDetail",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEntryPoint.Type) -> EntrupySDK.EntrupyAnalyticsEntryPoint",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEntryPoint",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint",
+                    "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEntryPoint",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint",
+                        "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint@EntrupyAnalyticsEntryPointHistoryDetail",
+            "mangledName": "$s10EntrupySDK0A19AnalyticsEntryPointO13historyDetailyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "retakesTab",
+            "printedName": "retakesTab",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEntryPoint.Type) -> EntrupySDK.EntrupyAnalyticsEntryPoint",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEntryPoint",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint",
+                    "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEntryPoint",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint",
+                        "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint@EntrupyAnalyticsEntryPointRetakesTab",
+            "mangledName": "$s10EntrupySDK0A19AnalyticsEntryPointO10retakesTabyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Var",
+            "name": "transfersList",
+            "printedName": "transfersList",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEntryPoint.Type) -> EntrupySDK.EntrupyAnalyticsEntryPoint",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEntryPoint",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint",
+                    "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEntryPoint",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint",
+                        "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint@EntrupyAnalyticsEntryPointTransfersList",
+            "mangledName": "$s10EntrupySDK0A19AnalyticsEntryPointO13transfersListyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 3
+          },
+          {
+            "kind": "Var",
+            "name": "inbox",
+            "printedName": "inbox",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEntryPoint.Type) -> EntrupySDK.EntrupyAnalyticsEntryPoint",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEntryPoint",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint",
+                    "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEntryPoint",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint",
+                        "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint@EntrupyAnalyticsEntryPointInbox",
+            "mangledName": "$s10EntrupySDK0A19AnalyticsEntryPointO5inboxyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 4
+          },
+          {
+            "kind": "Var",
+            "name": "push",
+            "printedName": "push",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEntryPoint.Type) -> EntrupySDK.EntrupyAnalyticsEntryPoint",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEntryPoint",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint",
+                    "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEntryPoint",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint",
+                        "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint@EntrupyAnalyticsEntryPointPush",
+            "mangledName": "$s10EntrupySDK0A19AnalyticsEntryPointO4pushyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 5
+          },
+          {
+            "kind": "Var",
+            "name": "deeplink",
+            "printedName": "deeplink",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEntryPoint.Type) -> EntrupySDK.EntrupyAnalyticsEntryPoint",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEntryPoint",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint",
+                    "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEntryPoint",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint",
+                        "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint@EntrupyAnalyticsEntryPointDeeplink",
+            "mangledName": "$s10EntrupySDK0A19AnalyticsEntryPointO8deeplinkyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 6
+          },
+          {
+            "kind": "Var",
+            "name": "home",
+            "printedName": "home",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEntryPoint.Type) -> EntrupySDK.EntrupyAnalyticsEntryPoint",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEntryPoint",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint",
+                    "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEntryPoint",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint",
+                        "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint@EntrupyAnalyticsEntryPointHome",
+            "mangledName": "$s10EntrupySDK0A19AnalyticsEntryPointO4homeyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 7
+          },
+          {
+            "kind": "Var",
+            "name": "captureMenu",
+            "printedName": "captureMenu",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEntryPoint.Type) -> EntrupySDK.EntrupyAnalyticsEntryPoint",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEntryPoint",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint",
+                    "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEntryPoint",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint",
+                        "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint@EntrupyAnalyticsEntryPointCaptureMenu",
+            "mangledName": "$s10EntrupySDK0A19AnalyticsEntryPointO11captureMenuyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 8
+          },
+          {
+            "kind": "Var",
+            "name": "orderId",
+            "printedName": "orderId",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEntryPoint.Type) -> EntrupySDK.EntrupyAnalyticsEntryPoint",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEntryPoint",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint",
+                    "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEntryPoint",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint",
+                        "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint@EntrupyAnalyticsEntryPointOrderId",
+            "mangledName": "$s10EntrupySDK0A19AnalyticsEntryPointO7orderIdyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 9
+          },
+          {
+            "kind": "Var",
+            "name": "claimSuccess",
+            "printedName": "claimSuccess",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEntryPoint.Type) -> EntrupySDK.EntrupyAnalyticsEntryPoint",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEntryPoint",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint",
+                    "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEntryPoint",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint",
+                        "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint@EntrupyAnalyticsEntryPointClaimSuccess",
+            "mangledName": "$s10EntrupySDK0A19AnalyticsEntryPointO12claimSuccessyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 10
+          },
+          {
+            "kind": "Var",
+            "name": "sdkApi",
+            "printedName": "sdkApi",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEntryPoint.Type) -> EntrupySDK.EntrupyAnalyticsEntryPoint",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEntryPoint",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint",
+                    "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEntryPoint",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint",
+                        "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint@EntrupyAnalyticsEntryPointSdkApi",
+            "mangledName": "$s10EntrupySDK0A19AnalyticsEntryPointO6sdkApiyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 11
+          },
+          {
+            "kind": "Var",
+            "name": "transferVerification",
+            "printedName": "transferVerification",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEntryPoint.Type) -> EntrupySDK.EntrupyAnalyticsEntryPoint",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEntryPoint",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint",
+                    "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEntryPoint",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint",
+                        "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint@EntrupyAnalyticsEntryPointTransferVerification",
+            "mangledName": "$s10EntrupySDK0A19AnalyticsEntryPointO20transferVerificationyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 12
+          },
+          {
+            "kind": "Var",
+            "name": "unknown",
+            "printedName": "unknown",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEntryPoint.Type) -> EntrupySDK.EntrupyAnalyticsEntryPoint",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEntryPoint",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint",
+                    "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEntryPoint",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint",
+                        "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint@EntrupyAnalyticsEntryPointUnknown",
+            "mangledName": "$s10EntrupySDK0A19AnalyticsEntryPointO7unknownyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 13
+          },
+          {
+            "kind": "Var",
+            "name": "analyticsValue",
+            "printedName": "analyticsValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10EntrupySDK0A19AnalyticsEntryPointO14analyticsValueSSvp",
+            "mangledName": "$s10EntrupySDK0A19AnalyticsEntryPointO14analyticsValueSSvp",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10EntrupySDK0A19AnalyticsEntryPointO14analyticsValueSSvg",
+                "mangledName": "$s10EntrupySDK0A19AnalyticsEntryPointO14analyticsValueSSvg",
+                "moduleName": "EntrupySDK",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEntryPoint",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEntryPoint",
+                    "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10EntrupySDK0A19AnalyticsEntryPointO8rawValueACSgSi_tcfc",
+            "mangledName": "$s10EntrupySDK0A19AnalyticsEntryPointO8rawValueACSgSi_tcfc",
+            "moduleName": "EntrupySDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10EntrupySDK0A19AnalyticsEntryPointO8rawValueSivp",
+            "mangledName": "$s10EntrupySDK0A19AnalyticsEntryPointO8rawValueSivp",
+            "moduleName": "EntrupySDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10EntrupySDK0A19AnalyticsEntryPointO8rawValueSivg",
+                "mangledName": "$s10EntrupySDK0A19AnalyticsEntryPointO8rawValueSivg",
+                "moduleName": "EntrupySDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@EntrupySDK@E@EntrupyAnalyticsEntryPoint",
+        "mangledName": "$s10EntrupySDK0A19AnalyticsEntryPointO",
+        "moduleName": "EntrupySDK",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "EntrupySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "EntrupySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "EntrupySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -63558,42 +65371,42 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
       "kind": "BooleanLiteral",
-      "offset": 1030,
+      "offset": 1629,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
       "kind": "BooleanLiteral",
-      "offset": 1871,
+      "offset": 2669,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
       "kind": "BooleanLiteral",
-      "offset": 1918,
+      "offset": 2716,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
       "kind": "BooleanLiteral",
-      "offset": 1963,
+      "offset": 2761,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
       "kind": "BooleanLiteral",
-      "offset": 2010,
+      "offset": 2808,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
       "kind": "Dictionary",
-      "offset": 6865,
+      "offset": 8905,
       "length": 3,
       "value": "[]"
     },
@@ -70109,22 +71922,15 @@
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/SDKInterface\/PublicAPI\/EntrupyApp.swift",
-      "kind": "BooleanLiteral",
-      "offset": 7546,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/SDKInterface\/PublicAPI\/EntrupyApp.swift",
       "kind": "IntegerLiteral",
-      "offset": 150469,
+      "offset": 160382,
       "length": 10,
       "value": "0xE07C01"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/SDKInterface\/PublicAPI\/EntrupyApp.swift",
       "kind": "IntegerLiteral",
-      "offset": 150537,
+      "offset": 160450,
       "length": 10,
       "value": "0xE07C02"
     },
@@ -73169,35 +74975,35 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/CaptureResult\/EntrupyCaptureResultViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 16274,
+      "offset": 17946,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/CaptureResult\/EntrupyCaptureResultViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 16321,
+      "offset": 17993,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/CaptureResult\/EntrupyCaptureResultViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 16528,
+      "offset": 18200,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/CaptureResult\/EntrupyCaptureResultViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 16666,
+      "offset": 18338,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/CaptureResult\/EntrupyCaptureResultViewModel.swift",
       "kind": "Array",
-      "offset": 25929,
+      "offset": 27601,
       "length": 2,
       "value": "[]"
     },
@@ -73232,86 +75038,79 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/CaptureResult\/EntrupyCaptureResultViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 30465,
+      "offset": 30840,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/CaptureResult\/EntrupyCaptureResultViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 30480,
+      "offset": 30855,
       "length": 13,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/CaptureResult\/EntrupyCaptureResultViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 30507,
+      "offset": 30882,
       "length": 14,
       "value": "2"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/Transfer\/EntrupyTransferCertificateViewController.swift",
-      "kind": "Array",
-      "offset": 453,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/Transfer\/EntrupyTransferCertificateViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 554,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/Transfer\/EntrupyTransferCertificateViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 870,
+      "offset": 814,
       "length": 2,
       "value": "18"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/Transfer\/EntrupyTransferCertificateViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1080,
+      "offset": 1024,
       "length": 2,
       "value": "13"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/Transfer\/EntrupyTransferCertificateViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1280,
+      "offset": 1224,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/Transfer\/EntrupyTransferCertificateViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1532,
+      "offset": 1476,
       "length": 2,
       "value": "18"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/Transfer\/EntrupyTransferCertificateViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1671,
+      "offset": 1615,
       "length": 2,
       "value": "13"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/Transfer\/EntrupyTransferCertificateViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1928,
+      "offset": 1872,
       "length": 2,
       "value": "15"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/Transfer\/EntrupyTransferCertificateViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 2176,
+      "offset": 2120,
       "length": 2,
       "value": "13"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/Transfer\/EntrupyTransferCertificateViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4554,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/Transfer\/EntrupyTransferServiceProtocol.swift",
@@ -73813,448 +75612,455 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "Dictionary",
-      "offset": 11531,
+      "offset": 12479,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "Dictionary",
-      "offset": 11581,
+      "offset": 12529,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "Array",
-      "offset": 11630,
+      "offset": 12578,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "FloatLiteral",
-      "offset": 15721,
+      "offset": 16669,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 16503,
+      "offset": 17451,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 17088,
+      "offset": 18036,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 17349,
+      "offset": 18297,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 17397,
+      "offset": 18345,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 17442,
+      "offset": 18390,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 17871,
+      "offset": 18819,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 17925,
+      "offset": 18873,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 17960,
+      "offset": 18908,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 18003,
+      "offset": 18951,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 18126,
+      "offset": 19074,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 18465,
+      "offset": 19413,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 18709,
+      "offset": 19657,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 18943,
+      "offset": 19891,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 19058,
+      "offset": 20006,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 19174,
+      "offset": 20122,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 19220,
+      "offset": 20168,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 19468,
+      "offset": 20416,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 19504,
+      "offset": 20452,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 19537,
+      "offset": 20485,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 19622,
+      "offset": 20570,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 19662,
+      "offset": 20610,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 19785,
+      "offset": 20733,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 19829,
+      "offset": 20777,
       "length": 2,
       "value": "15"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 20069,
+      "offset": 21017,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 20137,
+      "offset": 21085,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 21092,
+      "offset": 22040,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 21185,
+      "offset": 22133,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "Array",
-      "offset": 21236,
+      "offset": 22184,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 21510,
+      "offset": 22458,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 21554,
+      "offset": 22502,
       "length": 3,
       "value": "120"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 21605,
+      "offset": 22553,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 21659,
+      "offset": 22607,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 22527,
+      "offset": 23475,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "Array",
-      "offset": 24634,
+      "offset": 25582,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 24699,
+      "offset": 25647,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 26769,
+      "offset": 27717,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 26812,
+      "offset": 27760,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 26900,
+      "offset": 27848,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 27103,
+      "offset": 28051,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "Dictionary",
-      "offset": 28322,
+      "offset": 29270,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "Dictionary",
-      "offset": 28857,
+      "offset": 29805,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "Dictionary",
-      "offset": 29014,
+      "offset": 29962,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 89726,
+      "offset": 91715,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 91774,
+      "offset": 93763,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 91827,
+      "offset": 93816,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 147300,
+      "offset": 149790,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 218745,
+      "offset": 150349,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 322753,
+      "offset": 221931,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
+      "kind": "BooleanLiteral",
+      "offset": 325939,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 322804,
+      "offset": 325990,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 322834,
+      "offset": 326020,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 322909,
+      "offset": 326095,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 323061,
+      "offset": 326247,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 323097,
+      "offset": 326283,
       "length": 2,
       "value": "15"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 323543,
+      "offset": 326729,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 323832,
+      "offset": 327018,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 323967,
+      "offset": 327153,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 324348,
+      "offset": 327534,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "StringLiteral",
-      "offset": 324515,
+      "offset": 327701,
       "length": 3,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "Array",
-      "offset": 325348,
+      "offset": 328534,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 374562,
+      "offset": 380034,
       "length": 5,
       "value": "false"
     },
@@ -74303,21 +76109,21 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/Session\/EntrupyCameraSetupV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 2326,
+      "offset": 3239,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/Session\/EntrupyCameraSetupV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 6680,
+      "offset": 7593,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/Session\/EntrupyCameraSetupV2.swift",
       "kind": "Array",
-      "offset": 6824,
+      "offset": 7737,
       "length": 2,
       "value": "[]"
     },
@@ -87855,35 +89661,35 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/FeatureFlag\/EntrupyFeatureFlags.swift",
       "kind": "IntegerLiteral",
-      "offset": 16453,
+      "offset": 17024,
       "length": 3,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/FeatureFlag\/EntrupyFeatureFlags.swift",
       "kind": "Array",
-      "offset": 16498,
+      "offset": 17069,
       "length": 17,
       "value": "[\"bottom\", \"top\"]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/FeatureFlag\/EntrupyFeatureFlags.swift",
       "kind": "IntegerLiteral",
-      "offset": 17506,
+      "offset": 18077,
       "length": 13,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/FeatureFlag\/EntrupyFeatureFlags.swift",
       "kind": "IntegerLiteral",
-      "offset": 17533,
+      "offset": 18104,
       "length": 6,
       "value": "2"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/FeatureFlag\/EntrupyFeatureFlags.swift",
       "kind": "Array",
-      "offset": 17581,
+      "offset": 18152,
       "length": 40,
       "value": "[\"v1_only\", \"backend_choice\", \"v2_only\"]"
     },
@@ -88667,28 +90473,28 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/Transfer\/EntrupyTransferDetailClaimViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 39479,
+      "offset": 40586,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/Transfer\/EntrupyTransferDetailClaimViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 39589,
+      "offset": 40696,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/Transfer\/EntrupyTransferDetailClaimViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 3031,
+      "offset": 3443,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/Transfer\/EntrupyTransferDetailClaimViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 3339,
+      "offset": 3751,
       "length": 5,
       "value": "false"
     },
@@ -89209,6 +91015,146 @@
       "offset": 6590,
       "length": 27,
       "value": "\"authentication_api_result\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 6866,
+      "length": 26,
+      "value": "\"transfer_initiate_opened\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 7219,
+      "length": 28,
+      "value": "\"transfer_recipients_loaded\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 7440,
+      "length": 29,
+      "value": "\"transfer_initiate_submitted\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 7687,
+      "length": 26,
+      "value": "\"transfer_initiate_result\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 7920,
+      "length": 29,
+      "value": "\"transfer_initiate_abandoned\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 8224,
+      "length": 24,
+      "value": "\"transfer_cancel_result\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 8566,
+      "length": 23,
+      "value": "\"transfer_claim_opened\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 8840,
+      "length": 23,
+      "value": "\"transfer_claim_result\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 9039,
+      "length": 25,
+      "value": "\"transfer_decline_result\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 9386,
+      "length": 31,
+      "value": "\"transfer_verification_started\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 10158,
+      "length": 31,
+      "value": "\"transfer_verification_outcome\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 10396,
+      "length": 23,
+      "value": "\"transfer_claim_closed\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 10940,
+      "length": 18,
+      "value": "\"tasks_tab_opened\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 11117,
+      "length": 20,
+      "value": "\"tasks_tab_switched\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 11492,
+      "length": 19,
+      "value": "\"tasks_list_loaded\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 11718,
+      "length": 22,
+      "value": "\"tasks_list_refreshed\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 12095,
+      "length": 21,
+      "value": "\"tasks_item_selected\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 12333,
+      "length": 32,
+      "value": "\"tasks_transfers_filter_applied\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 12576,
+      "length": 34,
+      "value": "\"tasks_transfers_search_submitted\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 12752,
+      "length": 18,
+      "value": "\"tasks_tab_closed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/MarketEdge\/Infrastructure\/EntrupyMarketEdgeAnalytics.swift",
@@ -90506,6 +92452,265 @@
       "value": "0"
     },
     {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Search\/Domain\/EntrupySearchSubmissionsModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 272,
+      "length": 2,
+      "value": "25"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Search\/Domain\/EntrupySearchSubmissionsModels.swift",
+      "kind": "StringLiteral",
+      "offset": 416,
+      "length": 14,
+      "value": "\"string-array\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Search\/Infrastructure\/EntrupySearchSubmissionsService.swift",
+      "kind": "StringLiteral",
+      "offset": 282,
+      "length": 33,
+      "value": "\"properties.function_and_mode.id\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Search\/Infrastructure\/EntrupySearchSubmissionsService.swift",
+      "kind": "StringLiteral",
+      "offset": 359,
+      "length": 24,
+      "value": "\"properties.function.id\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Search\/Infrastructure\/EntrupySearchSubmissionsService.swift",
+      "kind": "StringLiteral",
+      "offset": 439,
+      "length": 22,
+      "value": "\"lightbox_fingerprint\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEntryPoint.swift",
+      "kind": "IntegerLiteral",
+      "offset": 946,
+      "length": 13,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEntryPoint.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1036,
+      "length": 10,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEntryPoint.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1128,
+      "length": 13,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEntryPoint.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1340,
+      "length": 5,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEntryPoint.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1403,
+      "length": 4,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEntryPoint.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1470,
+      "length": 8,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEntryPoint.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1538,
+      "length": 4,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEntryPoint.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1656,
+      "length": 11,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEntryPoint.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1752,
+      "length": 7,
+      "value": "9"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEntryPoint.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1835,
+      "length": 12,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEntryPoint.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1926,
+      "length": 6,
+      "value": "11"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEntryPoint.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2220,
+      "length": 20,
+      "value": "12"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEntryPoint.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2557,
+      "length": 7,
+      "value": "13"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Transfer\/Infrastructure\/EntrupyTransferAnalytics.swift",
+      "kind": "StringLiteral",
+      "offset": 1273,
+      "length": 17,
+      "value": "\"backend_failure\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Transfer\/Infrastructure\/EntrupyTransferAnalytics.swift",
+      "kind": "StringLiteral",
+      "offset": 1322,
+      "length": 23,
+      "value": "\"missing_artifact_data\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Transfer\/Infrastructure\/EntrupyTransferAnalytics.swift",
+      "kind": "StringLiteral",
+      "offset": 1376,
+      "length": 21,
+      "value": "\"capture_unavailable\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Transfer\/Infrastructure\/EntrupyTransferAnalytics.swift",
+      "kind": "StringLiteral",
+      "offset": 1591,
+      "length": 17,
+      "value": "\"awaiting_review\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Transfer\/Infrastructure\/EntrupyTransferAnalytics.swift",
+      "kind": "StringLiteral",
+      "offset": 1639,
+      "length": 21,
+      "value": "\"verification_failed\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Transfer\/Infrastructure\/EntrupyTransferAnalytics.swift",
+      "kind": "StringLiteral",
+      "offset": 2311,
+      "length": 10,
+      "value": "\"no_match\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Transfer\/Infrastructure\/EntrupyTransferAnalytics.swift",
+      "kind": "StringLiteral",
+      "offset": 2345,
+      "length": 14,
+      "value": "\"needs_review\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Transfer\/Infrastructure\/EntrupyTransferAnalytics.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4384,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Transfer\/Infrastructure\/EntrupyTransferAnalytics.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4427,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Transfer\/Infrastructure\/EntrupyTransferAnalytics.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4467,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Transfer\/Infrastructure\/EntrupyTransferAnalytics.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4510,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Transfer\/Infrastructure\/EntrupyTransferAnalytics.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4610,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Transfer\/Infrastructure\/EntrupyTransferAnalytics.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4644,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Transfer\/Infrastructure\/EntrupyTransferAnalytics.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6030,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Transfer\/Infrastructure\/EntrupyTransferAnalytics.swift",
+      "kind": "StringLiteral",
+      "offset": 7402,
+      "length": 32,
+      "value": "\"com.entrupy.transfer.analytics\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Transfer\/Infrastructure\/EntrupyTransferAnalytics.swift",
+      "kind": "Dictionary",
+      "offset": 21964,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/Transfer\/EntrupyTransferCertificateViewModel.swift",
+      "kind": "Array",
+      "offset": 1359,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/Transfer\/EntrupyTransferCertificateViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1470,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/Transfer\/EntrupyTransferCertificateViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4447,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Domain\/EntrupyCaptureStoryProperties.swift",
       "kind": "StringLiteral",
       "offset": 644,
@@ -91145,14 +93350,21 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureStoryLogger.swift",
       "kind": "StringLiteral",
-      "offset": 21471,
+      "offset": 21348,
+      "length": 24,
+      "value": "\"quality_prioritization\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureStoryLogger.swift",
+      "kind": "StringLiteral",
+      "offset": 21549,
       "length": 4,
       "value": "\", \""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureStoryLogger.swift",
       "kind": "BooleanLiteral",
-      "offset": 23078,
+      "offset": 23156,
       "length": 5,
       "value": "false"
     },

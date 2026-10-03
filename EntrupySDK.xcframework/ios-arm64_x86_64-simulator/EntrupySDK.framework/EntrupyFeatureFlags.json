@@ -13,6 +13,7 @@
     "flagViewServiceV2": false,
     "setFlagV2": false,
     "searchAuthenticationItemsServiceV2": false,
+    "searchSubmissionsServiceV2": false,
     "captureServiceV2": true,
     "macroFingerprint": true,
     "marketEdgeNewStructure" : false,
@@ -28,5 +29,6 @@
     "imageMemoryCacheV2": true,
     "postHog": true,
     "captureStoryLogs": true,
-    "instructionToastPosition": "bottom"
+    "photoQualityFallback": false,
+    "instructionToastPosition": "top"
 }

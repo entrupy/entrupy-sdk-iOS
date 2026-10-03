@@ -17,6 +17,7 @@
     "flagViewServiceV2": true,
     "setFlagV2": true,
     "searchAuthenticationItemsServiceV2": true,
+    "searchSubmissionsServiceV2": true,
     "captureServiceV2": true,
     "marketEdgeServiceV2": true,
     "configVersion": "backend_choice",
@@ -28,5 +29,6 @@
     "imageMemoryCacheV2": true,
     "postHog": true,
     "captureStoryLogs": true,
+    "photoQualityFallback": true,
     "instructionToastPosition": "top"
 }
