@@ -867,7 +867,8 @@ extension EntrupySDK.EntrupyMarketMatchViewController : UIKit.UITableViewDelegat
   @objc final public let state: Swift.String?
   @objc final public let blurLevel: Swift.Int
   @objc final public let inferenceTime: Swift.Double
-  public init(shouldCapture: Swift.Bool, state: Swift.String?, blurLevel: Swift.Int = -1, inferenceTime: Swift.Double = 0.0)
+  final public let _blurRegionOfInterest: CoreFoundation.CGRect?
+  public init(shouldCapture: Swift.Bool, state: Swift.String?, blurLevel: Swift.Int = -1, inferenceTime: Swift.Double = 0.0, blurRegionOfInterest: CoreFoundation.CGRect? = nil)
   @objc deinit
 }
 @objc(ObjCSnapIQLogResult) public class SnapIQLogResult : ObjectiveC.NSObject {
@@ -883,7 +884,7 @@ extension EntrupySDK.EntrupyMarketMatchViewController : UIKit.UITableViewDelegat
   @objc weak public var delegate: (any EntrupySDK.SnapIQDelegate)?
   @objc weak public var nonRoiDelegate: (any EntrupySDK.SnapIQNonRoiDelegate)?
   @objc weak public var loggingDelegate: (any EntrupySDK.SnapIQLoggingDelegate)?
-  public init(viewSize: CoreFoundation.CGSize, regionType: Swift.String = "camera", modelPath: Swift.String? = nil, blurModelPath: Swift.String? = nil, captureDevice: AVFoundation.AVCaptureDevice? = nil, configuration: EntrupySDK.SnapIQConfiguration, completion: ((Swift.Bool, (any Swift.Error)?) -> Swift.Void)? = nil)
+  public init(viewSize: CoreFoundation.CGSize, regionType: Swift.String = "camera", modelPath: Swift.String? = nil, blurModelPath: Swift.String? = nil, regionMask: CoreGraphics.CGImage? = nil, regionMaskFrameInView: CoreFoundation.CGRect? = nil, captureDevice: AVFoundation.AVCaptureDevice? = nil, configuration: EntrupySDK.SnapIQConfiguration, completion: ((Swift.Bool, (any Swift.Error)?) -> Swift.Void)? = nil)
   @objc public func updateViewSize(_ newSize: CoreFoundation.CGSize)
   @objc public func resetTemporalState()
   @objc(processFrameWithSampleBuffer:) public func processFrame(sampleBuffer: CoreMedia.CMSampleBuffer) -> EntrupySDK.SnapIQResult

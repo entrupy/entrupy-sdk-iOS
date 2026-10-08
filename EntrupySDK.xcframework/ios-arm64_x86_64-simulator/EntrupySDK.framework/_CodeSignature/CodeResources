@@ -26,7 +26,7 @@
 		</data>
 		<key>EntrupyAlphaFeatureFlags.json</key>
 		<data>
-		iOA6SE6+ewAeU3SUATGjXDFSAPA=
+		QOKJMoM2twL42g3TuDqx6HkgSL4=
 		</data>
 		<key>EntrupyBannerView.nib</key>
 		<data>
@@ -86,7 +86,7 @@
 		</data>
 		<key>EntrupyFeatureFlags.json</key>
 		<data>
-		oZpXKm577/iSfn8CPuH/UInsI4U=
+		sFimTDEzrVPLEm4E/Qiy38UCfhQ=
 		</data>
 		<key>EntrupyGalleryCollectionViewCell.nib</key>
 		<data>
@@ -286,7 +286,7 @@
 		</data>
 		<key>Headers/EntrupySDK-Swift.h</key>
 		<data>
-		C1hW+MweJtRQ3BmnFMEcCKkPgjU=
+		9bttBLweAkrt1t3jkMA6dJgpC80=
 		</data>
 		<key>Headers/EntrupySDK.h</key>
 		<data>
@@ -434,43 +434,43 @@
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		CT/v8+G6SHCmbImj78yvLGzby9M=
+		4+Ql52RkBQVOyhFA1/4dGbaC0dw=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		ubQSvbHjraDOAKkONK5f8LTZE60=
+		BybO58+fCWyliTY9GfJk3ikA7vY=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		lWLB8HNvAulqo9KkZVEAQRgEK1s=
+		vFyxIS5jQkyJIbz6BoHzyi01J6w=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		ubQSvbHjraDOAKkONK5f8LTZE60=
+		BybO58+fCWyliTY9GfJk3ikA7vY=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		6WRiaN2W0tTtnAqJM3YRlMl0FIk=
+		kHdd4YODACCnAdXfPgNw6/E+FAc=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		CT/v8+G6SHCmbImj78yvLGzby9M=
+		4+Ql52RkBQVOyhFA1/4dGbaC0dw=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		dVKD913QOoYOWHcbc7vtKNBAgSc=
+		+Qq4QggclMDpM/3seIAQUFVpuyQ=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		ysdZPj0pUlD6xvMelp306F1rI8U=
+		IxhBE5jIP8uH/nqcqKimX1ghNKY=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		dVKD913QOoYOWHcbc7vtKNBAgSc=
+		+Qq4QggclMDpM/3seIAQUFVpuyQ=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		s+rRSd3WxUkYHHkz7EWwoB+sXNQ=
+		0J2cugG9UvkAUDUUpxfdKOwno8U=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1494,7 +1494,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			NWosr/V2CzmvBrlNP9g8h/ANrT8=
+			WrG9lV+y0z8zJnq7MYxbkUH3IWc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1593,7 +1593,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			tRU4pSjw5B8NOkAvYK0it/WmybM=
+			LciKG4UNSWGRCnzPyTNBfAbWEdE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1613,7 +1613,7 @@
 		</data>
 		<key>mlmodel_adidas_yeezy_350_v2_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_yeezy350v2_1.0.0_model.mlmodelc/coremldata.bin</key>
 		<data>
-		rfXM+PYanvmIrlioG8pYS2ZaEjg=
+		O+kK46Bp5l6rplobeXdZ8LjGc1w=
 		</data>
 		<key>mlmodel_adidas_yeezy_350_v2_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_yeezy350v2_1.0.0_model.mlmodelc/metadata.json</key>
 		<data>
@@ -1645,7 +1645,7 @@
 		</data>
 		<key>mlmodel_nike_air_jordan_1_high_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_jordan1_1.0.0_model.mlmodelc/coremldata.bin</key>
 		<data>
-		rfXM+PYanvmIrlioG8pYS2ZaEjg=
+		O+kK46Bp5l6rplobeXdZ8LjGc1w=
 		</data>
 		<key>mlmodel_nike_air_jordan_1_high_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_jordan1_1.0.0_model.mlmodelc/metadata.json</key>
 		<data>
@@ -2846,7 +2846,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			pMza8TsOuPPBxi27+b+sbfH750k=
+			mn4z5g3UvxSAdCH95zdsxa7359U=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2864,7 +2864,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			+oERJhU2nHLl+S621u+W2AXRzXA=
+			9rpD6B3xKuombkKNhDJb14lDVGo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2911,7 +2911,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WedFTpcUFjf27T1wHWCC/fN57w/iP/w1Mz1yKqmKuGA=
+			QbknEuQuu5Njhem6VOCKf9Rqu01xaps3xxlN/3lvLfE=
 			</data>
 		</dict>
 		<key>EntrupyBannerView.nib</key>
@@ -3016,7 +3016,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BeWwAuG2i61fRmDij7zgikroFf/QEl3jON1xkwLn8Xw=
+			t4v8PNAcg/8kSU7DAxLIPwEir0muzG7mo7zDI6QZX1g=
 			</data>
 		</dict>
 		<key>EntrupyGalleryCollectionViewCell.nib</key>
@@ -3366,7 +3366,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Dr6UBEpTo6blOwrcjCIV4l+AThlh7IlA8XElY9Dmdxs=
+			eb3XdcQGY04Zx37GAx+1oxghpkdLjzGO34Eyh6+M5uo=
 			</data>
 		</dict>
 		<key>Headers/EntrupySDK.h</key>
@@ -3618,70 +3618,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			46wxNHvrhnpHkrlUE3Jp6Zw/Apv7tslmNQpFoMXDq8c=
+			8S4PUncmVVfD1ZSazVR/JmvBhxbLALO4xMEyNkd55k0=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4Ok0kvk7a3YDCCOqfjhfApG6nAWsOuJPWQW/elhdrlA=
+			jzQra3S+OXSgPWSsF+uJHk1FB0tiL8jmz4ddJWEogzk=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uc6GvMOb4MQHzy17ge4830Y4ECisHfs/F3eOARbAV+g=
+			wDjwnrvLUW/V4wJIeIwNK9V6ycvoN++K556ZMJhRvAY=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4Ok0kvk7a3YDCCOqfjhfApG6nAWsOuJPWQW/elhdrlA=
+			jzQra3S+OXSgPWSsF+uJHk1FB0tiL8jmz4ddJWEogzk=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XDch3e3KZrGO6ZTwVXuRtgGy+YDUzzkp8XU2z2sWMGo=
+			WskeeUZbEB1gh7WXsxM3uZAlgUsIGCXDn6BJMG02G8M=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			46wxNHvrhnpHkrlUE3Jp6Zw/Apv7tslmNQpFoMXDq8c=
+			8S4PUncmVVfD1ZSazVR/JmvBhxbLALO4xMEyNkd55k0=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AUJf9K6lrk3dHXr2nAtVElBK2hQCn26aEMk5rf6Wvi8=
+			hgB+lulCMyi/6obfRRPS2LIea3mzODyjLqR5O7kvqds=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kQrisB8nM+YiW/uPraEjNL6AHuzlyM3WFLxOuvpBRQA=
+			Y0MVlzLo/iuDjpRxhZKBBRyhJYQtttix4sD3b9MToWE=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AUJf9K6lrk3dHXr2nAtVElBK2hQCn26aEMk5rf6Wvi8=
+			hgB+lulCMyi/6obfRRPS2LIea3mzODyjLqR5O7kvqds=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iuBGGkYAZnqYQvBxtbKsGNQmcey93+jHUEHIKa52QfI=
+			MYfGk+lTDkEscRUkR20fD1DaQkkxF0jQeeeFdIRpNQI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -5429,7 +5429,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fd6QF7hOprP32FWkHGyHB/HX5nGFjtlV9yatfUWBqOY=
+			M/01riLLoOhCibqUUDO1VTDbLBoWUSai4wqecX9gphw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -5528,7 +5528,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			a2BCSkr/ILy5NxeGXxUPV70RPECBTKvKClsqdhKZNH4=
+			KSQ2bqcJ5Pgjo2RXdP34sz5wIcG74AMYWsWrN1kbWKU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -5553,7 +5553,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+utynyRIdDOmWzZaAV0U97qz1f0pxjC/dk5rY+RDv+Q=
+			Ms90tuGva8fvO6hbRG66l6jD901H27ViJc/Q5QlwCcg=
 			</data>
 		</dict>
 		<key>mlmodel_adidas_yeezy_350_v2_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_yeezy350v2_1.0.0_model.mlmodelc/metadata.json</key>
@@ -5609,7 +5609,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+utynyRIdDOmWzZaAV0U97qz1f0pxjC/dk5rY+RDv+Q=
+			Ms90tuGva8fvO6hbRG66l6jD901H27ViJc/Q5QlwCcg=
 			</data>
 		</dict>
 		<key>mlmodel_nike_air_jordan_1_high_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_jordan1_1.0.0_model.mlmodelc/metadata.json</key>
@@ -7633,7 +7633,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wvI6qML8mKgDyvPSXWNmp9yneyehj+TTc1oK2lj7X58=
+			E9evAc9QtqFaFN18ktl1fyyiNVOhuc4o/DdQHIExscE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -7651,7 +7651,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XwC5SfGJvQVXPkV3Dj+bGAr6tGAH0BTt8PDsB65YcaY=
+			zlDkD5zcLBfDeynUAvKQcBOJZbR6nC7WgGdMkcj75sM=
 			</data>
 			<key>optional</key>
 			<true/>

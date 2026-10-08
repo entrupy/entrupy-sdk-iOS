@@ -1093,8 +1093,10 @@ SWIFT_CLASS_NAMED("SnapIQ")
 @property (nonatomic, weak) id <ObjCSnapIQNonRoiDelegate> _Nullable nonRoiDelegate;
 /// Delegate to receive logging events
 @property (nonatomic, weak) id <ObjCSnapIQLoggingDelegate> _Nullable loggingDelegate;
+/// Safe to call from another thread; waits for in-flight frame processing to finish.
 - (void)updateViewSize:(CGSize)newSize;
 /// Resets temporal state (useful when switching to a new sample or restarting capture)
+/// Safe to call from another thread; waits for in-flight frame processing to finish.
 - (void)resetTemporalState;
 /// Process a camera frame and perform detection + auto-capture analysis
 /// \param sampleBuffer The camera frame buffer to process
@@ -1102,6 +1104,7 @@ SWIFT_CLASS_NAMED("SnapIQ")
 ///
 /// returns:
 /// A SnapIQResult containing detection results and auto-capture analysis
+/// Calls are serialized to protect temporal capture state.
 - (ObjCSnapIQResult * _Nonnull)processFrameWithSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer SWIFT_WARN_UNUSED_RESULT;
 /// Process a camera frame for non-ROI regions (no YOLO detector). Capture
 /// is gated on stability, exposure, and blur only and stays blocked until
@@ -1111,10 +1114,12 @@ SWIFT_CLASS_NAMED("SnapIQ")
 ///
 /// returns:
 /// A SnapIQNonRoiResult containing the block/unblock decision and guidance state
+/// Calls are serialized to protect temporal capture state.
 - (ObjCSnapIQNonRoiResult * _Nonnull)processFrameNonRoiWithSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer SWIFT_WARN_UNUSED_RESULT;
 + (BOOL)isRegionSupportedWithBrandName:(NSString * _Nonnull)brandName regionName:(NSString * _Nonnull)regionName SWIFT_WARN_UNUSED_RESULT;
 + (NSDictionary<NSString *, id> * _Nonnull)getConfigInfo SWIFT_WARN_UNUSED_RESULT;
 + (NSArray<NSDictionary<NSString *, id> *> * _Nonnull)getBrandIdentifiers SWIFT_WARN_UNUSED_RESULT;
+/// Logs a safely retained snapshot of the latest result and may be called from any thread.
 - (void)logLatestFrameResult;
 - (void)exposureAnalyser:(ObjCExposureAnalyser * _Nonnull)analyser didAnalyse:(enum ObjCBrightness)brightness;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -2360,8 +2365,10 @@ SWIFT_CLASS_NAMED("SnapIQ")
 @property (nonatomic, weak) id <ObjCSnapIQNonRoiDelegate> _Nullable nonRoiDelegate;
 /// Delegate to receive logging events
 @property (nonatomic, weak) id <ObjCSnapIQLoggingDelegate> _Nullable loggingDelegate;
+/// Safe to call from another thread; waits for in-flight frame processing to finish.
 - (void)updateViewSize:(CGSize)newSize;
 /// Resets temporal state (useful when switching to a new sample or restarting capture)
+/// Safe to call from another thread; waits for in-flight frame processing to finish.
 - (void)resetTemporalState;
 /// Process a camera frame and perform detection + auto-capture analysis
 /// \param sampleBuffer The camera frame buffer to process
@@ -2369,6 +2376,7 @@ SWIFT_CLASS_NAMED("SnapIQ")
 ///
 /// returns:
 /// A SnapIQResult containing detection results and auto-capture analysis
+/// Calls are serialized to protect temporal capture state.
 - (ObjCSnapIQResult * _Nonnull)processFrameWithSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer SWIFT_WARN_UNUSED_RESULT;
 /// Process a camera frame for non-ROI regions (no YOLO detector). Capture
 /// is gated on stability, exposure, and blur only and stays blocked until
@@ -2378,10 +2386,12 @@ SWIFT_CLASS_NAMED("SnapIQ")
 ///
 /// returns:
 /// A SnapIQNonRoiResult containing the block/unblock decision and guidance state
+/// Calls are serialized to protect temporal capture state.
 - (ObjCSnapIQNonRoiResult * _Nonnull)processFrameNonRoiWithSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer SWIFT_WARN_UNUSED_RESULT;
 + (BOOL)isRegionSupportedWithBrandName:(NSString * _Nonnull)brandName regionName:(NSString * _Nonnull)regionName SWIFT_WARN_UNUSED_RESULT;
 + (NSDictionary<NSString *, id> * _Nonnull)getConfigInfo SWIFT_WARN_UNUSED_RESULT;
 + (NSArray<NSDictionary<NSString *, id> *> * _Nonnull)getBrandIdentifiers SWIFT_WARN_UNUSED_RESULT;
+/// Logs a safely retained snapshot of the latest result and may be called from any thread.
 - (void)logLatestFrameResult;
 - (void)exposureAnalyser:(ObjCExposureAnalyser * _Nonnull)analyser didAnalyse:(enum ObjCBrightness)brightness;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
