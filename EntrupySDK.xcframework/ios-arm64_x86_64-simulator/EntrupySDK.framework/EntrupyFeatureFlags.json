@@ -25,11 +25,11 @@
     "identifierCapture": "control",
     "identifierFirstSignIn": true,
     "passwordReset": false,
-    "certificateTransfer": false,
+    "certificateTransfer": true,
     "searchFilterV2": true,
     "imageMemoryCacheV2": true,
     "postHog": true,
     "captureStoryLogs": true,
-    "photoQualityFallback": false,
+    "photoQualityFallback": true,
     "instructionToastPosition": "top"
 }

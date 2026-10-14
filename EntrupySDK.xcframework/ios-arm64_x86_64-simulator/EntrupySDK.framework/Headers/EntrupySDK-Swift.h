@@ -381,12 +381,6 @@ typedef SWIFT_ENUM_NAMED(NSInteger, ObjCBrightness, "Brightness", open) {
   ObjCBrightnessOverexposed = 2,
 };
 
-typedef SWIFT_ENUM_NAMED(NSInteger, ObjCBrightnessV3, "BrightnessV3", open) {
-  ObjCBrightnessV3Normal = 0,
-  ObjCBrightnessV3Underexposed = 1,
-  ObjCBrightnessV3Overexposed = 2,
-};
-
 /// Where the user came from when a flow was opened.
 /// Sent as the <code>entry_point</code> property on capture, transfer, and claim events so a
 /// funnel can be split by its source. The same flow is reachable from several
@@ -919,11 +913,19 @@ typedef SWIFT_ENUM_NAMED(NSInteger, ObjcEntrupyEventName, "EntrupyEventName", op
 };
 
 /// Lightweight, ObjC-bridged handle returned from image download requests. Callers
-/// store the token and invoke <code>cancel()</code> on cell reuse / view disappearance to drop
-/// in-flight network work and suppress late completion callbacks.
+/// store the token and it is evicted automatically when its owner goes away: cell
+/// reuse cancels it via <code>prepareForReuse</code>, and a released owner (cell / image view)
+/// cancels it from its own <code>deinit</code>. No view controller manages its lifecycle.
 SWIFT_CLASS_NAMED("EntrupyImageRequestToken")
 @interface EntrupyImageRequestToken : NSObject
 @property (nonatomic, readonly) BOOL isCancelled;
+/// Cancels the in-flight task and any scheduled retry. Main-thread safe by
+/// construction: it performs only a constant-time flag update under the lock plus
+/// two advisory cancellations — <code>URLSessionDataTask.cancel()</code> and
+/// <code>DispatchWorkItem.cancel()</code> both return immediately and do their teardown
+/// asynchronously on their own queues. No network, decode, or disk work ever
+/// happens on the calling thread, so calling this from the main thread (cell
+/// reuse, owner <code>deinit</code>) never blocks the UI.
 - (void)cancel;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -1066,19 +1068,6 @@ SWIFT_PROTOCOL_NAMED("ExposureAnalyserDelegate")
 - (void)exposureAnalyser:(ObjCExposureAnalyser * _Nonnull)analyser didAnalyse:(enum ObjCBrightness)brightness;
 @end
 
-@class ObjCExposureAnalyserV3;
-SWIFT_PROTOCOL_NAMED("ExposureAnalyserDelegateV3")
-@protocol ObjCExposureAnalyserDelegateV3
-- (void)exposureAnalyser:(ObjCExposureAnalyserV3 * _Nonnull)analyser didAnalyse:(enum ObjCBrightnessV3)brightness;
-@end
-
-SWIFT_CLASS_NAMED("ExposureAnalyserV3")
-@interface ObjCExposureAnalyserV3 : NSObject
-@property (nonatomic, weak) id <ObjCExposureAnalyserDelegateV3> _Nullable delegate;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
 @protocol ObjCSnapIQDelegate;
 @protocol ObjCSnapIQNonRoiDelegate;
 @protocol ObjCSnapIQLoggingDelegate;
@@ -1143,25 +1132,9 @@ SWIFT_PROTOCOL_NAMED("SnapIQDelegate")
 - (void)didProcessFrameWithResult:(ObjCSnapIQResult * _Nonnull)result;
 @end
 
-@class ObjCSnapIQResultV3;
-/// Delegate protocol for receiving SnapIQV3 detection results
-SWIFT_PROTOCOL_NAMED("SnapIQDelegateV3")
-@protocol ObjCSnapIQDelegateV3
-- (void)didProcessFrameWithResult:(ObjCSnapIQResultV3 * _Nonnull)result;
-@end
-
 /// Log result containing event name and timestamped logs
 SWIFT_CLASS_NAMED("SnapIQLogResult")
 @interface ObjCSnapIQLogResult : NSObject
-@property (nonatomic, readonly, copy) NSString * _Nonnull eventName;
-@property (nonatomic, readonly, copy) NSDictionary<NSString *, NSString *> * _Nonnull eventLogs;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-/// Log result containing event name and timestamped logs
-SWIFT_CLASS_NAMED("SnapIQLogResultV3")
-@interface ObjCSnapIQLogResultV3 : NSObject
 @property (nonatomic, readonly, copy) NSString * _Nonnull eventName;
 @property (nonatomic, readonly, copy) NSDictionary<NSString *, NSString *> * _Nonnull eventLogs;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -1172,12 +1145,6 @@ SWIFT_CLASS_NAMED("SnapIQLogResultV3")
 SWIFT_PROTOCOL_NAMED("SnapIQLoggingDelegate")
 @protocol ObjCSnapIQLoggingDelegate
 - (void)ReceiveLog:(ObjCSnapIQLogResult * _Nonnull)logResult;
-@end
-
-/// Delegate protocol for receiving SnapIQV3 logging events
-SWIFT_PROTOCOL_NAMED("SnapIQLoggingDelegateV3")
-@protocol ObjCSnapIQLoggingDelegateV3
-- (void)ReceiveLog:(ObjCSnapIQLogResultV3 * _Nonnull)logResult;
 @end
 
 /// Delegate protocol for receiving SnapIQ non-ROI capture results
@@ -1212,53 +1179,11 @@ SWIFT_CLASS_NAMED("SnapIQResult")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-/// Combined result containing both detected box and auto-capture analysis
-SWIFT_CLASS_NAMED("SnapIQResultV3")
-@interface ObjCSnapIQResultV3 : NSObject
-@property (nonatomic, readonly) BOOL shouldCapture;
-@property (nonatomic, readonly, copy) NSString * _Nullable state;
-@property (nonatomic, readonly) float confidence;
-@property (nonatomic, readonly) double fps;
-@property (nonatomic, readonly) double inferenceTime;
-@property (nonatomic, readonly) BOOL zoomSet;
-@property (nonatomic, readonly) double zoomLevel;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-SWIFT_CLASS_NAMED("SnapIQV3")
-@interface ObjCSnapIQV3 : NSObject <ObjCExposureAnalyserDelegateV3>
-@property (nonatomic, readonly) BOOL isModelReady;
-/// Delegate to receive detection results
-@property (nonatomic, weak) id <ObjCSnapIQDelegateV3> _Nullable delegate;
-/// Delegate to receive logging events
-@property (nonatomic, weak) id <ObjCSnapIQLoggingDelegateV3> _Nullable loggingDelegate;
-- (void)updateViewSize:(CGSize)newSize;
-/// Resets temporal state (useful when switching to a new sample or restarting capture)
-- (void)resetTemporalState;
-/// Process a camera frame and perform detection
-/// \param sampleBuffer The camera frame buffer to process
-///
-/// \param zoomApplied When false, runs AutoZoomV3 to determine optimal zoom level.
-/// When true, runs the normal auto-capture workflow.
-///
-///
-/// returns:
-/// A SnapIQResultV3 containing detection results, zoom info, and auto-capture analysis
-- (ObjCSnapIQResultV3 * _Nonnull)processFrameWithSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer zoomApplied:(BOOL)zoomApplied SWIFT_WARN_UNUSED_RESULT;
-+ (BOOL)isRegionSupportedWithBrandName:(NSString * _Nonnull)brandName regionName:(NSString * _Nonnull)regionName SWIFT_WARN_UNUSED_RESULT;
-+ (NSDictionary<NSString *, id> * _Nonnull)getConfigInfo SWIFT_WARN_UNUSED_RESULT;
-+ (NSArray<NSDictionary<NSString *, id> *> * _Nonnull)getBrandIdentifiers SWIFT_WARN_UNUSED_RESULT;
-- (void)logLatestFrameResult;
-- (void)exposureAnalyser:(ObjCExposureAnalyserV3 * _Nonnull)analyser didAnalyse:(enum ObjCBrightnessV3)brightness;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
 @interface UIImageView (SWIFT_EXTENSION(EntrupySDK))
 /// Cancels any in-flight image download attached to this image view and clears
-/// the stored token. Safe to call repeatedly. Intended for <code>prepareForReuse</code> /
-/// <code>viewWillDisappear</code> callsites where the destination view is no longer interested.
+/// the stored token. Safe to call repeatedly. Cell reuse calls this from
+/// <code>prepareForReuse</code>; when the image view itself is released, the token box’s
+/// <code>deinit</code> performs the same cancellation automatically.
 - (void)cancelImageDownload;
 @end
 
@@ -1653,12 +1578,6 @@ typedef SWIFT_ENUM_NAMED(NSInteger, ObjCBrightness, "Brightness", open) {
   ObjCBrightnessOverexposed = 2,
 };
 
-typedef SWIFT_ENUM_NAMED(NSInteger, ObjCBrightnessV3, "BrightnessV3", open) {
-  ObjCBrightnessV3Normal = 0,
-  ObjCBrightnessV3Underexposed = 1,
-  ObjCBrightnessV3Overexposed = 2,
-};
-
 /// Where the user came from when a flow was opened.
 /// Sent as the <code>entry_point</code> property on capture, transfer, and claim events so a
 /// funnel can be split by its source. The same flow is reachable from several
@@ -2191,11 +2110,19 @@ typedef SWIFT_ENUM_NAMED(NSInteger, ObjcEntrupyEventName, "EntrupyEventName", op
 };
 
 /// Lightweight, ObjC-bridged handle returned from image download requests. Callers
-/// store the token and invoke <code>cancel()</code> on cell reuse / view disappearance to drop
-/// in-flight network work and suppress late completion callbacks.
+/// store the token and it is evicted automatically when its owner goes away: cell
+/// reuse cancels it via <code>prepareForReuse</code>, and a released owner (cell / image view)
+/// cancels it from its own <code>deinit</code>. No view controller manages its lifecycle.
 SWIFT_CLASS_NAMED("EntrupyImageRequestToken")
 @interface EntrupyImageRequestToken : NSObject
 @property (nonatomic, readonly) BOOL isCancelled;
+/// Cancels the in-flight task and any scheduled retry. Main-thread safe by
+/// construction: it performs only a constant-time flag update under the lock plus
+/// two advisory cancellations — <code>URLSessionDataTask.cancel()</code> and
+/// <code>DispatchWorkItem.cancel()</code> both return immediately and do their teardown
+/// asynchronously on their own queues. No network, decode, or disk work ever
+/// happens on the calling thread, so calling this from the main thread (cell
+/// reuse, owner <code>deinit</code>) never blocks the UI.
 - (void)cancel;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -2338,19 +2265,6 @@ SWIFT_PROTOCOL_NAMED("ExposureAnalyserDelegate")
 - (void)exposureAnalyser:(ObjCExposureAnalyser * _Nonnull)analyser didAnalyse:(enum ObjCBrightness)brightness;
 @end
 
-@class ObjCExposureAnalyserV3;
-SWIFT_PROTOCOL_NAMED("ExposureAnalyserDelegateV3")
-@protocol ObjCExposureAnalyserDelegateV3
-- (void)exposureAnalyser:(ObjCExposureAnalyserV3 * _Nonnull)analyser didAnalyse:(enum ObjCBrightnessV3)brightness;
-@end
-
-SWIFT_CLASS_NAMED("ExposureAnalyserV3")
-@interface ObjCExposureAnalyserV3 : NSObject
-@property (nonatomic, weak) id <ObjCExposureAnalyserDelegateV3> _Nullable delegate;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
 @protocol ObjCSnapIQDelegate;
 @protocol ObjCSnapIQNonRoiDelegate;
 @protocol ObjCSnapIQLoggingDelegate;
@@ -2415,25 +2329,9 @@ SWIFT_PROTOCOL_NAMED("SnapIQDelegate")
 - (void)didProcessFrameWithResult:(ObjCSnapIQResult * _Nonnull)result;
 @end
 
-@class ObjCSnapIQResultV3;
-/// Delegate protocol for receiving SnapIQV3 detection results
-SWIFT_PROTOCOL_NAMED("SnapIQDelegateV3")
-@protocol ObjCSnapIQDelegateV3
-- (void)didProcessFrameWithResult:(ObjCSnapIQResultV3 * _Nonnull)result;
-@end
-
 /// Log result containing event name and timestamped logs
 SWIFT_CLASS_NAMED("SnapIQLogResult")
 @interface ObjCSnapIQLogResult : NSObject
-@property (nonatomic, readonly, copy) NSString * _Nonnull eventName;
-@property (nonatomic, readonly, copy) NSDictionary<NSString *, NSString *> * _Nonnull eventLogs;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-/// Log result containing event name and timestamped logs
-SWIFT_CLASS_NAMED("SnapIQLogResultV3")
-@interface ObjCSnapIQLogResultV3 : NSObject
 @property (nonatomic, readonly, copy) NSString * _Nonnull eventName;
 @property (nonatomic, readonly, copy) NSDictionary<NSString *, NSString *> * _Nonnull eventLogs;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -2444,12 +2342,6 @@ SWIFT_CLASS_NAMED("SnapIQLogResultV3")
 SWIFT_PROTOCOL_NAMED("SnapIQLoggingDelegate")
 @protocol ObjCSnapIQLoggingDelegate
 - (void)ReceiveLog:(ObjCSnapIQLogResult * _Nonnull)logResult;
-@end
-
-/// Delegate protocol for receiving SnapIQV3 logging events
-SWIFT_PROTOCOL_NAMED("SnapIQLoggingDelegateV3")
-@protocol ObjCSnapIQLoggingDelegateV3
-- (void)ReceiveLog:(ObjCSnapIQLogResultV3 * _Nonnull)logResult;
 @end
 
 /// Delegate protocol for receiving SnapIQ non-ROI capture results
@@ -2484,53 +2376,11 @@ SWIFT_CLASS_NAMED("SnapIQResult")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-/// Combined result containing both detected box and auto-capture analysis
-SWIFT_CLASS_NAMED("SnapIQResultV3")
-@interface ObjCSnapIQResultV3 : NSObject
-@property (nonatomic, readonly) BOOL shouldCapture;
-@property (nonatomic, readonly, copy) NSString * _Nullable state;
-@property (nonatomic, readonly) float confidence;
-@property (nonatomic, readonly) double fps;
-@property (nonatomic, readonly) double inferenceTime;
-@property (nonatomic, readonly) BOOL zoomSet;
-@property (nonatomic, readonly) double zoomLevel;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-SWIFT_CLASS_NAMED("SnapIQV3")
-@interface ObjCSnapIQV3 : NSObject <ObjCExposureAnalyserDelegateV3>
-@property (nonatomic, readonly) BOOL isModelReady;
-/// Delegate to receive detection results
-@property (nonatomic, weak) id <ObjCSnapIQDelegateV3> _Nullable delegate;
-/// Delegate to receive logging events
-@property (nonatomic, weak) id <ObjCSnapIQLoggingDelegateV3> _Nullable loggingDelegate;
-- (void)updateViewSize:(CGSize)newSize;
-/// Resets temporal state (useful when switching to a new sample or restarting capture)
-- (void)resetTemporalState;
-/// Process a camera frame and perform detection
-/// \param sampleBuffer The camera frame buffer to process
-///
-/// \param zoomApplied When false, runs AutoZoomV3 to determine optimal zoom level.
-/// When true, runs the normal auto-capture workflow.
-///
-///
-/// returns:
-/// A SnapIQResultV3 containing detection results, zoom info, and auto-capture analysis
-- (ObjCSnapIQResultV3 * _Nonnull)processFrameWithSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer zoomApplied:(BOOL)zoomApplied SWIFT_WARN_UNUSED_RESULT;
-+ (BOOL)isRegionSupportedWithBrandName:(NSString * _Nonnull)brandName regionName:(NSString * _Nonnull)regionName SWIFT_WARN_UNUSED_RESULT;
-+ (NSDictionary<NSString *, id> * _Nonnull)getConfigInfo SWIFT_WARN_UNUSED_RESULT;
-+ (NSArray<NSDictionary<NSString *, id> *> * _Nonnull)getBrandIdentifiers SWIFT_WARN_UNUSED_RESULT;
-- (void)logLatestFrameResult;
-- (void)exposureAnalyser:(ObjCExposureAnalyserV3 * _Nonnull)analyser didAnalyse:(enum ObjCBrightnessV3)brightness;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
 @interface UIImageView (SWIFT_EXTENSION(EntrupySDK))
 /// Cancels any in-flight image download attached to this image view and clears
-/// the stored token. Safe to call repeatedly. Intended for <code>prepareForReuse</code> /
-/// <code>viewWillDisappear</code> callsites where the destination view is no longer interested.
+/// the stored token. Safe to call repeatedly. Cell reuse calls this from
+/// <code>prepareForReuse</code>; when the image view itself is released, the token box’s
+/// <code>deinit</code> performs the same cancellation automatically.
 - (void)cancelImageDownload;
 @end
 
