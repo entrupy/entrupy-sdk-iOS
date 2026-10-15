@@ -10,7 +10,10 @@
     "configurationServiceV2": true,
     "resultDetailServiceV2": true,
     "flagServiceV2": true,
+    "flagViewServiceV2": false,
+    "setFlagV2": false,
     "searchAuthenticationItemsServiceV2": false,
+    "searchSubmissionsServiceV2": false,
     "captureServiceV2": true,
     "macroFingerprint": true,
     "marketEdgeNewStructure" : false,
@@ -19,11 +22,14 @@
     "configVersion": "backend_choice",
     "captureViewControllerV2": true,
     "marketEdgeServiceV2": false,
-    "identifierCapture": false,
+    "identifierCapture": "control",
     "identifierFirstSignIn": true,
-    "certificateTransfer": false,
+    "passwordReset": false,
+    "certificateTransfer": true,
     "searchFilterV2": true,
     "imageMemoryCacheV2": true,
     "postHog": true,
-    "instructionToastPosition": "bottom"
+    "captureStoryLogs": true,
+    "photoQualityFallback": true,
+    "instructionToastPosition": "top"
 }

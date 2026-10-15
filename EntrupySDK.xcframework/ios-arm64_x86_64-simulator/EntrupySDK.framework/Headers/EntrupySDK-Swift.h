@@ -381,10 +381,52 @@ typedef SWIFT_ENUM_NAMED(NSInteger, ObjCBrightness, "Brightness", open) {
   ObjCBrightnessOverexposed = 2,
 };
 
-typedef SWIFT_ENUM_NAMED(NSInteger, ObjCBrightnessV3, "BrightnessV3", open) {
-  ObjCBrightnessV3Normal = 0,
-  ObjCBrightnessV3Underexposed = 1,
-  ObjCBrightnessV3Overexposed = 2,
+/// Where the user came from when a flow was opened.
+/// Sent as the <code>entry_point</code> property on capture, transfer, and claim events so a
+/// funnel can be split by its source. The same flow is reachable from several
+/// places — a retake capture starts from the Retakes tab, a push deep link, or the
+/// public <code>startRetakeCaptureForItem</code> API — and without this they are
+/// indistinguishable in PostHog.
+/// Backed by <code>Int</code> rather than <code>String</code> so the enum is usable from Objective-C
+/// call sites; <code>analyticsValue</code> carries the snake_case string PostHog receives.
+/// Android uses the same value set (EMBL-2350).
+typedef SWIFT_ENUM(NSInteger, EntrupyAnalyticsEntryPoint, open) {
+/// The result screen shown immediately after a capture completes.
+  EntrupyAnalyticsEntryPointCaptureResult = 0,
+/// An item opened from the History tab.
+  EntrupyAnalyticsEntryPointHistoryDetail = 1,
+/// An item opened from the Retakes sub-tab of the Tasks tab.
+  EntrupyAnalyticsEntryPointRetakesTab = 2,
+/// A transfer opened from the Transfers sub-tab of the Tasks tab.
+  EntrupyAnalyticsEntryPointTransfersList = 3,
+/// Opened from a cell in the in-app Notifications tab.
+/// Distinct from <code>transfersList</code>: the Notifications inbox and the Transfers sub-tab are
+/// different screens.
+  EntrupyAnalyticsEntryPointInbox = 4,
+/// Opened by tapping a push notification.
+  EntrupyAnalyticsEntryPointPush = 5,
+/// Opened by a universal link or in-app route.
+  EntrupyAnalyticsEntryPointDeeplink = 6,
+/// Opened from the home / main menu screen.
+  EntrupyAnalyticsEntryPointHome = 7,
+/// A capture started from the capture flow menu — the category picker most captures go through.
+  EntrupyAnalyticsEntryPointCaptureMenu = 8,
+/// A capture started after scanning or typing an order id / barcode.
+  EntrupyAnalyticsEntryPointOrderId = 9,
+/// The new certificate opened from the claim success sheet.
+  EntrupyAnalyticsEntryPointClaimSuccess = 10,
+/// Started by an SDK consumer calling the public API directly.
+  EntrupyAnalyticsEntryPointSdkApi = 11,
+/// A recipient’s fingerprint verification capture during a certificate transfer.
+/// This capture runs through the same <code>startCapture</code> path as a normal capture
+/// and would otherwise be counted as one, skewing capture metrics once transfer
+/// ships.
+  EntrupyAnalyticsEntryPointTransferVerification = 12,
+/// The source could not be determined.
+/// Reserved for genuine gaps, so a rising <code>unknown</code> count means something is unattributed
+/// rather than describing the ordinary case. Normal captures report <code>capture_menu</code>, <code>home</code>, or
+/// <code>order_id</code>; external SDK callers report <code>sdk_api</code>.
+  EntrupyAnalyticsEntryPointUnknown = 13,
 };
 
 @protocol EntrupyLoginDelegate;
@@ -473,9 +515,14 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) EntrupyApp *
 /// \param viewController View controller to present capture workflow
 ///
 - (void)startCaptureForItem:(NSDictionary * _Nonnull)item viewController:(UIViewController * _Nonnull)viewController;
+/// Capture entry point that records where the capture was launched from.
+/// A separate overload rather than a defaulted parameter: the signature above ships in
+/// <code>EntrupyApp.h</code> and this target builds with library evolution, so widening it would break
+/// ABI. Consumers keep calling the original, which reports <code>sdk_api</code>.
+- (void)startCaptureForItem:(NSDictionary * _Nonnull)item viewController:(UIViewController * _Nonnull)viewController entryPoint:(enum EntrupyAnalyticsEntryPoint)entryPoint;
 /// Legacy: Search submissions (Objective-C compatible)
-/// This method calls the legacy Objective-C implementation and propagates delegate callbacks.
-/// Delegates are automatically forwarded via didSet when set on the Swift facade.
+/// Uses the Swift search service when enabled and falls back to the legacy Objective-C
+/// implementation while the migration is rolled out.
 /// \param pageCursor Cursor for pagination
 ///
 /// \param filters Search filters array
@@ -574,8 +621,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) EntrupyApp *
 ///
 - (void)getFlagDetailsForResultWithEntrupyID:(NSString * _Nonnull)entrupyID completionHandler:(void (^ _Nonnull)(NSDictionary * _Nullable, NSError * _Nullable))completionHandler;
 /// Legacy: Set flag for result (Objective-C compatible)
-/// This method calls the legacy Objective-C implementation and propagates delegate callbacks.
-/// Delegates are automatically forwarded via didSet when set on the Swift facade.
 /// \param flag true to set flag, false to clear
 ///
 /// \param entrupyID Entrupy ID of the result
@@ -593,6 +638,11 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) EntrupyApp *
 /// \param configuration View configuration options
 ///
 - (void)displayDetailViewForItemWithEntrupyID:(NSString * _Nonnull)entrupyID withConfiguration:(EntrupyDetailViewConfiguration * _Nonnull)configuration;
+/// Detail-view entry point that records where the user opened the screen from.
+/// A separate overload rather than a defaulted parameter on the Objective-C method above: that
+/// signature ships in <code>EntrupyApp.h</code> and this target builds with library evolution, so widening
+/// it would break ABI. SDK consumers keep calling the original.
+- (void)displayDetailViewForItemWithEntrupyID:(NSString * _Nonnull)entrupyID withConfiguration:(EntrupyDetailViewConfiguration * _Nonnull)configuration entryPoint:(enum EntrupyAnalyticsEntryPoint)entryPoint;
 /// Presents the Market Edge view for a specific authentication result.
 /// @param entrupyID The Entrupy ID for the item to display.
 /// @param viewConfiguration Configuration options, including:
@@ -621,8 +671,10 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) EntrupyApp *
 /// \endcode
 - (void)displayMarketEdgeViewForItemWithEntrupyID:(NSString * _Nonnull)entrupyID withConfiguration:(EntrupyMarketEdgeViewConfiguration * _Nonnull)configuration;
 /// Legacy: Display flag view for item (Objective-C compatible)
-/// This method calls the legacy Objective-C implementation and propagates delegate callbacks.
-/// The delegate set on the Swift facade is forwarded to the legacy implementation.
+/// When the flag view migration is enabled (<code>flagViewServiceV2</code>) and the presenter
+/// is set, uses the new Swift flow. Otherwise calls the legacy Objective-C
+/// implementation. Delegates are automatically forwarded via didSet when set on
+/// the Swift facade.
 /// \param entrupyID Entrupy ID of the result
 ///
 - (void)displayFlagViewForItemWithEntrupyID:(NSString * _Nonnull)entrupyID;
@@ -861,11 +913,19 @@ typedef SWIFT_ENUM_NAMED(NSInteger, ObjcEntrupyEventName, "EntrupyEventName", op
 };
 
 /// Lightweight, ObjC-bridged handle returned from image download requests. Callers
-/// store the token and invoke <code>cancel()</code> on cell reuse / view disappearance to drop
-/// in-flight network work and suppress late completion callbacks.
+/// store the token and it is evicted automatically when its owner goes away: cell
+/// reuse cancels it via <code>prepareForReuse</code>, and a released owner (cell / image view)
+/// cancels it from its own <code>deinit</code>. No view controller manages its lifecycle.
 SWIFT_CLASS_NAMED("EntrupyImageRequestToken")
 @interface EntrupyImageRequestToken : NSObject
 @property (nonatomic, readonly) BOOL isCancelled;
+/// Cancels the in-flight task and any scheduled retry. Main-thread safe by
+/// construction: it performs only a constant-time flag update under the lock plus
+/// two advisory cancellations — <code>URLSessionDataTask.cancel()</code> and
+/// <code>DispatchWorkItem.cancel()</code> both return immediately and do their teardown
+/// asynchronously on their own queues. No network, decode, or disk work ever
+/// happens on the calling thread, so calling this from the main thread (cell
+/// reuse, owner <code>deinit</code>) never blocks the UI.
 - (void)cancel;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -1008,19 +1068,6 @@ SWIFT_PROTOCOL_NAMED("ExposureAnalyserDelegate")
 - (void)exposureAnalyser:(ObjCExposureAnalyser * _Nonnull)analyser didAnalyse:(enum ObjCBrightness)brightness;
 @end
 
-@class ObjCExposureAnalyserV3;
-SWIFT_PROTOCOL_NAMED("ExposureAnalyserDelegateV3")
-@protocol ObjCExposureAnalyserDelegateV3
-- (void)exposureAnalyser:(ObjCExposureAnalyserV3 * _Nonnull)analyser didAnalyse:(enum ObjCBrightnessV3)brightness;
-@end
-
-SWIFT_CLASS_NAMED("ExposureAnalyserV3")
-@interface ObjCExposureAnalyserV3 : NSObject
-@property (nonatomic, weak) id <ObjCExposureAnalyserDelegateV3> _Nullable delegate;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
 @protocol ObjCSnapIQDelegate;
 @protocol ObjCSnapIQNonRoiDelegate;
 @protocol ObjCSnapIQLoggingDelegate;
@@ -1035,8 +1082,10 @@ SWIFT_CLASS_NAMED("SnapIQ")
 @property (nonatomic, weak) id <ObjCSnapIQNonRoiDelegate> _Nullable nonRoiDelegate;
 /// Delegate to receive logging events
 @property (nonatomic, weak) id <ObjCSnapIQLoggingDelegate> _Nullable loggingDelegate;
+/// Safe to call from another thread; waits for in-flight frame processing to finish.
 - (void)updateViewSize:(CGSize)newSize;
 /// Resets temporal state (useful when switching to a new sample or restarting capture)
+/// Safe to call from another thread; waits for in-flight frame processing to finish.
 - (void)resetTemporalState;
 /// Process a camera frame and perform detection + auto-capture analysis
 /// \param sampleBuffer The camera frame buffer to process
@@ -1044,6 +1093,7 @@ SWIFT_CLASS_NAMED("SnapIQ")
 ///
 /// returns:
 /// A SnapIQResult containing detection results and auto-capture analysis
+/// Calls are serialized to protect temporal capture state.
 - (ObjCSnapIQResult * _Nonnull)processFrameWithSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer SWIFT_WARN_UNUSED_RESULT;
 /// Process a camera frame for non-ROI regions (no YOLO detector). Capture
 /// is gated on stability, exposure, and blur only and stays blocked until
@@ -1053,10 +1103,12 @@ SWIFT_CLASS_NAMED("SnapIQ")
 ///
 /// returns:
 /// A SnapIQNonRoiResult containing the block/unblock decision and guidance state
+/// Calls are serialized to protect temporal capture state.
 - (ObjCSnapIQNonRoiResult * _Nonnull)processFrameNonRoiWithSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer SWIFT_WARN_UNUSED_RESULT;
 + (BOOL)isRegionSupportedWithBrandName:(NSString * _Nonnull)brandName regionName:(NSString * _Nonnull)regionName SWIFT_WARN_UNUSED_RESULT;
 + (NSDictionary<NSString *, id> * _Nonnull)getConfigInfo SWIFT_WARN_UNUSED_RESULT;
 + (NSArray<NSDictionary<NSString *, id> *> * _Nonnull)getBrandIdentifiers SWIFT_WARN_UNUSED_RESULT;
+/// Logs a safely retained snapshot of the latest result and may be called from any thread.
 - (void)logLatestFrameResult;
 - (void)exposureAnalyser:(ObjCExposureAnalyser * _Nonnull)analyser didAnalyse:(enum ObjCBrightness)brightness;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -1080,25 +1132,9 @@ SWIFT_PROTOCOL_NAMED("SnapIQDelegate")
 - (void)didProcessFrameWithResult:(ObjCSnapIQResult * _Nonnull)result;
 @end
 
-@class ObjCSnapIQResultV3;
-/// Delegate protocol for receiving SnapIQV3 detection results
-SWIFT_PROTOCOL_NAMED("SnapIQDelegateV3")
-@protocol ObjCSnapIQDelegateV3
-- (void)didProcessFrameWithResult:(ObjCSnapIQResultV3 * _Nonnull)result;
-@end
-
 /// Log result containing event name and timestamped logs
 SWIFT_CLASS_NAMED("SnapIQLogResult")
 @interface ObjCSnapIQLogResult : NSObject
-@property (nonatomic, readonly, copy) NSString * _Nonnull eventName;
-@property (nonatomic, readonly, copy) NSDictionary<NSString *, NSString *> * _Nonnull eventLogs;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-/// Log result containing event name and timestamped logs
-SWIFT_CLASS_NAMED("SnapIQLogResultV3")
-@interface ObjCSnapIQLogResultV3 : NSObject
 @property (nonatomic, readonly, copy) NSString * _Nonnull eventName;
 @property (nonatomic, readonly, copy) NSDictionary<NSString *, NSString *> * _Nonnull eventLogs;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -1109,12 +1145,6 @@ SWIFT_CLASS_NAMED("SnapIQLogResultV3")
 SWIFT_PROTOCOL_NAMED("SnapIQLoggingDelegate")
 @protocol ObjCSnapIQLoggingDelegate
 - (void)ReceiveLog:(ObjCSnapIQLogResult * _Nonnull)logResult;
-@end
-
-/// Delegate protocol for receiving SnapIQV3 logging events
-SWIFT_PROTOCOL_NAMED("SnapIQLoggingDelegateV3")
-@protocol ObjCSnapIQLoggingDelegateV3
-- (void)ReceiveLog:(ObjCSnapIQLogResultV3 * _Nonnull)logResult;
 @end
 
 /// Delegate protocol for receiving SnapIQ non-ROI capture results
@@ -1149,53 +1179,11 @@ SWIFT_CLASS_NAMED("SnapIQResult")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-/// Combined result containing both detected box and auto-capture analysis
-SWIFT_CLASS_NAMED("SnapIQResultV3")
-@interface ObjCSnapIQResultV3 : NSObject
-@property (nonatomic, readonly) BOOL shouldCapture;
-@property (nonatomic, readonly, copy) NSString * _Nullable state;
-@property (nonatomic, readonly) float confidence;
-@property (nonatomic, readonly) double fps;
-@property (nonatomic, readonly) double inferenceTime;
-@property (nonatomic, readonly) BOOL zoomSet;
-@property (nonatomic, readonly) double zoomLevel;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-SWIFT_CLASS_NAMED("SnapIQV3")
-@interface ObjCSnapIQV3 : NSObject <ObjCExposureAnalyserDelegateV3>
-@property (nonatomic, readonly) BOOL isModelReady;
-/// Delegate to receive detection results
-@property (nonatomic, weak) id <ObjCSnapIQDelegateV3> _Nullable delegate;
-/// Delegate to receive logging events
-@property (nonatomic, weak) id <ObjCSnapIQLoggingDelegateV3> _Nullable loggingDelegate;
-- (void)updateViewSize:(CGSize)newSize;
-/// Resets temporal state (useful when switching to a new sample or restarting capture)
-- (void)resetTemporalState;
-/// Process a camera frame and perform detection
-/// \param sampleBuffer The camera frame buffer to process
-///
-/// \param zoomApplied When false, runs AutoZoomV3 to determine optimal zoom level.
-/// When true, runs the normal auto-capture workflow.
-///
-///
-/// returns:
-/// A SnapIQResultV3 containing detection results, zoom info, and auto-capture analysis
-- (ObjCSnapIQResultV3 * _Nonnull)processFrameWithSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer zoomApplied:(BOOL)zoomApplied SWIFT_WARN_UNUSED_RESULT;
-+ (BOOL)isRegionSupportedWithBrandName:(NSString * _Nonnull)brandName regionName:(NSString * _Nonnull)regionName SWIFT_WARN_UNUSED_RESULT;
-+ (NSDictionary<NSString *, id> * _Nonnull)getConfigInfo SWIFT_WARN_UNUSED_RESULT;
-+ (NSArray<NSDictionary<NSString *, id> *> * _Nonnull)getBrandIdentifiers SWIFT_WARN_UNUSED_RESULT;
-- (void)logLatestFrameResult;
-- (void)exposureAnalyser:(ObjCExposureAnalyserV3 * _Nonnull)analyser didAnalyse:(enum ObjCBrightnessV3)brightness;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
 @interface UIImageView (SWIFT_EXTENSION(EntrupySDK))
 /// Cancels any in-flight image download attached to this image view and clears
-/// the stored token. Safe to call repeatedly. Intended for <code>prepareForReuse</code> /
-/// <code>viewWillDisappear</code> callsites where the destination view is no longer interested.
+/// the stored token. Safe to call repeatedly. Cell reuse calls this from
+/// <code>prepareForReuse</code>; when the image view itself is released, the token box’s
+/// <code>deinit</code> performs the same cancellation automatically.
 - (void)cancelImageDownload;
 @end
 
@@ -1590,10 +1578,52 @@ typedef SWIFT_ENUM_NAMED(NSInteger, ObjCBrightness, "Brightness", open) {
   ObjCBrightnessOverexposed = 2,
 };
 
-typedef SWIFT_ENUM_NAMED(NSInteger, ObjCBrightnessV3, "BrightnessV3", open) {
-  ObjCBrightnessV3Normal = 0,
-  ObjCBrightnessV3Underexposed = 1,
-  ObjCBrightnessV3Overexposed = 2,
+/// Where the user came from when a flow was opened.
+/// Sent as the <code>entry_point</code> property on capture, transfer, and claim events so a
+/// funnel can be split by its source. The same flow is reachable from several
+/// places — a retake capture starts from the Retakes tab, a push deep link, or the
+/// public <code>startRetakeCaptureForItem</code> API — and without this they are
+/// indistinguishable in PostHog.
+/// Backed by <code>Int</code> rather than <code>String</code> so the enum is usable from Objective-C
+/// call sites; <code>analyticsValue</code> carries the snake_case string PostHog receives.
+/// Android uses the same value set (EMBL-2350).
+typedef SWIFT_ENUM(NSInteger, EntrupyAnalyticsEntryPoint, open) {
+/// The result screen shown immediately after a capture completes.
+  EntrupyAnalyticsEntryPointCaptureResult = 0,
+/// An item opened from the History tab.
+  EntrupyAnalyticsEntryPointHistoryDetail = 1,
+/// An item opened from the Retakes sub-tab of the Tasks tab.
+  EntrupyAnalyticsEntryPointRetakesTab = 2,
+/// A transfer opened from the Transfers sub-tab of the Tasks tab.
+  EntrupyAnalyticsEntryPointTransfersList = 3,
+/// Opened from a cell in the in-app Notifications tab.
+/// Distinct from <code>transfersList</code>: the Notifications inbox and the Transfers sub-tab are
+/// different screens.
+  EntrupyAnalyticsEntryPointInbox = 4,
+/// Opened by tapping a push notification.
+  EntrupyAnalyticsEntryPointPush = 5,
+/// Opened by a universal link or in-app route.
+  EntrupyAnalyticsEntryPointDeeplink = 6,
+/// Opened from the home / main menu screen.
+  EntrupyAnalyticsEntryPointHome = 7,
+/// A capture started from the capture flow menu — the category picker most captures go through.
+  EntrupyAnalyticsEntryPointCaptureMenu = 8,
+/// A capture started after scanning or typing an order id / barcode.
+  EntrupyAnalyticsEntryPointOrderId = 9,
+/// The new certificate opened from the claim success sheet.
+  EntrupyAnalyticsEntryPointClaimSuccess = 10,
+/// Started by an SDK consumer calling the public API directly.
+  EntrupyAnalyticsEntryPointSdkApi = 11,
+/// A recipient’s fingerprint verification capture during a certificate transfer.
+/// This capture runs through the same <code>startCapture</code> path as a normal capture
+/// and would otherwise be counted as one, skewing capture metrics once transfer
+/// ships.
+  EntrupyAnalyticsEntryPointTransferVerification = 12,
+/// The source could not be determined.
+/// Reserved for genuine gaps, so a rising <code>unknown</code> count means something is unattributed
+/// rather than describing the ordinary case. Normal captures report <code>capture_menu</code>, <code>home</code>, or
+/// <code>order_id</code>; external SDK callers report <code>sdk_api</code>.
+  EntrupyAnalyticsEntryPointUnknown = 13,
 };
 
 @protocol EntrupyLoginDelegate;
@@ -1682,9 +1712,14 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) EntrupyApp *
 /// \param viewController View controller to present capture workflow
 ///
 - (void)startCaptureForItem:(NSDictionary * _Nonnull)item viewController:(UIViewController * _Nonnull)viewController;
+/// Capture entry point that records where the capture was launched from.
+/// A separate overload rather than a defaulted parameter: the signature above ships in
+/// <code>EntrupyApp.h</code> and this target builds with library evolution, so widening it would break
+/// ABI. Consumers keep calling the original, which reports <code>sdk_api</code>.
+- (void)startCaptureForItem:(NSDictionary * _Nonnull)item viewController:(UIViewController * _Nonnull)viewController entryPoint:(enum EntrupyAnalyticsEntryPoint)entryPoint;
 /// Legacy: Search submissions (Objective-C compatible)
-/// This method calls the legacy Objective-C implementation and propagates delegate callbacks.
-/// Delegates are automatically forwarded via didSet when set on the Swift facade.
+/// Uses the Swift search service when enabled and falls back to the legacy Objective-C
+/// implementation while the migration is rolled out.
 /// \param pageCursor Cursor for pagination
 ///
 /// \param filters Search filters array
@@ -1783,8 +1818,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) EntrupyApp *
 ///
 - (void)getFlagDetailsForResultWithEntrupyID:(NSString * _Nonnull)entrupyID completionHandler:(void (^ _Nonnull)(NSDictionary * _Nullable, NSError * _Nullable))completionHandler;
 /// Legacy: Set flag for result (Objective-C compatible)
-/// This method calls the legacy Objective-C implementation and propagates delegate callbacks.
-/// Delegates are automatically forwarded via didSet when set on the Swift facade.
 /// \param flag true to set flag, false to clear
 ///
 /// \param entrupyID Entrupy ID of the result
@@ -1802,6 +1835,11 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) EntrupyApp *
 /// \param configuration View configuration options
 ///
 - (void)displayDetailViewForItemWithEntrupyID:(NSString * _Nonnull)entrupyID withConfiguration:(EntrupyDetailViewConfiguration * _Nonnull)configuration;
+/// Detail-view entry point that records where the user opened the screen from.
+/// A separate overload rather than a defaulted parameter on the Objective-C method above: that
+/// signature ships in <code>EntrupyApp.h</code> and this target builds with library evolution, so widening
+/// it would break ABI. SDK consumers keep calling the original.
+- (void)displayDetailViewForItemWithEntrupyID:(NSString * _Nonnull)entrupyID withConfiguration:(EntrupyDetailViewConfiguration * _Nonnull)configuration entryPoint:(enum EntrupyAnalyticsEntryPoint)entryPoint;
 /// Presents the Market Edge view for a specific authentication result.
 /// @param entrupyID The Entrupy ID for the item to display.
 /// @param viewConfiguration Configuration options, including:
@@ -1830,8 +1868,10 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) EntrupyApp *
 /// \endcode
 - (void)displayMarketEdgeViewForItemWithEntrupyID:(NSString * _Nonnull)entrupyID withConfiguration:(EntrupyMarketEdgeViewConfiguration * _Nonnull)configuration;
 /// Legacy: Display flag view for item (Objective-C compatible)
-/// This method calls the legacy Objective-C implementation and propagates delegate callbacks.
-/// The delegate set on the Swift facade is forwarded to the legacy implementation.
+/// When the flag view migration is enabled (<code>flagViewServiceV2</code>) and the presenter
+/// is set, uses the new Swift flow. Otherwise calls the legacy Objective-C
+/// implementation. Delegates are automatically forwarded via didSet when set on
+/// the Swift facade.
 /// \param entrupyID Entrupy ID of the result
 ///
 - (void)displayFlagViewForItemWithEntrupyID:(NSString * _Nonnull)entrupyID;
@@ -2070,11 +2110,19 @@ typedef SWIFT_ENUM_NAMED(NSInteger, ObjcEntrupyEventName, "EntrupyEventName", op
 };
 
 /// Lightweight, ObjC-bridged handle returned from image download requests. Callers
-/// store the token and invoke <code>cancel()</code> on cell reuse / view disappearance to drop
-/// in-flight network work and suppress late completion callbacks.
+/// store the token and it is evicted automatically when its owner goes away: cell
+/// reuse cancels it via <code>prepareForReuse</code>, and a released owner (cell / image view)
+/// cancels it from its own <code>deinit</code>. No view controller manages its lifecycle.
 SWIFT_CLASS_NAMED("EntrupyImageRequestToken")
 @interface EntrupyImageRequestToken : NSObject
 @property (nonatomic, readonly) BOOL isCancelled;
+/// Cancels the in-flight task and any scheduled retry. Main-thread safe by
+/// construction: it performs only a constant-time flag update under the lock plus
+/// two advisory cancellations — <code>URLSessionDataTask.cancel()</code> and
+/// <code>DispatchWorkItem.cancel()</code> both return immediately and do their teardown
+/// asynchronously on their own queues. No network, decode, or disk work ever
+/// happens on the calling thread, so calling this from the main thread (cell
+/// reuse, owner <code>deinit</code>) never blocks the UI.
 - (void)cancel;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -2217,19 +2265,6 @@ SWIFT_PROTOCOL_NAMED("ExposureAnalyserDelegate")
 - (void)exposureAnalyser:(ObjCExposureAnalyser * _Nonnull)analyser didAnalyse:(enum ObjCBrightness)brightness;
 @end
 
-@class ObjCExposureAnalyserV3;
-SWIFT_PROTOCOL_NAMED("ExposureAnalyserDelegateV3")
-@protocol ObjCExposureAnalyserDelegateV3
-- (void)exposureAnalyser:(ObjCExposureAnalyserV3 * _Nonnull)analyser didAnalyse:(enum ObjCBrightnessV3)brightness;
-@end
-
-SWIFT_CLASS_NAMED("ExposureAnalyserV3")
-@interface ObjCExposureAnalyserV3 : NSObject
-@property (nonatomic, weak) id <ObjCExposureAnalyserDelegateV3> _Nullable delegate;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
 @protocol ObjCSnapIQDelegate;
 @protocol ObjCSnapIQNonRoiDelegate;
 @protocol ObjCSnapIQLoggingDelegate;
@@ -2244,8 +2279,10 @@ SWIFT_CLASS_NAMED("SnapIQ")
 @property (nonatomic, weak) id <ObjCSnapIQNonRoiDelegate> _Nullable nonRoiDelegate;
 /// Delegate to receive logging events
 @property (nonatomic, weak) id <ObjCSnapIQLoggingDelegate> _Nullable loggingDelegate;
+/// Safe to call from another thread; waits for in-flight frame processing to finish.
 - (void)updateViewSize:(CGSize)newSize;
 /// Resets temporal state (useful when switching to a new sample or restarting capture)
+/// Safe to call from another thread; waits for in-flight frame processing to finish.
 - (void)resetTemporalState;
 /// Process a camera frame and perform detection + auto-capture analysis
 /// \param sampleBuffer The camera frame buffer to process
@@ -2253,6 +2290,7 @@ SWIFT_CLASS_NAMED("SnapIQ")
 ///
 /// returns:
 /// A SnapIQResult containing detection results and auto-capture analysis
+/// Calls are serialized to protect temporal capture state.
 - (ObjCSnapIQResult * _Nonnull)processFrameWithSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer SWIFT_WARN_UNUSED_RESULT;
 /// Process a camera frame for non-ROI regions (no YOLO detector). Capture
 /// is gated on stability, exposure, and blur only and stays blocked until
@@ -2262,10 +2300,12 @@ SWIFT_CLASS_NAMED("SnapIQ")
 ///
 /// returns:
 /// A SnapIQNonRoiResult containing the block/unblock decision and guidance state
+/// Calls are serialized to protect temporal capture state.
 - (ObjCSnapIQNonRoiResult * _Nonnull)processFrameNonRoiWithSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer SWIFT_WARN_UNUSED_RESULT;
 + (BOOL)isRegionSupportedWithBrandName:(NSString * _Nonnull)brandName regionName:(NSString * _Nonnull)regionName SWIFT_WARN_UNUSED_RESULT;
 + (NSDictionary<NSString *, id> * _Nonnull)getConfigInfo SWIFT_WARN_UNUSED_RESULT;
 + (NSArray<NSDictionary<NSString *, id> *> * _Nonnull)getBrandIdentifiers SWIFT_WARN_UNUSED_RESULT;
+/// Logs a safely retained snapshot of the latest result and may be called from any thread.
 - (void)logLatestFrameResult;
 - (void)exposureAnalyser:(ObjCExposureAnalyser * _Nonnull)analyser didAnalyse:(enum ObjCBrightness)brightness;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -2289,25 +2329,9 @@ SWIFT_PROTOCOL_NAMED("SnapIQDelegate")
 - (void)didProcessFrameWithResult:(ObjCSnapIQResult * _Nonnull)result;
 @end
 
-@class ObjCSnapIQResultV3;
-/// Delegate protocol for receiving SnapIQV3 detection results
-SWIFT_PROTOCOL_NAMED("SnapIQDelegateV3")
-@protocol ObjCSnapIQDelegateV3
-- (void)didProcessFrameWithResult:(ObjCSnapIQResultV3 * _Nonnull)result;
-@end
-
 /// Log result containing event name and timestamped logs
 SWIFT_CLASS_NAMED("SnapIQLogResult")
 @interface ObjCSnapIQLogResult : NSObject
-@property (nonatomic, readonly, copy) NSString * _Nonnull eventName;
-@property (nonatomic, readonly, copy) NSDictionary<NSString *, NSString *> * _Nonnull eventLogs;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-/// Log result containing event name and timestamped logs
-SWIFT_CLASS_NAMED("SnapIQLogResultV3")
-@interface ObjCSnapIQLogResultV3 : NSObject
 @property (nonatomic, readonly, copy) NSString * _Nonnull eventName;
 @property (nonatomic, readonly, copy) NSDictionary<NSString *, NSString *> * _Nonnull eventLogs;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -2318,12 +2342,6 @@ SWIFT_CLASS_NAMED("SnapIQLogResultV3")
 SWIFT_PROTOCOL_NAMED("SnapIQLoggingDelegate")
 @protocol ObjCSnapIQLoggingDelegate
 - (void)ReceiveLog:(ObjCSnapIQLogResult * _Nonnull)logResult;
-@end
-
-/// Delegate protocol for receiving SnapIQV3 logging events
-SWIFT_PROTOCOL_NAMED("SnapIQLoggingDelegateV3")
-@protocol ObjCSnapIQLoggingDelegateV3
-- (void)ReceiveLog:(ObjCSnapIQLogResultV3 * _Nonnull)logResult;
 @end
 
 /// Delegate protocol for receiving SnapIQ non-ROI capture results
@@ -2358,53 +2376,11 @@ SWIFT_CLASS_NAMED("SnapIQResult")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-/// Combined result containing both detected box and auto-capture analysis
-SWIFT_CLASS_NAMED("SnapIQResultV3")
-@interface ObjCSnapIQResultV3 : NSObject
-@property (nonatomic, readonly) BOOL shouldCapture;
-@property (nonatomic, readonly, copy) NSString * _Nullable state;
-@property (nonatomic, readonly) float confidence;
-@property (nonatomic, readonly) double fps;
-@property (nonatomic, readonly) double inferenceTime;
-@property (nonatomic, readonly) BOOL zoomSet;
-@property (nonatomic, readonly) double zoomLevel;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-SWIFT_CLASS_NAMED("SnapIQV3")
-@interface ObjCSnapIQV3 : NSObject <ObjCExposureAnalyserDelegateV3>
-@property (nonatomic, readonly) BOOL isModelReady;
-/// Delegate to receive detection results
-@property (nonatomic, weak) id <ObjCSnapIQDelegateV3> _Nullable delegate;
-/// Delegate to receive logging events
-@property (nonatomic, weak) id <ObjCSnapIQLoggingDelegateV3> _Nullable loggingDelegate;
-- (void)updateViewSize:(CGSize)newSize;
-/// Resets temporal state (useful when switching to a new sample or restarting capture)
-- (void)resetTemporalState;
-/// Process a camera frame and perform detection
-/// \param sampleBuffer The camera frame buffer to process
-///
-/// \param zoomApplied When false, runs AutoZoomV3 to determine optimal zoom level.
-/// When true, runs the normal auto-capture workflow.
-///
-///
-/// returns:
-/// A SnapIQResultV3 containing detection results, zoom info, and auto-capture analysis
-- (ObjCSnapIQResultV3 * _Nonnull)processFrameWithSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer zoomApplied:(BOOL)zoomApplied SWIFT_WARN_UNUSED_RESULT;
-+ (BOOL)isRegionSupportedWithBrandName:(NSString * _Nonnull)brandName regionName:(NSString * _Nonnull)regionName SWIFT_WARN_UNUSED_RESULT;
-+ (NSDictionary<NSString *, id> * _Nonnull)getConfigInfo SWIFT_WARN_UNUSED_RESULT;
-+ (NSArray<NSDictionary<NSString *, id> *> * _Nonnull)getBrandIdentifiers SWIFT_WARN_UNUSED_RESULT;
-- (void)logLatestFrameResult;
-- (void)exposureAnalyser:(ObjCExposureAnalyserV3 * _Nonnull)analyser didAnalyse:(enum ObjCBrightnessV3)brightness;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
 @interface UIImageView (SWIFT_EXTENSION(EntrupySDK))
 /// Cancels any in-flight image download attached to this image view and clears
-/// the stored token. Safe to call repeatedly. Intended for <code>prepareForReuse</code> /
-/// <code>viewWillDisappear</code> callsites where the destination view is no longer interested.
+/// the stored token. Safe to call repeatedly. Cell reuse calls this from
+/// <code>prepareForReuse</code>; when the image view itself is released, the token box’s
+/// <code>deinit</code> performs the same cancellation automatically.
 - (void)cancelImageDownload;
 @end
 
