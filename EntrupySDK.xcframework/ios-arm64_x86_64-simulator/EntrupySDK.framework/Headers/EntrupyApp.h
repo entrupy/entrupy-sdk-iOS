@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak) id<EntrupyConfigDelegate> configDelegate;
 @property (nonatomic, weak) id<EntrupyCaptureDelegate> captureDelegate;
 @property (nonatomic, weak) id<EntrupySearchDelegate> searchDelegate;
-@property (nonatomic, strong) id<EntrupyTheme> theme;
+@property (nonatomic, strong, nullable) id<EntrupyTheme> theme;
 @property (nonatomic, copy, nullable) void(^backgroundTransferCompletionHandler)(void);
 @property (nonatomic, weak) id<EntrupyFlagDelegate> flagDelegate;
 @property (nonatomic, weak) id<EntrupyDetailViewDelegate> detailViewDelegate;

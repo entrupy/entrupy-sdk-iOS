@@ -658,7 +658,10 @@ extension Swift.Array {
     @objc get
     @objc set
   }
-  @objc public var theme: (any EntrupySDK.EntrupyTheme)?
+  @objc public var theme: (any EntrupySDK.EntrupyTheme)? {
+    @objc get
+    @objc set
+  }
   @objc public var backgroundTransferCompletionHandler: (() -> Swift.Void)?
   @objc deinit
 }
@@ -1189,6 +1192,7 @@ public enum EntrupyAnalyticsEvent : Swift.String {
   case captureTimedout
   case captureSubmitted
   case resultReceived
+  case evbCtaTapped
   case duplicateSessionFound
   case duplicateSessionSearchFailed
   case duplicateSessionContinuedWithoutChecking
