@@ -1192,6 +1192,11 @@ public enum EntrupyAnalyticsEvent : Swift.String {
   case captureTimedout
   case captureSubmitted
   case resultReceived
+  case captureRegionRetaken
+  case reviewScreenViewed
+  case reviewScreenRegionSelected
+  case retakeScreenViewed
+  case sliderRegionSelected
   case evbCtaTapped
   case duplicateSessionFound
   case duplicateSessionSearchFailed
@@ -1232,6 +1237,7 @@ public enum EntrupyAnalyticsEvent : Swift.String {
   case tasksTransfersFilterApplied
   case tasksTransfersSearchSubmitted
   case tasksTabClosed
+  case itemDetailsImageLoadSummary
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {

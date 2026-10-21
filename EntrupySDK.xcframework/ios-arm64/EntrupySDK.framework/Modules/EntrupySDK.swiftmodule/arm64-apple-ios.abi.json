@@ -669,6 +669,16 @@
       },
       {
         "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "EntrupySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -41305,6 +41315,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "EntrupySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "QuartzCore",
         "printedName": "QuartzCore",
         "declKind": "Import",
@@ -50287,6 +50307,206 @@
           },
           {
             "kind": "Var",
+            "name": "captureRegionRetaken",
+            "printedName": "captureRegionRetaken",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEvent.Type) -> EntrupySDK.EntrupyAnalyticsEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEvent",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                    "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEvent",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                        "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10EntrupySDK0A14AnalyticsEventO20captureRegionRetakenyA2CmF",
+            "mangledName": "$s10EntrupySDK0A14AnalyticsEventO20captureRegionRetakenyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "reviewScreenViewed",
+            "printedName": "reviewScreenViewed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEvent.Type) -> EntrupySDK.EntrupyAnalyticsEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEvent",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                    "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEvent",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                        "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10EntrupySDK0A14AnalyticsEventO18reviewScreenViewedyA2CmF",
+            "mangledName": "$s10EntrupySDK0A14AnalyticsEventO18reviewScreenViewedyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "reviewScreenRegionSelected",
+            "printedName": "reviewScreenRegionSelected",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEvent.Type) -> EntrupySDK.EntrupyAnalyticsEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEvent",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                    "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEvent",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                        "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10EntrupySDK0A14AnalyticsEventO26reviewScreenRegionSelectedyA2CmF",
+            "mangledName": "$s10EntrupySDK0A14AnalyticsEventO26reviewScreenRegionSelectedyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "retakeScreenViewed",
+            "printedName": "retakeScreenViewed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEvent.Type) -> EntrupySDK.EntrupyAnalyticsEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEvent",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                    "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEvent",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                        "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10EntrupySDK0A14AnalyticsEventO18retakeScreenViewedyA2CmF",
+            "mangledName": "$s10EntrupySDK0A14AnalyticsEventO18retakeScreenViewedyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "sliderRegionSelected",
+            "printedName": "sliderRegionSelected",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEvent.Type) -> EntrupySDK.EntrupyAnalyticsEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEvent",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                    "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEvent",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                        "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10EntrupySDK0A14AnalyticsEventO20sliderRegionSelectedyA2CmF",
+            "mangledName": "$s10EntrupySDK0A14AnalyticsEventO20sliderRegionSelectedyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "evbCtaTapped",
             "printedName": "evbCtaTapped",
             "children": [
@@ -51880,6 +52100,46 @@
             "declKind": "EnumElement",
             "usr": "s:10EntrupySDK0A14AnalyticsEventO14tasksTabClosedyA2CmF",
             "mangledName": "$s10EntrupySDK0A14AnalyticsEventO14tasksTabClosedyA2CmF",
+            "moduleName": "EntrupySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "itemDetailsImageLoadSummary",
+            "printedName": "itemDetailsImageLoadSummary",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(EntrupySDK.EntrupyAnalyticsEvent.Type) -> EntrupySDK.EntrupyAnalyticsEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EntrupyAnalyticsEvent",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                    "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "EntrupySDK.EntrupyAnalyticsEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EntrupyAnalyticsEvent",
+                        "printedName": "EntrupySDK.EntrupyAnalyticsEvent",
+                        "usr": "s:10EntrupySDK0A14AnalyticsEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10EntrupySDK0A14AnalyticsEventO27itemDetailsImageLoadSummaryyA2CmF",
+            "mangledName": "$s10EntrupySDK0A14AnalyticsEventO27itemDetailsImageLoadSummaryyA2CmF",
             "moduleName": "EntrupySDK",
             "declAttributes": [
               "RawDocComment"
@@ -58173,64 +58433,274 @@
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
+      "kind": "StringLiteral",
+      "offset": 930,
+      "length": 19,
+      "value": "\"immediate_preview\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
+      "kind": "StringLiteral",
+      "offset": 975,
+      "length": 16,
+      "value": "\"slider_reentry\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
+      "kind": "StringLiteral",
+      "offset": 1026,
+      "length": 27,
+      "value": "\"review_screen_mid_capture\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
+      "kind": "StringLiteral",
+      "offset": 1087,
+      "length": 26,
+      "value": "\"review_screen_pre_submit\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
+      "kind": "StringLiteral",
+      "offset": 1138,
+      "length": 15,
+      "value": "\"retake_screen\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
+      "kind": "StringLiteral",
+      "offset": 1339,
+      "length": 13,
+      "value": "\"pre_capture\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
+      "kind": "StringLiteral",
+      "offset": 1375,
+      "length": 13,
+      "value": "\"mid_capture\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
+      "kind": "StringLiteral",
+      "offset": 1410,
+      "length": 12,
+      "value": "\"pre_submit\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
+      "kind": "StringLiteral",
+      "offset": 1609,
+      "length": 10,
+      "value": "\"accepted\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
+      "kind": "StringLiteral",
+      "offset": 1639,
+      "length": 9,
+      "value": "\"skipped\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
+      "kind": "StringLiteral",
+      "offset": 1667,
+      "length": 8,
+      "value": "\"active\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
+      "kind": "StringLiteral",
+      "offset": 1827,
+      "length": 21,
+      "value": "\"review_screen_shown\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
+      "kind": "StringLiteral",
+      "offset": 1867,
+      "length": 22,
+      "value": "\"review_screen_hidden\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
+      "kind": "StringLiteral",
+      "offset": 1915,
+      "length": 16,
+      "value": "\"not_applicable\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
+      "kind": "StringLiteral",
+      "offset": 3919,
+      "length": 22,
+      "value": "\"review_screen_submit\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
+      "kind": "StringLiteral",
+      "offset": 4057,
+      "length": 23,
+      "value": "\"preview_submit_button\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
+      "kind": "StringLiteral",
+      "offset": 4193,
+      "length": 18,
+      "value": "\"last_region_skip\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
       "kind": "BooleanLiteral",
-      "offset": 1816,
+      "offset": 6004,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
       "kind": "StringLiteral",
-      "offset": 2485,
+      "offset": 7152,
       "length": 13,
       "value": "\"cannot_find\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
       "kind": "StringLiteral",
-      "offset": 2521,
+      "offset": 7188,
       "length": 13,
       "value": "\"cannot_read\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
       "kind": "StringLiteral",
-      "offset": 2714,
+      "offset": 7381,
       "length": 14,
       "value": "\"not_captured\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
       "kind": "BooleanLiteral",
-      "offset": 4648,
+      "offset": 9751,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
       "kind": "BooleanLiteral",
-      "offset": 4695,
+      "offset": 9798,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
       "kind": "BooleanLiteral",
-      "offset": 4740,
+      "offset": 9843,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
       "kind": "BooleanLiteral",
-      "offset": 4787,
+      "offset": 9890,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10008,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10058,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10111,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10163,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10212,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10260,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
+      "kind": "Array",
+      "offset": 10332,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
+      "kind": "Array",
+      "offset": 10399,
+      "length": 2,
+      "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
       "kind": "Dictionary",
-      "offset": 13322,
+      "offset": 10454,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
+      "kind": "Array",
+      "offset": 10515,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
+      "kind": "Array",
+      "offset": 10570,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
+      "kind": "Array",
+      "offset": 10631,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
+      "kind": "BooleanLiteral",
+      "offset": 25269,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureAnalytics.swift",
+      "kind": "Dictionary",
+      "offset": 29379,
       "length": 3,
       "value": "[]"
     },
@@ -59533,6 +60003,27 @@
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Extensions\/UIImageView+Extension.swift",
       "kind": "Array",
       "offset": 2035,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Extensions\/UIImageView+ImageLoadObserver.swift",
+      "kind": "FloatLiteral",
+      "offset": 600,
+      "length": 3,
+      "value": "0.7"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Extensions\/UIImageView+ImageLoadObserver.swift",
+      "kind": "BooleanLiteral",
+      "offset": 629,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Extensions\/UIImageView+ImageLoadObserver.swift",
+      "kind": "Array",
+      "offset": 694,
       "length": 2,
       "value": "[]"
     },
@@ -62094,7 +62585,7 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Views\/RadioButton\/EntrupyRadioButtonGroupView.swift",
       "kind": "StringLiteral",
-      "offset": 4646,
+      "offset": 4721,
       "length": 2,
       "value": "\"\""
     },
@@ -63802,7 +64293,7 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/PublicAPI\/PublicModels\/EntrupyCaptureResult.swift",
       "kind": "Dictionary",
-      "offset": 21111,
+      "offset": 21153,
       "length": 3,
       "value": "[]"
     },
@@ -65839,7 +66330,21 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Cache\/Infrastructure\/EntrupyCacheDownloadUtils.swift",
       "kind": "FloatLiteral",
-      "offset": 2274,
+      "offset": 2285,
+      "length": 3,
+      "value": "0.7"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Cache\/Infrastructure\/EntrupyCacheDownloadUtils.swift",
+      "kind": "Array",
+      "offset": 2328,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Cache\/Infrastructure\/EntrupyCacheDownloadUtils.swift",
+      "kind": "FloatLiteral",
+      "offset": 3416,
       "length": 3,
       "value": "0.7"
     },
@@ -65951,7 +66456,14 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/CaptureDetail\/EntrupyCaptureDetailViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 27572,
+      "offset": 4698,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/CaptureDetail\/EntrupyCaptureDetailViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 29360,
       "length": 5,
       "value": "false"
     },
@@ -67560,10 +68072,24 @@
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/CaptureResult\/Cells\/EntrupyUploadedImagesSectionCell.swift",
+      "kind": "Array",
+      "offset": 1004,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/CaptureResult\/Cells\/EntrupyUploadedImagesSectionCell.swift",
       "kind": "StringLiteral",
-      "offset": 981,
+      "offset": 1054,
       "length": 29,
       "value": "\"UploadedImageCellIdentifier\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/CaptureResult\/Cells\/EntrupyUploadedImagesSectionCell.swift",
+      "kind": "Array",
+      "offset": 2336,
+      "length": 2,
+      "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/CaptureResult\/Cells\/EntrupyUploadedImagesHeaderCell.swift",
@@ -67876,42 +68402,42 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/CaptureResult\/EntrupyCaptureResultViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 22053,
+      "offset": 22123,
       "length": 18,
       "value": "\"transfer_expired\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/CaptureResult\/EntrupyCaptureResultViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 22790,
+      "offset": 22860,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/CaptureResult\/EntrupyCaptureResultViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 22837,
+      "offset": 22907,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/CaptureResult\/EntrupyCaptureResultViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 23044,
+      "offset": 23114,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/CaptureResult\/EntrupyCaptureResultViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 23182,
+      "offset": 23252,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/CaptureResult\/EntrupyCaptureResultViewModel.swift",
       "kind": "Array",
-      "offset": 36112,
+      "offset": 37490,
       "length": 2,
       "value": "[]"
     },
@@ -67946,28 +68472,28 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/CaptureResult\/EntrupyCaptureResultViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 26221,
+      "offset": 26734,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/CaptureResult\/EntrupyCaptureResultViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 33951,
+      "offset": 34464,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/CaptureResult\/EntrupyCaptureResultViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 33966,
+      "offset": 34479,
       "length": 13,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/CaptureResult\/EntrupyCaptureResultViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 33993,
+      "offset": 34506,
       "length": 14,
       "value": "2"
     },
@@ -68527,469 +69053,497 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 8646,
+      "offset": 7857,
+      "length": 2,
+      "value": "12"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8020,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8658,
+      "length": 2,
+      "value": "42"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9052,
       "length": 3,
       "value": "100"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "StringLiteral",
-      "offset": 8829,
+      "offset": 9235,
       "length": 25,
       "value": "\"capture_overlay_preview\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 11458,
+      "offset": 11864,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "Dictionary",
-      "offset": 12631,
+      "offset": 13655,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "Dictionary",
-      "offset": 12681,
+      "offset": 13705,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "Array",
-      "offset": 12730,
+      "offset": 13754,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "FloatLiteral",
-      "offset": 16821,
+      "offset": 17845,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 17603,
+      "offset": 18627,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 18188,
+      "offset": 19212,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 18449,
+      "offset": 19473,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 18497,
+      "offset": 19521,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 18542,
+      "offset": 19566,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 18971,
+      "offset": 19995,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 19025,
+      "offset": 20049,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 19060,
+      "offset": 20084,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 19103,
+      "offset": 20127,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 19226,
+      "offset": 20250,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 19565,
+      "offset": 20589,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 19809,
+      "offset": 20833,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 20043,
+      "offset": 21067,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 20158,
+      "offset": 21182,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 20274,
+      "offset": 21298,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 20320,
+      "offset": 21344,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 20568,
+      "offset": 21592,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 20604,
+      "offset": 21628,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 20637,
+      "offset": 21661,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 20722,
+      "offset": 21746,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 20762,
+      "offset": 21786,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 20885,
+      "offset": 21909,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 20929,
+      "offset": 21953,
       "length": 2,
       "value": "15"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 21169,
+      "offset": 22193,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 21237,
+      "offset": 22261,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 22192,
+      "offset": 23216,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 22285,
+      "offset": 23309,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "Array",
-      "offset": 22336,
+      "offset": 23360,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 22610,
+      "offset": 23634,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 22654,
+      "offset": 23678,
       "length": 3,
       "value": "120"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 22705,
+      "offset": 23729,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 22759,
+      "offset": 23783,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
+      "kind": "Dictionary",
+      "offset": 24025,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 23627,
+      "offset": 26476,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "Array",
-      "offset": 25734,
+      "offset": 28583,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 25799,
+      "offset": 28648,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 27869,
+      "offset": 30718,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 28031,
+      "offset": 30880,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "Dictionary",
-      "offset": 29250,
+      "offset": 32099,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "Dictionary",
-      "offset": 29785,
+      "offset": 32634,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "Dictionary",
-      "offset": 29942,
+      "offset": 32791,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 30337,
+      "offset": 33186,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 93340,
+      "offset": 98020,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 95388,
+      "offset": 100068,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 95441,
+      "offset": 100121,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 151759,
+      "offset": 156775,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 152318,
+      "offset": 157334,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 228565,
+      "offset": 240326,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 335091,
+      "offset": 347910,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 335142,
+      "offset": 347961,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 335172,
+      "offset": 347991,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 335247,
+      "offset": 348066,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 335399,
+      "offset": 348218,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 335435,
+      "offset": 348254,
       "length": 2,
       "value": "15"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 335881,
+      "offset": 348700,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 336170,
+      "offset": 348989,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 336305,
+      "offset": 349124,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 336686,
+      "offset": 349505,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "StringLiteral",
-      "offset": 336853,
+      "offset": 349672,
       "length": 3,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "Array",
-      "offset": 337686,
+      "offset": 350505,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 390459,
+      "offset": 403564,
       "length": 5,
       "value": "false"
     },
@@ -69059,35 +69613,35 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewModel\/EntrupyCaptureViewModelV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 4972,
+      "offset": 5681,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewModel\/EntrupyCaptureViewModelV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 5028,
+      "offset": 5737,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewModel\/EntrupyCaptureViewModelV2.swift",
       "kind": "Array",
-      "offset": 5952,
+      "offset": 6661,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewModel\/EntrupyCaptureViewModelV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 12297,
+      "offset": 14699,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewModel\/EntrupyCaptureViewModelV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 17064,
+      "offset": 19466,
       "length": 5,
       "value": "false"
     },
@@ -82982,35 +83536,35 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/FeatureFlag\/EntrupyFeatureFlags.swift",
       "kind": "IntegerLiteral",
-      "offset": 18308,
+      "offset": 19001,
       "length": 3,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/FeatureFlag\/EntrupyFeatureFlags.swift",
       "kind": "Array",
-      "offset": 18353,
+      "offset": 19046,
       "length": 17,
       "value": "[\"bottom\", \"top\"]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/FeatureFlag\/EntrupyFeatureFlags.swift",
       "kind": "IntegerLiteral",
-      "offset": 19361,
+      "offset": 20054,
       "length": 13,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/FeatureFlag\/EntrupyFeatureFlags.swift",
       "kind": "IntegerLiteral",
-      "offset": 19388,
+      "offset": 20081,
       "length": 6,
       "value": "2"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/FeatureFlag\/EntrupyFeatureFlags.swift",
       "kind": "Array",
-      "offset": 19436,
+      "offset": 20129,
       "length": 40,
       "value": "[\"v1_only\", \"backend_choice\", \"v2_only\"]"
     },
@@ -83384,6 +83938,55 @@
       "offset": 7528,
       "length": 3,
       "value": "\"y\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/ResultDetail\/Infrastructure\/EntrupyItemDetailsImageLoadTracker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3880,
+      "length": 4,
+      "value": "3000"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/ResultDetail\/Infrastructure\/EntrupyItemDetailsImageLoadTracker.swift",
+      "kind": "Dictionary",
+      "offset": 4417,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/ResultDetail\/Infrastructure\/EntrupyItemDetailsImageLoadTracker.swift",
+      "kind": "Dictionary",
+      "offset": 4473,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/ResultDetail\/Infrastructure\/EntrupyItemDetailsImageLoadTracker.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4504,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/ResultDetail\/Infrastructure\/EntrupyItemDetailsImageLoadTracker.swift",
+      "kind": "StringLiteral",
+      "offset": 4912,
+      "length": 45,
+      "value": "\"com.entrupy.itemdetails.imageload.analytics\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/ResultDetail\/Infrastructure\/EntrupyItemDetailsImageLoadTracker.swift",
+      "kind": "BooleanLiteral",
+      "offset": 10224,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/ResultDetail\/Infrastructure\/EntrupyItemDetailsImageLoadTracker.swift",
+      "kind": "BooleanLiteral",
+      "offset": 10264,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Configuration\/Capabilities\/PricingDisplayCapabilities.swift",
@@ -84270,324 +84873,366 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 915,
+      "offset": 1127,
       "length": 17,
       "value": "\"capture_started\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 1324,
+      "offset": 1836,
       "length": 18,
       "value": "\"capture_canceled\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 1738,
+      "offset": 2133,
       "length": 16,
       "value": "\"capture_failed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2128,
+      "offset": 2406,
       "length": 18,
       "value": "\"capture_timedout\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2804,
+      "offset": 3691,
       "length": 19,
       "value": "\"capture_submitted\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 3142,
+      "offset": 3954,
       "length": 17,
       "value": "\"result_received\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 3373,
+      "offset": 4480,
+      "length": 24,
+      "value": "\"capture_region_retaken\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 4845,
+      "length": 22,
+      "value": "\"review_screen_viewed\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 5246,
+      "length": 31,
+      "value": "\"review_screen_region_selected\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 6010,
+      "length": 22,
+      "value": "\"retake_screen_viewed\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 6343,
+      "length": 24,
+      "value": "\"slider_region_selected\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 6581,
       "length": 16,
       "value": "\"evb_cta_tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 3684,
+      "offset": 6892,
       "length": 25,
       "value": "\"duplicate_session_found\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 3960,
+      "offset": 7168,
       "length": 33,
       "value": "\"duplicate_session_search_failed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 4226,
+      "offset": 7434,
       "length": 46,
       "value": "\"duplicate_session_continued_without_checking\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 4466,
+      "offset": 7674,
       "length": 32,
       "value": "\"freshchat_conversation_started\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 4743,
+      "offset": 7951,
       "length": 21,
       "value": "\"session_ended_shown\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 4990,
+      "offset": 8198,
       "length": 19,
       "value": "\"marketedge_opened\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 5319,
+      "offset": 8527,
       "length": 19,
       "value": "\"marketedge_closed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 5554,
+      "offset": 8762,
       "length": 27,
       "value": "\"marketedge_section_viewed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 5751,
+      "offset": 8959,
       "length": 30,
       "value": "\"marketedge_refresh_attempted\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 6074,
+      "offset": 9282,
       "length": 24,
       "value": "\"marketedge_load_result\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 6317,
+      "offset": 9525,
       "length": 14,
       "value": "\"login_opened\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 6620,
+      "offset": 9828,
       "length": 19,
       "value": "\"login_step_result\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 6912,
+      "offset": 10120,
       "length": 17,
       "value": "\"login_completed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 7157,
+      "offset": 10365,
       "length": 14,
       "value": "\"login_exited\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 7457,
+      "offset": 10665,
       "length": 27,
       "value": "\"event_registration_opened\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 7831,
+      "offset": 11039,
       "length": 32,
       "value": "\"event_registration_step_result\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 8121,
+      "offset": 11329,
       "length": 30,
       "value": "\"event_registration_completed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 8417,
+      "offset": 11625,
       "length": 27,
       "value": "\"event_registration_exited\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 8754,
+      "offset": 11962,
       "length": 27,
       "value": "\"authentication_api_result\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 9030,
+      "offset": 12238,
       "length": 26,
       "value": "\"transfer_initiate_opened\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 9456,
+      "offset": 12664,
       "length": 28,
       "value": "\"transfer_recipients_loaded\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 9677,
+      "offset": 12885,
       "length": 29,
       "value": "\"transfer_initiate_submitted\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 9924,
+      "offset": 13132,
       "length": 26,
       "value": "\"transfer_initiate_result\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 10157,
+      "offset": 13365,
       "length": 29,
       "value": "\"transfer_initiate_abandoned\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 10461,
+      "offset": 13669,
       "length": 24,
       "value": "\"transfer_cancel_result\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 10803,
+      "offset": 14011,
       "length": 23,
       "value": "\"transfer_claim_opened\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 11077,
+      "offset": 14285,
       "length": 23,
       "value": "\"transfer_claim_result\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 11276,
+      "offset": 14484,
       "length": 25,
       "value": "\"transfer_decline_result\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 11623,
+      "offset": 14831,
       "length": 31,
       "value": "\"transfer_verification_started\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 12395,
+      "offset": 15603,
       "length": 31,
       "value": "\"transfer_verification_outcome\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 12633,
+      "offset": 15841,
       "length": 23,
       "value": "\"transfer_claim_closed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 13177,
+      "offset": 16385,
       "length": 18,
       "value": "\"tasks_tab_opened\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 13354,
+      "offset": 16562,
       "length": 20,
       "value": "\"tasks_tab_switched\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 13729,
+      "offset": 16937,
       "length": 19,
       "value": "\"tasks_list_loaded\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 13955,
+      "offset": 17163,
       "length": 22,
       "value": "\"tasks_list_refreshed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 14332,
+      "offset": 17540,
       "length": 21,
       "value": "\"tasks_item_selected\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 14570,
+      "offset": 17778,
       "length": 32,
       "value": "\"tasks_transfers_filter_applied\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 14813,
+      "offset": 18021,
       "length": 34,
       "value": "\"tasks_transfers_search_submitted\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
       "kind": "StringLiteral",
-      "offset": 14989,
+      "offset": 18197,
       "length": 18,
       "value": "\"tasks_tab_closed\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Analytics\/Domain\/EntrupyAnalyticsEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 19031,
+      "length": 33,
+      "value": "\"item_details_image_load_summary\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/MarketEdge\/Infrastructure\/EntrupyMarketEdgeAnalytics.swift",
@@ -84830,21 +85475,35 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Cache\/Infrastructure\/EntrupyImageDownloaderV2.swift",
       "kind": "FloatLiteral",
-      "offset": 11985,
+      "offset": 13409,
       "length": 3,
       "value": "0.7"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Cache\/Infrastructure\/EntrupyImageDownloaderV2.swift",
       "kind": "Array",
-      "offset": 12028,
+      "offset": 13452,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Cache\/Infrastructure\/EntrupyImageDownloaderV2.swift",
       "kind": "FloatLiteral",
-      "offset": 12701,
+      "offset": 13956,
+      "length": 3,
+      "value": "0.7"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Cache\/Infrastructure\/EntrupyImageDownloaderV2.swift",
+      "kind": "Array",
+      "offset": 13999,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Cache\/Infrastructure\/EntrupyImageDownloaderV2.swift",
+      "kind": "FloatLiteral",
+      "offset": 14756,
       "length": 3,
       "value": "0.7"
     },
