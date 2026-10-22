@@ -31,5 +31,6 @@
     "postHog": true,
     "captureStoryLogs": true,
     "photoQualityFallback": true,
-    "instructionToastPosition": "top"
+    "instructionToastPosition": "top",
+    "hideCaptureReviewScreen": true
 }
