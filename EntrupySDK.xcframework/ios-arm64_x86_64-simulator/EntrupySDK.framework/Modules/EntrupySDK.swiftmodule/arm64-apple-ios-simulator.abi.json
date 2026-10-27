@@ -27900,6 +27900,16 @@
       },
       {
         "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "EntrupySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -27929,6 +27939,16 @@
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "EntrupySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "EntrupySDK",
         "declAttributes": [
@@ -52312,6 +52332,16 @@
       },
       {
         "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "EntrupySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -53358,6 +53388,26 @@
             "usr": "s:5UIKit23UITraitChangeObservableP",
             "mangledName": "$s5UIKit23UITraitChangeObservableP"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "EntrupySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "EntrupySDK",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -54528,26 +54578,6 @@
       },
       {
         "kind": "Import",
-        "name": "CoreML",
-        "printedName": "CoreML",
-        "declKind": "Import",
-        "moduleName": "EntrupySDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "CoreML",
-        "printedName": "CoreML",
-        "declKind": "Import",
-        "moduleName": "EntrupySDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -54582,8 +54612,7 @@
         "usr": "c:@S@CGPoint",
         "moduleName": "CoreFoundation",
         "declAttributes": [
-          "SynthesizedProtocol",
-          "Sendable"
+          "SynthesizedProtocol"
         ],
         "isExternal": true,
         "conformances": [
@@ -54826,10 +54855,24 @@
           },
           {
             "kind": "Conformance",
+            "name": "CKRecordValueProtocol",
+            "printedName": "CKRecordValueProtocol",
+            "usr": "s:8CloudKit21CKRecordValueProtocolP",
+            "mangledName": "$s8CloudKit21CKRecordValueProtocolP"
+          },
+          {
+            "kind": "Conformance",
             "name": "MLShapedArrayScalar",
             "printedName": "MLShapedArrayScalar",
             "usr": "s:6CoreML19MLShapedArrayScalarP",
             "mangledName": "$s6CoreML19MLShapedArrayScalarP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVAttachmentValueRepresentable",
+            "printedName": "CVAttachmentValueRepresentable",
+            "usr": "s:9CoreVideo30CVAttachmentValueRepresentableP",
+            "mangledName": "$s9CoreVideo30CVAttachmentValueRepresentableP"
           },
           {
             "kind": "Conformance",
@@ -54915,6 +54958,20 @@
             "printedName": "Comparable",
             "usr": "s:SL",
             "mangledName": "$sSL"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ConvertibleFromBytes",
+            "printedName": "ConvertibleFromBytes",
+            "usr": "s:s20ConvertibleFromBytesP",
+            "mangledName": "$ss20ConvertibleFromBytesP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ConvertibleToBytes",
+            "printedName": "ConvertibleToBytes",
+            "usr": "s:s18ConvertibleToBytesP",
+            "mangledName": "$ss18ConvertibleToBytesP"
           },
           {
             "kind": "Conformance",
@@ -55392,6 +55449,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "CVAttachmentValueRepresentable",
+            "printedName": "CVAttachmentValueRepresentable",
+            "usr": "s:9CoreVideo30CVAttachmentValueRepresentableP",
+            "mangledName": "$s9CoreVideo30CVAttachmentValueRepresentableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "_FormatSpecifiable",
             "printedName": "_FormatSpecifiable",
             "children": [
@@ -55759,11 +55823,17 @@
         "usr": "c:@S@CGRect",
         "moduleName": "CoreFoundation",
         "declAttributes": [
-          "SynthesizedProtocol",
-          "Sendable"
+          "SynthesizedProtocol"
         ],
         "isExternal": true,
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "CVAttachmentValueRepresentable",
+            "printedName": "CVAttachmentValueRepresentable",
+            "usr": "s:9CoreVideo30CVAttachmentValueRepresentableP",
+            "mangledName": "$s9CoreVideo30CVAttachmentValueRepresentableP"
+          },
           {
             "kind": "Conformance",
             "name": "BitwiseCopyable",
@@ -55944,11 +56014,17 @@
         "usr": "c:@S@CGSize",
         "moduleName": "CoreFoundation",
         "declAttributes": [
-          "SynthesizedProtocol",
-          "Sendable"
+          "SynthesizedProtocol"
         ],
         "isExternal": true,
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "CVAttachmentValueRepresentable",
+            "printedName": "CVAttachmentValueRepresentable",
+            "usr": "s:9CoreVideo30CVAttachmentValueRepresentableP",
+            "mangledName": "$s9CoreVideo30CVAttachmentValueRepresentableP"
+          },
           {
             "kind": "Conformance",
             "name": "BitwiseCopyable",
@@ -56344,6 +56420,20 @@
             "printedName": "AccelerateMutableBuffer",
             "usr": "s:10Accelerate0A13MutableBufferP",
             "mangledName": "$s10Accelerate0A13MutableBufferP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CKRecordValueProtocol",
+            "printedName": "CKRecordValueProtocol",
+            "usr": "s:8CloudKit21CKRecordValueProtocolP",
+            "mangledName": "$s8CloudKit21CKRecordValueProtocolP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVAttachmentValueRepresentable",
+            "printedName": "CVAttachmentValueRepresentable",
+            "usr": "s:9CoreVideo30CVAttachmentValueRepresentableP",
+            "mangledName": "$s9CoreVideo30CVAttachmentValueRepresentableP"
           },
           {
             "kind": "Conformance",
@@ -57648,6 +57738,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "CKRecordValueProtocol",
+            "printedName": "CKRecordValueProtocol",
+            "usr": "s:8CloudKit21CKRecordValueProtocolP",
+            "mangledName": "$s8CloudKit21CKRecordValueProtocolP"
+          },
+          {
+            "kind": "Conformance",
             "name": "MLShapedArrayScalar",
             "printedName": "MLShapedArrayScalar",
             "usr": "s:6CoreML19MLShapedArrayScalarP",
@@ -57659,6 +57756,13 @@
             "printedName": "MLTensorScalar",
             "usr": "s:6CoreML14MLTensorScalarP",
             "mangledName": "$s6CoreML14MLTensorScalarP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVAttachmentValueRepresentable",
+            "printedName": "CVAttachmentValueRepresentable",
+            "usr": "s:9CoreVideo30CVAttachmentValueRepresentableP",
+            "mangledName": "$s9CoreVideo30CVAttachmentValueRepresentableP"
           },
           {
             "kind": "Conformance",
@@ -57744,6 +57848,20 @@
             "printedName": "Comparable",
             "usr": "s:SL",
             "mangledName": "$sSL"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ConvertibleFromBytes",
+            "printedName": "ConvertibleFromBytes",
+            "usr": "s:s20ConvertibleFromBytesP",
+            "mangledName": "$ss20ConvertibleFromBytesP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ConvertibleToBytes",
+            "printedName": "ConvertibleToBytes",
+            "usr": "s:s18ConvertibleToBytesP",
+            "mangledName": "$ss18ConvertibleToBytesP"
           },
           {
             "kind": "Conformance",
@@ -58205,7 +58323,6 @@
           "ObjC",
           "SynthesizedProtocol",
           "NonSendable",
-          "Sendable",
           "Dynamic"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
@@ -59568,7 +59685,7 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Configuration\/Capabilities\/EntrupyCapabilitiesConfigurationFactory.swift",
       "kind": "StringLiteral",
-      "offset": 8028,
+      "offset": 8197,
       "length": 13,
       "value": "\"result_ctas\""
     },
@@ -63215,14 +63332,14 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/RegionPreferences\/EntrupyRegionPreferencesViewController.swift",
       "kind": "StringLiteral",
-      "offset": 449,
+      "offset": 578,
       "length": 38,
       "value": "\"entrupy_region_preferences_tableview\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/RegionPreferences\/EntrupyRegionPreferencesViewController.swift",
       "kind": "StringLiteral",
-      "offset": 618,
+      "offset": 747,
       "length": 41,
       "value": "\"entrupy_region_preferences_close_button\""
     },
@@ -65287,14 +65404,14 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/SDKInterface\/PublicAPI\/EntrupyApp.swift",
       "kind": "IntegerLiteral",
-      "offset": 160626,
+      "offset": 164834,
       "length": 10,
       "value": "0xE07C01"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/SDKInterface\/PublicAPI\/EntrupyApp.swift",
       "kind": "IntegerLiteral",
-      "offset": 160694,
+      "offset": 164902,
       "length": 10,
       "value": "0xE07C02"
     },
@@ -65609,56 +65726,56 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/MarketEdge\/Controller\/EntrupyMarketEdgeViewController.swift",
       "kind": "StringLiteral",
-      "offset": 360,
+      "offset": 575,
       "length": 30,
       "value": "\"entrupy_marketedge_tableview\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/MarketEdge\/Controller\/EntrupyMarketEdgeViewController.swift",
       "kind": "StringLiteral",
-      "offset": 1435,
+      "offset": 1650,
       "length": 33,
       "value": "\"EntrupyMarketEdgeViewController\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/MarketEdge\/Controller\/EntrupyMarketEdgeViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 13734,
+      "offset": 14266,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/MarketEdge\/Controller\/EntrupyMarketEdgeViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 13763,
+      "offset": 14295,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/MarketEdge\/Controller\/EntrupyMarketEdgeViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 13792,
+      "offset": 14324,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/MarketEdge\/Controller\/EntrupyMarketEdgeViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 13821,
+      "offset": 14353,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/MarketEdge\/Controller\/EntrupyMarketEdgeViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 13854,
+      "offset": 14386,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/MarketEdge\/Controller\/EntrupyMarketEdgeViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 13882,
+      "offset": 14414,
       "length": 1,
       "value": "5"
     },
@@ -66365,107 +66482,121 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/CaptureDetail\/EntrupyCaptureDetailViewController.swift",
       "kind": "StringLiteral",
-      "offset": 1229,
+      "offset": 1356,
       "length": 43,
       "value": "\"entrupy_capture_detail_vc_collection_view\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/CaptureDetail\/EntrupyCaptureDetailViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1483,
+      "offset": 1610,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/CaptureDetail\/EntrupyCaptureDetailViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1560,
+      "offset": 1687,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/CaptureDetail\/EntrupyCaptureDetailViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2036,
+      "offset": 2163,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/CaptureDetail\/EntrupyCaptureDetailViewController.swift",
       "kind": "Array",
-      "offset": 2228,
+      "offset": 2355,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/CaptureDetail\/EntrupyCaptureDetailViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 2315,
+      "offset": 2442,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/CaptureDetail\/EntrupyCaptureDetailViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2397,
+      "offset": 2524,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/CaptureDetail\/EntrupyCaptureDetailViewController.swift",
       "kind": "Array",
-      "offset": 2880,
+      "offset": 3007,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/CaptureDetail\/EntrupyCaptureDetailViewController.swift",
       "kind": "StringLiteral",
-      "offset": 3589,
+      "offset": 3716,
       "length": 12,
       "value": "\"text\/plain\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/CaptureDetail\/EntrupyCaptureDetailViewController.swift",
       "kind": "StringLiteral",
-      "offset": 3634,
+      "offset": 3761,
       "length": 12,
       "value": "\"image\/jpeg\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/CaptureDetail\/EntrupyCaptureDetailViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4217,
+      "offset": 4344,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/CaptureDetail\/EntrupyCaptureDetailViewController.swift",
       "kind": "StringLiteral",
-      "offset": 4483,
+      "offset": 4610,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/CaptureDetail\/EntrupyCaptureDetailViewController.swift",
       "kind": "StringLiteral",
-      "offset": 4525,
+      "offset": 4652,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/CaptureDetail\/EntrupyCaptureDetailViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4698,
+      "offset": 4825,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/CaptureDetail\/EntrupyCaptureDetailViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 29360,
+      "offset": 29792,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/CaptureDetail\/EntrupyCaptureDetailItemSizes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 441,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Configuration\/Capabilities\/EntrupyCaptureLoopCapability.swift",
+      "kind": "StringLiteral",
+      "offset": 344,
+      "length": 14,
+      "value": "\"capture_loop\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Lottie-iOS\/Private\/Model\/Text\/EntrupyTextAnimator.swift",
@@ -66617,63 +66748,63 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/HistoryTimeline\/ViewController\/EntrupyHistoryTimelineViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 509,
+      "offset": 638,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/HistoryTimeline\/ViewController\/EntrupyHistoryTimelineViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 514,
+      "offset": 643,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/HistoryTimeline\/ViewController\/EntrupyHistoryTimelineViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 991,
+      "offset": 1120,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/HistoryTimeline\/ViewController\/EntrupyHistoryTimelineViewController.swift",
       "kind": "StringLiteral",
-      "offset": 1253,
+      "offset": 1382,
       "length": 37,
       "value": "\"entrupy_history_timeline_table_view\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/HistoryTimeline\/ViewController\/EntrupyHistoryTimelineViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1567,
+      "offset": 1696,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/HistoryTimeline\/ViewController\/EntrupyHistoryTimelineViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 1813,
+      "offset": 1942,
       "length": 4,
       "value": "16.0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/HistoryTimeline\/ViewController\/EntrupyHistoryTimelineViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1942,
+      "offset": 2071,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/HistoryTimeline\/ViewController\/EntrupyHistoryTimelineViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 2059,
+      "offset": 2188,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/HistoryTimeline\/ViewController\/EntrupyHistoryTimelineViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 2135,
+      "offset": 2264,
       "length": 4,
       "value": "10.0"
     },
@@ -67821,7 +67952,7 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/CaptureDetail\/Layout\/CustomLayout.swift",
       "kind": "StringLiteral",
-      "offset": 4502,
+      "offset": 4671,
       "length": 13,
       "value": "\"sectionView\""
     },
@@ -68472,28 +68603,28 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/CaptureResult\/EntrupyCaptureResultViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 26734,
+      "offset": 27137,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/CaptureResult\/EntrupyCaptureResultViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 34464,
+      "offset": 34867,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/CaptureResult\/EntrupyCaptureResultViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 34479,
+      "offset": 34882,
       "length": 13,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/CaptureResult\/EntrupyCaptureResultViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 34506,
+      "offset": 34909,
       "length": 14,
       "value": "2"
     },
@@ -69088,427 +69219,427 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 11864,
+      "offset": 11934,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "Dictionary",
-      "offset": 13655,
+      "offset": 13725,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "Dictionary",
-      "offset": 13705,
+      "offset": 13775,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "Array",
-      "offset": 13754,
+      "offset": 13824,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "FloatLiteral",
-      "offset": 17845,
+      "offset": 17915,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 18627,
+      "offset": 18697,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 19212,
+      "offset": 19282,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 19473,
+      "offset": 19543,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 19521,
+      "offset": 19591,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 19566,
+      "offset": 19636,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 19995,
+      "offset": 20065,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 20049,
+      "offset": 20119,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 20084,
+      "offset": 20154,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 20127,
+      "offset": 20197,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 20250,
+      "offset": 20320,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 20589,
+      "offset": 20659,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 20833,
+      "offset": 20903,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 21067,
+      "offset": 21137,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 21182,
+      "offset": 21252,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 21298,
+      "offset": 21368,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 21344,
+      "offset": 21414,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 21592,
+      "offset": 21662,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 21628,
+      "offset": 21698,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 21661,
+      "offset": 21731,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 21746,
+      "offset": 21816,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 21786,
+      "offset": 21856,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 21909,
+      "offset": 21979,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 21953,
+      "offset": 22023,
       "length": 2,
       "value": "15"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 22193,
+      "offset": 22263,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 22261,
+      "offset": 22331,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 23216,
+      "offset": 23286,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 23309,
+      "offset": 23379,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "Array",
-      "offset": 23360,
+      "offset": 23430,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 23634,
+      "offset": 23704,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 23678,
+      "offset": 23748,
       "length": 3,
       "value": "120"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 23729,
+      "offset": 23799,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 23783,
+      "offset": 23853,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "Dictionary",
-      "offset": 24025,
+      "offset": 24095,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 26476,
+      "offset": 26546,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "Array",
-      "offset": 28583,
+      "offset": 28764,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 28648,
+      "offset": 28829,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 30718,
+      "offset": 30899,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 30880,
+      "offset": 31061,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "Dictionary",
-      "offset": 32099,
+      "offset": 32280,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "Dictionary",
-      "offset": 32634,
+      "offset": 32815,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "Dictionary",
-      "offset": 32791,
+      "offset": 32972,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 33186,
+      "offset": 33367,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 98020,
+      "offset": 99992,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 100068,
+      "offset": 102040,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 100121,
+      "offset": 102093,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 156775,
+      "offset": 158796,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 157334,
+      "offset": 159355,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 240326,
+      "offset": 242347,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 347910,
+      "offset": 349931,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 347961,
+      "offset": 349982,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 347991,
+      "offset": 350012,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 348066,
+      "offset": 350087,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 348218,
+      "offset": 350239,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 348254,
+      "offset": 350275,
       "length": 2,
       "value": "15"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 348700,
+      "offset": 350721,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 403564,
+      "offset": 405585,
       "length": 5,
       "value": "false"
     },
@@ -83018,63 +83149,63 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Retake\/EntrupyRetakeViewController.swift",
       "kind": "StringLiteral",
-      "offset": 736,
+      "offset": 865,
       "length": 23,
       "value": "\"retake_vc_header_view\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Retake\/EntrupyRetakeViewController.swift",
       "kind": "StringLiteral",
-      "offset": 896,
+      "offset": 1025,
       "length": 24,
       "value": "\"retake_vc_close_button\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Retake\/EntrupyRetakeViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1236,
+      "offset": 1365,
       "length": 2,
       "value": "18"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Retake\/EntrupyRetakeViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1512,
+      "offset": 1641,
       "length": 2,
       "value": "14"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Retake\/EntrupyRetakeViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1630,
+      "offset": 1759,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Retake\/EntrupyRetakeViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1891,
+      "offset": 2020,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Retake\/EntrupyRetakeViewController.swift",
       "kind": "Array",
-      "offset": 2446,
+      "offset": 2575,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Retake\/EntrupyRetakeViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 2490,
+      "offset": 2619,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Retake\/EntrupyRetakeViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 2599,
+      "offset": 2728,
       "length": 1,
       "value": "0"
     },
@@ -83501,35 +83632,35 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/FeatureFlag\/EntrupyFeatureFlags.swift",
       "kind": "IntegerLiteral",
-      "offset": 19001,
+      "offset": 19375,
       "length": 3,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/FeatureFlag\/EntrupyFeatureFlags.swift",
       "kind": "Array",
-      "offset": 19046,
+      "offset": 19420,
       "length": 17,
       "value": "[\"bottom\", \"top\"]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/FeatureFlag\/EntrupyFeatureFlags.swift",
       "kind": "IntegerLiteral",
-      "offset": 20054,
+      "offset": 20428,
       "length": 13,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/FeatureFlag\/EntrupyFeatureFlags.swift",
       "kind": "IntegerLiteral",
-      "offset": 20081,
+      "offset": 20455,
       "length": 6,
       "value": "2"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/FeatureFlag\/EntrupyFeatureFlags.swift",
       "kind": "Array",
-      "offset": 20129,
+      "offset": 20503,
       "length": 40,
       "value": "[\"v1_only\", \"backend_choice\", \"v2_only\"]"
     },
@@ -84719,70 +84850,70 @@
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/CaptureFlowMenu\/EntrupyCaptureFlowMenuViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 896,
+      "offset": 900,
       "length": 1,
       "value": "9"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/CaptureFlowMenu\/EntrupyCaptureFlowMenuViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 934,
+      "offset": 938,
       "length": 1,
       "value": "9"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/CaptureFlowMenu\/EntrupyCaptureFlowMenuViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1123,
+      "offset": 1127,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/CaptureFlowMenu\/EntrupyCaptureFlowMenuViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1207,
+      "offset": 1211,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/CaptureFlowMenu\/EntrupyCaptureFlowMenuViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1247,
+      "offset": 1251,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/CaptureFlowMenu\/EntrupyCaptureFlowMenuViewController.swift",
       "kind": "StringLiteral",
-      "offset": 1289,
+      "offset": 1293,
       "length": 42,
       "value": "\"entrupy_capture_flow_menu_collectionview\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/CaptureFlowMenu\/EntrupyCaptureFlowMenuViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1746,
+      "offset": 1750,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/CaptureFlowMenu\/EntrupyCaptureFlowMenuViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1812,
+      "offset": 1816,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/CaptureFlowMenu\/EntrupyCaptureFlowMenuViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1934,
+      "offset": 1938,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/CaptureFlowMenu\/EntrupyCaptureFlowMenuViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2270,
+      "offset": 2274,
       "length": 5,
       "value": "false"
     },
@@ -85382,6 +85513,13 @@
       "value": "[]"
     },
     {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Utilities\/EntrupyDuoTopBandAdjuster.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1382,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Capture\/DetailView\/Transfer\/EntrupyTransferInboxService.swift",
       "kind": "StringLiteral",
       "offset": 2467,
@@ -85492,6 +85630,20 @@
       "offset": 698,
       "length": 3,
       "value": "0.3"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Views\/EntrupyPhoneSizedPresenter.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1800,
+      "length": 3,
+      "value": "469"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/Shared\/Views\/EntrupyPhoneSizedPresenter.swift",
+      "kind": "BooleanLiteral",
+      "offset": 8621,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/Views\/EntrupySnapIQStatusPillView.swift",
@@ -85789,8 +85941,29 @@
     },
     {
       "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Search\/Domain\/EntrupySearchSubmissionsModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 322,
+      "length": 2,
+      "value": "20"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Search\/Domain\/EntrupySearchSubmissionsModels.swift",
       "kind": "StringLiteral",
-      "offset": 416,
+      "offset": 379,
+      "length": 30,
+      "value": "\"batch_request.customer_state\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Search\/Domain\/EntrupySearchSubmissionsModels.swift",
+      "kind": "StringLiteral",
+      "offset": 469,
+      "length": 12,
+      "value": "\"batch_open\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Search\/Domain\/EntrupySearchSubmissionsModels.swift",
+      "kind": "StringLiteral",
+      "offset": 623,
       "length": 14,
       "value": "\"string-array\""
     },
@@ -86745,20 +86918,6 @@
       "offset": 473,
       "length": 30,
       "value": "\"entrupy_cert_transfer_access\""
-    },
-    {
-      "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/EntrupySDK-ctafxccmlacdcbarvmpltknhqlfm\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphonesimulator\/EntrupySDK.build\/DerivedSources\/CoreMLGenerated\/mlmodel_nike_air_jordan_1_high_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_jordan1_1.0.0_model\/mlmodel_nike_air_jordan_1_high_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_jordan1_1.0.0_model.swift",
-      "kind": "Array",
-      "offset": 665,
-      "length": 12,
-      "value": "[\"in_image\"]"
-    },
-    {
-      "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/EntrupySDK-ctafxccmlacdcbarvmpltknhqlfm\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphonesimulator\/EntrupySDK.build\/DerivedSources\/CoreMLGenerated\/mlmodel_adidas_yeezy_350_v2_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_yeezy350v2_1.0.0_model\/mlmodel_adidas_yeezy_350_v2_BASEURL_entrupy-app-resources.s3.amazonaws.com_models_sneaker_autocapture_yeezy350v2_1.0.0_model.swift",
-      "kind": "Array",
-      "offset": 665,
-      "length": 12,
-      "value": "[\"in_image\"]"
     },
     {
       "filePath": "\/Users\/vagrant\/Library\/Developer\/Xcode\/DerivedData\/EntrupySDK-ctafxccmlacdcbarvmpltknhqlfm\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EntrupySDK\/IntermediateBuildFilesPath\/EntrupySDK.build\/Release-iphonesimulator\/EntrupySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",

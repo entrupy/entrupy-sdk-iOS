@@ -14,6 +14,7 @@
     "setFlagV2": false,
     "searchAuthenticationItemsServiceV2": false,
     "searchSubmissionsServiceV2": false,
+    "searchRetakesServiceV2": false,
     "captureServiceV2": true,
     "macroFingerprint": true,
     "marketEdgeNewStructure" : false,
@@ -32,5 +33,6 @@
     "captureStoryLogs": true,
     "photoQualityFallback": true,
     "instructionToastPosition": "top",
-    "hideCaptureReviewScreen": false
+    "hideCaptureReviewScreen": false,
+    "captureLoop": false
 }

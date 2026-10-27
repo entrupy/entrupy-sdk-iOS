@@ -18,6 +18,7 @@
     "setFlagV2": true,
     "searchAuthenticationItemsServiceV2": true,
     "searchSubmissionsServiceV2": true,
+    "searchRetakesServiceV2": true,
     "captureServiceV2": true,
     "marketEdgeServiceV2": true,
     "configVersion": "backend_choice",
@@ -32,5 +33,6 @@
     "captureStoryLogs": true,
     "photoQualityFallback": true,
     "instructionToastPosition": "top",
-    "hideCaptureReviewScreen": true
+    "hideCaptureReviewScreen": true,
+    "captureLoop": true
 }
