@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.3.3 effective-5.10 (swiftlang-6.3.3.1.3 clang-2100.1.1.101)
-// swift-module-flags: -target arm64-apple-ios15.8 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name EntrupySDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.3
+// swift-compiler-version: Apple Swift version 6.4 effective-5.10 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)
+// swift-module-flags: -target arm64-apple-ios15.8 -enable-objc-interop -enable-library-evolution -language-mode 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name EntrupySDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.4
 import AVFoundation
 import AudioToolbox
 import Combine
@@ -37,68 +37,68 @@ import _SwiftConcurrencyShims
 import zlib
 infix operator +| : DefaultPrecedence
 infix operator +- : DefaultPrecedence
-extension UIKit.UIImageView {
-  @objc @_Concurrency.MainActor @preconcurrency dynamic public func cancelImageDownload()
+extension UIKit::UIImageView {
+  @objc @_Concurrency::MainActor @preconcurrency dynamic public func cancelImageDownload()
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class EntrupyMarketGradeDetailViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
-  @_Concurrency.MainActor @preconcurrency public func configure(with viewModel: EntrupySDK.EntrupyMarketGradeDetailViewModel)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+@objc @_inheritsConvenienceInitializers @_Concurrency::MainActor @preconcurrency public class EntrupyMarketGradeDetailViewController : UIKit::UIViewController {
+  @_Concurrency::MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency::MainActor @preconcurrency public func configure(with viewModel: EntrupySDK::EntrupyMarketGradeDetailViewModel)
+  @_Concurrency::MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift::String?, bundle nibBundleOrNil: Foundation::Bundle?)
+  @_Concurrency::MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation::NSCoder)
   @objc deinit
 }
-extension EntrupySDK.EntrupyMarketGradeDetailViewController : UIKit.UITableViewDataSource {
-  @_Concurrency.MainActor @preconcurrency @objc dynamic public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
-  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
-  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+extension EntrupySDK::EntrupyMarketGradeDetailViewController : UIKit::UITableViewDataSource {
+  @_Concurrency::MainActor @preconcurrency @objc dynamic public func numberOfSections(in tableView: UIKit::UITableView) -> Swift::Int
+  @_Concurrency::MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit::UITableView, numberOfRowsInSection section: Swift::Int) -> Swift::Int
+  @_Concurrency::MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit::UITableView, cellForRowAt indexPath: Foundation::IndexPath) -> UIKit::UITableViewCell
 }
-extension EntrupySDK.EntrupyMarketGradeDetailViewController : UIKit.UITableViewDelegate {
-  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
-  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, estimatedHeightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+extension EntrupySDK::EntrupyMarketGradeDetailViewController : UIKit::UITableViewDelegate {
+  @_Concurrency::MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit::UITableView, heightForRowAt indexPath: Foundation::IndexPath) -> CoreFoundation::CGFloat
+  @_Concurrency::MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit::UITableView, estimatedHeightForRowAt indexPath: Foundation::IndexPath) -> CoreFoundation::CGFloat
 }
-@objc public class EntrupyMarketGradeDetailViewModel : ObjectiveC.NSObject {
-  public init(marketGrade: EntrupySDK.EntrupyMarketGrade, captureResult: EntrupySDK.EntrupyCaptureResult)
+@objc public class EntrupyMarketGradeDetailViewModel : ObjectiveC::NSObject {
+  public init(marketGrade: EntrupySDK::EntrupyMarketGrade, captureResult: EntrupySDK::EntrupyCaptureResult)
   @objc deinit
 }
 public protocol MotionSensorDelegate : AnyObject {
-  func motionSensorDidUpdate(state: EntrupySDK.MotionSensorState, accelerometer: (x: Swift.Double, y: Swift.Double, z: Swift.Double), gyroscope: (x: Swift.Double, y: Swift.Double, z: Swift.Double))
+  func motionSensorDidUpdate(state: EntrupySDK::MotionSensorState, accelerometer: (x: Swift::Double, y: Swift::Double, z: Swift::Double), gyroscope: (x: Swift::Double, y: Swift::Double, z: Swift::Double))
 }
 public enum MotionSensorState {
   case SENSOR_STABLE
   case SENSOR_UNSTABLE
-  public static func == (a: EntrupySDK.MotionSensorState, b: EntrupySDK.MotionSensorState) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
+  public static func == (a: EntrupySDK::MotionSensorState, b: EntrupySDK::MotionSensorState) -> Swift::Bool
+  public func hash(into hasher: inout Swift::Hasher)
+  public var hashValue: Swift::Int {
     get
   }
 }
 public class MotionSensors {
-  weak public var delegate: (any EntrupySDK.MotionSensorDelegate)?
-  public init(configuration: EntrupySDK.SnapIQConfiguration)
+  weak public var delegate: (any EntrupySDK::MotionSensorDelegate)?
+  public init(configuration: EntrupySDK::SnapIQConfiguration)
   public func startMonitoring()
   public func stopMonitoring()
   @objc deinit
 }
-@objc(ObjCBrightness) public enum Brightness : Swift.Int {
+@objc(ObjCBrightness) public enum Brightness : Swift::Int {
   case normal = 0
   case underexposed = 1
   case overexposed = 2
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
+  public init?(rawValue: Swift::Int)
+  public typealias RawValue = Swift::Int
+  public var rawValue: Swift::Int {
     get
   }
 }
 @objc(ObjCExposureAnalyserDelegate) public protocol ExposureAnalyserDelegate {
-  @objc func exposureAnalyser(_ analyser: EntrupySDK.ExposureAnalyser, didAnalyse brightness: EntrupySDK.Brightness)
+  @objc func exposureAnalyser(_ analyser: EntrupySDK::ExposureAnalyser, didAnalyse brightness: EntrupySDK::Brightness)
 }
-@objc(ObjCExposureAnalyser) public class ExposureAnalyser : ObjectiveC.NSObject {
-  @objc weak public var delegate: (any EntrupySDK.ExposureAnalyserDelegate)?
-  public init(configuration: EntrupySDK.SnapIQConfiguration)
-  public func analyse(sampleBuffer: CoreMedia.CMSampleBuffer, roi: CoreFoundation.CGRect?, viewSize: CoreFoundation.CGSize, device: AVFoundation.AVCaptureDevice?)
+@objc(ObjCExposureAnalyser) public class ExposureAnalyser : ObjectiveC::NSObject {
+  @objc weak public var delegate: (any EntrupySDK::ExposureAnalyserDelegate)?
+  public init(configuration: EntrupySDK::SnapIQConfiguration)
+  public func analyse(sampleBuffer: CoreMedia::CMSampleBuffer, roi: CoreFoundation::CGRect?, viewSize: CoreFoundation::CGSize, device: AVFoundation::AVCaptureDevice?)
   @objc deinit
 }
-@objc(ObjcEntrupyEventName) public enum EntrupyEventName : Swift.Int {
+@objc(ObjcEntrupyEventName) public enum EntrupyEventName : Swift::Int {
   case captureStarted = 1
   case captureSucceeded
   case captureFailed
@@ -160,14 +160,14 @@ public class MotionSensors {
   case snapIQSessionStarted
   case snapIQAutoCaptureTriggered
   case logging
-  public func toString() -> Swift.String
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
+  public func toString() -> Swift::String
+  public init?(rawValue: Swift::Int)
+  public typealias RawValue = Swift::Int
+  public var rawValue: Swift::Int {
     get
   }
 }
-public enum EntrupyTransferStatus : Swift.Equatable {
+public enum EntrupyTransferStatus : Swift::Equatable {
   case available
   case pending
   case completed
@@ -179,210 +179,210 @@ public enum EntrupyTransferStatus : Swift.Equatable {
   case failed
   case unsuccessful
   case unknown
-  public init(rawValue: Swift.String)
-  public var rawValue: Swift.String {
+  public init(rawValue: Swift::String)
+  public var rawValue: Swift::String {
     get
   }
-  public static func == (a: EntrupySDK.EntrupyTransferStatus, b: EntrupySDK.EntrupyTransferStatus) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
+  public static func == (a: EntrupySDK::EntrupyTransferStatus, b: EntrupySDK::EntrupyTransferStatus) -> Swift::Bool
+  public func hash(into hasher: inout Swift::Hasher)
+  public var hashValue: Swift::Int {
     get
   }
 }
-extension EntrupySDK.EntrupyTransferStatus : Swift.Codable {
-  public init(from decoder: any Swift.Decoder) throws
-  public func encode(to encoder: any Swift.Encoder) throws
+extension EntrupySDK::EntrupyTransferStatus : Swift::Codable {
+  public init(from decoder: any Swift::Decoder) throws
+  public func encode(to encoder: any Swift::Encoder) throws
 }
-public struct EntrupyCertTransferInfo : Swift.Codable {
-  public let is_eligible: Swift.Bool?
-  public let status: EntrupySDK.EntrupyTransferStatus
-  public let transfer_id: Swift.String?
-  public let is_control_visible: Swift.Bool?
-  public let recipient_name: Swift.String?
-  public let sender_name: Swift.String?
-  public let initiated_at: Swift.String?
-  public let claimed_at: Swift.String?
-  public let fp_started_at: Swift.String?
-  public let finalized_at: Swift.String?
-  public let expires_at: Swift.String?
-  public let sender_message_max_length: Swift.Int?
-  public let transferred_onward: Swift.Bool?
-  public var isEligible: Swift.Bool {
+public struct EntrupyCertTransferInfo : Swift::Codable {
+  public let is_eligible: Swift::Bool?
+  public let status: EntrupySDK::EntrupyTransferStatus
+  public let transfer_id: Swift::String?
+  public let is_control_visible: Swift::Bool?
+  public let recipient_name: Swift::String?
+  public let sender_name: Swift::String?
+  public let initiated_at: Swift::String?
+  public let claimed_at: Swift::String?
+  public let fp_started_at: Swift::String?
+  public let finalized_at: Swift::String?
+  public let expires_at: Swift::String?
+  public let sender_message_max_length: Swift::Int?
+  public let transferred_onward: Swift::Bool?
+  public var isEligible: Swift::Bool {
     get
   }
-  public var isControlVisible: Swift.Bool {
+  public var isControlVisible: Swift::Bool {
     get
   }
-  public var transferId: Swift.String? {
+  public var transferId: Swift::String? {
     get
   }
-  public var recipientName: Swift.String? {
+  public var recipientName: Swift::String? {
     get
   }
-  public var senderName: Swift.String? {
+  public var senderName: Swift::String? {
     get
   }
-  public var initiatedAt: Swift.String? {
+  public var initiatedAt: Swift::String? {
     get
   }
-  public var claimedAt: Swift.String? {
+  public var claimedAt: Swift::String? {
     get
   }
-  public var fpStartedAt: Swift.String? {
+  public var fpStartedAt: Swift::String? {
     get
   }
-  public var finalizedAt: Swift.String? {
+  public var finalizedAt: Swift::String? {
     get
   }
-  public var expiresAt: Swift.String? {
+  public var expiresAt: Swift::String? {
     get
   }
-  public var senderMessageMaxLength: Swift.Int? {
+  public var senderMessageMaxLength: Swift::Int? {
     get
   }
-  public var transferredOnward: Swift.Bool {
+  public var transferredOnward: Swift::Bool {
     get
   }
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyCaptureResult : Swift.Codable {
-  public let session_uuid: Swift.String?
-  public var events: [EntrupySDK.EntrupyCaptureResultEvents]?
-  public var user: EntrupySDK.EntrupyCaptureResultUser?
-  public var price: EntrupySDK.EntrupyCaptureResultPrice?
-  public let batch_request: EntrupySDK.EntrupyCaptureResultBatchRequest?
+public struct EntrupyCaptureResult : Swift::Codable {
+  public let session_uuid: Swift::String?
+  public var events: [EntrupySDK::EntrupyCaptureResultEvents]?
+  public var user: EntrupySDK::EntrupyCaptureResultUser?
+  public var price: EntrupySDK::EntrupyCaptureResultPrice?
+  public let batch_request: EntrupySDK::EntrupyCaptureResultBatchRequest?
   @available(*, deprecated, message: "Use entrupy_id instead. authentication_id will be removed in a future SDK version.")
-  public let authentication_id: Swift.String
-  public var entrupy_id: Swift.String {
+  public let authentication_id: Swift::String
+  public var entrupy_id: Swift::String {
     get
   }
-  public let properties: EntrupySDK.EntrupyCaptureResultProperties
-  public var status: EntrupySDK.EntrupyCaptureResultStatus
-  public let more_details: EntrupySDK.EntrupyCaptureResultMoreDetails?
-  public var text_fields: [EntrupySDK.EntrupyCaptureResultTextField]?
-  public let images: EntrupySDK.EntrupyCaptureResultImages?
-  public let event_times: EntrupySDK.EntrupyCaptureResultEventTimes?
-  public let timestamp: EntrupySDK.EntrupyCaptureResultTimestamp
-  public let transfer: EntrupySDK.EntrupyCertTransferInfo?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+  public let properties: EntrupySDK::EntrupyCaptureResultProperties
+  public var status: EntrupySDK::EntrupyCaptureResultStatus
+  public let more_details: EntrupySDK::EntrupyCaptureResultMoreDetails?
+  public var text_fields: [EntrupySDK::EntrupyCaptureResultTextField]?
+  public let images: EntrupySDK::EntrupyCaptureResultImages?
+  public let event_times: EntrupySDK::EntrupyCaptureResultEventTimes?
+  public let timestamp: EntrupySDK::EntrupyCaptureResultTimestamp
+  public let transfer: EntrupySDK::EntrupyCertTransferInfo?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyCaptureResultImages : Swift.Codable {
-  public let item_photo: Swift.String?
-  public let uploaded_images: [EntrupySDK.EntrupyCaptureResultUploadedImages]?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyCaptureResultImages : Swift::Codable {
+  public let item_photo: Swift::String?
+  public let uploaded_images: [EntrupySDK::EntrupyCaptureResultUploadedImages]?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyCaptureResultUploadedImages : Swift.Codable {
-  public let urls: EntrupySDK.EntrupyCaptureResultUploadedImagesUrls?
-  public let display_name: Swift.String?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyCaptureResultUploadedImages : Swift::Codable {
+  public let urls: EntrupySDK::EntrupyCaptureResultUploadedImagesUrls?
+  public let display_name: Swift::String?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyCaptureResultUploadedImagesUrls : Swift.Codable {
-  public let original: Swift.String?
-  public let scale_micro: Swift.String?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyCaptureResultUploadedImagesUrls : Swift::Codable {
+  public let original: Swift::String?
+  public let scale_micro: Swift::String?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyCaptureResultEventTimes : Swift.Codable {
-  public let submitted_at: EntrupySDK.EntrupyCaptureResultTimestamp?
-  public let result_returned_at: EntrupySDK.EntrupyCaptureResultTimestamp?
-  public let initial_result_set_at: EntrupySDK.EntrupyCaptureResultTimestamp?
-  public let capture_started_at: EntrupySDK.EntrupyCaptureResultTimestamp?
-  public let received_at: EntrupySDK.EntrupyCaptureResultTimestamp?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyCaptureResultEventTimes : Swift::Codable {
+  public let submitted_at: EntrupySDK::EntrupyCaptureResultTimestamp?
+  public let result_returned_at: EntrupySDK::EntrupyCaptureResultTimestamp?
+  public let initial_result_set_at: EntrupySDK::EntrupyCaptureResultTimestamp?
+  public let capture_started_at: EntrupySDK::EntrupyCaptureResultTimestamp?
+  public let received_at: EntrupySDK::EntrupyCaptureResultTimestamp?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyCaptureResultMoreDetails : Swift.Codable {
-  public let certificate: EntrupySDK.EntrupyCaptureResultMoreDetailsCertificate?
-  public let catalog_insights: EntrupySDK.EntrupyCaptureResultMoreDetailsCatalogInsights?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyCaptureResultMoreDetails : Swift::Codable {
+  public let certificate: EntrupySDK::EntrupyCaptureResultMoreDetailsCertificate?
+  public let catalog_insights: EntrupySDK::EntrupyCaptureResultMoreDetailsCatalogInsights?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyCaptureResultMoreDetailsCatalogInsights : Swift.Codable {
-  public var supported: Swift.Bool
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyCaptureResultMoreDetailsCatalogInsights : Swift::Codable {
+  public var supported: Swift::Bool
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyCaptureResultMoreDetailsCertificate : Swift.Codable {
-  public var preview: Swift.String?
-  public var site: Swift.String?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyCaptureResultMoreDetailsCertificate : Swift::Codable {
+  public var preview: Swift::String?
+  public var site: Swift::String?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyCaptureResultProperties : Swift.Codable {
-  public let model: EntrupySDK.EntrupyCaptureResultPropertiesModel?
-  public let function: EntrupySDK.EntrupyCaptureResultPropertiesFunction?
-  public let brand: EntrupySDK.EntrupyCaptureResultPropertiesBrand
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyCaptureResultProperties : Swift::Codable {
+  public let model: EntrupySDK::EntrupyCaptureResultPropertiesModel?
+  public let function: EntrupySDK::EntrupyCaptureResultPropertiesFunction?
+  public let brand: EntrupySDK::EntrupyCaptureResultPropertiesBrand
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyCaptureResultPropertiesBrand : Swift.Codable {
-  public let display: [Swift.String : Swift.String]
-  public let id: Swift.String
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyCaptureResultPropertiesBrand : Swift::Codable {
+  public let display: [Swift::String : Swift::String]
+  public let id: Swift::String
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyCaptureResultStatusIntegration : Swift.Codable {
-  public let platform: Swift.String
-  public let display_name: Swift.String
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyCaptureResultStatusIntegration : Swift::Codable {
+  public let platform: Swift::String
+  public let display_name: Swift::String
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyCaptureResultStatus : Swift.Codable {
-  public var flag: EntrupySDK.EntrupyCaptureResultStatusFlag
-  public let result: EntrupySDK.EntrupyCaptureResultStatusResult
-  public let integrations: [EntrupySDK.EntrupyCaptureResultStatusIntegration]?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyCaptureResultStatus : Swift::Codable {
+  public var flag: EntrupySDK::EntrupyCaptureResultStatusFlag
+  public let result: EntrupySDK::EntrupyCaptureResultStatusResult
+  public let integrations: [EntrupySDK::EntrupyCaptureResultStatusIntegration]?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public enum EntrupyFlagId : Swift.Equatable, Swift.CustomStringConvertible, Swift.Encodable {
+public enum EntrupyFlagId : Swift::Equatable, Swift::CustomStringConvertible, Swift::Encodable {
   case none
   case flagged
   case resolved
-  case other(Swift.String)
-  public init(rawValue: Swift.String)
-  public var description: Swift.String {
+  case other(Swift::String)
+  public init(rawValue: Swift::String)
+  public var description: Swift::String {
     get
   }
-  public func encode(to encoder: any Swift.Encoder) throws
-  public static func == (a: EntrupySDK.EntrupyFlagId, b: EntrupySDK.EntrupyFlagId) -> Swift.Bool
+  public func encode(to encoder: any Swift::Encoder) throws
+  public static func == (a: EntrupySDK::EntrupyFlagId, b: EntrupySDK::EntrupyFlagId) -> Swift::Bool
 }
-public struct EntrupyCaptureResultStatusFlagInfo : Swift.Codable, Swift.Sendable {
-  public let id: Swift.String?
-  public let label: Swift.String?
-  public let message: Swift.String?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyCaptureResultStatusFlagInfo : Swift::Codable, Swift::Sendable {
+  public let id: Swift::String?
+  public let label: Swift::String?
+  public let message: Swift::String?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyCaptureResultStatusFlag : Swift.Codable {
-  public var id: EntrupySDK.EntrupyFlagId
-  public let is_flaggable: Swift.Bool
-  public let flag_info: EntrupySDK.EntrupyCaptureResultStatusFlagInfo?
+public struct EntrupyCaptureResultStatusFlag : Swift::Codable {
+  public var id: EntrupySDK::EntrupyFlagId
+  public let is_flaggable: Swift::Bool
+  public let flag_info: EntrupySDK::EntrupyCaptureResultStatusFlagInfo?
   public mutating func toggle()
-  public var isFlagged: Swift.Bool {
+  public var isFlagged: Swift::Bool {
     get
   }
-  public init(id: EntrupySDK.EntrupyFlagId, is_flaggable: Swift.Bool, flag_info: EntrupySDK.EntrupyCaptureResultStatusFlagInfo? = nil)
-  public init(from decoder: any Swift.Decoder) throws
-  public func encode(to encoder: any Swift.Encoder) throws
+  public init(id: EntrupySDK::EntrupyFlagId, is_flaggable: Swift::Bool, flag_info: EntrupySDK::EntrupyCaptureResultStatusFlagInfo? = nil)
+  public init(from decoder: any Swift::Decoder) throws
+  public func encode(to encoder: any Swift::Encoder) throws
 }
-public struct EntrupyFlagDetails : Swift.Codable {
-  public let flag_status: EntrupySDK.EntrupyCaptureResultStatusFlag
-  public let supported_flag_reasons: [EntrupySDK.EntrupyCaptureResultStatusFlagInfo]?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyFlagDetails : Swift::Codable {
+  public let flag_status: EntrupySDK::EntrupyCaptureResultStatusFlag
+  public let supported_flag_reasons: [EntrupySDK::EntrupyCaptureResultStatusFlagInfo]?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public enum EntrupyCaptureResultStatusId : Swift.Equatable, Swift.CustomStringConvertible, Swift.Encodable, Swift.Hashable {
+public enum EntrupyCaptureResultStatusId : Swift::Equatable, Swift::CustomStringConvertible, Swift::Encodable, Swift::Hashable {
   case authentic
   case unknown
   case not_supported
   case needs_review
   case invalid
   case analyzed
-  case other(Swift.String)
+  case other(Swift::String)
   case match
   case no_match
   case registered
@@ -394,355 +394,355 @@ public enum EntrupyCaptureResultStatusId : Swift.Equatable, Swift.CustomStringCo
   case match_found
   case no_match_found
   case received
-  public init(rawValue: Swift.String, localizeValue: Swift.String)
-  public var description: Swift.String {
+  public init(rawValue: Swift::String, localizeValue: Swift::String)
+  public var description: Swift::String {
     get
   }
-  public func encode(to encoder: any Swift.Encoder) throws
-  public static func == (a: EntrupySDK.EntrupyCaptureResultStatusId, b: EntrupySDK.EntrupyCaptureResultStatusId) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
+  public func encode(to encoder: any Swift::Encoder) throws
+  public static func == (a: EntrupySDK::EntrupyCaptureResultStatusId, b: EntrupySDK::EntrupyCaptureResultStatusId) -> Swift::Bool
+  public func hash(into hasher: inout Swift::Hasher)
+  public var hashValue: Swift::Int {
     get
   }
 }
-public struct EntrupyCaptureResultStatusResult : Swift.Codable {
-  public let display: EntrupySDK.EntrupyCaptureResultStatusResultDisplay
-  public let id: EntrupySDK.EntrupyCaptureResultStatusId
-  public init(display: EntrupySDK.EntrupyCaptureResultStatusResultDisplay, id: EntrupySDK.EntrupyCaptureResultStatusId)
-  public init(from decoder: any Swift.Decoder) throws
-  public func encode(to encoder: any Swift.Encoder) throws
+public struct EntrupyCaptureResultStatusResult : Swift::Codable {
+  public let display: EntrupySDK::EntrupyCaptureResultStatusResultDisplay
+  public let id: EntrupySDK::EntrupyCaptureResultStatusId
+  public init(display: EntrupySDK::EntrupyCaptureResultStatusResultDisplay, id: EntrupySDK::EntrupyCaptureResultStatusId)
+  public init(from decoder: any Swift::Decoder) throws
+  public func encode(to encoder: any Swift::Encoder) throws
 }
-public struct EntrupyCaptureResultStatusResultDisplay : Swift.Codable {
-  public let header: Swift.String
-  public let message: Swift.String?
-  public let reasons: [EntrupySDK.EntrupyCaptureResultStatusResultDisplayReasons]?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyCaptureResultStatusResultDisplay : Swift::Codable {
+  public let header: Swift::String
+  public let message: Swift::String?
+  public let reasons: [EntrupySDK::EntrupyCaptureResultStatusResultDisplayReasons]?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyCaptureResultStatusResultDisplayReasons : Swift.Codable {
-  public let image: Swift.String?
-  public let text: Swift.String?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyCaptureResultStatusResultDisplayReasons : Swift::Codable {
+  public let image: Swift::String?
+  public let text: Swift::String?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyCaptureResultTextField : Swift.Codable {
-  public let region_id: Swift.String?
-  public let editable: Swift.Bool
-  public let required: Swift.Bool
-  public let is_identifier: Swift.Bool
-  public var content: Swift.String?
-  public let display_name: Swift.String
-  public init(from decoder: any Swift.Decoder) throws
-  public func encode(to encoder: any Swift.Encoder) throws
+public struct EntrupyCaptureResultTextField : Swift::Codable {
+  public let region_id: Swift::String?
+  public let editable: Swift::Bool
+  public let required: Swift::Bool
+  public let is_identifier: Swift::Bool
+  public var content: Swift::String?
+  public let display_name: Swift::String
+  public init(from decoder: any Swift::Decoder) throws
+  public func encode(to encoder: any Swift::Encoder) throws
 }
-public struct EntrupyCaptureResultTimestamp : Swift.Codable {
-  public let display: Swift.String
-  public let epoch: Swift.Double
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyCaptureResultTimestamp : Swift::Codable {
+  public let display: Swift::String
+  public let epoch: Swift::Double
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyCaptureResultBatchRequest : Swift.Codable {
-  public let customer_state: Swift.String?
-  public let requested_at: Swift.Double?
-  public let retake_reasons: Swift.String?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyCaptureResultBatchRequest : Swift::Codable {
+  public let customer_state: Swift::String?
+  public let requested_at: Swift::Double?
+  public let retake_reasons: Swift::String?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyCaptureResultPropertiesFunction : Swift.Codable {
-  public let id: Swift.String
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyCaptureResultPropertiesFunction : Swift::Codable {
+  public let id: Swift::String
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyCaptureResultPropertiesModel : Swift.Codable {
-  public let display: [Swift.String : Swift.String]
-  public let id: Swift.String
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyCaptureResultPropertiesModel : Swift::Codable {
+  public let display: [Swift::String : Swift::String]
+  public let id: Swift::String
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyCaptureResultEvents : Swift.Codable {
-  public let label: Swift.String
-  public let title: Swift.String
-  public let type: Swift.String
-  public var message: Swift.String?
-  public let timestamp: EntrupySDK.EntrupyCaptureResultTimestamp
-  public init(from decoder: any Swift.Decoder) throws
-  public func encode(to encoder: any Swift.Encoder) throws
+public struct EntrupyCaptureResultEvents : Swift::Codable {
+  public let label: Swift::String
+  public let title: Swift::String
+  public let type: Swift::String
+  public var message: Swift::String?
+  public let timestamp: EntrupySDK::EntrupyCaptureResultTimestamp
+  public init(from decoder: any Swift::Decoder) throws
+  public func encode(to encoder: any Swift::Encoder) throws
 }
-public struct EntrupyCaptureResultUser : Swift.Codable {
-  public let username: Swift.String
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyCaptureResultUser : Swift::Codable {
+  public let username: Swift::String
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyCaptureResultPrice : Swift.Codable {
-  public let show_pricing_widget: Swift.Bool
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyCaptureResultPrice : Swift::Codable {
+  public let show_pricing_widget: Swift::Bool
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
 @objc public protocol EntrupyTheme {
-  @objc var backgroundColor: UIKit.UIColor? { get }
-  @objc var foregroundColor: UIKit.UIColor? { get }
-  @objc var borderColor: UIKit.UIColor? { get }
+  @objc var backgroundColor: UIKit::UIColor? { get }
+  @objc var foregroundColor: UIKit::UIColor? { get }
+  @objc var borderColor: UIKit::UIColor? { get }
 }
-public struct EntrupyMarketEdge : Swift.Codable {
-  public let identifier: EntrupySDK.EntrupyMarketEdgeIdentifier
-  public let market_grade: EntrupySDK.EntrupyMarketGrade?
-  public let market_value: EntrupySDK.EntrupyMarketValue?
-  public let market_match: EntrupySDK.EntrupyMarketMatch?
-  public let disclaimer: [Swift.String]?
-  public let error: EntrupySDK.EntrupyMarketEdgeError?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyMarketEdge : Swift::Codable {
+  public let identifier: EntrupySDK::EntrupyMarketEdgeIdentifier
+  public let market_grade: EntrupySDK::EntrupyMarketGrade?
+  public let market_value: EntrupySDK::EntrupyMarketValue?
+  public let market_match: EntrupySDK::EntrupyMarketMatch?
+  public let disclaimer: [Swift::String]?
+  public let error: EntrupySDK::EntrupyMarketEdgeError?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyMarketEdgeIdentifier : Swift.Codable {
+public struct EntrupyMarketEdgeIdentifier : Swift::Codable {
   @available(*, deprecated, message: "Use entrupy_id instead. authentication_id will be removed in a future SDK version.")
-  public let authentication_id: Swift.String
-  public var entrupy_id: Swift.String {
+  public let authentication_id: Swift::String
+  public var entrupy_id: Swift::String {
     get
   }
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyMarketGrade : Swift.Codable {
-  public let values: EntrupySDK.EntrupyMarketGradeValue?
-  public let error: EntrupySDK.EntrupyMarketEdgeError?
-  public let section_description: Swift.String
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyMarketGrade : Swift::Codable {
+  public let values: EntrupySDK::EntrupyMarketGradeValue?
+  public let error: EntrupySDK::EntrupyMarketEdgeError?
+  public let section_description: Swift::String
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyMarketValue : Swift.Codable {
-  public let price: Swift.String?
-  public let error: EntrupySDK.EntrupyMarketEdgeError?
-  public let section_description: Swift.String
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyMarketValue : Swift::Codable {
+  public let price: Swift::String?
+  public let error: EntrupySDK::EntrupyMarketEdgeError?
+  public let section_description: Swift::String
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyMarketGradeValue : Swift.Codable {
-  public let rating: Swift.String
-  public let issues: [Swift.String]?
-  public let details: [EntrupySDK.EntrupyMarketGradeDetail]?
-  public let rating_explanation: Swift.String
-  public let rating_ui_details: EntrupySDK.EntrupyMarketGradeRatingUIDetails?
-  public let error: EntrupySDK.EntrupyMarketEdgeError?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyMarketGradeValue : Swift::Codable {
+  public let rating: Swift::String
+  public let issues: [Swift::String]?
+  public let details: [EntrupySDK::EntrupyMarketGradeDetail]?
+  public let rating_explanation: Swift::String
+  public let rating_ui_details: EntrupySDK::EntrupyMarketGradeRatingUIDetails?
+  public let error: EntrupySDK::EntrupyMarketEdgeError?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyMarketGradeRatingUIDetails : Swift.Codable {
-  public let title: Swift.String
-  public let selected_rating_index: Swift.Int?
-  public let scale: [EntrupySDK.EntrupyMarketGradeRatingScale]
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyMarketGradeRatingUIDetails : Swift::Codable {
+  public let title: Swift::String
+  public let selected_rating_index: Swift::Int?
+  public let scale: [EntrupySDK::EntrupyMarketGradeRatingScale]
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyMarketGradeRatingScale : Swift.Codable {
-  public let color: Swift.String
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyMarketGradeRatingScale : Swift::Codable {
+  public let color: Swift::String
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyMarketMatch : Swift.Codable {
-  public let pending: Swift.Bool
-  public let section_description: Swift.String
-  public let values: [EntrupySDK.EntrupyMarketMatchValue]?
-  public let error: EntrupySDK.EntrupyMarketEdgeError?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyMarketMatch : Swift::Codable {
+  public let pending: Swift::Bool
+  public let section_description: Swift::String
+  public let values: [EntrupySDK::EntrupyMarketMatchValue]?
+  public let error: EntrupySDK::EntrupyMarketEdgeError?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyMarketGradeDetail : Swift.Codable {
-  public let item_region_display_name: Swift.String
-  public let description: Swift.String
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyMarketGradeDetail : Swift::Codable {
+  public let item_region_display_name: Swift::String
+  public let description: Swift::String
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyMarketEdgeClientPollingInstructions : Swift.Codable {
-  public let polling_rate: Swift.Double
-  public let number_of_retries: Swift.Double
-  public let error: EntrupySDK.EntrupyMarketEdgeError
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyMarketEdgeClientPollingInstructions : Swift::Codable {
+  public let polling_rate: Swift::Double
+  public let number_of_retries: Swift::Double
+  public let error: EntrupySDK::EntrupyMarketEdgeError
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyMarketMatchValue : Swift.Codable {
-  public let title: Swift.String
-  public let platform: Swift.String
-  public let link: Swift.String?
-  public let brand: Swift.String?
-  public let image_url: Swift.String?
-  public let category: Swift.String
-  public let style: Swift.String?
-  public let description: Swift.String?
-  public let price: Swift.String
-  public let currency: Swift.String?
-  public let price_min: Swift.String?
-  public let price_max: Swift.String?
-  public let time_of_report: Swift.Double
-  public let price_difference_perc: Swift.String?
-  public let price_difference: Swift.String?
-  public let price_avg: Swift.String?
-  public let price_days_window: Swift.String?
-  public let price_difference_positive: Swift.Bool?
-  public let error: EntrupySDK.EntrupyMarketEdgeError?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyMarketMatchValue : Swift::Codable {
+  public let title: Swift::String
+  public let platform: Swift::String
+  public let link: Swift::String?
+  public let brand: Swift::String?
+  public let image_url: Swift::String?
+  public let category: Swift::String
+  public let style: Swift::String?
+  public let description: Swift::String?
+  public let price: Swift::String
+  public let currency: Swift::String?
+  public let price_min: Swift::String?
+  public let price_max: Swift::String?
+  public let time_of_report: Swift::Double
+  public let price_difference_perc: Swift::String?
+  public let price_difference: Swift::String?
+  public let price_avg: Swift::String?
+  public let price_days_window: Swift::String?
+  public let price_difference_positive: Swift::Bool?
+  public let error: EntrupySDK::EntrupyMarketEdgeError?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyMarketEdgeError : Swift.Codable {
-  public let message: Swift.String
-  public let show: Swift.Bool
-  public let retry: Swift.Bool?
-  public let ecode: Swift.String?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyMarketEdgeError : Swift::Codable {
+  public let message: Swift::String
+  public let show: Swift::Bool
+  public let retry: Swift::Bool?
+  public let ecode: Swift::String?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-@objc(EntrupyZoomButtonBackgroundState) public enum EntrupyZoomButtonBackgroundState : Swift.Int {
+@objc(EntrupyZoomButtonBackgroundState) public enum EntrupyZoomButtonBackgroundState : Swift::Int {
   case zoomIn
   case zoomOut
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
+  public init?(rawValue: Swift::Int)
+  public typealias RawValue = Swift::Int
+  public var rawValue: Swift::Int {
     get
   }
 }
-@_inheritsConvenienceInitializers @objc(EntrupyZoomButton) @_Concurrency.MainActor @preconcurrency public class EntrupyZoomButton : UIKit.UIButton {
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc(setButtonBackgroundState:) @_Concurrency.MainActor @preconcurrency public func setButtonBackgroundState(_ state: EntrupySDK.EntrupyZoomButtonBackgroundState)
-  @objc(currentBackgroundState) @_Concurrency.MainActor @preconcurrency public func currentBackgroundState() -> EntrupySDK.EntrupyZoomButtonBackgroundState
+@_inheritsConvenienceInitializers @objc(EntrupyZoomButton) @_Concurrency::MainActor @preconcurrency public class EntrupyZoomButton : UIKit::UIButton {
+  @_Concurrency::MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation::CGRect)
+  @_Concurrency::MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation::NSCoder)
+  @objc(setButtonBackgroundState:) @_Concurrency::MainActor @preconcurrency public func setButtonBackgroundState(_ state: EntrupySDK::EntrupyZoomButtonBackgroundState)
+  @objc(currentBackgroundState) @_Concurrency::MainActor @preconcurrency public func currentBackgroundState() -> EntrupySDK::EntrupyZoomButtonBackgroundState
   @objc deinit
 }
-extension Swift.Array {
-  public subscript(safe index: Swift.Int) -> Element? {
+extension Swift::Array {
+  public subscript(safe index: Swift::Int) -> Element? {
     get
   }
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(EntrupyApp) public class EntrupyApp : ObjectiveC.NSObject {
-  @objc public static let shared: EntrupySDK.EntrupyApp
-  @objc public static func sharedInstance() -> EntrupySDK.EntrupyApp
-  @objc weak public var loginDelegate: (any EntrupySDK.EntrupyLoginDelegate)? {
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(EntrupyApp) public class EntrupyApp : ObjectiveC::NSObject {
+  @objc public static let shared: EntrupySDK::EntrupyApp
+  @objc public static func sharedInstance() -> EntrupySDK::EntrupyApp
+  @objc weak public var loginDelegate: (any EntrupySDK::EntrupyLoginDelegate)? {
     @objc get
     @objc set
   }
-  @objc weak public var configDelegate: (any EntrupySDK.EntrupyConfigDelegate)? {
+  @objc weak public var configDelegate: (any EntrupySDK::EntrupyConfigDelegate)? {
     @objc get
     @objc set
   }
-  @objc weak public var captureDelegate: (any EntrupySDK.EntrupyCaptureDelegate)? {
+  @objc weak public var captureDelegate: (any EntrupySDK::EntrupyCaptureDelegate)? {
     @objc get
     @objc set
   }
-  @objc weak public var searchDelegate: (any EntrupySDK.EntrupySearchDelegate)? {
+  @objc weak public var searchDelegate: (any EntrupySDK::EntrupySearchDelegate)? {
     @objc get
     @objc set
   }
-  @objc weak public var flagDelegate: (any EntrupySDK.EntrupyFlagDelegate)? {
+  @objc weak public var flagDelegate: (any EntrupySDK::EntrupyFlagDelegate)? {
     @objc get
     @objc set
   }
-  @objc weak public var detailViewDelegate: (any EntrupySDK.EntrupyDetailViewDelegate)? {
+  @objc weak public var detailViewDelegate: (any EntrupySDK::EntrupyDetailViewDelegate)? {
     @objc get
     @objc set
   }
-  @objc weak public var flagViewDelegate: (any EntrupySDK.EntrupyFlagViewDelegate)? {
+  @objc weak public var flagViewDelegate: (any EntrupySDK::EntrupyFlagViewDelegate)? {
     @objc get
     @objc set
   }
-  @objc weak public var retakeCaptureDelegate: (any EntrupySDK.EntrupyRetakeCaptureDelegate)? {
+  @objc weak public var retakeCaptureDelegate: (any EntrupySDK::EntrupyRetakeCaptureDelegate)? {
     @objc get
     @objc set
   }
-  @objc weak public var searchRetakeDelegate: (any EntrupySDK.EntrupySearchRetakeDelegate)? {
+  @objc weak public var searchRetakeDelegate: (any EntrupySDK::EntrupySearchRetakeDelegate)? {
     @objc get
     @objc set
   }
-  @objc weak public var marketEdgeDelegate: (any EntrupySDK.EntrupyMarketEdgeDelegate)? {
+  @objc weak public var marketEdgeDelegate: (any EntrupySDK::EntrupyMarketEdgeDelegate)? {
     @objc get
     @objc set
   }
-  @objc weak public var marketEdgeViewDelegate: (any EntrupySDK.EntrupyMarketEdgeViewDelegate)? {
+  @objc weak public var marketEdgeViewDelegate: (any EntrupySDK::EntrupyMarketEdgeViewDelegate)? {
     @objc get
     @objc set
   }
-  @objc public var theme: (any EntrupySDK.EntrupyTheme)? {
+  @objc public var theme: (any EntrupySDK::EntrupyTheme)? {
     @objc get
     @objc set
   }
-  @objc public var backgroundTransferCompletionHandler: (() -> Swift.Void)?
+  @objc public var backgroundTransferCompletionHandler: (() -> Swift::Void)?
   @objc deinit
 }
-extension EntrupySDK.EntrupyApp {
-  @objc dynamic public func loginUser(withSignedRequest signedRequest: Swift.String)
-  @objc dynamic public func generateSDKAuthorizationRequest() -> Swift.String
-  @objc dynamic public func isAuthorizationValid() -> Swift.Bool
-  @objc dynamic public func fetchConfigurationType(_ configType: EntrupySDK.EntrupyConfigType)
-  @objc dynamic public func startCapture(forItem item: [Swift.AnyHashable : Any], viewController: UIKit.UIViewController)
-  @objc(startCaptureForItem:viewController:entryPoint:) dynamic public func startCapture(forItem item: [Swift.AnyHashable : Any], viewController: UIKit.UIViewController, entryPoint: EntrupySDK.EntrupyAnalyticsEntryPoint)
-  public func startCapture(forItem item: [Swift.String : Any], viewController: UIKit.UIViewController)
-  public func startCapture(forItem item: [Swift.String : Any], viewController: UIKit.UIViewController, entryPoint: EntrupySDK.EntrupyAnalyticsEntryPoint)
-  @objc dynamic public func searchSubmissions(at pageCursor: [Any], filters: [Any], startDate: Foundation.TimeInterval, endDate: Foundation.TimeInterval, paginationLimit: Swift.Int)
-  @objc dynamic public func searchAuthenticationItems(query: EntrupySDK.EntrupySearchQuery, completion: @escaping (Foundation.NSDictionary?, Foundation.NSError?) -> Swift.Void)
-  public func fetchTransferInbox() async throws -> EntrupySDK.EntrupySearchResult
-  public func fetchTransferInbox(filters: [[Swift.String : Any]], startDate: Foundation.TimeInterval, endDate: Foundation.TimeInterval, cursor: [Swift.String]?, limit: Swift.Int?) async throws -> EntrupySDK.EntrupySearchResult
-  public func fetchSessionDetails(entrupyId: Swift.String) async throws -> EntrupySDK.EntrupyCaptureResult
-  @objc dynamic public func getFlagDetailsForResult(withEntrupyID entrupyID: Swift.String, completionHandler: @escaping ([Swift.AnyHashable : Any]?, (any Swift.Error)?) -> Swift.Void)
-  @objc dynamic public func setFlag(_ flag: Swift.Bool, forResultWithEntrupyID entrupyID: Swift.String, flagReasonId: Swift.String, message: Swift.String?)
-  @objc(displayDetailViewForItemWithEntrupyID:withConfiguration:) dynamic public func displayDetailViewForItem(withEntrupyID entrupyID: Swift.String, withConfiguration configuration: EntrupySDK.EntrupyDetailViewConfiguration)
-  @objc(displayDetailViewForItemWithEntrupyID:withConfiguration:entryPoint:) dynamic public func displayDetailViewForItem(withEntrupyID entrupyID: Swift.String, withConfiguration configuration: EntrupySDK.EntrupyDetailViewConfiguration, entryPoint: EntrupySDK.EntrupyAnalyticsEntryPoint)
-  @objc(displayMarketEdgeViewForItemWithEntrupyID:withConfiguration:) dynamic public func displayMarketEdgeViewForItem(withEntrupyID entrupyID: Swift.String, withConfiguration configuration: EntrupySDK.EntrupyMarketEdgeViewConfiguration)
-  @objc dynamic public func displayFlagViewForItem(withEntrupyID entrupyID: Swift.String)
-  @objc dynamic public func startRetakeCaptureForItem(withEntrupyID entrupyID: Swift.String)
-  public func startRetakeCaptureForItem(withEntrupyID entrupyID: Swift.String, entryPoint: EntrupySDK.EntrupyAnalyticsEntryPoint)
+extension EntrupySDK::EntrupyApp {
+  @objc dynamic public func loginUser(withSignedRequest signedRequest: Swift::String)
+  @objc dynamic public func generateSDKAuthorizationRequest() -> Swift::String
+  @objc dynamic public func isAuthorizationValid() -> Swift::Bool
+  @objc dynamic public func fetchConfigurationType(_ configType: EntrupySDK::EntrupyConfigType)
+  @objc dynamic public func startCapture(forItem item: [Swift::AnyHashable : Any], viewController: UIKit::UIViewController)
+  @objc(startCaptureForItem:viewController:entryPoint:) dynamic public func startCapture(forItem item: [Swift::AnyHashable : Any], viewController: UIKit::UIViewController, entryPoint: EntrupySDK::EntrupyAnalyticsEntryPoint)
+  public func startCapture(forItem item: [Swift::String : Any], viewController: UIKit::UIViewController)
+  public func startCapture(forItem item: [Swift::String : Any], viewController: UIKit::UIViewController, entryPoint: EntrupySDK::EntrupyAnalyticsEntryPoint)
+  @objc dynamic public func searchSubmissions(at pageCursor: [Any], filters: [Any], startDate: Foundation::TimeInterval, endDate: Foundation::TimeInterval, paginationLimit: Swift::Int)
+  @objc dynamic public func searchAuthenticationItems(query: EntrupySDK::EntrupySearchQuery, completion: @escaping (Foundation::NSDictionary?, Foundation::NSError?) -> Swift::Void)
+  public func fetchTransferInbox() async throws -> EntrupySDK::EntrupySearchResult
+  public func fetchTransferInbox(filters: [[Swift::String : Any]], startDate: Foundation::TimeInterval, endDate: Foundation::TimeInterval, cursor: [Swift::String]?, limit: Swift::Int?) async throws -> EntrupySDK::EntrupySearchResult
+  public func fetchSessionDetails(entrupyId: Swift::String) async throws -> EntrupySDK::EntrupyCaptureResult
+  @objc dynamic public func getFlagDetailsForResult(withEntrupyID entrupyID: Swift::String, completionHandler: @escaping ([Swift::AnyHashable : Any]?, (any Swift::Error)?) -> Swift::Void)
+  @objc dynamic public func setFlag(_ flag: Swift::Bool, forResultWithEntrupyID entrupyID: Swift::String, flagReasonId: Swift::String, message: Swift::String?)
+  @objc(displayDetailViewForItemWithEntrupyID:withConfiguration:) dynamic public func displayDetailViewForItem(withEntrupyID entrupyID: Swift::String, withConfiguration configuration: EntrupySDK::EntrupyDetailViewConfiguration)
+  @objc(displayDetailViewForItemWithEntrupyID:withConfiguration:entryPoint:) dynamic public func displayDetailViewForItem(withEntrupyID entrupyID: Swift::String, withConfiguration configuration: EntrupySDK::EntrupyDetailViewConfiguration, entryPoint: EntrupySDK::EntrupyAnalyticsEntryPoint)
+  @objc(displayMarketEdgeViewForItemWithEntrupyID:withConfiguration:) dynamic public func displayMarketEdgeViewForItem(withEntrupyID entrupyID: Swift::String, withConfiguration configuration: EntrupySDK::EntrupyMarketEdgeViewConfiguration)
+  @objc dynamic public func displayFlagViewForItem(withEntrupyID entrupyID: Swift::String)
+  @objc dynamic public func startRetakeCaptureForItem(withEntrupyID entrupyID: Swift::String)
+  public func startRetakeCaptureForItem(withEntrupyID entrupyID: Swift::String, entryPoint: EntrupySDK::EntrupyAnalyticsEntryPoint)
   @objc dynamic public func searchRetakes()
-  @objc dynamic public func fetchMarketEdgeForItem(withEntrupyID entrupyID: Swift.String)
+  @objc dynamic public func fetchMarketEdgeForItem(withEntrupyID entrupyID: Swift::String)
   @objc dynamic public func cleanup()
-  @objc dynamic public func interceptApplication(_ application: UIKit.UIApplication, handleEventsForBackgroundURLSession identifier: Swift.String, completionHandler: @escaping () -> Swift.Void)
+  @objc dynamic public func interceptApplication(_ application: UIKit::UIApplication, handleEventsForBackgroundURLSession identifier: Swift::String, completionHandler: @escaping () -> Swift::Void)
 }
-public struct EntrupySearchItemsResult : Swift.Codable {
-  public let metadata: EntrupySDK.EntrupySearchItemsResultMetadata
-  public let total_count: Swift.Int
-  public let item_count: Swift.Int
-  public let items: [EntrupySDK.EntrupyCaptureResult]?
-  public let next_cursor: [Swift.String]?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupySearchItemsResult : Swift::Codable {
+  public let metadata: EntrupySDK::EntrupySearchItemsResultMetadata
+  public let total_count: Swift::Int
+  public let item_count: Swift::Int
+  public let items: [EntrupySDK::EntrupyCaptureResult]?
+  public let next_cursor: [Swift::String]?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupySearchItemsResultMetadata : Swift.Codable {
-  public let result_mode: Swift.String?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupySearchItemsResultMetadata : Swift::Codable {
+  public let result_mode: Swift::String?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-@_hasMissingDesignatedInitializers @objc(ObjcEntrupyLocalizationManager) public class EntrupyLocalizationManager : ObjectiveC.NSObject {
+@_hasMissingDesignatedInitializers @objc(ObjcEntrupyLocalizationManager) public class EntrupyLocalizationManager : ObjectiveC::NSObject {
   @objc deinit
 }
-public let KEntrupyLocalizationsUpdatedNotification: Swift.String
-@_inheritsConvenienceInitializers @objc(ObjcEntrupyCacheDownloadUtils) @objcMembers final public class EntrupyCacheDownloadUtils : ObjectiveC.NSObject {
+public let KEntrupyLocalizationsUpdatedNotification: Swift::String
+@_inheritsConvenienceInitializers @objc(ObjcEntrupyCacheDownloadUtils) @objcMembers final public class EntrupyCacheDownloadUtils : ObjectiveC::NSObject {
   @objc @discardableResult
-  public static func downloadToCacheImage(WithURL url: Swift.String, withIdentifier identifier: Swift.String, withQuality jpegQuality: Swift.Float, completionBlock: @escaping (_ succeeded: Swift.Bool, _ image: UIKit.UIImage?, _ error: (any Swift.Error)?) -> Swift.Void) -> EntrupySDK.EntrupyImageRequestToken
+  public static func downloadToCacheImage(WithURL url: Swift::String, withIdentifier identifier: Swift::String, withQuality jpegQuality: Swift::Float, completionBlock: @escaping (_ succeeded: Swift::Bool, _ image: UIKit::UIImage?, _ error: (any Swift::Error)?) -> Swift::Void) -> EntrupySDK::EntrupyImageRequestToken
   @discardableResult
-  @nonobjc public static func downloadImage(url: Swift.String, identifier: Swift.String, jpegQuality: Swift.Float = 0.7, retryDelays: [Foundation.TimeInterval] = [], completion: @escaping (_ succeeded: Swift.Bool, _ image: UIKit.UIImage?, _ error: (any Swift.Error)?) -> Swift.Void) -> EntrupySDK.EntrupyImageRequestToken
+  @nonobjc public static func downloadImage(url: Swift::String, identifier: Swift::String, jpegQuality: Swift::Float = 0.7, retryDelays: [Foundation::TimeInterval] = [], completion: @escaping (_ succeeded: Swift::Bool, _ image: UIKit::UIImage?, _ error: (any Swift::Error)?) -> Swift::Void) -> EntrupySDK::EntrupyImageRequestToken
   @discardableResult
-  @nonobjc public static func downloadImage(url: Swift.String, identifier: Swift.String, jpegQuality: Swift.Float = 0.7, placeholder: UIKit.UIImage? = nil, completion: @escaping (UIKit.UIImage?) -> Swift.Void) -> EntrupySDK.EntrupyImageRequestToken
-  @objc public static func getShorterIdentifier(for identifier: Swift.String) -> Swift.String
+  @nonobjc public static func downloadImage(url: Swift::String, identifier: Swift::String, jpegQuality: Swift::Float = 0.7, placeholder: UIKit::UIImage? = nil, completion: @escaping (UIKit::UIImage?) -> Swift::Void) -> EntrupySDK::EntrupyImageRequestToken
+  @objc public static func getShorterIdentifier(for identifier: Swift::String) -> Swift::String
   @objc override dynamic public init()
   @objc deinit
 }
-@_hasMissingDesignatedInitializers public class EntrupyAsset : Swift.Codable {
-  required public init(from decoder: any Swift.Decoder) throws
-  final public let id: Swift.String
+@_hasMissingDesignatedInitializers public class EntrupyAsset : Swift::Codable {
+  required public init(from decoder: any Swift::Decoder) throws
+  final public let id: Swift::String
   @objc deinit
-  public func encode(to encoder: any Swift.Encoder) throws
+  public func encode(to encoder: any Swift::Encoder) throws
 }
-public struct EntrupySearchResult : Swift.Codable {
-  public let item_count: Swift.Int
-  public let items: [EntrupySDK.EntrupyCaptureResult]
-  public let next_cursor: [Swift.String]?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupySearchResult : Swift::Codable {
+  public let item_count: Swift::Int
+  public let items: [EntrupySDK::EntrupyCaptureResult]
+  public let next_cursor: [Swift::String]?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-@_inheritsConvenienceInitializers @objc public class EntrupySearchQuery : ObjectiveC.NSObject {
-  public var dateRange: EntrupySDK.EntrupySearchQuery.DateRange?
-  public var filters: [EntrupySDK.EntrupySearchFilter]
-  public var resultMode: EntrupySDK.ResultMode
-  public var limit: Swift.Int
-  public var cursor: [Swift.String]?
+@_inheritsConvenienceInitializers @objc public class EntrupySearchQuery : ObjectiveC::NSObject {
+  public var dateRange: EntrupySDK::EntrupySearchQuery.EntrupySDK::DateRange?
+  public var filters: [EntrupySDK::EntrupySearchFilter]
+  public var resultMode: EntrupySDK::ResultMode
+  public var limit: Swift::Int
+  public var cursor: [Swift::String]?
   public enum DateRange {
-    case last(days: Swift.Int)
-    case custom(start: Swift.String, end: Swift.String)
+    case last(days: Swift::Int)
+    case custom(start: Swift::String, end: Swift::String)
   }
   @objc override dynamic public init()
   @objc deinit
@@ -750,61 +750,61 @@ public struct EntrupySearchResult : Swift.Codable {
 public enum ResultMode {
   case countOnly
   case results
-  case other(Swift.String)
+  case other(Swift::String)
 }
 public enum EntrupySearchFilter {
-  case status([EntrupySDK.EntrupySearchFilter.AuthenticationStatus])
-  case category([EntrupySDK.EntrupySearchFilter.Category])
-  case brands([Swift.String])
-  case flag([EntrupySDK.EntrupySearchFilter.FlagStatus])
+  case status([EntrupySDK::EntrupySearchFilter.EntrupySDK::AuthenticationStatus])
+  case category([EntrupySDK::EntrupySearchFilter.EntrupySDK::Category])
+  case brands([Swift::String])
+  case flag([EntrupySDK::EntrupySearchFilter.EntrupySDK::FlagStatus])
   public enum AuthenticationStatus {
     case authentic
     case underReview
     case invalid
     case notSupported
     case unidentified
-    case other(Swift.String)
+    case other(Swift::String)
   }
   public enum Category {
     case luxury
     case apparel
     case sneakers
-    case other(Swift.String)
+    case other(Swift::String)
   }
   public enum FlagStatus {
     case none
     case flagged
     case resolved
-    case other(Swift.String)
+    case other(Swift::String)
   }
 }
-extension EntrupySDK.SnapIQ {
-  @objc(initWithViewSize:regionType:modelPath:blurModelPath:captureDevice:configurationDictionary:completion:) convenience dynamic public init(viewSize: CoreFoundation.CGSize, regionType: Swift.String, modelPath: Swift.String?, blurModelPath: Swift.String?, captureDevice: AVFoundation.AVCaptureDevice?, configurationDictionary: [Swift.String : Any]?, completion: ((Swift.Bool, (any Swift.Error)?) -> Swift.Void)?)
+extension EntrupySDK::SnapIQ {
+  @objc(initWithViewSize:regionType:modelPath:blurModelPath:captureDevice:configurationDictionary:completion:) convenience dynamic public init(viewSize: CoreFoundation::CGSize, regionType: Swift::String, modelPath: Swift::String?, blurModelPath: Swift::String?, captureDevice: AVFoundation::AVCaptureDevice?, configurationDictionary: [Swift::String : Any]?, completion: ((Swift::Bool, (any Swift::Error)?) -> Swift::Void)?)
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class EntrupyMarketMatchViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
-  @_Concurrency.MainActor @preconcurrency public func configure(with listings: [EntrupySDK.EntrupyMarketMatchValue], functionId: Swift.String)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+@objc @_inheritsConvenienceInitializers @_Concurrency::MainActor @preconcurrency public class EntrupyMarketMatchViewController : UIKit::UIViewController {
+  @_Concurrency::MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency::MainActor @preconcurrency public func configure(with listings: [EntrupySDK::EntrupyMarketMatchValue], functionId: Swift::String)
+  @_Concurrency::MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift::String?, bundle nibBundleOrNil: Foundation::Bundle?)
+  @_Concurrency::MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation::NSCoder)
   @objc deinit
 }
-extension EntrupySDK.EntrupyMarketMatchViewController : UIKit.UITableViewDataSource {
-  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
-  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+extension EntrupySDK::EntrupyMarketMatchViewController : UIKit::UITableViewDataSource {
+  @_Concurrency::MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit::UITableView, numberOfRowsInSection section: Swift::Int) -> Swift::Int
+  @_Concurrency::MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit::UITableView, cellForRowAt indexPath: Foundation::IndexPath) -> UIKit::UITableViewCell
 }
-extension EntrupySDK.EntrupyMarketMatchViewController : UIKit.UITableViewDelegate {
-  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
-  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, estimatedHeightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+extension EntrupySDK::EntrupyMarketMatchViewController : UIKit::UITableViewDelegate {
+  @_Concurrency::MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit::UITableView, heightForRowAt indexPath: Foundation::IndexPath) -> CoreFoundation::CGFloat
+  @_Concurrency::MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit::UITableView, estimatedHeightForRowAt indexPath: Foundation::IndexPath) -> CoreFoundation::CGFloat
 }
-@objc public class EntrupyDetailViewConfiguration : ObjectiveC.NSObject {
-  final public let displayTimeline: Swift.Bool
-  final public let displayUploadedImages: Swift.Bool
-  final public let enableFlagging: Swift.Bool
-  final public let enableItemDetailEdit: Swift.Bool
-  @objc public init(displayTimeline: Swift.Bool = false, displayUploadedImages: Swift.Bool = false, enableFlagging: Swift.Bool = false, enableItemDetailEdit: Swift.Bool = false)
+@objc public class EntrupyDetailViewConfiguration : ObjectiveC::NSObject {
+  final public let displayTimeline: Swift::Bool
+  final public let displayUploadedImages: Swift::Bool
+  final public let enableFlagging: Swift::Bool
+  final public let enableItemDetailEdit: Swift::Bool
+  @objc public init(displayTimeline: Swift::Bool = false, displayUploadedImages: Swift::Bool = false, enableFlagging: Swift::Bool = false, enableItemDetailEdit: Swift::Bool = false)
   @objc deinit
 }
-@objc(EntrupyButtonBackgroundState) public enum EntrupyButtonBackgroundState : Swift.Int {
+@objc(EntrupyButtonBackgroundState) public enum EntrupyButtonBackgroundState : Swift::Int {
   case tapToCapture
   case blurDetectionOn
   case moveCloser
@@ -820,194 +820,194 @@ extension EntrupySDK.EntrupyMarketMatchViewController : UIKit.UITableViewDelegat
   case imageTooDark
   case photoCaptured
   case blurDetectionActive
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
+  public init?(rawValue: Swift::Int)
+  public typealias RawValue = Swift::Int
+  public var rawValue: Swift::Int {
     get
   }
 }
-@_inheritsConvenienceInitializers @objc(EntrupyCaptureButton) @_Concurrency.MainActor @preconcurrency public class EntrupyCaptureButton : UIKit.UIButton {
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
-  @objc(setButtonBackgroundState:) @_Concurrency.MainActor @preconcurrency public func setButtonBackgroundState(_ state: EntrupySDK.EntrupyButtonBackgroundState)
-  @objc(currentState) @_Concurrency.MainActor @preconcurrency public func currentState() -> EntrupySDK.EntrupyButtonBackgroundState
+@_inheritsConvenienceInitializers @objc(EntrupyCaptureButton) @_Concurrency::MainActor @preconcurrency public class EntrupyCaptureButton : UIKit::UIButton {
+  @_Concurrency::MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation::CGRect)
+  @_Concurrency::MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation::NSCoder)
+  @_Concurrency::MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
+  @objc(setButtonBackgroundState:) @_Concurrency::MainActor @preconcurrency public func setButtonBackgroundState(_ state: EntrupySDK::EntrupyButtonBackgroundState)
+  @objc(currentState) @_Concurrency::MainActor @preconcurrency public func currentState() -> EntrupySDK::EntrupyButtonBackgroundState
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class EntrupyMarketEdgeViewConfiguration : ObjectiveC.NSObject {
-  final public let displayMarketGrade: Swift.Bool
-  final public let displayMarketValue: Swift.Bool
-  final public let displayMarketMatch: Swift.Bool
-  final public let displayRegionSelection: Swift.Bool
+@_inheritsConvenienceInitializers @objc public class EntrupyMarketEdgeViewConfiguration : ObjectiveC::NSObject {
+  final public let displayMarketGrade: Swift::Bool
+  final public let displayMarketValue: Swift::Bool
+  final public let displayMarketMatch: Swift::Bool
+  final public let displayRegionSelection: Swift::Bool
   @objc override dynamic public init()
-  @objc public init(displayMarketGrade: Swift.Bool = true, displayMarketValue: Swift.Bool = true, displayMarketMatch: Swift.Bool = true, displayRegionSelection: Swift.Bool = true)
+  @objc public init(displayMarketGrade: Swift::Bool = true, displayMarketValue: Swift::Bool = true, displayMarketMatch: Swift::Bool = true, displayRegionSelection: Swift::Bool = true)
   @objc deinit
 }
 @objc(ObjCSnapIQDelegate) public protocol SnapIQDelegate {
-  @objc func didProcessFrameWithResult(_ result: EntrupySDK.SnapIQResult)
+  @objc func didProcessFrameWithResult(_ result: EntrupySDK::SnapIQResult)
 }
 @objc(ObjCSnapIQNonRoiDelegate) public protocol SnapIQNonRoiDelegate {
-  @objc func didProcessNonRoiFrameWithResult(_ result: EntrupySDK.SnapIQNonRoiResult)
+  @objc func didProcessNonRoiFrameWithResult(_ result: EntrupySDK::SnapIQNonRoiResult)
 }
 @objc(ObjCSnapIQLoggingDelegate) public protocol SnapIQLoggingDelegate {
-  @objc func ReceiveLog(_ logResult: EntrupySDK.SnapIQLogResult)
+  @objc func ReceiveLog(_ logResult: EntrupySDK::SnapIQLogResult)
 }
-@objc(ObjCSnapIQResult) public class SnapIQResult : ObjectiveC.NSObject {
-  @objc final public let shouldCapture: Swift.Bool
-  @objc final public let state: Swift.String?
-  final public let _smoothedBox: CoreFoundation.CGRect?
-  @objc final public let confidence: Swift.Float
-  @objc final public let fps: Swift.Double
-  @objc final public let inferenceTime: Swift.Double
-  @objc final public let blurLevel: Swift.Int
-  public init(shouldCapture: Swift.Bool, state: Swift.String?, smoothedBox: CoreFoundation.CGRect?, confidence: Swift.Float, fps: Swift.Double, inferenceTime: Swift.Double, blurLevel: Swift.Int = -1)
+@objc(ObjCSnapIQResult) public class SnapIQResult : ObjectiveC::NSObject {
+  @objc final public let shouldCapture: Swift::Bool
+  @objc final public let state: Swift::String?
+  final public let _smoothedBox: CoreFoundation::CGRect?
+  @objc final public let confidence: Swift::Float
+  @objc final public let fps: Swift::Double
+  @objc final public let inferenceTime: Swift::Double
+  @objc final public let blurLevel: Swift::Int
+  public init(shouldCapture: Swift::Bool, state: Swift::String?, smoothedBox: CoreFoundation::CGRect?, confidence: Swift::Float, fps: Swift::Double, inferenceTime: Swift::Double, blurLevel: Swift::Int = -1)
   @objc deinit
 }
-@objc(ObjCSnapIQNonRoiResult) public class SnapIQNonRoiResult : ObjectiveC.NSObject {
-  @objc final public let shouldCapture: Swift.Bool
-  @objc final public let state: Swift.String?
-  @objc final public let blurLevel: Swift.Int
-  @objc final public let inferenceTime: Swift.Double
-  final public let _blurRegionOfInterest: CoreFoundation.CGRect?
-  public init(shouldCapture: Swift.Bool, state: Swift.String?, blurLevel: Swift.Int = -1, inferenceTime: Swift.Double = 0.0, blurRegionOfInterest: CoreFoundation.CGRect? = nil)
+@objc(ObjCSnapIQNonRoiResult) public class SnapIQNonRoiResult : ObjectiveC::NSObject {
+  @objc final public let shouldCapture: Swift::Bool
+  @objc final public let state: Swift::String?
+  @objc final public let blurLevel: Swift::Int
+  @objc final public let inferenceTime: Swift::Double
+  final public let _blurRegionOfInterest: CoreFoundation::CGRect?
+  public init(shouldCapture: Swift::Bool, state: Swift::String?, blurLevel: Swift::Int = -1, inferenceTime: Swift::Double = 0.0, blurRegionOfInterest: CoreFoundation::CGRect? = nil)
   @objc deinit
 }
-@objc(ObjCSnapIQLogResult) public class SnapIQLogResult : ObjectiveC.NSObject {
-  @objc final public let eventName: Swift.String
-  @objc final public let eventLogs: [Swift.String : Swift.String]
-  public init(eventName: Swift.String, eventLogs: [Swift.String : Swift.String])
+@objc(ObjCSnapIQLogResult) public class SnapIQLogResult : ObjectiveC::NSObject {
+  @objc final public let eventName: Swift::String
+  @objc final public let eventLogs: [Swift::String : Swift::String]
+  public init(eventName: Swift::String, eventLogs: [Swift::String : Swift::String])
   @objc deinit
 }
-@objc(ObjCSnapIQ) @objcMembers public class SnapIQ : ObjectiveC.NSObject, EntrupySDK.ExposureAnalyserDelegate, EntrupySDK.MotionSensorDelegate {
-  @objc public var isModelReady: Swift.Bool {
+@objc(ObjCSnapIQ) @objcMembers public class SnapIQ : ObjectiveC::NSObject, EntrupySDK::ExposureAnalyserDelegate, EntrupySDK::MotionSensorDelegate {
+  @objc public var isModelReady: Swift::Bool {
     get
   }
-  @objc weak public var delegate: (any EntrupySDK.SnapIQDelegate)?
-  @objc weak public var nonRoiDelegate: (any EntrupySDK.SnapIQNonRoiDelegate)?
-  @objc weak public var loggingDelegate: (any EntrupySDK.SnapIQLoggingDelegate)?
-  public init(viewSize: CoreFoundation.CGSize, regionType: Swift.String = "camera", modelPath: Swift.String? = nil, blurModelPath: Swift.String? = nil, regionMask: CoreGraphics.CGImage? = nil, regionMaskFrameInView: CoreFoundation.CGRect? = nil, captureDevice: AVFoundation.AVCaptureDevice? = nil, configuration: EntrupySDK.SnapIQConfiguration, completion: ((Swift.Bool, (any Swift.Error)?) -> Swift.Void)? = nil)
-  @objc public func updateViewSize(_ newSize: CoreFoundation.CGSize)
+  @objc weak public var delegate: (any EntrupySDK::SnapIQDelegate)?
+  @objc weak public var nonRoiDelegate: (any EntrupySDK::SnapIQNonRoiDelegate)?
+  @objc weak public var loggingDelegate: (any EntrupySDK::SnapIQLoggingDelegate)?
+  public init(viewSize: CoreFoundation::CGSize, regionType: Swift::String = "camera", modelPath: Swift::String? = nil, blurModelPath: Swift::String? = nil, regionMask: CoreGraphics::CGImage? = nil, regionMaskFrameInView: CoreFoundation::CGRect? = nil, captureDevice: AVFoundation::AVCaptureDevice? = nil, configuration: EntrupySDK::SnapIQConfiguration, completion: ((Swift::Bool, (any Swift::Error)?) -> Swift::Void)? = nil)
+  @objc public func updateViewSize(_ newSize: CoreFoundation::CGSize)
   @objc public func resetTemporalState()
-  @objc(processFrameWithSampleBuffer:) public func processFrame(sampleBuffer: CoreMedia.CMSampleBuffer) -> EntrupySDK.SnapIQResult
-  @objc(processFrameNonRoiWithSampleBuffer:) public func processFrameNonRoi(sampleBuffer: CoreMedia.CMSampleBuffer) -> EntrupySDK.SnapIQNonRoiResult
-  @objc public static func isRegionSupported(brandName: Swift.String, regionName: Swift.String) -> Swift.Bool
-  @objc public static func getConfigInfo() -> [Swift.String : Any]
-  @objc public static func getBrandIdentifiers() -> [[Swift.String : Any]]
+  @objc(processFrameWithSampleBuffer:) public func processFrame(sampleBuffer: CoreMedia::CMSampleBuffer) -> EntrupySDK::SnapIQResult
+  @objc(processFrameNonRoiWithSampleBuffer:) public func processFrameNonRoi(sampleBuffer: CoreMedia::CMSampleBuffer) -> EntrupySDK::SnapIQNonRoiResult
+  @objc public static func isRegionSupported(brandName: Swift::String, regionName: Swift::String) -> Swift::Bool
+  @objc public static func getConfigInfo() -> [Swift::String : Any]
+  @objc public static func getBrandIdentifiers() -> [[Swift::String : Any]]
   @objc public func logLatestFrameResult()
-  @objc public func exposureAnalyser(_ analyser: EntrupySDK.ExposureAnalyser, didAnalyse brightness: EntrupySDK.Brightness)
-  public func motionSensorDidUpdate(state: EntrupySDK.MotionSensorState, accelerometer: (x: Swift.Double, y: Swift.Double, z: Swift.Double), gyroscope: (x: Swift.Double, y: Swift.Double, z: Swift.Double))
+  @objc public func exposureAnalyser(_ analyser: EntrupySDK::ExposureAnalyser, didAnalyse brightness: EntrupySDK::Brightness)
+  public func motionSensorDidUpdate(state: EntrupySDK::MotionSensorState, accelerometer: (x: Swift::Double, y: Swift::Double, z: Swift::Double), gyroscope: (x: Swift::Double, y: Swift::Double, z: Swift::Double))
   @objc deinit
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class EntrupyImageAsset : EntrupySDK.EntrupyAsset {
-  final public let name: Swift.String
-  final public let directory: Swift.String
-  final public let width: Swift.Double
-  final public let height: Swift.Double
-  override final public func encode(to encoder: any Swift.Encoder) throws
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class EntrupyImageAsset : EntrupySDK::EntrupyAsset {
+  final public let name: Swift::String
+  final public let directory: Swift::String
+  final public let width: Swift::Double
+  final public let height: Swift::Double
+  override final public func encode(to encoder: any Swift::Encoder) throws
   @objc deinit
 }
-extension EntrupySDK.EntrupyCaptureResultTextField : Swift.Equatable {
-  public static func == (lhs: EntrupySDK.EntrupyCaptureResultTextField, rhs: EntrupySDK.EntrupyCaptureResultTextField) -> Swift.Bool
+extension EntrupySDK::EntrupyCaptureResultTextField : Swift::Equatable {
+  public static func == (lhs: EntrupySDK::EntrupyCaptureResultTextField, rhs: EntrupySDK::EntrupyCaptureResultTextField) -> Swift::Bool
 }
-extension QuartzCore.CALayer {
-  @nonobjc public func logLayerTree(withIndent: Swift.Int = 0)
+extension QuartzCore::CALayer {
+  @nonobjc public func logLayerTree(withIndent: Swift::Int = 0)
 }
-public let ModelS3Path: Swift.String
-public let ModelVersion: Swift.String
-public let BlurModelS3Path: Swift.String
-public let BlurModelVersion: Swift.String
+public let ModelS3Path: Swift::String
+public let ModelVersion: Swift::String
+public let BlurModelS3Path: Swift::String
+public let BlurModelVersion: Swift::String
 public struct SnapIQConfiguration {
-  public var confidenceThreshold: Swift.Float
-  public var iouThreshold: Swift.Float
-  public var centerThreshold: CoreFoundation.CGFloat
-  public var emaSmoothing: CoreFoundation.CGFloat
-  public var maxFramesToTrack: Swift.Int
-  public var stabilityThreshold: CoreFoundation.CGFloat
-  public var requiredConsecutiveIdealFrames: Swift.Int
-  public var stateQueueSize: Swift.Int
-  public var frameBoundaryMargin: CoreFoundation.CGFloat
-  public var overexposedBrightnessThreshold: Swift.Double
-  public var underexposedBrightnessThreshold: Swift.Double
-  public var minimumRequiredBrightness: Swift.Double
-  public var lowLightISOThreshold: Swift.Float
-  public var highISOThreshold: Swift.Float
-  public var motionHistorySize: Swift.Int
-  public var motionUpdateInterval: Swift.Double
-  public var accelerometerMinThreshold: Swift.Double
-  public var accelerometerMaxThreshold: Swift.Double
-  public var maxAccelerometerSlope: Swift.Double
-  public var gyroscopeEpsilon: Swift.Double
-  public var stateSmoothenerWindowSize: Swift.Int
-  public var logThrottleInterval: Foundation.TimeInterval
-  public var blurSharpMaxLevel: Swift.Int
-  public var blurSmoothingWindow: Swift.Int
-  public var blurryFramesToInvalidate: Swift.Int
-  public var blurLadderCheckpoints: [CoreFoundation.CGFloat]
-  public var blurNonCameraRegionCap: CoreFoundation.CGFloat
-  public var blurCameraRegionCap: CoreFoundation.CGFloat
+  public var confidenceThreshold: Swift::Float
+  public var iouThreshold: Swift::Float
+  public var centerThreshold: CoreFoundation::CGFloat
+  public var emaSmoothing: CoreFoundation::CGFloat
+  public var maxFramesToTrack: Swift::Int
+  public var stabilityThreshold: CoreFoundation::CGFloat
+  public var requiredConsecutiveIdealFrames: Swift::Int
+  public var stateQueueSize: Swift::Int
+  public var frameBoundaryMargin: CoreFoundation::CGFloat
+  public var overexposedBrightnessThreshold: Swift::Double
+  public var underexposedBrightnessThreshold: Swift::Double
+  public var minimumRequiredBrightness: Swift::Double
+  public var lowLightISOThreshold: Swift::Float
+  public var highISOThreshold: Swift::Float
+  public var motionHistorySize: Swift::Int
+  public var motionUpdateInterval: Swift::Double
+  public var accelerometerMinThreshold: Swift::Double
+  public var accelerometerMaxThreshold: Swift::Double
+  public var maxAccelerometerSlope: Swift::Double
+  public var gyroscopeEpsilon: Swift::Double
+  public var stateSmoothenerWindowSize: Swift::Int
+  public var logThrottleInterval: Foundation::TimeInterval
+  public var blurSharpMaxLevel: Swift::Int
+  public var blurSmoothingWindow: Swift::Int
+  public var blurryFramesToInvalidate: Swift::Int
+  public var blurLadderCheckpoints: [CoreFoundation::CGFloat]
+  public var blurNonCameraRegionCap: CoreFoundation::CGFloat
+  public var blurCameraRegionCap: CoreFoundation::CGFloat
   public init()
 }
-extension Foundation.Bundle : @unchecked Swift.Sendable {
+extension Foundation::Bundle : @unchecked Swift::Sendable {
 }
 public class EntrupyCaptureFlowMenuDataSource {
   public struct MenuLayer {
-    public enum Layout : Swift.String {
+    public enum Layout : Swift::String {
       case twoColumn
       case oneColumn
       case oneColumnGrouped
       case mixColumnGrouped
-      public init?(rawValue: Swift.String)
-      public typealias RawValue = Swift.String
-      public var rawValue: Swift.String {
+      public init?(rawValue: Swift::String)
+      public typealias RawValue = Swift::String
+      public var rawValue: Swift::String {
         get
       }
     }
-    public let key: Swift.String
-    public let layout: EntrupySDK.EntrupyCaptureFlowMenuDataSource.MenuLayer.Layout
-    public let groupKey: Swift.String?
-    public let groupValueOrder: [Swift.String]
-    public static func make(from response: EntrupySDK.EntrupyMenuLayerResponse) -> EntrupySDK.EntrupyCaptureFlowMenuDataSource.MenuLayer
+    public let key: Swift::String
+    public let layout: EntrupySDK::EntrupyCaptureFlowMenuDataSource.EntrupySDK::MenuLayer.EntrupySDK::Layout
+    public let groupKey: Swift::String?
+    public let groupValueOrder: [Swift::String]
+    public static func make(from response: EntrupySDK::EntrupyMenuLayerResponse) -> EntrupySDK::EntrupyCaptureFlowMenuDataSource.EntrupySDK::MenuLayer
   }
-  public init(captureFlowOptions: [EntrupySDK.EntrupyCaptureFlowOptionResponse], captureFlowHighlights: [EntrupySDK.EntrupyCaptureFlowHighlightResponse], menuLayers: [EntrupySDK.EntrupyCaptureFlowMenuDataSource.MenuLayer])
-  public var rootLayout: EntrupySDK.EntrupyCaptureFlowMenuDataSource.MenuLayer.Layout {
+  public init(captureFlowOptions: [EntrupySDK::EntrupyCaptureFlowOptionResponse], captureFlowHighlights: [EntrupySDK::EntrupyCaptureFlowHighlightResponse], menuLayers: [EntrupySDK::EntrupyCaptureFlowMenuDataSource.EntrupySDK::MenuLayer])
+  public var rootLayout: EntrupySDK::EntrupyCaptureFlowMenuDataSource.EntrupySDK::MenuLayer.EntrupySDK::Layout {
     get
   }
-  public func buildPageSource() -> [EntrupySDK.EntrupyCaptureFlowItemRow]
+  public func buildPageSource() -> [EntrupySDK::EntrupyCaptureFlowItemRow]
   @objc deinit
 }
 final public class EntrupyCaptureFlowItemRow {
-  public enum RowType : Swift.String {
+  public enum RowType : Swift::String {
     case menu
     case authentication
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
+    public init?(rawValue: Swift::String)
+    public typealias RawValue = Swift::String
+    public var rawValue: Swift::String {
       get
     }
   }
   public enum MetadataKey {
-    public static let captureFlowUUID: Swift.String
-    public static let childPageLayout: Swift.String
-    public static let highlightTags: Swift.String
-    public static let pricingInfo: Swift.String
+    public static let captureFlowUUID: Swift::String
+    public static let childPageLayout: Swift::String
+    public static let highlightTags: Swift::String
+    public static let pricingInfo: Swift::String
   }
-  final public let localizedDisplayName: Swift.String
-  final public let localizedCaption: Swift.String?
-  final public let priceDisplayString: Swift.String?
-  final public let menuTextColor: Swift.String
-  final public let imageURL: Swift.String?
-  final public let captureFlowUUID: Swift.String?
-  final public let metadata: [Swift.String : Any]
-  final public let sourceMetadataKey: Swift.String?
-  final public let sourceMetadataValue: Swift.String?
-  final public var isBrandRow: Swift.Bool {
+  final public let localizedDisplayName: Swift::String
+  final public let localizedCaption: Swift::String?
+  final public let priceDisplayString: Swift::String?
+  final public let menuTextColor: Swift::String
+  final public let imageURL: Swift::String?
+  final public let captureFlowUUID: Swift::String?
+  final public let metadata: [Swift::String : Any]
+  final public let sourceMetadataKey: Swift::String?
+  final public let sourceMetadataValue: Swift::String?
+  final public var isBrandRow: Swift::Bool {
     get
   }
-  public init(type: EntrupySDK.EntrupyCaptureFlowItemRow.RowType, displayName: Swift.String, localizedCaption: Swift.String? = nil, priceDisplayString: Swift.String? = nil, menuTextColor: Swift.String = "default", imageURL: Swift.String? = nil, captureFlowUUID: Swift.String? = nil, metadata: [Swift.String : Any] = [:], sourceMetadataKey: Swift.String? = nil, sourceMetadataValue: Swift.String? = nil, children: [EntrupySDK.EntrupyCaptureFlowItemRow] = [])
-  final public var type: EntrupySDK.EntrupyCaptureFlowItemRow.RowType {
+  public init(type: EntrupySDK::EntrupyCaptureFlowItemRow.EntrupySDK::RowType, displayName: Swift::String, localizedCaption: Swift::String? = nil, priceDisplayString: Swift::String? = nil, menuTextColor: Swift::String = "default", imageURL: Swift::String? = nil, captureFlowUUID: Swift::String? = nil, metadata: [Swift::String : Any] = [:], sourceMetadataKey: Swift::String? = nil, sourceMetadataValue: Swift::String? = nil, children: [EntrupySDK::EntrupyCaptureFlowItemRow] = [])
+  final public var type: EntrupySDK::EntrupyCaptureFlowItemRow.EntrupySDK::RowType {
     get
   }
-  final public var typedChildren: [EntrupySDK.EntrupyCaptureFlowItemRow] {
+  final public var typedChildren: [EntrupySDK::EntrupyCaptureFlowItemRow] {
     get
   }
   @objc deinit
@@ -1017,175 +1017,175 @@ final public class EntrupyCaptureFlowItemRow {
 }
 final public class EntrupyCaptureFlowMenuViewModel {
   public struct Section {
-    public let title: Swift.String
-    public let rows: [EntrupySDK.EntrupyCaptureFlowItemRow]
+    public let title: Swift::String
+    public let rows: [EntrupySDK::EntrupyCaptureFlowItemRow]
   }
-  final public let isRootMenu: Swift.Bool
-  final public var pageTitle: Swift.String
-  final public var pageLayout: EntrupySDK.EntrupyCaptureFlowMenuDataSource.MenuLayer.Layout {
+  final public let isRootMenu: Swift::Bool
+  final public var pageTitle: Swift::String
+  final public var pageLayout: EntrupySDK::EntrupyCaptureFlowMenuDataSource.EntrupySDK::MenuLayer.EntrupySDK::Layout {
     get
   }
-  final public var pageSource: [EntrupySDK.EntrupyCaptureFlowItemRow] {
+  final public var pageSource: [EntrupySDK::EntrupyCaptureFlowItemRow] {
     get
   }
-  final public func apply(layout: EntrupySDK.EntrupyCaptureFlowMenuDataSource.MenuLayer.Layout, source: [EntrupySDK.EntrupyCaptureFlowItemRow])
-  public init(isRootMenu: Swift.Bool, pageTitle: Swift.String = "")
-  final public var sections: [EntrupySDK.EntrupyCaptureFlowMenuViewModel.Section] {
+  final public func apply(layout: EntrupySDK::EntrupyCaptureFlowMenuDataSource.EntrupySDK::MenuLayer.EntrupySDK::Layout, source: [EntrupySDK::EntrupyCaptureFlowItemRow])
+  public init(isRootMenu: Swift::Bool, pageTitle: Swift::String = "")
+  final public var sections: [EntrupySDK::EntrupyCaptureFlowMenuViewModel.EntrupySDK::Section] {
     get
   }
-  final public var usesGroupedLayout: Swift.Bool {
+  final public var usesGroupedLayout: Swift::Bool {
     get
   }
-  final public func rowItem(at indexPath: Foundation.IndexPath) -> EntrupySDK.EntrupyCaptureFlowItemRow?
-  final public func numberOfItems(in section: Swift.Int) -> Swift.Int
-  final public func menuItemAccessibilityIdentifier(for title: Swift.String) -> Swift.String
-  final public func applyFilter(_ text: Swift.String) -> Swift.Bool
+  final public func rowItem(at indexPath: Foundation::IndexPath) -> EntrupySDK::EntrupyCaptureFlowItemRow?
+  final public func numberOfItems(in section: Swift::Int) -> Swift::Int
+  final public func menuItemAccessibilityIdentifier(for title: Swift::String) -> Swift::String
+  final public func applyFilter(_ text: Swift::String) -> Swift::Bool
   final public func clearFilter()
   @objc deinit
 }
-extension EntrupySDK.EntrupyCaptureFlowMenuViewModel {
-  public static func buildDataSource(from model: EntrupySDK.EntrupyCaptureFlowMenuConfigModel, captureWorkflowFilter: Swift.String? = nil) -> EntrupySDK.EntrupyCaptureFlowMenuDataSource?
-  public static func buildFallbackRows(from model: EntrupySDK.EntrupyCaptureFlowMenuConfigModel) -> [EntrupySDK.EntrupyCaptureFlowItemRow]
+extension EntrupySDK::EntrupyCaptureFlowMenuViewModel {
+  public static func buildDataSource(from model: EntrupySDK::EntrupyCaptureFlowMenuConfigModel, captureWorkflowFilter: Swift::String? = nil) -> EntrupySDK::EntrupyCaptureFlowMenuDataSource?
+  public static func buildFallbackRows(from model: EntrupySDK::EntrupyCaptureFlowMenuConfigModel) -> [EntrupySDK::EntrupyCaptureFlowItemRow]
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class EntrupyCaptureFlowMenuSectionHeaderView : UIKit.UICollectionReusableView {
-  @_Concurrency.MainActor @preconcurrency public static let identifier: Swift.String
-  @_Concurrency.MainActor @preconcurrency @objc override final public func prepareForReuse()
-  @_Concurrency.MainActor @preconcurrency final public func configure(title: Swift.String)
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency::MainActor @preconcurrency final public class EntrupyCaptureFlowMenuSectionHeaderView : UIKit::UICollectionReusableView {
+  @_Concurrency::MainActor @preconcurrency public static let identifier: Swift::String
+  @_Concurrency::MainActor @preconcurrency @objc override final public func prepareForReuse()
+  @_Concurrency::MainActor @preconcurrency final public func configure(title: Swift::String)
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class EntrupyOneColumnCell : UIKit.UICollectionViewCell {
-  @_Concurrency.MainActor @preconcurrency public static let identifier: Swift.String
-  @_Concurrency.MainActor @preconcurrency @objc override final public func prepareForReuse()
-  @_Concurrency.MainActor @preconcurrency final public func configure(title: Swift.String, subtitle: Swift.String? = nil, creditsText: Swift.String? = nil, imageURL: Swift.String?)
-  @_Concurrency.MainActor @preconcurrency public static func height(for width: CoreFoundation.CGFloat, title: Swift.String, subtitle: Swift.String?, creditsText: Swift.String?, minimumHeight: CoreFoundation.CGFloat = 68) -> CoreFoundation.CGFloat
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency::MainActor @preconcurrency final public class EntrupyOneColumnCell : UIKit::UICollectionViewCell {
+  @_Concurrency::MainActor @preconcurrency public static let identifier: Swift::String
+  @_Concurrency::MainActor @preconcurrency @objc override final public func prepareForReuse()
+  @_Concurrency::MainActor @preconcurrency final public func configure(title: Swift::String, subtitle: Swift::String? = nil, creditsText: Swift::String? = nil, imageURL: Swift::String?)
+  @_Concurrency::MainActor @preconcurrency public static func height(for width: CoreFoundation::CGFloat, title: Swift::String, subtitle: Swift::String?, creditsText: Swift::String?, minimumHeight: CoreFoundation::CGFloat = 68) -> CoreFoundation::CGFloat
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class EntrupyOneColumnView : UIKit.UIView {
-  @_Concurrency.MainActor @preconcurrency @objc override final public func layoutSubviews()
-  @_Concurrency.MainActor @preconcurrency final public func configure(title: Swift.String, subtitle: Swift.String? = nil, creditsText: Swift.String? = nil, image: UIKit.UIImage? = nil)
-  @_Concurrency.MainActor @preconcurrency final public func updateImage(_ image: UIKit.UIImage?)
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency::MainActor @preconcurrency final public class EntrupyOneColumnView : UIKit::UIView {
+  @_Concurrency::MainActor @preconcurrency @objc override final public func layoutSubviews()
+  @_Concurrency::MainActor @preconcurrency final public func configure(title: Swift::String, subtitle: Swift::String? = nil, creditsText: Swift::String? = nil, image: UIKit::UIImage? = nil)
+  @_Concurrency::MainActor @preconcurrency final public func updateImage(_ image: UIKit::UIImage?)
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class EntrupyTwoColumnCell : UIKit.UICollectionViewCell {
-  @_Concurrency.MainActor @preconcurrency public static let identifier: Swift.String
-  @_Concurrency.MainActor @preconcurrency @objc override final public func prepareForReuse()
-  @_Concurrency.MainActor @preconcurrency final public func configure(with row: EntrupySDK.EntrupyCaptureFlowItemRow)
-  @_Concurrency.MainActor @preconcurrency final public func configure(label: Swift.String, imageURL: Swift.String?)
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency::MainActor @preconcurrency final public class EntrupyTwoColumnCell : UIKit::UICollectionViewCell {
+  @_Concurrency::MainActor @preconcurrency public static let identifier: Swift::String
+  @_Concurrency::MainActor @preconcurrency @objc override final public func prepareForReuse()
+  @_Concurrency::MainActor @preconcurrency final public func configure(with row: EntrupySDK::EntrupyCaptureFlowItemRow)
+  @_Concurrency::MainActor @preconcurrency final public func configure(label: Swift::String, imageURL: Swift::String?)
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class EntrupyTwoColumnView : UIKit.UIView {
-  @_Concurrency.MainActor @preconcurrency @objc override final public func layoutSubviews()
-  @_Concurrency.MainActor @preconcurrency final public func configure(title: Swift.String, image: UIKit.UIImage? = nil)
-  @_Concurrency.MainActor @preconcurrency final public func updateImage(_ image: UIKit.UIImage?, title: Swift.String)
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency::MainActor @preconcurrency final public class EntrupyTwoColumnView : UIKit::UIView {
+  @_Concurrency::MainActor @preconcurrency @objc override final public func layoutSubviews()
+  @_Concurrency::MainActor @preconcurrency final public func configure(title: Swift::String, image: UIKit::UIImage? = nil)
+  @_Concurrency::MainActor @preconcurrency final public func updateImage(_ image: UIKit::UIImage?, title: Swift::String)
   @objc deinit
 }
-public struct EntrupyCaptureFlowMenuConfigModel : Swift.Codable {
-  public let account_state: EntrupySDK.EntrupyAccountStateResponse
-  public let capture_flow_highlights: [EntrupySDK.EntrupyCaptureFlowHighlightResponse]?
-  public let capture_flow_options: [EntrupySDK.EntrupyCaptureFlowOptionResponse]
-  public let capture_flow_version: Swift.String
-  public let config_schema: Swift.String
-  public let exp: Foundation.TimeInterval
-  public let iat: Foundation.TimeInterval
-  public let main_display: EntrupySDK.EntrupyCaptureMenuConfigMainDisplayModel
-  public let menu_settings: EntrupySDK.EntrupyCaptureFlowMenuSettingsResponse
-  public let user_uuid: Swift.String
-  public let org_uuid: Swift.String?
-  public let uuid: Swift.String
-  public let uuid_match: Swift.String?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyCaptureFlowMenuConfigModel : Swift::Codable {
+  public let account_state: EntrupySDK::EntrupyAccountStateResponse
+  public let capture_flow_highlights: [EntrupySDK::EntrupyCaptureFlowHighlightResponse]?
+  public let capture_flow_options: [EntrupySDK::EntrupyCaptureFlowOptionResponse]
+  public let capture_flow_version: Swift::String
+  public let config_schema: Swift::String
+  public let exp: Foundation::TimeInterval
+  public let iat: Foundation::TimeInterval
+  public let main_display: EntrupySDK::EntrupyCaptureMenuConfigMainDisplayModel
+  public let menu_settings: EntrupySDK::EntrupyCaptureFlowMenuSettingsResponse
+  public let user_uuid: Swift::String
+  public let org_uuid: Swift::String?
+  public let uuid: Swift::String
+  public let uuid_match: Swift::String?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyCaptureMenuConfigMainDisplayModel : Swift.Codable {
-  public let account_status: EntrupySDK.EntrupyCaptureMenuConfigAccountStatusModel?
-  public let tts_qr_session: EntrupySDK.EntrupyTikTokQRSession?
-  public let qr_search: EntrupySDK.EntrupyQRSearch?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyCaptureMenuConfigMainDisplayModel : Swift::Codable {
+  public let account_status: EntrupySDK::EntrupyCaptureMenuConfigAccountStatusModel?
+  public let tts_qr_session: EntrupySDK::EntrupyTikTokQRSession?
+  public let qr_search: EntrupySDK::EntrupyQRSearch?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyQRSearch : Swift.Codable {
-  public let enabled: Swift.Bool
-  public let format: Swift.String
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyQRSearch : Swift::Codable {
+  public let enabled: Swift::Bool
+  public let format: Swift::String
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyTikTokQRSession : Swift.Codable {
-  public let enabled: Swift.Bool
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyTikTokQRSession : Swift::Codable {
+  public let enabled: Swift::Bool
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyCaptureMenuConfigAccountStatusModel : Swift.Codable {
-  public let account_standing_message: Swift.String?
-  public let active: Swift.Bool
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyCaptureMenuConfigAccountStatusModel : Swift::Codable {
+  public let account_standing_message: Swift::String?
+  public let active: Swift::Bool
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyCaptureFlowCreditRangeResponse : Swift.Codable {
-  public let min: Swift.Int?
-  public let max: Swift.Int?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyCaptureFlowCreditRangeResponse : Swift::Codable {
+  public let min: Swift::Int?
+  public let max: Swift::Int?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyCaptureFlowPricingInfoResponse : Swift.Codable {
-  public let pricing_available: Swift.Bool?
-  public let pricing_tags: [Swift.String]?
-  public let price_display_string: Swift.String?
-  public let credit_range: EntrupySDK.EntrupyCaptureFlowCreditRangeResponse?
-  public init(from decoder: any Swift.Decoder) throws
-  public func encode(to encoder: any Swift.Encoder) throws
+public struct EntrupyCaptureFlowPricingInfoResponse : Swift::Codable {
+  public let pricing_available: Swift::Bool?
+  public let pricing_tags: [Swift::String]?
+  public let price_display_string: Swift::String?
+  public let credit_range: EntrupySDK::EntrupyCaptureFlowCreditRangeResponse?
+  public init(from decoder: any Swift::Decoder) throws
+  public func encode(to encoder: any Swift::Encoder) throws
 }
-public struct EntrupyCaptureFlowMetadataKeyValueResponse : Swift.Codable {
-  public let key: Swift.String
-  public let value: Swift.String
-  public let localized_value: Swift.String
-  public let localized_caption: Swift.String?
-  public let image_url: Swift.String?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyCaptureFlowMetadataKeyValueResponse : Swift::Codable {
+  public let key: Swift::String
+  public let value: Swift::String
+  public let localized_value: Swift::String
+  public let localized_caption: Swift::String?
+  public let image_url: Swift::String?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyCaptureFlowOptionResponse : Swift.Codable {
-  public let capture_flow_uuid: Swift.String
-  public let capture_flow_name: Swift.String
-  public let metadata_options: [[EntrupySDK.EntrupyCaptureFlowMetadataKeyValueResponse]]
-  public let pricing_info: EntrupySDK.EntrupyCaptureFlowPricingInfoResponse?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyCaptureFlowOptionResponse : Swift::Codable {
+  public let capture_flow_uuid: Swift::String
+  public let capture_flow_name: Swift::String
+  public let metadata_options: [[EntrupySDK::EntrupyCaptureFlowMetadataKeyValueResponse]]
+  public let pricing_info: EntrupySDK::EntrupyCaptureFlowPricingInfoResponse?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyCaptureFlowHighlightResponse : Swift.Codable {
-  public let tag: Swift.String
-  public let capture_flow_uuids: [Swift.String]
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyCaptureFlowHighlightResponse : Swift::Codable {
+  public let tag: Swift::String
+  public let capture_flow_uuids: [Swift::String]
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyMenuLayerResponse : Swift.Codable {
-  public let key: Swift.String
-  public let layout: Swift.String
-  public let group_key: Swift.String?
-  public let group_value_order: [Swift.String]?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyMenuLayerResponse : Swift::Codable {
+  public let key: Swift::String
+  public let layout: Swift::String
+  public let group_key: Swift::String?
+  public let group_value_order: [Swift::String]?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyCaptureFlowMenuSettingsResponse : Swift.Codable {
-  public let presentation_mode: Swift.String?
-  public let menu_layers: [EntrupySDK.EntrupyMenuLayerResponse]?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyCaptureFlowMenuSettingsResponse : Swift::Codable {
+  public let presentation_mode: Swift::String?
+  public let menu_layers: [EntrupySDK::EntrupyMenuLayerResponse]?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyAccountStatePermissionsResponse : Swift.Codable {
-  public let can_submit: Swift.Bool?
-  public let can_compare: Swift.Bool?
-  public let can_register: Swift.Bool?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyAccountStatePermissionsResponse : Swift::Codable {
+  public let can_submit: Swift::Bool?
+  public let can_compare: Swift::Bool?
+  public let can_register: Swift::Bool?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct EntrupyAccountStateResponse : Swift.Codable {
-  public let permissions: EntrupySDK.EntrupyAccountStatePermissionsResponse?
-  public let suspended: Swift.Bool?
-  public let display_message: Swift.String?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct EntrupyAccountStateResponse : Swift::Codable {
+  public let permissions: EntrupySDK::EntrupyAccountStatePermissionsResponse?
+  public let suspended: Swift::Bool?
+  public let display_message: Swift::String?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public enum EntrupyAnalyticsEvent : Swift.String {
+public enum EntrupyAnalyticsEvent : Swift::String {
   case captureStarted
   case captureCanceled
   case captureFailed
@@ -1238,40 +1238,40 @@ public enum EntrupyAnalyticsEvent : Swift.String {
   case tasksTransfersSearchSubmitted
   case tasksTabClosed
   case itemDetailsImageLoadSummary
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
+  public init?(rawValue: Swift::String)
+  public typealias RawValue = Swift::String
+  public var rawValue: Swift::String {
     get
   }
 }
-@_inheritsConvenienceInitializers @objc(EntrupyImageRequestToken) @objcMembers final public class EntrupyImageRequestToken : ObjectiveC.NSObject {
-  @objc final public var isCancelled: Swift.Bool {
+@_inheritsConvenienceInitializers @objc(EntrupyImageRequestToken) @objcMembers final public class EntrupyImageRequestToken : ObjectiveC::NSObject {
+  @objc final public var isCancelled: Swift::Bool {
     @objc get
   }
   @objc final public func cancel()
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc(ObjcEntrupyCacheDownloadUtilsV2) @objcMembers final public class EntrupyCacheDownloadUtilsV2 : ObjectiveC.NSObject {
+@_inheritsConvenienceInitializers @objc(ObjcEntrupyCacheDownloadUtilsV2) @objcMembers final public class EntrupyCacheDownloadUtilsV2 : ObjectiveC::NSObject {
   @discardableResult
-  @nonobjc public static func downloadImage(url: Swift.String, identifier: Swift.String, jpegQuality: Swift.Float = 0.7, retryDelays: [Foundation.TimeInterval] = [], completion: @escaping (_ succeeded: Swift.Bool, _ image: UIKit.UIImage?, _ error: (any Swift.Error)?) -> Swift.Void) -> EntrupySDK.EntrupyImageRequestToken
+  @nonobjc public static func downloadImage(url: Swift::String, identifier: Swift::String, jpegQuality: Swift::Float = 0.7, retryDelays: [Foundation::TimeInterval] = [], completion: @escaping (_ succeeded: Swift::Bool, _ image: UIKit::UIImage?, _ error: (any Swift::Error)?) -> Swift::Void) -> EntrupySDK::EntrupyImageRequestToken
   @discardableResult
-  @nonobjc public static func downloadImage(url: Swift.String, identifier: Swift.String, jpegQuality: Swift.Float = 0.7, placeholder: UIKit.UIImage? = nil, completion: @escaping (UIKit.UIImage?) -> Swift.Void) -> EntrupySDK.EntrupyImageRequestToken
+  @nonobjc public static func downloadImage(url: Swift::String, identifier: Swift::String, jpegQuality: Swift::Float = 0.7, placeholder: UIKit::UIImage? = nil, completion: @escaping (UIKit::UIImage?) -> Swift::Void) -> EntrupySDK::EntrupyImageRequestToken
   @objc @discardableResult
-  public static func downloadToCacheImage(WithURL url: Swift.String, withIdentifier identifier: Swift.String, withQuality jpegQuality: Swift.Float, completionBlock: @escaping (_ succeeded: Swift.Bool, _ image: UIKit.UIImage?, _ error: (any Swift.Error)?) -> Swift.Void) -> EntrupySDK.EntrupyImageRequestToken
-  @objc public static func getShorterIdentifier(for identifier: Swift.String) -> Swift.String
+  public static func downloadToCacheImage(WithURL url: Swift::String, withIdentifier identifier: Swift::String, withQuality jpegQuality: Swift::Float, completionBlock: @escaping (_ succeeded: Swift::Bool, _ image: UIKit::UIImage?, _ error: (any Swift::Error)?) -> Swift::Void) -> EntrupySDK::EntrupyImageRequestToken
+  @objc public static func getShorterIdentifier(for identifier: Swift::String) -> Swift::String
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc(EntrupySessionEndedViewController) @_Concurrency.MainActor @preconcurrency final public class EntrupySessionEndedViewController : UIKit.UIViewController {
-  @objc(setOnSignInAgainHandler:) @_Concurrency.MainActor @preconcurrency final public func setOnSignInAgainHandler(_ handler: @escaping @convention(block) () -> Swift.Void)
-  @objc(setSessionEndedEcode:) @_Concurrency.MainActor @preconcurrency final public func setSessionEndedEcode(_ ecode: Swift.String?)
-  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+@_inheritsConvenienceInitializers @objc(EntrupySessionEndedViewController) @_Concurrency::MainActor @preconcurrency final public class EntrupySessionEndedViewController : UIKit::UIViewController {
+  @objc(setOnSignInAgainHandler:) @_Concurrency::MainActor @preconcurrency final public func setOnSignInAgainHandler(_ handler: @escaping @convention(block) () -> Swift::Void)
+  @objc(setSessionEndedEcode:) @_Concurrency::MainActor @preconcurrency final public func setSessionEndedEcode(_ ecode: Swift::String?)
+  @_Concurrency::MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @_Concurrency::MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift::String?, bundle nibBundleOrNil: Foundation::Bundle?)
+  @_Concurrency::MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation::NSCoder)
   @objc deinit
 }
-@objc public enum EntrupyAnalyticsEntryPoint : Swift.Int {
+@objc public enum EntrupyAnalyticsEntryPoint : Swift::Int {
   case captureResult
   case historyDetail
   case retakesTab
@@ -1286,39 +1286,39 @@ public enum EntrupyAnalyticsEvent : Swift.String {
   case sdkApi
   case transferVerification
   case unknown
-  public var analyticsValue: Swift.String {
+  public var analyticsValue: Swift::String {
     get
   }
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
+  public init?(rawValue: Swift::Int)
+  public typealias RawValue = Swift::Int
+  public var rawValue: Swift::Int {
     get
   }
 }
-extension EntrupySDK.MotionSensorState : Swift.Equatable {}
-extension EntrupySDK.MotionSensorState : Swift.Hashable {}
-extension EntrupySDK.Brightness : Swift.Equatable {}
-extension EntrupySDK.Brightness : Swift.Hashable {}
-extension EntrupySDK.Brightness : Swift.RawRepresentable {}
-extension EntrupySDK.EntrupyEventName : Swift.Equatable {}
-extension EntrupySDK.EntrupyEventName : Swift.Hashable {}
-extension EntrupySDK.EntrupyEventName : Swift.RawRepresentable {}
-extension EntrupySDK.EntrupyTransferStatus : Swift.Hashable {}
-extension EntrupySDK.EntrupyZoomButtonBackgroundState : Swift.Equatable {}
-extension EntrupySDK.EntrupyZoomButtonBackgroundState : Swift.Hashable {}
-extension EntrupySDK.EntrupyZoomButtonBackgroundState : Swift.RawRepresentable {}
-extension EntrupySDK.EntrupyButtonBackgroundState : Swift.Equatable {}
-extension EntrupySDK.EntrupyButtonBackgroundState : Swift.Hashable {}
-extension EntrupySDK.EntrupyButtonBackgroundState : Swift.RawRepresentable {}
-extension EntrupySDK.EntrupyCaptureFlowMenuDataSource.MenuLayer.Layout : Swift.Equatable {}
-extension EntrupySDK.EntrupyCaptureFlowMenuDataSource.MenuLayer.Layout : Swift.Hashable {}
-extension EntrupySDK.EntrupyCaptureFlowMenuDataSource.MenuLayer.Layout : Swift.RawRepresentable {}
-extension EntrupySDK.EntrupyCaptureFlowItemRow.RowType : Swift.Equatable {}
-extension EntrupySDK.EntrupyCaptureFlowItemRow.RowType : Swift.Hashable {}
-extension EntrupySDK.EntrupyCaptureFlowItemRow.RowType : Swift.RawRepresentable {}
-extension EntrupySDK.EntrupyAnalyticsEvent : Swift.Equatable {}
-extension EntrupySDK.EntrupyAnalyticsEvent : Swift.Hashable {}
-extension EntrupySDK.EntrupyAnalyticsEvent : Swift.RawRepresentable {}
-extension EntrupySDK.EntrupyAnalyticsEntryPoint : Swift.Equatable {}
-extension EntrupySDK.EntrupyAnalyticsEntryPoint : Swift.Hashable {}
-extension EntrupySDK.EntrupyAnalyticsEntryPoint : Swift.RawRepresentable {}
+extension EntrupySDK::MotionSensorState : Swift::Equatable {}
+extension EntrupySDK::MotionSensorState : Swift::Hashable {}
+extension EntrupySDK::Brightness : Swift::Equatable {}
+extension EntrupySDK::Brightness : Swift::Hashable {}
+extension EntrupySDK::Brightness : Swift::RawRepresentable {}
+extension EntrupySDK::EntrupyEventName : Swift::Equatable {}
+extension EntrupySDK::EntrupyEventName : Swift::Hashable {}
+extension EntrupySDK::EntrupyEventName : Swift::RawRepresentable {}
+extension EntrupySDK::EntrupyTransferStatus : Swift::Hashable {}
+extension EntrupySDK::EntrupyZoomButtonBackgroundState : Swift::Equatable {}
+extension EntrupySDK::EntrupyZoomButtonBackgroundState : Swift::Hashable {}
+extension EntrupySDK::EntrupyZoomButtonBackgroundState : Swift::RawRepresentable {}
+extension EntrupySDK::EntrupyButtonBackgroundState : Swift::Equatable {}
+extension EntrupySDK::EntrupyButtonBackgroundState : Swift::Hashable {}
+extension EntrupySDK::EntrupyButtonBackgroundState : Swift::RawRepresentable {}
+extension EntrupySDK::EntrupyCaptureFlowMenuDataSource.EntrupySDK::MenuLayer.EntrupySDK::Layout : Swift::Equatable {}
+extension EntrupySDK::EntrupyCaptureFlowMenuDataSource.EntrupySDK::MenuLayer.EntrupySDK::Layout : Swift::Hashable {}
+extension EntrupySDK::EntrupyCaptureFlowMenuDataSource.EntrupySDK::MenuLayer.EntrupySDK::Layout : Swift::RawRepresentable {}
+extension EntrupySDK::EntrupyCaptureFlowItemRow.EntrupySDK::RowType : Swift::Equatable {}
+extension EntrupySDK::EntrupyCaptureFlowItemRow.EntrupySDK::RowType : Swift::Hashable {}
+extension EntrupySDK::EntrupyCaptureFlowItemRow.EntrupySDK::RowType : Swift::RawRepresentable {}
+extension EntrupySDK::EntrupyAnalyticsEvent : Swift::Equatable {}
+extension EntrupySDK::EntrupyAnalyticsEvent : Swift::Hashable {}
+extension EntrupySDK::EntrupyAnalyticsEvent : Swift::RawRepresentable {}
+extension EntrupySDK::EntrupyAnalyticsEntryPoint : Swift::Equatable {}
+extension EntrupySDK::EntrupyAnalyticsEntryPoint : Swift::Hashable {}
+extension EntrupySDK::EntrupyAnalyticsEntryPoint : Swift::RawRepresentable {}
