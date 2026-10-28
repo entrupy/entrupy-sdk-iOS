@@ -14,7 +14,7 @@
 		</data>
 		<key>Base.lproj/EntrupyCaptureViewControllerV2.nib</key>
 		<data>
-		7xLYuibrJxfbvA17131p9vlc6qQ=
+		zsaN8mPCKMjz05mN0ladaKJs/Xs=
 		</data>
 		<key>Base.lproj/EntrupyTOCropViewControllerLocalizable.strings</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>EntrupyBaseViewController.nib</key>
 		<data>
-		tNTuTrciEIUpCbJ5PLinHcGhMeI=
+		jcxHqDpm39xcrDVpN24iGOzprX0=
 		</data>
 		<key>EntrupyCameraActionsView.nib</key>
 		<data>
@@ -82,7 +82,7 @@
 		</data>
 		<key>EntrupyEditBarcodeViewController.nib</key>
 		<data>
-		p4/pF7tU1YhKHqOCaQEvyVgn48k=
+		/PEr/tF4kOE9LeugceKhSOZPKXA=
 		</data>
 		<key>EntrupyFeatureFlags.json</key>
 		<data>
@@ -114,7 +114,7 @@
 		</data>
 		<key>EntrupyHorizontalActionView.nib</key>
 		<data>
-		CAYDd39WC2ZNZp8hfRycH0lLgdE=
+		oJnQMf2g1sQVsLjVIcvxK6v4Wjg=
 		</data>
 		<key>EntrupyHorizontalItemCell.nib</key>
 		<data>
@@ -150,7 +150,7 @@
 		</data>
 		<key>EntrupyPopupInstructionViewController.nib</key>
 		<data>
-		E4ZSoLZIt7tAKmlAakOuIEIcYTY=
+		xuX/ouW+/hCANr10pm0KsLJjuLg=
 		</data>
 		<key>EntrupyPriceGraphView.nib</key>
 		<data>
@@ -190,7 +190,7 @@
 		</data>
 		<key>EntrupyRetakeViewController.nib</key>
 		<data>
-		Fqxg0Zxblob0+UKCgbLrtEKtc2E=
+		+GrlyCrRCq07JZ3cqA0e4hlLS0U=
 		</data>
 		<key>EntrupySDK-Info.plist</key>
 		<data>
@@ -230,7 +230,7 @@
 		</data>
 		<key>EntrupyUploadProgressController.nib</key>
 		<data>
-		DPWFhPdRIZRPQ4TVRVq/EBBdBG0=
+		adguwvg0441DeNuyGCuAcKmKFbQ=
 		</data>
 		<key>EntrupyUploadedImagesHeaderCell.nib</key>
 		<data>
@@ -434,7 +434,7 @@
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		FmMSMJUbVYFRBfxZGH+xxJ3WzZ4=
+		Wv+ZzxS68TeM/fIQMf6cjAwsN8I=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -450,11 +450,11 @@
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		h11ZHL6W3iveQJeZkorWS/uYlMc=
+		r+RKdCM6M/Ule4uzqi/TA8lvTAM=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		FmMSMJUbVYFRBfxZGH+xxJ3WzZ4=
+		Wv+ZzxS68TeM/fIQMf6cjAwsN8I=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -470,7 +470,7 @@
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		1N2TFOhdOlolnOpcRuuYrNxn9Ic=
+		gk8IHIu6OFWWPRmx2LNewgED8gI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -2826,7 +2826,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7K6KTntIe/tfr6fPmvHmd0Pseh1dOtBoql64LIer1Cs=
+			EjEmzRrbo42LQvGUCtnXPJ0CvWR07XSkRqe2DYQ3D4w=
 			</data>
 		</dict>
 		<key>Base.lproj/EntrupyTOCropViewControllerLocalizable.strings</key>
@@ -2868,7 +2868,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			CiKlIRK6LWuPpHG8w7jjNZvd1IdkSZf2l2u6yRhAbD8=
+			komNn/0jtiDWipcdqfNXQmAPji0qhez5H3D6X7UzsHg=
 			</data>
 		</dict>
 		<key>EntrupyCameraActionsView.nib</key>
@@ -2945,7 +2945,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WXYwgEvAvNaFS86QwyjC5Ywshsy8ctj8qabUsCOb4I0=
+			m0iB1hVDlEqEtj8q06G1tTY6je2Y1APj2ddN1LxvDOc=
 			</data>
 		</dict>
 		<key>EntrupyFeatureFlags.json</key>
@@ -3001,7 +3001,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			OlyTvaL6x4u/VBsE0L6TMbHBNQfyjPu8SbYydPPU0+k=
+			e1I8lK0UeiE3sDhMAWKTriRx3wXPCsCCAu5GzNqDQN4=
 			</data>
 		</dict>
 		<key>EntrupyHorizontalItemCell.nib</key>
@@ -3064,7 +3064,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			TL+88uH9JJluHF9gtUpKQ16I7hcVggfwBvJ4q7UzNR0=
+			te8gXouvjiLV3CFWYrY1jhF1z20CmhlzIqQBn9cw5Ok=
 			</data>
 		</dict>
 		<key>EntrupyPriceGraphView.nib</key>
@@ -3134,7 +3134,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IdRw6daj26l0o3GD3dulfQUQThgGxxtXJhyOqLKKfMg=
+			aiSIXGWFoPOfFZxKPSdBY8bENweSc/lczSIUYkk9wcU=
 			</data>
 		</dict>
 		<key>EntrupySDK-Info.plist</key>
@@ -3204,7 +3204,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pbuxV8ChYxAMMGk5fqd4PmzqVeWls+EYltT4Uo7u2Xo=
+			ni6UUsTT3WBTVMrNagGS3QVAOgo4xEX0YX2hm86LfeA=
 			</data>
 		</dict>
 		<key>EntrupyUploadedImagesHeaderCell.nib</key>
@@ -3554,7 +3554,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0Qd6dh0Q6DxvMcogFOKx9rrH7woSw2yy4FLltWMJTas=
+			X91AIaIgFQx7Un7hcDfTloFJBIjBjuEvZxhyO9CiS8I=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -3582,14 +3582,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8mJ465HoAMHyAYMaepYuIjx+6vFFbEmGsBn0/CGHt9c=
+			ndGVZxWNED0XV2Ic+k8JaZLhpBIy9vM8dDXeXMJnub4=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0Qd6dh0Q6DxvMcogFOKx9rrH7woSw2yy4FLltWMJTas=
+			X91AIaIgFQx7Un7hcDfTloFJBIjBjuEvZxhyO9CiS8I=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -3617,7 +3617,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			P9oofJAT7HXQWq88W+7MPpGE+/erOqpiSt2lwVBdQeM=
+			vt+JzIwCPKUZEK5tBdcjE7xC9pEXgofbfe1SPCruYX0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
