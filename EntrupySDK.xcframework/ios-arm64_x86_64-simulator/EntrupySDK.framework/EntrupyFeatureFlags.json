@@ -33,6 +33,5 @@
     "captureStoryLogs": true,
     "photoQualityFallback": true,
     "instructionToastPosition": "top",
-    "hideCaptureReviewScreen": false,
-    "captureLoop": false
+    "multipartUploadEnabled": false
 }

@@ -672,6 +672,7 @@ extension EntrupySDK::EntrupyApp {
   @objc dynamic public func fetchConfigurationType(_ configType: EntrupySDK::EntrupyConfigType)
   @objc dynamic public func startCapture(forItem item: [Swift::AnyHashable : Any], viewController: UIKit::UIViewController)
   @objc(startCaptureForItem:viewController:entryPoint:) dynamic public func startCapture(forItem item: [Swift::AnyHashable : Any], viewController: UIKit::UIViewController, entryPoint: EntrupySDK::EntrupyAnalyticsEntryPoint)
+  @objc(startCaptureForItem:viewController:preResultHook:) dynamic public func startCapture(forItem item: [Swift::AnyHashable : Any], viewController: UIKit::UIViewController, preResultHook: @escaping (UIKit::UIViewController, EntrupySDK::EntrupyPreResultDecision) -> Swift::Void)
   public func startCapture(forItem item: [Swift::String : Any], viewController: UIKit::UIViewController)
   public func startCapture(forItem item: [Swift::String : Any], viewController: UIKit::UIViewController, entryPoint: EntrupySDK::EntrupyAnalyticsEntryPoint)
   @objc dynamic public func searchSubmissions(at pageCursor: [Any], filters: [Any], startDate: Foundation::TimeInterval, endDate: Foundation::TimeInterval, paginationLimit: Swift::Int)
@@ -691,6 +692,11 @@ extension EntrupySDK::EntrupyApp {
   @objc dynamic public func fetchMarketEdgeForItem(withEntrupyID entrupyID: Swift::String)
   @objc dynamic public func cleanup()
   @objc dynamic public func interceptApplication(_ application: UIKit::UIApplication, handleEventsForBackgroundURLSession identifier: Swift::String, completionHandler: @escaping () -> Swift::Void)
+}
+@_hasMissingDesignatedInitializers @objc(EntrupyPreResultDecision) final public class EntrupyPreResultDecision : ObjectiveC::NSObject, @unchecked Swift::Sendable {
+  @objc deinit
+  @objc final public func proceed()
+  @objc final public func cancel()
 }
 public struct EntrupySearchItemsResult : Swift::Codable {
   public let metadata: EntrupySDK::EntrupySearchItemsResultMetadata
@@ -1217,6 +1223,7 @@ public enum EntrupyAnalyticsEvent : Swift::String {
   case eventRegistrationCompleted
   case eventRegistrationExited
   case authenticationApiResult
+  case editPasswordResult
   case transferInitiateOpened
   case transferRecipientsLoaded
   case transferInitiateSubmitted

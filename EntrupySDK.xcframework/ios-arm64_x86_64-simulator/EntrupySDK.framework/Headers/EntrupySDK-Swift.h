@@ -476,6 +476,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) EntrupyApp *
 
 @class NSString;
 @class UIViewController;
+@class EntrupyPreResultDecision;
 @class EntrupySearchQuery;
 @class NSError;
 @class EntrupyDetailViewConfiguration;
@@ -521,6 +522,37 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) EntrupyApp *
 /// <code>EntrupyApp.h</code> and this target builds with library evolution, so widening it would break
 /// ABI. Consumers keep calling the original, which reports <code>sdk_api</code>.
 - (void)startCaptureForItem:(NSDictionary * _Nonnull)item viewController:(UIViewController * _Nonnull)viewController entryPoint:(enum EntrupyAnalyticsEntryPoint)entryPoint;
+/// Starts a capture that pauses after Submit so your app can run its own step before the item
+/// is sent for review.
+/// After the user taps Submit, the SDK finishes uploading the images, then calls
+/// <code>preResultHook</code> on the main thread with the SDK view controller to present your screen on,
+/// and waits. Answer with the <code>EntrupyPreResultDecision</code>:
+/// <ul>
+///   <li>
+///     <code>proceed()</code>: the SDK submits the capture for review and continues as usual.
+///   </li>
+///   <li>
+///     <code>cancel()</code>: nothing is submitted. The user returns to an SDK hand-over screen, where
+///     Continue calls the hook again, or they can quit the capture.
+///   </li>
+/// </ul>
+/// Dismiss your screen before you answer, ideally answering in the dismiss completion. If it is
+/// still open when you answer, the SDK dismisses it. If your screen can be dismissed
+/// interactively, answer from that dismissal too, or set <code>isModalInPresentation</code>; the SDK waits
+/// until you answer.
+/// Only the first answer counts, and you can answer from any thread. Keep the decision until
+/// you answer: releasing it without an answer counts as <code>cancel()</code>. After <code>proceed()</code>, the hook is
+/// not called again, even if the submission is retried; a failed submission still reaches
+/// <code>didCaptureFailWithError</code>. The 2-hour capture timeout keeps running while your screen is
+/// open, and if the OS kills the app during it, the capture is lost and nothing is submitted.
+/// Fingerprint and retake captures submit without calling the hook.
+/// \code
+/// EntrupyApp.sharedInstance().startCapture(forItem: item, viewController: self) { sdkViewController, decision in
+///     showHostStep(on: sdkViewController, onDone: decision.proceed, onClosed: decision.cancel)
+/// }
+///
+/// \endcode
+- (void)startCaptureForItem:(NSDictionary * _Nonnull)item viewController:(UIViewController * _Nonnull)viewController preResultHook:(void (^ _Nonnull)(UIViewController * _Nonnull, EntrupyPreResultDecision * _Nonnull))preResultHook;
 /// Legacy: Search submissions (Objective-C compatible)
 /// Uses the Swift search service when enabled and falls back to the legacy Objective-C
 /// implementation while the migration is rolled out.
@@ -1000,6 +1032,20 @@ SWIFT_CLASS("_TtC10EntrupySDK20EntrupyOneColumnView")
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 - (void)layoutSubviews;
+@end
+
+/// The host app’s answer to a pre-result hook (see <code>EntrupyApp.startCapture(forItem:viewController:preResultHook:)</code>).
+/// Only the first call to <code>proceed()</code> or <code>cancel()</code> counts. Later calls, and calls made after the
+/// capture has closed, are ignored. Both methods can be called from any thread. Releasing the
+/// decision without answering counts as <code>cancel()</code>.
+SWIFT_CLASS_NAMED("EntrupyPreResultDecision")
+@interface EntrupyPreResultDecision : NSObject
+/// Submits the capture for review.
+- (void)proceed;
+/// Submits nothing. The SDK shows a hand-over screen where Continue calls the hook again.
+- (void)cancel;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 SWIFT_CLASS("_TtC10EntrupySDK18EntrupySearchQuery")
@@ -1674,6 +1720,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) EntrupyApp *
 
 @class NSString;
 @class UIViewController;
+@class EntrupyPreResultDecision;
 @class EntrupySearchQuery;
 @class NSError;
 @class EntrupyDetailViewConfiguration;
@@ -1719,6 +1766,37 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) EntrupyApp *
 /// <code>EntrupyApp.h</code> and this target builds with library evolution, so widening it would break
 /// ABI. Consumers keep calling the original, which reports <code>sdk_api</code>.
 - (void)startCaptureForItem:(NSDictionary * _Nonnull)item viewController:(UIViewController * _Nonnull)viewController entryPoint:(enum EntrupyAnalyticsEntryPoint)entryPoint;
+/// Starts a capture that pauses after Submit so your app can run its own step before the item
+/// is sent for review.
+/// After the user taps Submit, the SDK finishes uploading the images, then calls
+/// <code>preResultHook</code> on the main thread with the SDK view controller to present your screen on,
+/// and waits. Answer with the <code>EntrupyPreResultDecision</code>:
+/// <ul>
+///   <li>
+///     <code>proceed()</code>: the SDK submits the capture for review and continues as usual.
+///   </li>
+///   <li>
+///     <code>cancel()</code>: nothing is submitted. The user returns to an SDK hand-over screen, where
+///     Continue calls the hook again, or they can quit the capture.
+///   </li>
+/// </ul>
+/// Dismiss your screen before you answer, ideally answering in the dismiss completion. If it is
+/// still open when you answer, the SDK dismisses it. If your screen can be dismissed
+/// interactively, answer from that dismissal too, or set <code>isModalInPresentation</code>; the SDK waits
+/// until you answer.
+/// Only the first answer counts, and you can answer from any thread. Keep the decision until
+/// you answer: releasing it without an answer counts as <code>cancel()</code>. After <code>proceed()</code>, the hook is
+/// not called again, even if the submission is retried; a failed submission still reaches
+/// <code>didCaptureFailWithError</code>. The 2-hour capture timeout keeps running while your screen is
+/// open, and if the OS kills the app during it, the capture is lost and nothing is submitted.
+/// Fingerprint and retake captures submit without calling the hook.
+/// \code
+/// EntrupyApp.sharedInstance().startCapture(forItem: item, viewController: self) { sdkViewController, decision in
+///     showHostStep(on: sdkViewController, onDone: decision.proceed, onClosed: decision.cancel)
+/// }
+///
+/// \endcode
+- (void)startCaptureForItem:(NSDictionary * _Nonnull)item viewController:(UIViewController * _Nonnull)viewController preResultHook:(void (^ _Nonnull)(UIViewController * _Nonnull, EntrupyPreResultDecision * _Nonnull))preResultHook;
 /// Legacy: Search submissions (Objective-C compatible)
 /// Uses the Swift search service when enabled and falls back to the legacy Objective-C
 /// implementation while the migration is rolled out.
@@ -2198,6 +2276,20 @@ SWIFT_CLASS("_TtC10EntrupySDK20EntrupyOneColumnView")
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 - (void)layoutSubviews;
+@end
+
+/// The host app’s answer to a pre-result hook (see <code>EntrupyApp.startCapture(forItem:viewController:preResultHook:)</code>).
+/// Only the first call to <code>proceed()</code> or <code>cancel()</code> counts. Later calls, and calls made after the
+/// capture has closed, are ignored. Both methods can be called from any thread. Releasing the
+/// decision without answering counts as <code>cancel()</code>.
+SWIFT_CLASS_NAMED("EntrupyPreResultDecision")
+@interface EntrupyPreResultDecision : NSObject
+/// Submits the capture for review.
+- (void)proceed;
+/// Submits nothing. The SDK shows a hand-over screen where Continue calls the hook again.
+- (void)cancel;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 SWIFT_CLASS("_TtC10EntrupySDK18EntrupySearchQuery")
