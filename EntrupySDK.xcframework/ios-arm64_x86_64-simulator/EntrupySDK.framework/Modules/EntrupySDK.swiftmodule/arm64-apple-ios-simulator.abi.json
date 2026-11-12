@@ -59024,14 +59024,14 @@
     {
       "filePath": "\/Users\/markjoselli14\/Documents\/GitHub\/Entrupy\/MobileApps\/mobile-apps-ios\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureMultipartUploader.swift",
       "kind": "BooleanLiteral",
-      "offset": 6415,
+      "offset": 6492,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/markjoselli14\/Documents\/GitHub\/Entrupy\/MobileApps\/mobile-apps-ios\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Infrastructure\/EntrupyCaptureMultipartUploader.swift",
       "kind": "Array",
-      "offset": 18315,
+      "offset": 18909,
       "length": 2,
       "value": "[]"
     },
@@ -69587,105 +69587,105 @@
     {
       "filePath": "\/Users\/markjoselli14\/Documents\/GitHub\/Entrupy\/MobileApps\/mobile-apps-ios\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 104227,
+      "offset": 104501,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/markjoselli14\/Documents\/GitHub\/Entrupy\/MobileApps\/mobile-apps-ios\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 106275,
+      "offset": 106549,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/markjoselli14\/Documents\/GitHub\/Entrupy\/MobileApps\/mobile-apps-ios\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 106328,
+      "offset": 106602,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/markjoselli14\/Documents\/GitHub\/Entrupy\/MobileApps\/mobile-apps-ios\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 164043,
+      "offset": 164317,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/markjoselli14\/Documents\/GitHub\/Entrupy\/MobileApps\/mobile-apps-ios\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 164602,
+      "offset": 164876,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/markjoselli14\/Documents\/GitHub\/Entrupy\/MobileApps\/mobile-apps-ios\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 254785,
+      "offset": 255020,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/markjoselli14\/Documents\/GitHub\/Entrupy\/MobileApps\/mobile-apps-ios\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 256424,
+      "offset": 256659,
       "length": 2,
       "value": "40"
     },
     {
       "filePath": "\/Users\/markjoselli14\/Documents\/GitHub\/Entrupy\/MobileApps\/mobile-apps-ios\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 365457,
+      "offset": 365692,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/markjoselli14\/Documents\/GitHub\/Entrupy\/MobileApps\/mobile-apps-ios\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 365508,
+      "offset": 365743,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/markjoselli14\/Documents\/GitHub\/Entrupy\/MobileApps\/mobile-apps-ios\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 365538,
+      "offset": 365773,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/markjoselli14\/Documents\/GitHub\/Entrupy\/MobileApps\/mobile-apps-ios\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 365613,
+      "offset": 365848,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/markjoselli14\/Documents\/GitHub\/Entrupy\/MobileApps\/mobile-apps-ios\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 365765,
+      "offset": 366000,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/markjoselli14\/Documents\/GitHub\/Entrupy\/MobileApps\/mobile-apps-ios\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "IntegerLiteral",
-      "offset": 365801,
+      "offset": 366036,
       "length": 2,
       "value": "15"
     },
     {
       "filePath": "\/Users\/markjoselli14\/Documents\/GitHub\/Entrupy\/MobileApps\/mobile-apps-ios\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 366247,
+      "offset": 366482,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/markjoselli14\/Documents\/GitHub\/Entrupy\/MobileApps\/mobile-apps-ios\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewController\/EntrupyCaptureViewControllerV2.swift",
       "kind": "BooleanLiteral",
-      "offset": 432533,
+      "offset": 432623,
       "length": 5,
       "value": "false"
     },
@@ -69958,7 +69958,7 @@
     {
       "filePath": "\/Users\/markjoselli14\/Documents\/GitHub\/Entrupy\/MobileApps\/mobile-apps-ios\/EntrupySDK\/EntrupySDK\/v2\/Presentation\/Capture\/ViewModel\/EntrupyCaptureLegacyBatchCompleteTracker.swift",
       "kind": "BooleanLiteral",
-      "offset": 7098,
+      "offset": 7038,
       "length": 5,
       "value": "false"
     },
@@ -87010,7 +87010,7 @@
     {
       "filePath": "\/Users\/markjoselli14\/Documents\/GitHub\/Entrupy\/MobileApps\/mobile-apps-ios\/EntrupySDK\/EntrupySDK\/v2\/CoreServices\/Capture\/Domain\/EntrupyCaptureUploadStoryProperties.swift",
       "kind": "StringLiteral",
-      "offset": 6105,
+      "offset": 6320,
       "length": 20,
       "value": "\"attempts_exhausted\""
     },
