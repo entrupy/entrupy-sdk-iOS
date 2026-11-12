@@ -15,11 +15,12 @@ FOUNDATION_EXPORT const CGFloat EntrupyLoadingOverlaySpinnerSize;
 FOUNDATION_EXPORT const CGFloat EntrupyLoadingCompactSpinnerSize;
 FOUNDATION_EXPORT const CGFloat EntrupyLoadingButtonSpinnerSize;
 
-/// Branded frame-based loading spinner (`refresh1`…`refresh8`).
+/// Branded vector loading spinner.
 /// Use as a blocking overlay (blur / solid background) or as a compact inline spinner.
 @interface EntrupyLoadingView: UIView
 
-@property (strong, nonatomic) UIImageView *spinner;
+/// The visible spinner. Hosts may set `accessibilityIdentifier` on it; the animation behind it is internal.
+@property (strong, nonatomic, readonly) UIView *spinner;
 @property (strong, nonatomic) UILabel *banner;
 
 /// Default spinner side length when not in compact mode (40). Compact default is 30.
