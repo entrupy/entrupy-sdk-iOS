@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		ZczPO3QRfgnls7n1p6V4NDWv2yE=
+		M8eaoDIq+je8F3e6+W5ZnKO9Jys=
 		</data>
 		<key>Base.lproj/EntrupyCaptureViewController.nib</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>EntrupyAlphaFeatureFlags.json</key>
 		<data>
-		16JAyd0VNY+AWjkwP2tYll03+y4=
+		Urq8B8kaxGwhtgdg7mP84fylhSI=
 		</data>
 		<key>EntrupyBannerView.nib</key>
 		<data>
@@ -82,7 +82,7 @@
 		</data>
 		<key>EntrupyFeatureFlags.json</key>
 		<data>
-		KFOJkE9pseCdz6SpAjoYVS0kgEc=
+		FeIBqJUHxSRmJySni8Bi8HdNosk=
 		</data>
 		<key>EntrupyGalleryCollectionViewCell.nib</key>
 		<data>
@@ -318,7 +318,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		kLEwzDEjP7hmVDdbQLR/UW3K33I=
+		LQb2ruy96ZepRRlA5srDrkFl2fI=
 		</data>
 		<key>Kanit-Bold.ttf</key>
 		<data>
@@ -346,43 +346,43 @@
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		UF+SMSpAibSFq386KandFxubyWM=
+		U5KjH2XenK5RrrfMZEY6/uykWjs=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		kiWiDHIpBPGcQ9+fHO2JlrruWko=
+		Vj2QrosHm5DkuDbgnmrYFesWaSg=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		6wZcnY2C8UDIf9F7E+QrysK0E8M=
+		CkAMoVqx4dHaqoJ3zEnUcBS/6bY=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		kiWiDHIpBPGcQ9+fHO2JlrruWko=
+		Vj2QrosHm5DkuDbgnmrYFesWaSg=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		pVGGkoIfS/9gOQbVRzCfZaJGXRQ=
+		DkMF5eWWvfIRxBLnLwmhmUu0YmU=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		UF+SMSpAibSFq386KandFxubyWM=
+		U5KjH2XenK5RrrfMZEY6/uykWjs=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		HkXYn90JpxHgUi4+/zq68aaNl4g=
+		dDK0oMGPil3XDElOo+SJ70Fkt1E=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		5BK8a94br35DFrjPB5/IfDx5EXg=
+		fZiGxMIxrzEfJc2dVo5lKKXm/p4=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		HkXYn90JpxHgUi4+/zq68aaNl4g=
+		dDK0oMGPil3XDElOo+SJ70Fkt1E=
 		</data>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		AM6hz5d2oUfXUe81//VzYYPepAM=
+		hb6zCqNUsJTeq1VDaaZ5f/jhH0I=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -704,7 +704,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			uWry0E+OK6Rmm7YbZ49Ur9RxzzCs/oz9oKJ3/w1EncQ=
+			SYusQGLCMKAbnD36pDoZqzuxkb2L5tL0IMlWoaKqj48=
 			</data>
 		</dict>
 		<key>Base.lproj/EntrupyCaptureViewController.nib</key>
@@ -732,7 +732,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			KZZCs+PdrEyBodMcUvUFMciLH2427Xx0o1PdMOwgdSE=
+			PwdUqbyxPqISrKd5B31zOA09xkyzbLaVEwXaEn5xF/Y=
 			</data>
 		</dict>
 		<key>EntrupyBannerView.nib</key>
@@ -837,7 +837,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			R6TkxjqKrTmbF5g/Gx/mAD4fOvAQkrJyupnaGuORcGA=
+			U3ywE1pvcyvPdF95oMMpjTfvLub6X9zwv8ES4L+/J1E=
 			</data>
 		</dict>
 		<key>EntrupyGalleryCollectionViewCell.nib</key>
@@ -1292,70 +1292,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XxB8j+sgDwhuMVbw/r+VZyv0tRT2cfdp5R0cYm15tg0=
+			m7RmLupdfKj/L3V7KEklGRAmg4LZxy8Yf0Bap+SQrLs=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+Ze963QrBE+8RLYZALdq5OFuzD4EroRDIIiLMVfwUD8=
+			U+n43GDnempct9TbdqIrPCn24KqAoSYIBJRiH5YyeSE=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Gi1vw3VDT1lcvT5s1GugkJ0sgFjNYROuZrJO5Z+y6kY=
+			v17MFud4tcQqBnOIXKcJ1NDGeBRA2BEak1JMcXUPp1Q=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+Ze963QrBE+8RLYZALdq5OFuzD4EroRDIIiLMVfwUD8=
+			U+n43GDnempct9TbdqIrPCn24KqAoSYIBJRiH5YyeSE=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oy3iEKL32rZO39ZDhx7kGuS7iOR9K4o98jgf9f5e2Nw=
+			BtwOlI6Ni3B1yz3xHcXXNsRPEG8bweYyiooUJLAXIiU=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XxB8j+sgDwhuMVbw/r+VZyv0tRT2cfdp5R0cYm15tg0=
+			m7RmLupdfKj/L3V7KEklGRAmg4LZxy8Yf0Bap+SQrLs=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DnOEG27X1c8PkL6MEtCMNmjBLcADiiV3ATqvAqoCcuA=
+			TTCeiZzRs/6Nktsbo9VmDGX4oNz8epGIiPf/eDSOdk0=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bpxrOqneDhv0GNdDbVXd8pMgRQhISjGZUkCx8ZfK56k=
+			Ioq/OGemVRPA4Mvbdq9ZKmFk1MB5RXqYGJtMdF0QmI4=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DnOEG27X1c8PkL6MEtCMNmjBLcADiiV3ATqvAqoCcuA=
+			TTCeiZzRs/6Nktsbo9VmDGX4oNz8epGIiPf/eDSOdk0=
 			</data>
 		</dict>
 		<key>Modules/EntrupySDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			psYjoOoc8cHZgEjVTtzYXvk0qf3faGp5K7SZZZ4Lgl4=
+			D9hruhV3KghKnpoLvgRWJoruFHaomXRQ/mDi3k64+bY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
