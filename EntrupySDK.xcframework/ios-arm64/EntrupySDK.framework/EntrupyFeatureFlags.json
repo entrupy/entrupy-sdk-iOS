@@ -25,7 +25,7 @@
     "marketEdgeServiceV2": false,
     "identifierCapture": "control",
     "identifierFirstSignIn": true,
-    "passwordReset": false,
+    "passwordReset": true,
     "certificateTransfer": true,
     "searchFilterV2": true,
     "imageMemoryCacheV2": true,
@@ -33,5 +33,6 @@
     "captureStoryLogs": true,
     "photoQualityFallback": true,
     "instructionToastPosition": "top",
-    "multipartUploadEnabled": false
+    "multipartUploadEnabled": false,
+    "appUpdatePolicy": false
 }

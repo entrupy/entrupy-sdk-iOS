@@ -1106,8 +1106,8 @@ public struct EntrupyCaptureMenuConfigMainDisplayModel : Swift::Codable {
   public let account_status: EntrupySDK::EntrupyCaptureMenuConfigAccountStatusModel?
   public let tts_qr_session: EntrupySDK::EntrupyTikTokQRSession?
   public let qr_search: EntrupySDK::EntrupyQRSearch?
-  public func encode(to encoder: any Swift::Encoder) throws
   public init(from decoder: any Swift::Decoder) throws
+  public func encode(to encoder: any Swift::Encoder) throws
 }
 public struct EntrupyQRSearch : Swift::Codable {
   public let enabled: Swift::Bool
@@ -1245,6 +1245,7 @@ public enum EntrupyAnalyticsEvent : Swift::String {
   case tasksTransfersSearchSubmitted
   case tasksTabClosed
   case itemDetailsImageLoadSummary
+  case mainMenuConfigRejected
   public init?(rawValue: Swift::String)
   public typealias RawValue = Swift::String
   public var rawValue: Swift::String {

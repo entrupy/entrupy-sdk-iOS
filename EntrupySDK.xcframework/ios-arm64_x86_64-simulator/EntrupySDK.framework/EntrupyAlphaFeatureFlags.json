@@ -33,5 +33,6 @@
     "captureStoryLogs": true,
     "photoQualityFallback": true,
     "instructionToastPosition": "top",
-    "multipartUploadEnabled": true
+    "multipartUploadEnabled": true,
+    "appUpdatePolicy": true
 }
