@@ -1224,6 +1224,8 @@ public enum EntrupyAnalyticsEvent : Swift::String {
   case eventRegistrationExited
   case authenticationApiResult
   case editPasswordResult
+  case appUpdatePromptShown
+  case appUpdateCtaTapped
   case transferInitiateOpened
   case transferRecipientsLoaded
   case transferInitiateSubmitted
