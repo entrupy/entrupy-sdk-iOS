@@ -805,8 +805,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) EntrupyApp *
 /// Legacy: Cleanup user data (Objective-C compatible)
 /// This method calls the legacy Objective-C implementation.
 - (void)cleanup;
-/// Legacy: Intercept application background URL session (Objective-C compatible)
-/// During migration: Calls Objective-C implementation
+/// Handles EntrupySDK download events that occurred while the app was suspended.
+/// Call it from the AppDelegate’s <code>application(_:handleEventsForBackgroundURLSession:completionHandler:)</code>.
 /// \param application UIApplication instance
 ///
 /// \param identifier URL session identifier

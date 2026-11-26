@@ -25,7 +25,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak) id<EntrupyCaptureDelegate> captureDelegate;
 @property (nonatomic, weak) id<EntrupySearchDelegate> searchDelegate;
 @property (nonatomic, strong, nullable) id<EntrupyTheme> theme;
-@property (nonatomic, copy, nullable) void(^backgroundTransferCompletionHandler)(void);
 @property (nonatomic, weak) id<EntrupyFlagDelegate> flagDelegate;
 @property (nonatomic, weak) id<EntrupyDetailViewDelegate> detailViewDelegate;
 @property (nonatomic, weak) id<EntrupyFlagViewDelegate> flagViewDelegate;
@@ -252,25 +251,6 @@ NS_ASSUME_NONNULL_BEGIN
  
  */
 -(BOOL) isAuthorizationValid;
-
-/**
- Handles EntrupySDK related upload or download events that occured while the app was in the suspended state.
-
- Call "interceptApplication" in the AppDelegate's handleEventsForBackgroundURLSession method.
- 
- 
- ```swift
- // AppDelegate
-
- func application(_ application: UIApplication, handleEventsForBackgroundURLSession identifier: String, completionHandler: @escaping () -> Void) {
-     EntrupyApp.sharedInstance().interceptApplication(application, handleEventsForBackgroundURLSession: identifier completionHandler:completionHandler)
- }
- 
- ```
- 
-*/
--(void)interceptApplication:(UIApplication *)application handleEventsForBackgroundURLSession:(NSString *)identifier completionHandler:(void(^ _Nullable)(void))completionHandler;
-
 
 /**
  Retrieves the flag status, eligibility, and supported flag reasons for an Entrupy result.
